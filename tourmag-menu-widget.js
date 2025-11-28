@@ -94,7 +94,7 @@
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 3rem;
+            padding: 0 5rem;
         }
 
         .nav-list {
