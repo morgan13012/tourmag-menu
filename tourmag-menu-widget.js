@@ -682,7 +682,7 @@
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--primary-blue);
+            color: #ffffff;
             cursor: pointer;
             padding: 0.5rem;
         }
@@ -869,6 +869,7 @@
         <!-- Navigation principale -->
         <nav class="main-nav">
             <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
                 <ul class="nav-list" id="navList">
                     <!-- 1. TourMaG -->
                     <li class="nav-item">
