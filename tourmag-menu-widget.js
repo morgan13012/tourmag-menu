@@ -155,9 +155,8 @@
         /* Mega Menu */
        .mega-menu {
     position: fixed;
-    top: auto;
+    top: 0;
     left: 0;
-    right: 0;
     width: 100vw;
     background: var(--white);
     box-shadow: var(--shadow-lg);
@@ -169,12 +168,14 @@
     overflow-y: auto;
     z-index: 2000;
     will-change: transform, opacity;
+    pointer-events: none;
 }
 
         .nav-item:hover .mega-menu {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
+            pointer-events: auto;
         }
 
         .mega-menu-content {
@@ -230,7 +231,7 @@
 
         .mega-column-title {
             font-family: 'Josefin Sans', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-weight: 600;
             color: var(--primary-blue);
             margin-bottom: 1rem;
@@ -251,7 +252,7 @@
             padding: 0.625rem 0;
             color: var(--text-gray);
             text-decoration: none;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             transition: all 0.2s ease;
             position: relative;
         }
@@ -275,7 +276,7 @@
             padding: 0.5rem 0;
             color: var(--text-gray);
             text-decoration: none;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             transition: all 0.2s ease;
         }
 
@@ -328,7 +329,7 @@
             width: 100%;
             text-align: left;
             font-family: inherit;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--text-gray);
         }
 
@@ -465,7 +466,7 @@
             width: 100%;
             text-align: left;
             font-family: inherit;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--text-gray);
         }
 
@@ -1168,9 +1169,9 @@
                                     <!-- Colonne 1 - Navigation compacte -->
                                     <div class="mega-column" style="max-width: 280px; min-width: 280px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                            <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.2rem;">MemberShip Club <span class="premium-badge">PREMIUM</span></a></li>
+                                            <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club <span class="premium-badge">PREMIUM</span></a></li>
                                             <li class="media-item">
-                                                <button type="button" class="mega-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.2rem;">Articles abonnés <span class="premium-badge">PREMIUM</span><span class="chevron">▼</span></button>
+                                                <button type="button" class="mega-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Articles abonnés <span class="premium-badge">PREMIUM</span><span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
                                                         <li><a href="https://www.tourmag.com/futuroscopie/">Futuroscopie</a></li>
@@ -1178,33 +1179,33 @@
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li><a href="https://www.tourmag.com/faq/Foire-aux-questions-Abonnements-articles_fi4792.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; font-weight: 600; padding: 0.75rem 1rem; font-size: 1.2rem;">❓ FAQ</a></li>
+                                            <li><a href="https://www.tourmag.com/faq/Foire-aux-questions-Abonnements-articles_fi4792.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; font-weight: 600; padding: 0.75rem 1rem; font-size: 1.15rem;">❓ FAQ</a></li>
                                         </ul>
                                     </div>
                                     <!-- Colonne 2 - Offres d'abonnement -->
                                     <div class="mega-column" style="flex: 1;">
                                         <div style="background: linear-gradient(135deg, #59DF7A, #0956E7); padding: 2px; border-radius: 12px;">
                                             <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(255, 102, 0, 0.05)); border-radius: 10px; padding: 1.5rem;">
-                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; font-weight: 600; color: #ffffff; margin-bottom: 1rem; text-align: center;">Nos Offres d'Abonnement</h4>
+                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.6rem; font-weight: 600; color: #ffffff; margin-bottom: 1rem; text-align: center;">Nos Offres d'Abonnement</h4>
                                                 
                                                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
                                                 <!-- Carte Premium -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.05rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Premium</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 0.95rem; color: var(--text-gray); line-height: 1.6;">
+                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Premium</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
                                                             Accès illimité aux articles Premium
                                                         </li>
                                                         
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">83€ TTC/an</span>
+                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">83€ TTC/an</span>
                                                 </div>
                                                 
                                                 <!-- Carte Futuroscopie -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.05rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Futuroscopie</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 0.95rem; color: var(--text-gray); line-height: 1.6;">
+                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Futuroscopie</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
                                                             Articles Premium
@@ -1215,13 +1216,13 @@
                                                         </li>
                                                         
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">133€ TTC/an</span>
+                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">133€ TTC/an</span>
                                                 </div>
                                                 
                                                 <!-- Carte MemberShip Club -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.05rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">MemberShip Club</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 0.95rem; color: var(--text-gray); line-height: 1.6;">
+                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">MemberShip Club</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
                                                             Articles Premium
@@ -1236,13 +1237,13 @@
                                                         </li>
                                                         
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">483€ TTC/an</span>
+                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">483€ TTC/an</span>
                                                 </div>
                                                 
                                                 <!-- Carte Spécial agences -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.05rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Spécial agences</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 0.95rem; color: var(--text-gray); line-height: 1.6;">
+                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Spécial agences</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
                                                             Articles Premium
@@ -1256,13 +1257,13 @@
                                                             Vidéo récapitulative hebdomadaire
                                                         </li>
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">199€ HT/an</span>
+                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">199€ HT/an</span>
                                                 </div>
                                                 
                                                 <!-- Carte Étudiant -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.05rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Étudiant</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 0.95rem; color: var(--text-gray); line-height: 1.6;">
+                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Étudiant</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
                                                             Articles Premium
@@ -1273,12 +1274,12 @@
                                                         </li>
                                                         
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">10€ TTC/an</span>
+                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">10€ TTC/an</span>
                                                 </div>
                                             </div>
                                             
                                             <div style="text-align: center; margin-top: 1rem;">
-                                                <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: #ffffff; color: #0956E7; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" onmouseover="this.style.background='#0956E7'; this.style.color='#ffffff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(9, 86, 231, 0.3)'" onmouseout="this.style.background='#ffffff'; this.style.color='#0956E7'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)'">
+                                                <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: #ffffff; color: #0956E7; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.3rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" onmouseover="this.style.background='#0956E7'; this.style.color='#ffffff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(9, 86, 231, 0.3)'" onmouseout="this.style.background='#ffffff'; this.style.color='#0956E7'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)'">
                                                     Voir toutes les offres →
                                                 </a>
                                             </div>
@@ -1306,24 +1307,66 @@
         return true;
     }
     
-    // Initialiser les fonctionnalités JavaScript
-    function initializeJS() {
-        // Toggle menu mobile
-        function toggleMobileMenu() {
-            const navList = document.getElementById('navList');
+    // Toggle menu mobile - fonction globale
+    window.toggleMobileMenu = function() {
+        const navList = document.getElementById('navList');
+        if (navList) {
             navList.classList.toggle('active');
         }
-
+    };
+    
+    // Initialiser les fonctionnalités JavaScript
+    function initializeJS() {
+        console.log('TourMag Widget: initializeJS() appelé');
+        
+        // Fonction pour positionner les mega menus correctement (sans décalage)
+        function updateMegaMenuPositions() {
+            const mainNav = document.querySelector('#tourmag-menu .main-nav');
+            if (!mainNav) return;
+            
+            const navRect = mainNav.getBoundingClientRect();
+            const navBottom = navRect.bottom;
+            
+            const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
+            megaMenus.forEach(menu => {
+                menu.style.top = navBottom + 'px';
+            });
+        }
+        
+        // Variable pour optimiser avec requestAnimationFrame
+        let ticking = false;
+        
+        function requestTick() {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateMegaMenuPositions();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        
+        // Mettre à jour la position au chargement
+        updateMegaMenuPositions();
+        
+        // Mettre à jour lors du scroll avec requestAnimationFrame (fluidité maximale)
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // Mettre à jour lors du resize
+        window.addEventListener('resize', updateMegaMenuPositions);
+        
         // Gestion du clic pour les newsletters
-        document.addEventListener('DOMContentLoaded', function() {
-            const newsletterItems = document.querySelectorAll('.newsletter-item');
+        const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
+        console.log('TourMag Widget: Newsletter items trouvés:', newsletterItems.length);
 
-            newsletterItems.forEach(item => {
-                const link = item.querySelector('.mega-link');
-                let closeTimeout;
-                
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
+        newsletterItems.forEach(item => {
+            const link = item.querySelector('.mega-link');
+            let closeTimeout;
+            
+            if (!link) return;
+            
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
                     
                     // Annuler tout timeout de fermeture en cours
                     clearTimeout(closeTimeout);
@@ -1362,7 +1405,8 @@
             });
 
             // Gestion identique pour les médias
-            const mediaItems = document.querySelectorAll('.media-item');
+            const mediaItems = document.querySelectorAll('#tourmag-menu .media-item');
+            console.log('TourMag Widget: Media items trouvés:', mediaItems.length);
 
             mediaItems.forEach(item => {
                 const link = item.querySelector('.mega-link');
@@ -1408,7 +1452,7 @@
             });
 
             // Gestion des sous-menus sur mobile ET desktop
-            const navItems = document.querySelectorAll('.nav-item');
+            const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
             
             navItems.forEach(item => {
                 const link = item.querySelector('.nav-link');
@@ -1448,12 +1492,11 @@
                 }
                 // Les onglets sans mega menu (Petites Annonces, Contacts) restent cliquables
             });
-        });
 
         // Fermer le menu mobile si on clique en dehors
         document.addEventListener('click', function(event) {
-            const nav = document.querySelector('.main-nav');
-            const toggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('#tourmag-menu .main-nav');
+            const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
             const navList = document.getElementById('navList');
             
             if (window.innerWidth <= 768 && 
@@ -1469,7 +1512,7 @@
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function() {
                 if (window.innerWidth > 768) {
-                    document.querySelectorAll('.mega-menu').forEach(menu => {
+                    document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
                         menu.style.display = '';
                     });
                     document.getElementById('navList').classList.remove('active');
