@@ -676,14 +676,18 @@
             right: 0;
         }
 
-     .mobile-menu-toggle {
+    .mobile-menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 2rem;
     color: #ffffff;
     cursor: pointer;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
     line-height: 1;
 }
 
