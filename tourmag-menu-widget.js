@@ -154,8 +154,8 @@
 
         /* Mega Menu */
        .mega-menu {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100vw;
     background: var(--white);
@@ -168,13 +168,14 @@
     overflow-y: auto;
     z-index: 2000;
     will-change: transform, opacity;
-    pointer-events: auto;
+    pointer-events: none;
 }
 
-        .mega-menu.active {
+        .nav-item:hover .mega-menu {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
+            pointer-events: auto;
         }
 
         .mega-menu-content {
@@ -213,10 +214,10 @@
             overflow: visible;
         }
 
-        .mega-menu.active .mega-column:nth-child(1) { animation-delay: 0.05s; }
-        .mega-menu.active .mega-column:nth-child(2) { animation-delay: 0.1s; }
-        .mega-menu.active .mega-column:nth-child(3) { animation-delay: 0.15s; }
-        .mega-menu.active .mega-column:nth-child(4) { animation-delay: 0.2s; }
+        .nav-item:hover .mega-column:nth-child(1) { animation-delay: 0.05s; }
+        .nav-item:hover .mega-column:nth-child(2) { animation-delay: 0.1s; }
+        .nav-item:hover .mega-column:nth-child(3) { animation-delay: 0.15s; }
+        .nav-item:hover .mega-column:nth-child(4) { animation-delay: 0.2s; }
 
         @keyframes fadeInUp {
             to {
@@ -1318,49 +1319,41 @@
     function initializeJS() {
         console.log('TourMag Widget: initializeJS() appelé');
         
-        // SOLUTION: Déplacer les mega menus hors des nav-items pour éviter le décalage
-        const mainNav = document.querySelector('#tourmag-menu .main-nav');
-        const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+        // Fonction pour positionner les mega menus correctement (sans décalage)
+        function updateMegaMenuPositions() {
+            const mainNav = document.querySelector('#tourmag-menu .main-nav');
+            if (!mainNav) return;
+            
+            const navRect = mainNav.getBoundingClientRect();
+            const navBottom = navRect.bottom;
+            
+            const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
+            megaMenus.forEach(menu => {
+                menu.style.top = navBottom + 'px';
+            });
+        }
         
-        navItems.forEach(navItem => {
-            const megaMenu = navItem.querySelector('.mega-menu');
-            if (megaMenu && mainNav) {
-                // Retirer le mega menu du nav-item
-                megaMenu.remove();
-                // L'ajouter directement dans main-nav
-                mainNav.appendChild(megaMenu);
-                
-                // Créer une référence entre le nav-item et son mega menu
-                navItem.dataset.menuId = 'menu-' + Math.random().toString(36).substr(2, 9);
-                megaMenu.dataset.menuId = navItem.dataset.menuId;
-                
-                // Ajouter les événements hover
-                navItem.addEventListener('mouseenter', function() {
-                    const menuId = this.dataset.menuId;
-                    const associatedMenu = document.querySelector(`#tourmag-menu .mega-menu[data-menu-id="${menuId}"]`);
-                    if (associatedMenu) {
-                        associatedMenu.classList.add('active');
-                    }
+        // Variable pour optimiser avec requestAnimationFrame
+        let ticking = false;
+        
+        function requestTick() {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateMegaMenuPositions();
+                    ticking = false;
                 });
-                
-                navItem.addEventListener('mouseleave', function(e) {
-                    const menuId = this.dataset.menuId;
-                    const associatedMenu = document.querySelector(`#tourmag-menu .mega-menu[data-menu-id="${menuId}"]`);
-                    if (associatedMenu && !associatedMenu.contains(e.relatedTarget)) {
-                        associatedMenu.classList.remove('active');
-                    }
-                });
-                
-                // Garder le menu ouvert quand on entre dedans
-                megaMenu.addEventListener('mouseenter', function() {
-                    this.classList.add('active');
-                });
-                
-                megaMenu.addEventListener('mouseleave', function() {
-                    this.classList.remove('active');
-                });
+                ticking = true;
             }
-        });
+        }
+        
+        // Mettre à jour la position au chargement
+        updateMegaMenuPositions();
+        
+        // Mettre à jour lors du scroll avec requestAnimationFrame (fluidité maximale)
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // Mettre à jour lors du resize
+        window.addEventListener('resize', updateMegaMenuPositions);
         
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
