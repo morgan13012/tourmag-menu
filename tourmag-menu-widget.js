@@ -743,7 +743,7 @@
 
         @media (max-width: 600px) {
     #tourmag-menu .mobile-menu-toggle {
-        display: block !important;
+        display: none !important;
     }
 
             .nav-list {
@@ -1310,7 +1310,7 @@
             </div>
         </nav>
     </header>
-    <button id="tourmag-hamburger-btn" onclick="toggleMobileMenu()" style="display: block !important; position: fixed !important; top: 120px !important; right: 20px !important; width: 70px !important; height: 70px !important; background: #000000 !important; color: #ffffff !important; border: 2px solid #59DF7A !important; font-size: 24px !important; font-weight: bold !important; z-index: 999999 !important; cursor: pointer !important; border-radius: 8px !important; opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;">☰</button>
+    
     `;
         return true;
     }
