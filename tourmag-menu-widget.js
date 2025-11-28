@@ -676,19 +676,15 @@
             right: 0;
         }
 
-        .mobile-menu-toggle {
+     .mobile-menu-toggle {
     display: none;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #ffffff;
     cursor: pointer;
-    padding: 1rem 2rem;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    padding: 1rem 1.5rem;
+    line-height: 1;
 }
 
         /* Contenu démo */
