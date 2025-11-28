@@ -1310,18 +1310,18 @@
             </div>
         </nav>
     </header>
-    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" style="display: block !important; position: fixed !important; top: 10px !important; right: 10px !important; z-index: 99999 !important; background: #ff0000 !important; color: #ffffff !important; border: 2px solid yellow !important; padding: 15px 20px !important; font-size: 30px !important; cursor: pointer !important; line-height: 1 !important; width: 60px !important; height: 60px !important; min-width: 60px !important; min-height: 60px !important;">☰</button>
+    <button id="tourmag-hamburger-btn" onclick="toggleMobileMenu()" style="display: block !important; position: fixed !important; top: 20px !important; right: 20px !important; width: 70px !important; height: 70px !important; background: #000000 !important; color: #ffffff !important; border: 2px solid #59DF7A !important; font-size: 24px !important; font-weight: bold !important; z-index: 999999 !important; cursor: pointer !important; border-radius: 8px !important; opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;">☰</button>
     `;
         return true;
     }
     
     // Toggle menu mobile - fonction globale
-    window.toggleMobileMenu = function() {
-        const navList = document.getElementById('navList');
-        if (navList) {
-            navList.classList.toggle('active');
-        }
-    };
+   window.toggleMobileMenu = function() {
+    const navList = document.getElementById('navList');
+    if (navList) {
+        navList.classList.toggle('active');
+    }
+};
     
     // Initialiser les fonctionnalités JavaScript
     function initializeJS() {
