@@ -40,54 +40,14 @@
 
         /* En-tête et navigation principale */
         .header {
-            background: var(--white);
-            box-shadow: var(--shadow-sm);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .header-top {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: 0.5rem 0;
-            font-size: 0.875rem;
-        }
-
-        .header-top-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-area {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--accent-orange);
-        }
-
         /* Navigation principale */
+            min-height: 60px;
         .main-nav {
             background: #000000;
+            position: relative;
             border-top: 1px solid #333333;
             position: relative;
         }
@@ -680,9 +640,13 @@
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--primary-blue);
+            color: #ffffff;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 1rem 1.5rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 100;
         }
 
         /* Contenu démo */
@@ -797,12 +761,10 @@
                 gap: 1.5rem;
             }
 
-            .logo-area {
-                padding: 1rem;
-            }
 
             .nav-container {
                 padding: 0 1rem;
+                min-height: 60px;
             }
 
             .demo-content {
@@ -861,12 +823,10 @@
             return false;
         }
         container.innerHTML = `<header class="header">
-        <!-- Bandeau supérieur -->
-        
-
         <!-- Navigation principale -->
         <nav class="main-nav">
             <div class="nav-container">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
                 <ul class="nav-list" id="navList">
                     <!-- 1. TourMaG -->
                     <li class="nav-item">
@@ -1307,13 +1267,15 @@
     }
     
     // Initialiser les fonctionnalités JavaScript
-    function initializeJS() {
-        // Toggle menu mobile
-        function toggleMobileMenu() {
-            const navList = document.getElementById('navList');
+    // Toggle menu mobile - fonction globale
+    window.toggleMobileMenu = function() {
+        const navList = document.getElementById('navList');
+        if (navList) {
             navList.classList.toggle('active');
         }
+    };
 
+    function initializeJS() {
         // Gestion du clic pour les newsletters
         document.addEventListener('DOMContentLoaded', function() {
             const newsletterItems = document.querySelectorAll('.newsletter-item');
