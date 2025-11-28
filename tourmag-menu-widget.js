@@ -154,26 +154,28 @@
 
         /* Mega Menu */
        .mega-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     background: var(--white);
     box-shadow: var(--shadow-lg);
     opacity: 0;
     visibility: hidden;
+    transform: translateY(-10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     max-height: 80vh;
     overflow-y: auto;
     z-index: 2000;
     will-change: transform, opacity;
+    pointer-events: none;
 }
 
         .nav-item:hover .mega-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateX(-50%) translateY(0);
+            transform: translateY(0);
+            pointer-events: auto;
         }
 
         .mega-menu-content {
@@ -1316,6 +1318,42 @@
     // Initialiser les fonctionnalités JavaScript
     function initializeJS() {
         console.log('TourMag Widget: initializeJS() appelé');
+        
+        // Fonction pour positionner les mega menus correctement (sans décalage)
+        function updateMegaMenuPositions() {
+            const mainNav = document.querySelector('#tourmag-menu .main-nav');
+            if (!mainNav) return;
+            
+            const navRect = mainNav.getBoundingClientRect();
+            const navBottom = navRect.bottom;
+            
+            const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
+            megaMenus.forEach(menu => {
+                menu.style.top = navBottom + 'px';
+            });
+        }
+        
+        // Variable pour optimiser avec requestAnimationFrame
+        let ticking = false;
+        
+        function requestTick() {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateMegaMenuPositions();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        
+        // Mettre à jour la position au chargement
+        updateMegaMenuPositions();
+        
+        // Mettre à jour lors du scroll avec requestAnimationFrame (fluidité maximale)
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // Mettre à jour lors du resize
+        window.addEventListener('resize', updateMegaMenuPositions);
         
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
