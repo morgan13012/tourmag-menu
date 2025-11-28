@@ -329,7 +329,7 @@
             width: 100%;
             text-align: left;
             font-family: inherit;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             color: var(--text-gray);
         }
 
