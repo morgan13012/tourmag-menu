@@ -154,8 +154,8 @@
 
         /* Mega Menu */
        .mega-menu {
-    position: fixed;
-    top: auto;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     width: 100vw;
@@ -1317,33 +1317,6 @@
     // Initialiser les fonctionnalités JavaScript
     function initializeJS() {
         console.log('TourMag Widget: initializeJS() appelé');
-        
-        // Fonction pour positionner les mega menus correctement
-        function updateMegaMenuPositions() {
-            const mainNav = document.querySelector('#tourmag-menu .main-nav');
-            if (!mainNav) return;
-            
-            const navRect = mainNav.getBoundingClientRect();
-            const navBottom = navRect.bottom;
-            
-            const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
-            megaMenus.forEach(menu => {
-                menu.style.top = navBottom + 'px';
-            });
-        }
-        
-        // Mettre à jour la position au chargement
-        updateMegaMenuPositions();
-        
-        // Mettre à jour la position lors du scroll
-        let scrollTimeout;
-        window.addEventListener('scroll', function() {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(updateMegaMenuPositions, 10);
-        });
-        
-        // Mettre à jour la position lors du resize
-        window.addEventListener('resize', updateMegaMenuPositions);
         
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
