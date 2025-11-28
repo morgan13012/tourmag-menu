@@ -88,7 +88,6 @@
         /* Navigation principale */
         .main-nav {
             background: #000000;
-            border-top: 1px solid #333333;
             position: relative;
         }
 
