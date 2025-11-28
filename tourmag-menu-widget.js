@@ -676,14 +676,14 @@
             right: 0;
         }
 
-    .mobile-menu-toggle {
+    #tourmag-menu .mobile-menu-toggle {
     display: none;
-    background: none;
-    border: none;
+    background: #ff0000;
+    border: 2px solid yellow;
     font-size: 2rem;
     color: #ffffff;
     cursor: pointer;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -742,9 +742,9 @@
         }
 
         @media (max-width: 600px) {
-            .mobile-menu-toggle {
-                display: block;
-            }
+    #tourmag-menu .mobile-menu-toggle {
+        display: block !important;
+    }
 
             .nav-list {
                 display: none;
