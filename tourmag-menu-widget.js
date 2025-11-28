@@ -727,8 +727,10 @@
             }
         }
 
-        @media (max-width: 600px) {
-    #tourmag-menu .mobile-menu-toggle {
+       @media (max-width: 600px) {
+    #tourmag-menu,
+    #tourmag-menu .header,
+    #tourmag-menu .main-nav {
         display: none !important;
     }
 
