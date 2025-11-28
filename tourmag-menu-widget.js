@@ -1318,6 +1318,33 @@
     function initializeJS() {
         console.log('TourMag Widget: initializeJS() appelé');
         
+        // Fonction pour positionner les mega menus correctement
+        function updateMegaMenuPositions() {
+            const mainNav = document.querySelector('#tourmag-menu .main-nav');
+            if (!mainNav) return;
+            
+            const navRect = mainNav.getBoundingClientRect();
+            const navBottom = navRect.bottom;
+            
+            const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
+            megaMenus.forEach(menu => {
+                menu.style.top = navBottom + 'px';
+            });
+        }
+        
+        // Mettre à jour la position au chargement
+        updateMegaMenuPositions();
+        
+        // Mettre à jour la position lors du scroll
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateMegaMenuPositions, 10);
+        });
+        
+        // Mettre à jour la position lors du resize
+        window.addEventListener('resize', updateMegaMenuPositions);
+        
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
         console.log('TourMag Widget: Newsletter items trouvés:', newsletterItems.length);
