@@ -36,6 +36,7 @@
             color: var(--text-dark);
             line-height: 1.6;
             background: var(--bg-light);
+            overflow-x: hidden ;
         }
 
         /* En-tête et navigation principale */
@@ -156,7 +157,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     background: var(--white);
     box-shadow: var(--shadow-lg);
     opacity: 0;
