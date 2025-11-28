@@ -872,7 +872,7 @@
 
         <!-- Navigation principale -->
         <nav class="main-nav">
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" style="display: block !important; position: fixed !important; top: 10px !important; right: 10px !important; z-index: 10000 !important; background: #ff0000 !important; color: #ffffff !important; border: 2px solid yellow !important; padding: 1rem 1.5rem !important; font-size: 2rem !important; cursor: pointer !important; line-height: 1 !important;">☰</button>
             <div class="nav-container">
                 <ul class="nav-list" id="navList">
                     <!-- 1. TourMaG -->
