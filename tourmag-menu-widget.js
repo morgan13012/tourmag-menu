@@ -120,6 +120,7 @@
             transition: all 0.3s ease;
             position: relative;
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         .nav-link:hover {
