@@ -721,7 +721,7 @@
             }
         }
         
-        @media (max-width: 1024px) {
+        @media (max-width: 1400px) {
             .nav-list {
                 flex-wrap: wrap;
             }
@@ -736,7 +736,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .mobile-menu-toggle {
                 display: block;
             }
