@@ -1277,7 +1277,8 @@
 
     function initializeJS() {
         // Gestion du clic pour les newsletters
-        const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterItems = document.querySelectorAll('.newsletter-item');
 
             newsletterItems.forEach(item => {
                 const link = item.querySelector('.mega-link');
@@ -1323,7 +1324,7 @@
             });
 
             // Gestion identique pour les médias
-            const mediaItems = document.querySelectorAll('#tourmag-menu .media-item');
+            const mediaItems = document.querySelectorAll('.media-item');
 
             mediaItems.forEach(item => {
                 const link = item.querySelector('.mega-link');
@@ -1369,7 +1370,7 @@
             });
 
             // Gestion des sous-menus sur mobile ET desktop
-            const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+            const navItems = document.querySelectorAll('.nav-item');
             
             navItems.forEach(item => {
                 const link = item.querySelector('.nav-link');
@@ -1409,11 +1410,12 @@
                 }
                 // Les onglets sans mega menu (Petites Annonces, Contacts) restent cliquables
             });
+        });
 
         // Fermer le menu mobile si on clique en dehors
         document.addEventListener('click', function(event) {
-            const nav = document.querySelector('#tourmag-menu .main-nav');
-            const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
+            const nav = document.querySelector('.main-nav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
             const navList = document.getElementById('navList');
             
             if (window.innerWidth <= 768 && 
@@ -1429,7 +1431,7 @@
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function() {
                 if (window.innerWidth > 768) {
-                    document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
+                    document.querySelectorAll('.mega-menu').forEach(menu => {
                         menu.style.display = '';
                     });
                     document.getElementById('navList').classList.remove('active');
