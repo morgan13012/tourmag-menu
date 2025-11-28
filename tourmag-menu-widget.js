@@ -676,20 +676,6 @@
             right: 0;
         }
 
-    #tourmag-menu .mobile-menu-toggle {
-    display: none;
-    background: #ff0000;
-    border: 2px solid yellow;
-    font-size: 2rem;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 1rem 1.5rem;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 10000;
-    line-height: 1;
-}
 
         /* Contenu démo */
         .demo-content {
