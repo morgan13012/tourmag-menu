@@ -676,16 +676,20 @@
             right: 0;
         }
 
-        /* Menu mobile */
         .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #ffffff;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
 
         /* Contenu démo */
         .demo-content {
@@ -868,8 +872,8 @@
 
         <!-- Navigation principale -->
         <nav class="main-nav">
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <div class="nav-container">
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
                 <ul class="nav-list" id="navList">
                     <!-- 1. TourMaG -->
                     <li class="nav-item">
