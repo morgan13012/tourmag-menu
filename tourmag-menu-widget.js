@@ -719,32 +719,30 @@
         }
 
 /* Menu mobile - Bouton hamburger */
-        .mobile-menu-toggle {
+        /* Menu mobile - Bouton hamburger */
+.mobile-menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 1.8rem;
-    color: #000000; /* noir */
+    color: #000000;
     cursor: pointer;
     padding: 1rem;
     z-index: 100;
+    position: relative;
 }
 
-/* Styles pour le bouton hamburger/croix */
 /* Styles pour le bouton hamburger/croix */
 .mobile-menu-toggle .hamburger-icon,
 .mobile-menu-toggle .close-icon {
     transition: all 0.3s ease;
     font-size: 1.8rem;
-}
-
-/* Par défaut : hamburger visible, croix cachée */
-.mobile-menu-toggle .hamburger-icon {
     display: block;
 }
 
+/* Par défaut : hamburger visible, croix cachée */
 .mobile-menu-toggle .close-icon {
-    display: none;
+    display: none !important;
 }
 
 /* Quand actif : hamburger caché, croix visible */
@@ -1031,7 +1029,7 @@
             <div class="nav-container">
               <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" id="mobileMenuToggle">
     <span class="hamburger-icon">☰</span>
-    <span class="close-icon" style="display: none;">✕</span>
+    <span class="close-icon">✕</span>
 </button>
                 <ul class="nav-list" id="navList">
                     <!-- 1. TourMaG -->
