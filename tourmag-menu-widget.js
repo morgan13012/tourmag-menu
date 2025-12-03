@@ -731,12 +731,23 @@
 }
 
 /* Styles pour le bouton hamburger/croix */
+/* Styles pour le bouton hamburger/croix */
 .mobile-menu-toggle .hamburger-icon,
 .mobile-menu-toggle .close-icon {
     transition: all 0.3s ease;
     font-size: 1.8rem;
 }
 
+/* Par défaut : hamburger visible, croix cachée */
+.mobile-menu-toggle .hamburger-icon {
+    display: block;
+}
+
+.mobile-menu-toggle .close-icon {
+    display: none;
+}
+
+/* Quand actif : hamburger caché, croix visible */
 .mobile-menu-toggle.active .hamburger-icon {
     display: none !important;
 }
@@ -1018,7 +1029,7 @@
         <!-- Navigation principale -->
         <nav class="main-nav">
             <div class="nav-container">
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" id="mobileMenuToggle">
+              <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" id="mobileMenuToggle">
     <span class="hamburger-icon">☰</span>
     <span class="close-icon" style="display: none;">✕</span>
 </button>
