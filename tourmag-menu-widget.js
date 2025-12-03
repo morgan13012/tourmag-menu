@@ -25,6 +25,25 @@
             --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
+ /* FORCER L'AFFICHAGE DU WIDGET - AJOUTER ICI ⬇️ */
+    #tourmag-menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    #tourmag-menu .header {
+        display: block !important;
+    }
+
+    #tourmag-menu .main-nav {
+        display: block !important;
+    }
+    /* FIN DU CODE AJOUTÉ ⬆️ */
+
+
+
+
         * {
             margin: 0;
             padding: 0;
@@ -740,13 +759,27 @@
             }
         }
 
-        @media (max-width: 768px) {
+      @media (max-width: 768px) {
+    /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÉ */
+    #tourmag-menu {
+        display: block !important;
+    }
+    
+    #tourmag-menu .header {
+        display: block !important;
+    }
+    
+    #tourmag-menu .main-nav {
+        display: block !important;
+    }
+    
     .mobile-menu-toggle {
-        display: block;
+        display: block !important;
         position: absolute;
         left: 1rem;
-        top: calc(50% + 16px); /* descend de 8px */
+        top: calc(50% + 16px);
         transform: translateY(-50%);
+        z-index: 9999 !important;
     }
     
     /* Ajuster le container pour faire de la place au hamburger */
@@ -771,7 +804,7 @@
 
     /* Afficher la liste quand active */
     .nav-list.active {
-        display: flex;
+        display: flex !important;
     }
     
     /* Style des liens en mobile */
@@ -809,24 +842,23 @@
         grid-template-columns: 1fr !important;
         gap: 1.5rem;
     }
+
+    .logo-area {
+        padding: 1rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem 0 4rem;
+    }
+
+    .demo-content {
+        padding: 0 1rem;
+    }
+
+    .demo-section {
+        padding: 1.5rem;
+    }
 }
-
-            .logo-area {
-                padding: 1rem;
-            }
-
-            .nav-container {
-                padding: 0 1rem;
-            }
-
-            .demo-content {
-                padding: 0 1rem;
-            }
-
-            .demo-section {
-                padding: 1.5rem;
-            }
-        }
 
         /* Badge Premium */
         .premium-badge {
