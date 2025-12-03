@@ -730,6 +730,23 @@
     z-index: 100;
 }
 
+/* Styles pour le bouton hamburger/croix */
+.mobile-menu-toggle .hamburger-icon,
+.mobile-menu-toggle .close-icon {
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+}
+
+.mobile-menu-toggle.active .hamburger-icon {
+    display: none !important;
+}
+
+.mobile-menu-toggle.active .close-icon {
+    display: block !important;
+}
+
+
+
 
         /* Responsive */
         @media (max-width: 1200px) {
@@ -1001,7 +1018,10 @@
         <!-- Navigation principale -->
         <nav class="main-nav">
             <div class="nav-container">
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" id="mobileMenuToggle">
+    <span class="hamburger-icon">☰</span>
+    <span class="close-icon" style="display: none;">✕</span>
+</button>
                 <ul class="nav-list" id="navList">
                     <!-- 1. TourMaG -->
                     <li class="nav-item">
@@ -1444,10 +1464,16 @@
     }
     
     // Toggle menu mobile - fonction globale
-   window.toggleMobileMenu = function() {
+  window.toggleMobileMenu = function() {
     const navList = document.getElementById('navList');
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    
     if (navList) {
         navList.classList.toggle('active');
+    }
+    
+    if (toggleBtn) {
+        toggleBtn.classList.toggle('active');
     }
 };
     
