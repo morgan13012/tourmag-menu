@@ -767,6 +767,42 @@
         position: relative !important;
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
+
+
+  /* ⬇️ AJOUTEZ CE CODE ICI ⬇️ */
+    /* Uniformiser la taille des pictos sur mobile */
+    .newsletter-item .mega-link .newsletter-icon img,
+    .media-item .mega-link .media-icon img,
+    .media-simple-link img {
+        width: 40px !important;
+        height: 40px !important;
+        object-fit: contain !important;
+        vertical-align: middle !important;
+        margin-right: 0.5rem !important;
+    }
+    
+    /* Assurer que les conteneurs d'icônes ont aussi une taille fixe */
+    .newsletter-item .mega-link .newsletter-icon,
+    .media-item .mega-link .media-icon {
+        width: 40px !important;
+        height: 40px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+    }
+    /* ⬆️ FIN DU CODE À AJOUTER ⬆️ */
+
+
+
+
+
+
+
+
+
+
+
     
     #tourmag-menu .header {
         display: block !important;
@@ -889,6 +925,7 @@
     #tourmag-menu .nav-list.active {
         display: flex !important;
         position : relative !important ;
+    
     }
 
 
