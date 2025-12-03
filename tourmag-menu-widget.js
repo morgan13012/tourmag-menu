@@ -764,6 +764,26 @@
     #tourmag-menu {
         display: block !important;
     }
+
+#tourmag-menu .sub-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111 !important;
+    padding: 0.5rem 1rem;
+}
+
+#tourmag-menu .sub-menu li a {
+    color: #fff !important;
+    padding: 0.5rem 0;
+}
+
+
+
+
+
+
+
     
     #tourmag-menu .header {
         display: block !important;
