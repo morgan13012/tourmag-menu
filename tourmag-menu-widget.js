@@ -742,7 +742,7 @@
 
 /* Par défaut : hamburger visible, croix cachée */
 .mobile-menu-toggle .close-icon {
-    display: none;
+    display: none !important;
 }
 
 /* Quand actif : hamburger caché, croix visible */
@@ -1677,6 +1677,7 @@
                 !nav.contains(event.target) && 
                 !toggle.contains(event.target)) {
                 navList.classList.remove('active');
+                toggle.classList.remove('active');
             }
         });
 
