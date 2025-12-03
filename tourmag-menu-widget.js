@@ -764,26 +764,6 @@
     #tourmag-menu {
         display: block !important;
     }
-
-#tourmag-menu .sub-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #111 !important;
-    padding: 0.5rem 1rem;
-}
-
-#tourmag-menu .sub-menu li a {
-    color: #fff !important;
-    padding: 0.5rem 0;
-}
-
-
-
-
-
-
-
     
     #tourmag-menu .header {
         display: block !important;
@@ -799,7 +779,7 @@
         left: 1rem;
         top: calc(50% - 40px);
         transform: translateY(-50%);
-        z-index: 9999 !important;
+        z-index: 2147483647 !important;
     }
     
     /* Ajuster le container pour faire de la place au hamburger */
@@ -811,63 +791,31 @@
     /* Cacher la liste par défaut */
     .nav-list {
         display: none;
-        flex-direction: column !important;
-        position: fixed !important;
-        top: 60px;
+        flex-direction: column;
+        position: absolute !important;
+        top: 100% !important;
         left: 0 !important;
         right: 0 !important;
-        width: 100% !important;
-        background: #000000;
-        box-shadow: var(--shadow-lg);
-        padding: 0.5rem 0;
+        background: #000000 !important;
+        box-shadow: var(--shadow-lg) !important;
+        padding: 0.5rem 0 !important;
         gap: 0;
-        z-index: 99999 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
+        z-index: 2147483647 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
+    }
+
+    .header {
+        z-index: 2147483647 !important;
+    }
+
+    .main-nav {
+        z-index: 2147483647 !important;
     }
 
     /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
-        flex-direction: column !important;
-        z-index: 99999 !important;  /* ← AJOUTE AUSSI ICI */
+        z-index: 2147483647 !important;  /* ← AJOUTE AUSSI ICI */
     }
-
-.nav-item {
-    width: 100% !important;
-    display: block !important;
-}
-
-/* Liens en pleine largeur */
-.nav-link {
-    width: 100% !important;
-}
-
-
-
- #tourmag-menu {
-        position: relative !important;
-        z-index: 999999 !important;
-    }
-
-    #tourmag-menu .nav-list {
-        position: fixed !important;
-        top: 60px; /* Ajustez si besoin selon la hauteur du header */
-        left: 0;
-        right: 0;
-        background: #000000;
-        height: calc(100vh - 60px);
-        overflow-y: auto;
-        z-index: 999999 !important;
-    }
-
-    #tourmag-menu .main-nav {
-        position: relative !important;
-        z-index: 999999 !important;
-    }
-
-}
-
-
-
     
     /* Style des liens en mobile */
     .nav-link {
@@ -883,14 +831,13 @@
 
     /* Mega menu en mobile */
     .mega-menu {
-        position: static !important;
+        position: static;
         box-shadow: none;
         border-top: none;
         border-left: 3px solid;
         border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
         margin-left: 1rem;
         display: none;
-        width: 100% !important ;
     }
     
     /* Afficher le mega menu quand activé */
@@ -1565,49 +1512,28 @@
             });
 
             // Gestion des sous-menus sur mobile ET desktop
-            // Gestion des sous-menus sur mobile ET desktop
-const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
-
-navItems.forEach(item => {
-    const link = item.querySelector('.nav-link');
-    const megaMenu = item.querySelector('.mega-menu');
-    
-    // Empêcher la navigation uniquement pour les onglets avec mega menu
-    if (megaMenu) {
-        link.addEventListener('click', function(e) {
-            // Sur mobile (largeur <= 768px), gérer l'ouverture/fermeture
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
+            const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+            
+            navItems.forEach(item => {
+                const link = item.querySelector('.nav-link');
+                const megaMenu = item.querySelector('.mega-menu');
                 
-                // Fermer les autres menus
-                navItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        const otherMega = otherItem.querySelector('.mega-menu');
-                        if (otherMega) {
-                            otherItem.classList.remove('active');
-                            otherMega.style.display = "none";
-                        }
-                    }
-                });
-                
-                // Toggle le menu actuel
-                if (megaMenu.style.display === 'block') {
-                    megaMenu.style.display = 'none';
-                } else {
-                    megaMenu.style.display = 'block';
-                    megaMenu.style.opacity = '1';
-                    megaMenu.style.visibility = 'visible';
-                }
-            }
-            // Sur desktop, on ne fait rien - le hover CSS gère l'affichage
-            // On empêche juste la navigation vers #
-            else {
-                e.preventDefault();
-            }
-        });
-    }
-    // Les onglets sans mega menu (Petites Annonces, Contacts) restent cliquables normalement
-});
+                // Empêcher la navigation uniquement pour les onglets avec mega menu
+                if (megaMenu) {
+                    link.addEventListener('click', function(e) {
+                        // Sur mobile (largeur <= 768px), gérer l'ouverture/fermeture
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            
+                            // Fermer les autres menus
+                            navItems.forEach(otherItem => {
+                                if (otherItem !== item) {
+                                    const otherMenu = otherItem.querySelector('.mega-menu');
+                                    if (otherMenu) {
+                                        otherMenu.style.display = 'none';
+                                    }
+                                }
+                            });
                             
                             // Toggle le menu actuel
                             if (megaMenu.style.display === 'block') {
