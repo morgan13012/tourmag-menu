@@ -745,7 +745,7 @@
         display: block;
         position: absolute;
         left: 1rem;
-        top: calc(50% + 8px); /* descend de 8px */
+        top: calc(50% + 16px); /* descend de 8px */
         transform: translateY(-50%);
     }
     
