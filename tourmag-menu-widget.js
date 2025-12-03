@@ -764,6 +764,26 @@
     #tourmag-menu {
         display: block !important;
     }
+
+#tourmag-menu .sub-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111 !important;
+    padding: 0.5rem 1rem;
+}
+
+#tourmag-menu .sub-menu li a {
+    color: #fff !important;
+    padding: 0.5rem 0;
+}
+
+
+
+
+
+
+
     
     #tourmag-menu .header {
         display: block !important;
@@ -779,7 +799,7 @@
         left: 1rem;
         top: calc(50% - 40px);
         transform: translateY(-50%);
-        z-index: 2147483647 !important;
+        z-index: 9999 !important;
     }
     
     /* Ajuster le container pour faire de la place au hamburger */
@@ -791,31 +811,63 @@
     /* Cacher la liste par défaut */
     .nav-list {
         display: none;
-        flex-direction: column;
-        position: absolute !important;
-        top: 100% !important;
+        flex-direction: column !important;
+        position: fixed !important;
+        top: 60px;
         left: 0 !important;
         right: 0 !important;
-        background: #000000 !important;
-        box-shadow: var(--shadow-lg) !important;
-        padding: 0.5rem 0 !important;
+        width: 100% !important;
+        background: #000000;
+        box-shadow: var(--shadow-lg);
+        padding: 0.5rem 0;
         gap: 0;
-        z-index: 2147483647 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
-    }
-
-    .header {
-        z-index: 2147483647 !important;
-    }
-
-    .main-nav {
-        z-index: 2147483647 !important;
+        z-index: 99999 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
     }
 
     /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
-        z-index: 2147483647 !important;  /* ← AJOUTE AUSSI ICI */
+        flex-direction: column !important;
+        z-index: 99999 !important;  /* ← AJOUTE AUSSI ICI */
     }
+
+.nav-item {
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Liens en pleine largeur */
+.nav-link {
+    width: 100% !important;
+}
+
+
+
+ #tourmag-menu {
+        position: relative !important;
+        z-index: 999999 !important;
+    }
+
+    #tourmag-menu .nav-list {
+        position: fixed !important;
+        top: 60px; /* Ajustez si besoin selon la hauteur du header */
+        left: 0;
+        right: 0;
+        background: #000000;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        z-index: 999999 !important;
+    }
+
+    #tourmag-menu .main-nav {
+        position: relative !important;
+        z-index: 999999 !important;
+    }
+
+}
+
+
+
     
     /* Style des liens en mobile */
     .nav-link {
@@ -831,13 +883,14 @@
 
     /* Mega menu en mobile */
     .mega-menu {
-        position: static;
+        position: static !important;
         box-shadow: none;
         border-top: none;
         border-left: 3px solid;
         border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
         margin-left: 1rem;
         display: none;
+        width: 100% !important ;
     }
     
     /* Afficher le mega menu quand activé */
@@ -1527,13 +1580,16 @@
                             
                             // Fermer les autres menus
                             navItems.forEach(otherItem => {
-                                if (otherItem !== item) {
-                                    const otherMenu = otherItem.querySelector('.mega-menu');
-                                    if (otherMenu) {
-                                        otherMenu.style.display = 'none';
-                                    }
-                                }
-                            });
+    if (otherItem !== item) {
+        const otherMega = otherItem.querySelector('.mega-menu');
+        // On ne modifie que les éléments qui ont un méga-menu
+        if (otherMega) {
+            otherItem.classList.remove('active');
+            otherMega.style.display = "none";
+        }
+    }
+});
+
                             
                             // Toggle le menu actuel
                             if (megaMenu.style.display === 'block') {
