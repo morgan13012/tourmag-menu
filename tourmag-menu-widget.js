@@ -720,7 +720,6 @@
 
 /* Menu mobile - Bouton hamburger */
         /* Menu mobile - Bouton hamburger */
-/* Menu mobile - Bouton hamburger */
 .mobile-menu-toggle {
     display: none;
     background: none;
@@ -729,7 +728,7 @@
     color: #000000;
     cursor: pointer;
     padding: 1rem;
-    z-index: 2147483647 !important;
+    z-index: 100;
     position: relative;
 }
 
@@ -739,14 +738,11 @@
     transition: all 0.3s ease;
     font-size: 1.8rem;
     display: block;
-    color: #000000 !important;
-    position: relative;
-    z-index: 2147483647 !important;
 }
 
 /* Par défaut : hamburger visible, croix cachée */
 .mobile-menu-toggle .close-icon {
-    display: none !important;
+    display: none;
 }
 
 /* Quand actif : hamburger caché, croix visible */
@@ -756,11 +752,6 @@
 
 .mobile-menu-toggle.active .close-icon {
     display: block !important;
-    color: #ff0000 !important;  /* Rouge pour test */
-    font-size: 2.5rem !important;
-    font-weight: bold !important;
-    position: relative !important;
-    z-index: 2147483647 !important;
 }
 
 
@@ -851,8 +842,8 @@
         display: block !important;
         position: absolute;
         left: 1rem;
-        top: calc(50% - 40px);
-        transform: translateY(-50%);
+        top: calc(50% +30px);
+        transform: translateY(-90%);
         z-index: 2147483647 !important;
     }
     
