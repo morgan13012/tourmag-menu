@@ -876,7 +876,9 @@
         border-left: 3px solid;
         border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
         margin-left: 0 !important;
+        margin-right : 0 !important ;
         display: none;
+        padding : 0 !important;
     }
     
     /* Afficher le mega menu quand activé */
@@ -890,6 +892,13 @@
     .mega-columns {
         grid-template-columns: 1fr !important;
         gap: 1.5rem;
+        width: 100% !important ;
+    }
+
+
+    .mega-column {
+        width: 100% !important;
+        padding: 0 !important;
     }
 
     .logo-area {
