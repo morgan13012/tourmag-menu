@@ -791,11 +791,12 @@
     /* Cacher la liste par défaut */
     .nav-list {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
+        flex-direction: column !important;
+        position: fixed !important;
+        top: 60px;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
         background: #000000;
         box-shadow: var(--shadow-lg);
         padding: 0.5rem 0;
@@ -806,12 +807,21 @@
     /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
+        flex-direction: column !important;
         z-index: 99999 !important;  /* ← AJOUTE AUSSI ICI */
     }
 
+.nav-item {
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Liens en pleine largeur */
+.nav-link {
+    width: 100% !important;
+}
 
 
-    
 
  #tourmag-menu {
         position: relative !important;
@@ -853,13 +863,14 @@
 
     /* Mega menu en mobile */
     .mega-menu {
-        position: static;
+        position: static !important;
         box-shadow: none;
         border-top: none;
         border-left: 3px solid;
         border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
         margin-left: 1rem;
         display: none;
+        width: 100% !important ;
     }
     
     /* Afficher le mega menu quand activé */
