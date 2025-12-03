@@ -808,6 +808,36 @@
         display: flex !important;
         z-index: 99999 !important;  /* ← AJOUTE AUSSI ICI */
     }
+
+
+
+    
+
+ #tourmag-menu {
+        position: relative !important;
+        z-index: 999999 !important;
+    }
+
+    #tourmag-menu .nav-list {
+        position: fixed !important;
+        top: 60px; /* Ajustez si besoin selon la hauteur du header */
+        left: 0;
+        right: 0;
+        background: #000000;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        z-index: 999999 !important;
+    }
+
+    #tourmag-menu .main-nav {
+        position: relative !important;
+        z-index: 999999 !important;
+    }
+
+}
+
+
+
     
     /* Style des liens en mobile */
     .nav-link {
