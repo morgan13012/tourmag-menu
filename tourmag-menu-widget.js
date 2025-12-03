@@ -761,52 +761,41 @@
 
       @media (max-width: 768px) {
     /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÉ */
-    #tourmag-menu {
+     #tourmag-menu {
         display: block !important;
+        position: relative !important;
+        z-index: 999999 !important;
     }
     
     #tourmag-menu .header {
         display: block !important;
+        position: relative !important;
+        z-index: 999999 !important;
     }
     
     #tourmag-menu .main-nav {
         display: block !important;
+        position: relative !important;
+        z-index: 999999 !important;
     }
     
-    .mobile-menu-toggle {
-        display: block !important;
-        position: absolute;
-        left: 1rem;
-        top: calc(50% - 40px);
-        transform: translateY(-50%);
-        z-index: 9999 !important;
-    }
-    
-    /* Ajuster le container pour faire de la place au hamburger */
-    .nav-container {
-        position: relative;
-        padding: 0 1rem 0 4rem;
-    }
-
-    /* Cacher la liste par défaut */
     .nav-list {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
+        position: fixed !important;  /* ← CHANGE de absolute à fixed */
+        top: auto !important;
+        left: 0 !important;
+        right: 0 !important;
         background: #000000;
-        box-shadow: var(--shadow-lg);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
         padding: 0.5rem 0;
         gap: 0;
-        z-index: 99999 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
+        z-index: 999999 !important;
     }
 
-    /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
-        z-index: 99999 !important;  /* ← AJOUTE AUSSI ICI */
+        z-index: 999999 !important;
     }
     
     /* Style des liens en mobile */
