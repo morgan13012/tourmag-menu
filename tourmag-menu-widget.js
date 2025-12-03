@@ -30,6 +30,7 @@
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
+       
     }
 
     #tourmag-menu .header {
@@ -763,6 +764,8 @@
     /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÉ */
     #tourmag-menu {
         display: block !important;
+        position: relative !important;
+    z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
     
     #tourmag-menu .header {
@@ -868,6 +871,28 @@
     .demo-section {
         padding: 1.5rem;
     }
+
+
+ #tourmag-menu .nav-container {
+        position: relative !important;
+        z-index: 2147483647 !important;
+    }
+
+    #tourmag-menu .nav-list {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 2147483647 !important;
+    }
+
+    #tourmag-menu .nav-list.active {
+        display: flex !important;
+    }
+
+
+
+
 }
 
         /* Badge Premium */
