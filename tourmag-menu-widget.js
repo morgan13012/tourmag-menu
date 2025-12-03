@@ -792,15 +792,23 @@
     .nav-list {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #000000;
-        box-shadow: var(--shadow-lg);
-        padding: 0.5rem 0;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: #000000 !important;
+        box-shadow: var(--shadow-lg) !important;
+        padding: 0.5rem 0 !important;
         gap: 0;
         z-index: 99999 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
+    }
+
+    .header {
+        z-index: 99999 !important;
+    }
+
+    .main-nav {
+        z-index: 99999 !important;
     }
 
     /* Afficher la liste quand active */
