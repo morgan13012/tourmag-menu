@@ -821,7 +821,11 @@
 
 
 
-
+.mega-menu-content {
+            
+            padding: 1rem 1rem;
+           
+        }
 
 
 
