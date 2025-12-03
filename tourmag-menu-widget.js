@@ -777,7 +777,7 @@
         display: block !important;
         position: absolute;
         left: 1rem;
-        top: calc(50% - 24px);
+        top: calc(50% - 40px);
         transform: translateY(-50%);
         z-index: 9999 !important;
     }
@@ -800,11 +800,13 @@
         box-shadow: var(--shadow-lg);
         padding: 0.5rem 0;
         gap: 0;
+        z-index: 99999 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
     }
 
     /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
+        z-index: 99999 !important;  /* ← AJOUTE AUSSI ICI */
     }
     
     /* Style des liens en mobile */
