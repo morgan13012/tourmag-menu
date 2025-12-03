@@ -875,7 +875,7 @@
         border-top: none;
         border-left: 3px solid;
         border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
-        margin-left: 1rem;
+        margin-left: 0 !important;
         display: none;
     }
     
