@@ -779,7 +779,7 @@
         left: 1rem;
         top: calc(50% - 40px);
         transform: translateY(-50%);
-        z-index: 9999 !important;
+        z-index: 2147483647 !important;
     }
     
     /* Ajuster le container pour faire de la place au hamburger */
@@ -800,21 +800,21 @@
         box-shadow: var(--shadow-lg) !important;
         padding: 0.5rem 0 !important;
         gap: 0;
-        z-index: 99999 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
+        z-index: 2147483647 !important;  /* ← AJOUTE CETTE LIGNE avec une valeur très élevée */
     }
 
     .header {
-        z-index: 99999 !important;
+        z-index: 2147483647 !important;
     }
 
     .main-nav {
-        z-index: 99999 !important;
+        z-index: 2147483647 !important;
     }
 
     /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
-        z-index: 99999 !important;  /* ← AJOUTE AUSSI ICI */
+        z-index: 2147483647 !important;  /* ← AJOUTE AUSSI ICI */
     }
     
     /* Style des liens en mobile */
