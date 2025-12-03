@@ -901,6 +901,13 @@
         padding: 0 !important;
     }
 
+    .media-item .mega-link,
+.media-simple-link {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    padding-left: 1rem !important;
+}
+
     .logo-area {
         padding: 1rem;
     }
