@@ -727,12 +727,31 @@
             }
         }
 
-       @media (max-width: 600px) {
-    #tourmag-menu,
-    #tourmag-menu .header,
-    #tourmag-menu .main-nav {
-        display: none !important;
-    }
+      @media (max-width: 600px) {
+    /* Mobile menu toggle button */
+    /* Menu mobile */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .logo-area {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+            }
+        }
 
             .nav-list {
                 display: none;
@@ -854,8 +873,12 @@
             console.error('TourMag Menu: Element #tourmag-menu not found');
             return false;
         }
-        container.innerHTML = `<header class="header">
-        <!-- Bandeau supérieur -->
+       container.innerHTML = `<header class="header">
+        <!-- Logo et bouton mobile -->
+        <div class="logo-area">
+            <a href="https://www.tourmag.com/" class="logo">TourMa<span>G</span></a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
         
 
         <!-- Navigation principale -->
