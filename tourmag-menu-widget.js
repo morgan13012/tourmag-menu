@@ -700,15 +700,15 @@
 
 /* Menu mobile - Bouton hamburger */
         .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: #ffffff;
-            cursor: pointer;
-            padding: 1rem;
-            z-index: 100;
-        }
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #000000; /* noir */
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 100;
+}
 
 
         /* Responsive */
@@ -741,12 +741,11 @@
         }
 
         @media (max-width: 768px) {
-    /* Afficher le bouton hamburger */
     .mobile-menu-toggle {
         display: block;
         position: absolute;
         left: 1rem;
-        top: 50%;
+        top: calc(50% + 8px); /* descend de 8px */
         transform: translateY(-50%);
     }
     
