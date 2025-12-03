@@ -741,75 +741,76 @@
         }
 
         @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: block;
-                position: absolute;
-                left: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            
-            .nav-container {
-                position: relative;
-                padding-left: 4rem;
-            }
+    /* Afficher le bouton hamburger */
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    /* Ajuster le container pour faire de la place au hamburger */
+    .nav-container {
+        position: relative;
+        padding: 0 1rem 0 4rem;
+    }
 
-            .nav-list {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #000000;
-                box-shadow: var(--shadow-lg);
-                padding: 0.5rem 0;
-                gap: 0;
-            }
+    /* Cacher la liste par défaut */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #000000;
+        box-shadow: var(--shadow-lg);
+        padding: 0.5rem 0;
+        gap: 0;
+    }
 
-            .nav-list.active {
-                display: flex;
-            }
-            
-            /* Réduire le padding des liens en mobile */
-            .nav-link {
-                color: #ffffff;
-                padding: 0.75rem 1.5rem;
-            }
-            
-            .nav-link:hover {
-                color: #59DF7A;
-                background: rgba(89, 223, 122, 0.1);
-            }
-            
-            /* Désactiver l'ouverture automatique du mega menu au hover */
-            .nav-item:hover .mega-menu {
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(-10px);
-            }
+    /* Afficher la liste quand active */
+    .nav-list.active {
+        display: flex;
+    }
+    
+    /* Style des liens en mobile */
+    .nav-link {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    /* Désactiver le hover sur mobile */
+    .nav-item:hover .mega-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
 
-            .mega-menu {
-                position: static;
-                box-shadow: none;
-                border-top: none;
-                border-left: 3px solid;
-                border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
-                margin-left: 1rem;
-                display: none;
-            }
-            
-            /* Afficher le mega menu quand il est activé par JavaScript */
-            .mega-menu[style*="display: block"] {
-                display: block !important;
-                opacity: 1;
-                visibility: visible;
-            }
+    /* Mega menu en mobile */
+    .mega-menu {
+        position: static;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid;
+        border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
+        margin-left: 1rem;
+        display: none;
+    }
+    
+    /* Afficher le mega menu quand activé */
+    .mega-menu[style*="display: block"] {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+    }
 
-            .mega-columns {
-                grid-template-columns: 1fr !important;
-                gap: 1.5rem;
-            }
+    /* Une seule colonne sur mobile */
+    .mega-columns {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+}
 
             .logo-area {
                 padding: 1rem;
