@@ -742,7 +742,7 @@
 
 /* Par défaut : hamburger visible, croix cachée */
 .mobile-menu-toggle .close-icon {
-    display: none !important;
+    display: none;
 }
 
 /* Quand actif : hamburger caché, croix visible */
