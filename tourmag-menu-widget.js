@@ -764,26 +764,6 @@
     #tourmag-menu {
         display: block !important;
     }
-
-#tourmag-menu .sub-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #111 !important;
-    padding: 0.5rem 1rem;
-}
-
-#tourmag-menu .sub-menu li a {
-    color: #fff !important;
-    padding: 0.5rem 0;
-}
-
-
-
-
-
-
-
     
     #tourmag-menu .header {
         display: block !important;
@@ -1580,16 +1560,13 @@
                             
                             // Fermer les autres menus
                             navItems.forEach(otherItem => {
-    if (otherItem !== item) {
-        const otherMega = otherItem.querySelector('.mega-menu');
-        // On ne modifie que les éléments qui ont un méga-menu
-        if (otherMega) {
-            otherItem.classList.remove('active');
-            otherMega.style.display = "none";
-        }
-    }
-});
-
+                                if (otherItem !== item) {
+                                    const otherMenu = otherItem.querySelector('.mega-menu');
+                                    if (otherMenu) {
+                                        otherMenu.style.display = 'none';
+                                    }
+                                }
+                            });
                             
                             // Toggle le menu actuel
                             if (megaMenu.style.display === 'block') {
