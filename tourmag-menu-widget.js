@@ -1565,31 +1565,49 @@
             });
 
             // Gestion des sous-menus sur mobile ET desktop
-            const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
-            
-            navItems.forEach(item => {
-                const link = item.querySelector('.nav-link');
-                const megaMenu = item.querySelector('.mega-menu');
-                
-                // Empêcher la navigation uniquement pour les onglets avec mega menu
-                if (megaMenu) {
-                    link.addEventListener('click', function(e) {
-                        // Sur mobile (largeur <= 768px), gérer l'ouverture/fermeture
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            
-                            // Fermer les autres menus
-                            navItems.forEach(otherItem => {
-    if (otherItem !== item) {
-        const otherMega = otherItem.querySelector('.mega-menu');
-        // On ne modifie que les éléments qui ont un méga-menu
-        if (otherMega) {
-            otherItem.classList.remove('active');
-            otherMega.style.display = "none";
-        }
-    }
-});
+            // Gestion des sous-menus sur mobile ET desktop
+const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
 
+navItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const megaMenu = item.querySelector('.mega-menu');
+    
+    // Empêcher la navigation uniquement pour les onglets avec mega menu
+    if (megaMenu) {
+        link.addEventListener('click', function(e) {
+            // Sur mobile (largeur <= 768px), gérer l'ouverture/fermeture
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                
+                // Fermer les autres menus
+                navItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherMega = otherItem.querySelector('.mega-menu');
+                        if (otherMega) {
+                            otherItem.classList.remove('active');
+                            otherMega.style.display = "none";
+                        }
+                    }
+                });
+                
+                // Toggle le menu actuel
+                if (megaMenu.style.display === 'block') {
+                    megaMenu.style.display = 'none';
+                } else {
+                    megaMenu.style.display = 'block';
+                    megaMenu.style.opacity = '1';
+                    megaMenu.style.visibility = 'visible';
+                }
+            }
+            // Sur desktop, on ne fait rien - le hover CSS gère l'affichage
+            // On empêche juste la navigation vers #
+            else {
+                e.preventDefault();
+            }
+        });
+    }
+    // Les onglets sans mega menu (Petites Annonces, Contacts) restent cliquables normalement
+});
                             
                             // Toggle le menu actuel
                             if (megaMenu.style.display === 'block') {
