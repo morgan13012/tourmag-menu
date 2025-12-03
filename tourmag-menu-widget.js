@@ -906,7 +906,7 @@
     }
 
     .nav-container {
-        padding: 0 1rem 0 4rem;
+        padding: 0 1rem 0 1rem;
     }
 
     .demo-content {
