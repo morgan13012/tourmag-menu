@@ -774,8 +774,8 @@
     .newsletter-item .mega-link .newsletter-icon img,
     .media-item .mega-link .media-icon img,
     .media-simple-link img {
-        width: 40px !important;
-        height: 40px !important;
+        width: 10px !important;
+        height: 10px !important;
         object-fit: contain !important;
         vertical-align: middle !important;
         margin-right: 0.5rem !important;
@@ -784,8 +784,8 @@
     /* Assurer que les conteneurs d'icônes ont aussi une taille fixe */
     .newsletter-item .mega-link .newsletter-icon,
     .media-item .mega-link .media-icon {
-        width: 40px !important;
-        height: 40px !important;
+        width: 15px !important;
+        height: 15px !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
