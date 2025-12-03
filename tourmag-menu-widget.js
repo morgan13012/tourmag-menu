@@ -777,7 +777,7 @@
         display: block !important;
         position: absolute;
         left: 1rem;
-        top: calc(50% + 16px);
+        top: calc(50% + 2px);
         transform: translateY(-50%);
         z-index: 9999 !important;
     }
