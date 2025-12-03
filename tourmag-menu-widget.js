@@ -862,10 +862,12 @@
             border-radius: 4px;
         }
 
-        .mega-menu::-webkit-scrollbar-thumb:hover {
+                .mega-menu::-webkit-scrollbar-thumb:hover {
             background: var(--primary-dark);
-        }`;
+        }
+`;
         document.head.appendChild(style);
+
     }
     
     // Injecter le HTML
