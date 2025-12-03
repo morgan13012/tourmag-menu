@@ -730,14 +730,20 @@
       @media (max-width: 600px) {
     /* Mobile menu toggle button */
     /* Menu mobile */
+       /* Menu mobile */
         .mobile-menu-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
-            color: var(--primary-blue);
+            font-size: 1.8rem;
+            color: #ffffff;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 1rem;
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
         }
 
         @media (max-width: 768px) {
@@ -745,11 +751,16 @@
                 display: block;
             }
             
-            .logo-area {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem 2rem;
+            .header {
+                display: none;
+            }
+            
+            .main-nav {
+                position: relative;
+            }
+            
+            .nav-container {
+                position: relative;
             }
         }
 
@@ -874,17 +885,10 @@
             return false;
         }
        container.innerHTML = `<header class="header">
-        <!-- Logo et bouton mobile -->
-        <div class="logo-area">
-            <a href="https://www.tourmag.com/" class="logo">TourMa<span>G</span></a>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-        </div>
-        
-
         <!-- Navigation principale -->
         <nav class="main-nav">
-      
             <div class="nav-container">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
                 <ul class="nav-list" id="navList">
                     <!-- 1. TourMaG -->
                     <li class="nav-item">
