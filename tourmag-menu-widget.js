@@ -1580,13 +1580,16 @@
                             
                             // Fermer les autres menus
                             navItems.forEach(otherItem => {
-                                if (otherItem !== item) {
-                                    const otherMenu = otherItem.querySelector('.mega-menu');
-                                    if (otherMenu) {
-                                        otherMenu.style.display = 'none';
-                                    }
-                                }
-                            });
+    if (otherItem !== item) {
+        const otherMega = otherItem.querySelector('.mega-menu');
+        // On ne modifie que les éléments qui ont un méga-menu
+        if (otherMega) {
+            otherItem.classList.remove('active');
+            otherMega.style.display = "none";
+        }
+    }
+});
+
                             
                             // Toggle le menu actuel
                             if (megaMenu.style.display === 'block') {
