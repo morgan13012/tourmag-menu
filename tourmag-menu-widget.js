@@ -800,8 +800,8 @@
     .newsletter-item .mega-link .newsletter-icon img,
     .media-item .mega-link .media-icon img,
     .media-simple-link img {
-        width: 25px !important;
-        height: 25px !important;
+        width: 40px !important;
+        height: 40px !important;
         object-fit: contain !important;
         vertical-align: middle !important;
         margin-right: 0.5rem !important;
@@ -810,8 +810,8 @@
     /* Assurer que les conteneurs d'icônes ont aussi une taille fixe */
     .newsletter-item .mega-link .newsletter-icon,
     .media-item .mega-link .media-icon {
-        width: 30px !important;
-        height: 30px !important;
+        width: 40px !important;
+        height: 40px !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -1202,7 +1202,7 @@
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_airmag/news_airmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/airmag1.png" alt="AirMaG"></span>AirMaG</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_airmag/news_airmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/airmag1.png" alt="AirMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>AirMaG</a></li>
                                             <li class="newsletter-item">
                                                 <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/brochures_en_ligne1.png" alt="Brochures en ligne"></span>Brochures en ligne<span class="chevron">▼</span></button>
                                                 <div class="newsletter-submenu">
@@ -1213,23 +1213,23 @@
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_cruisemag/news_cruisemag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/cruisemag.png" alt="CruiseMaG"></span>CruiseMaG</a></li>
-                                            <li><a href="https://www.tourmag.com/my/newsletter_DESTIMAG/archives/Newsletter_DESTIMAG.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/destimag.png" alt="DestiMaG"></span>DestiMaG</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_cruisemag/news_cruisemag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/cruisemag.png" alt="CruiseMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>CruiseMaG</a></li>
+                                            <li><a href="https://www.tourmag.com/my/newsletter_DESTIMAG/archives/Newsletter_DESTIMAG.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/destimag.png" alt="DestiMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>DestiMaG</a></li>
                                         </ul>
                                     </div>
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_partezenfrance/news_partezenfrance_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/partez_en_france.png" alt="Partez en France"></span>Partez en France</a></li>
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_latraveltech/news_latraveltech_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/la_travel_tech.png" alt="La Travel Tech"></span>La Travel Tech</a></li>
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_luxurytravelmag/news_luxurytravelmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/luxury_travel_mag.png" alt="LuxuryTravelMaG"></span>LuxuryTravelMaG</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_partezenfrance/news_partezenfrance_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/partez_en_france.png" alt="Partez en France" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>Partez en France</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_latraveltech/news_latraveltech_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/la_travel_tech.png" alt="La Travel Tech" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>La Travel Tech</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_luxurytravelmag/news_luxurytravelmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/luxury_travel_mag.png" alt="LuxuryTravelMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>LuxuryTravelMaG</a></li>
                                             <li><a href="https://www.tourmag.com/my/tourmag/news_salon/news_salon_derniere.html" class="media-simple-link" style="padding-left: 4rem;">Salons et événements</a></li>
-                                            <li><a href="https://www.tourmag.com/my/tourmag/emploi/newsemploi_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/traveljobs.png" alt="TravelJobs"></span>TravelJobs</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/emploi/newsemploi_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/traveljobs.png" alt="TravelJobs" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>TravelJobs</a></li>
                                         </ul>
                                     </div>
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_travelmanagermag/news_travelmanagermag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/tmcmag.png" alt="TravelManagerMaG"></span>TravelManagerMaG</a></li>
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_voyagesresponsables/news_voyagesresponsables_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/voyages_responsables.png" alt="Voyages Responsables"></span>Voyages Responsables</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_travelmanagermag/news_travelmanagermag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/tmcmag.png" alt="TravelManagerMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>TravelManagerMaG</a></li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_voyagesresponsables/news_voyagesresponsables_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/voyages_responsables.png" alt="Voyages Responsables" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>Voyages Responsables</a></li>
                                         </ul>
                                         
                                         <!-- FAQ traitée différemment -->
