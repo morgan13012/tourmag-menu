@@ -128,6 +128,18 @@
             position: relative;
         }
 
+        /* Créer un "pont" invisible entre le nav-item et le mega menu */
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: transparent;
+            pointer-events: auto;
+        }
+
         .nav-link {
             display: flex;
             align-items: center;
@@ -199,12 +211,31 @@
             pointer-events: auto;
         }
 
+        /* Maintenir le mega menu ouvert quand on le survole directement */
+        .mega-menu:hover {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
         .mega-menu-content {
             max-width: 1600px;
             margin: 0 auto;
             padding: 3rem 3rem;
             position: relative;
             overflow: visible;
+        }
+
+        /* Ajouter une zone invisible au-dessus du contenu pour maintenir le hover */
+        .mega-menu-content::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: transparent;
         }
 
         /* Colonnes du mega menu */
