@@ -132,10 +132,10 @@
         .nav-item::after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: -30px;
             left: 0;
             right: 0;
-            height: 20px;
+            height: 30px;
             background: transparent;
             pointer-events: auto;
         }
@@ -219,6 +219,14 @@
             pointer-events: auto;
         }
 
+        /* Gestion par JavaScript avec la classe hovering */
+        .nav-item.hovering .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
         .mega-menu-content {
             max-width: 1600px;
             margin: 0 auto;
@@ -231,10 +239,10 @@
         .mega-menu-content::before {
             content: '';
             position: absolute;
-            top: -20px;
+            top: -30px;
             left: 0;
             right: 0;
-            height: 20px;
+            height: 30px;
             background: transparent;
         }
 
@@ -1475,7 +1483,9 @@
             
             const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
             megaMenus.forEach(menu => {
-                menu.style.top = navBottom + 'px';
+                // Positionner le menu exactement sous la navigation, sans espace
+                // En soustrayant 1px pour créer un léger chevauchement et éviter les gaps
+                menu.style.top = (navBottom - 1) + 'px';
             });
         }
         
@@ -1500,6 +1510,53 @@
         
         // Mettre à jour lors du resize
         window.addEventListener('resize', updateMegaMenuPositions);
+        
+        // Gestion améliorée du hover pour éviter la fermeture prématurée (desktop uniquement)
+        if (window.innerWidth > 768) {
+            const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+            
+            navItems.forEach(navItem => {
+                const megaMenu = navItem.querySelector('.mega-menu');
+                if (!megaMenu) return;
+                
+                let hoverTimeout;
+                let isHoveringItem = false;
+                let isHoveringMenu = false;
+                
+                function checkAndClose() {
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = setTimeout(() => {
+                        if (!isHoveringItem && !isHoveringMenu) {
+                            navItem.classList.remove('hovering');
+                        }
+                    }, 150);
+                }
+                
+                // Hover sur le nav-item
+                navItem.addEventListener('mouseenter', () => {
+                    clearTimeout(hoverTimeout);
+                    isHoveringItem = true;
+                    navItem.classList.add('hovering');
+                });
+                
+                navItem.addEventListener('mouseleave', () => {
+                    isHoveringItem = false;
+                    checkAndClose();
+                });
+                
+                // Hover sur le mega-menu
+                megaMenu.addEventListener('mouseenter', () => {
+                    clearTimeout(hoverTimeout);
+                    isHoveringMenu = true;
+                    navItem.classList.add('hovering');
+                });
+                
+                megaMenu.addEventListener('mouseleave', () => {
+                    isHoveringMenu = false;
+                    checkAndClose();
+                });
+            });
+        }
         
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
