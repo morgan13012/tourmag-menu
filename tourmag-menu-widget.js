@@ -974,6 +974,14 @@
     
     }
 
+    /* Style spécifique pour le bouton newsletter sur mobile */
+    .newsletter-subscribe-btn {
+        width: 100% !important;
+        padding: 1.25rem 1rem !important;
+        font-size: 1.1rem !important;
+        text-align: center !important;
+    }
+
 
 
 
@@ -1232,8 +1240,16 @@
                                             <li><a href="https://www.tourmag.com/my/tourmag/news_voyagesresponsables/news_voyagesresponsables_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/voyages_responsables.png" alt="Voyages Responsables" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>Voyages Responsables</a></li>
                                         </ul>
                                         
+                                        <!-- Bouton d'inscription aux newsletters -->
+                                        <div style="margin-top: 2rem;">
+                                            <a href="https://tourmag.insc.edt02.net/300335/20150403/" target="_blank" class="newsletter-subscribe-btn" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 700; font-size: 1.15rem; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+                                                <span style="font-size: 1.4rem;">✉️</span>
+                                                S'abonner aux newsletters
+                                            </a>
+                                        </div>
+                                        
                                         <!-- FAQ traitée différemment -->
-                                        <div style="margin-top: 2rem; padding-top: 1.5rem; ">
+                                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; ">
                                             <a href="https://www.tourmag.com/faq/Foire-aux-questions-Newsletter_fi1063.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; padding: 0.75rem 1rem; border-radius: 6px;">
                                                 <span style="font-size: 1.2rem;">❓</span>
                                                 FAQ
