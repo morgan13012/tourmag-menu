@@ -195,19 +195,16 @@
     box-shadow: var(--shadow-lg);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.25s ease, visibility 0.25s ease;
     max-height: 80vh;
     overflow-y: auto;
     z-index: 2000;
-    will-change: transform, opacity;
     pointer-events: none;
 }
 
         .nav-item:hover .mega-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
             pointer-events: auto;
         }
 
@@ -215,7 +212,6 @@
         .mega-menu:hover {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
             pointer-events: auto;
         }
 
@@ -223,7 +219,6 @@
         .nav-item.hovering .mega-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
             pointer-events: auto;
         }
 
@@ -1486,8 +1481,14 @@
                 // Positionner le menu exactement sous la navigation, sans espace
                 // En soustrayant 1px pour créer un léger chevauchement et éviter les gaps
                 menu.style.top = (navBottom - 1) + 'px';
+                
+                // Ajouter une classe pour indiquer que le positionnement est prêt
+                menu.classList.add('positioned');
             });
         }
+        
+        // Appliquer le positionnement initial immédiatement
+        setTimeout(updateMegaMenuPositions, 0);
         
         // Variable pour optimiser avec requestAnimationFrame
         let ticking = false;
