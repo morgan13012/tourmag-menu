@@ -1135,7 +1135,6 @@
                                             <li><a href="https://www.tourmag.com/People_r2.html" class="media-simple-link">People</a></li>
                                             <li><a href="https://www.tourmag.com/Carnet_r57.html" class="media-simple-link">Carnet</a></li>
                                             <li><a href="https://www.tourmag.com/BONS-PLANS-AGV_r32.html" class="media-simple-link">Bons Plans AGV</a></li>
-                                            <li><a href="https://www.tourmag.com/Salons-et-evenements_r365.html" class="media-simple-link">Salons et Ã‰vÃ©nements</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1171,23 +1170,6 @@
                                             </li>
                                         </ul>
                                         
-                                        <!-- Section spÃ©ciale -->
-                                        <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                            <!-- TourMaG TV -->
-                                            <div style="background: linear-gradient(135deg, rgba(89, 223, 122, 0.15), rgba(9, 86, 231, 0.1)); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                                                <a href="https://www.tourmag.com/TourMaG-TV_r135.html" style="display: block; text-align: center;">
-                                                    <img src="https://www.tourmag.com/my/tourmag/site/menu/Logo-TourMagTV-Color-RVB.png" alt="TourMaG TV" style="max-width: 160px; height: auto; transition: transform 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                                </a>
-                                            </div>
-                                            
-                                            <!-- Futuroscopie -->
-                                            <div style="background: linear-gradient(135deg, rgba(89, 223, 122, 0.15), rgba(9, 86, 231, 0.1)); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                                                <a href="https://www.tourmag.com/futuroscopie/" style="display: block; text-align: center;">
-                                                    <img src="https://www.tourmag.com/my/tourmag/site/menu/Futuroscopie-noir_RVB.png" alt="Futuroscopie" style="max-width: 160px; height: auto; transition: transform 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <!-- Colonne 2 -->
                                     <div class="mega-column">
                                         <ul class="mega-links">
@@ -1218,9 +1200,7 @@
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li><a href="https://www.tourmag.com/travelmanagermag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/tmcmag.png" alt="TravelManagerMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">TravelManagerMaG</a></li>
                                             <li><a href="https://www.tourmag.com/voyageursmag/" class="media-simple-link" style="padding-left: 4rem;">VoyageursMaG</a></li>
-                                            <li><a href="https://www.tourmag.com/voyagesresponsables/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/voyages_responsables.png" alt="Voyages Responsables" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">Voyages Responsables</a></li>
                                         </ul>
                                     </div>
                                 </div>
