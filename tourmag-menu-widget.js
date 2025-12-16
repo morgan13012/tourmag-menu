@@ -1169,7 +1169,7 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        
+                                    </div>
                                     <!-- Colonne 2 -->
                                     <div class="mega-column">
                                         <ul class="mega-links">
