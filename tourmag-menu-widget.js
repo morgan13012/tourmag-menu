@@ -1143,10 +1143,10 @@
                         </div>
                     </li>
 
-                    <!-- 2. THÉMATIQUES -->
+                    <!-- 2. MÃ©dias -->
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            THÉMATIQUES
+                            MÃ©dias
                             <span class="nav-icon">â–¼</span>
                         </a>
                         <div class="mega-menu">
@@ -1300,15 +1300,10 @@
                         </div>
                     </li>
 
-                    <!-- 4. TV -->
-                    <li class="nav-item">
-                        <a href="https://www.tourmag.com/TourMaG-TV_r135.html" class="nav-link">TV</a>
-                    </li>
-
-                    <!-- 5. ABONNEMENTS -->
+                    <!-- 4. AbonnÃ©s -->
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            ABONNEMENTS
+                            AbonnÃ©s
                             <span class="nav-icon">â–¼</span>
                         </a>
                         <div class="mega-menu">
