@@ -807,7 +807,7 @@
 
 @media (max-width: 1400px) {
             .nav-list {
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
             }
 
             .mega-columns.cols-4,
