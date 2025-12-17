@@ -1091,7 +1091,7 @@
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
-                                <div class="mega-columns cols-3">
+                                <div class="mega-columns cols-4">
                                     <div class="mega-column">
                                         <ul class="mega-links">
                                             <li><a href="https://www.tourmag.com/Distribution_r4.html" class="media-simple-link">Distribution</a></li>
@@ -1116,6 +1116,20 @@
                                             <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-Rédactionnel</a></li>
                                             <li><a href="https://www.tourmag.com/Publi-news_r569.html" class="media-simple-link">Publi-News</a></li>
                                             <li><a href="https://www.tourmag.com/Webinaires_r493.html" class="media-simple-link">Webinaires</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Colonne 4 - Articles abonnés -->
+                                    <div class="mega-column">
+                                        <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                            <!-- Encadré Articles abonnés -->
+                                            <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
+                                                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 180px; text-align: center;">Articles abonnés</div>
+                                                <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
+                                            <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
+                                            <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club</a></li>
+                                                </div>
+                                            </div>
                                         </ul>
                                     </div>
                                 </div>
