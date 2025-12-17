@@ -1318,92 +1318,62 @@
                                                     <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">83â‚¬ TTC/an</span>
                                                 </div>
                                                 
+                                                <!-- Carte Futuroscopie -->
+                                                <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
+                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Futuroscopie</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
+                                                            Articles Premium
+                                                        </li>
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
+                                                            Futuroscopie (analyses de Josette Sicsic)
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">133â‚¬ TTC/an</span>
+                                                </div>
+                                                
                                                 <!-- Carte MemberShip Club -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
                                                     <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">MemberShip Club</h5>
                                                     <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
                                                             Articles Premium
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            Shortcast (podcast d'articles résumés)
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
+                                                            Futuroscopie
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            Interview nouveaux members
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            + d'infos WhatsApp avec
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            Shortcast quotidien
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            Une du journal la veille
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            Informations confidentielles
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            Articles en avant-première
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ"</span>
-                                                            Revue de presse
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
+                                                            Services additionnels
                                                         </li>
                                                         
                                                     </ul>
                                                     <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">483â‚¬ TTC/an</span>
                                                 </div>
                                                 
-                                                
                                                 <!-- Carte SpÃ©cial agences -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                <!-- Carte MemberShip Club -->
-                                                <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">MemberShip Club</h5>
+                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">SpÃ©cial agences</h5>
                                                     <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
                                                             Articles Premium
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
-                                                            Shortcast (podcast news résumés)
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
+                                                            Futuroscopie
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
-                                                            Interview nouveaux "Members"
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
-                                                            + fil d'infos WhatsApp avec Shortcast quotidien
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
-                                                            Une du journal la veille
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
-                                                            Informations confidentielles
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
-                                                            Articles en avant-première
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">✓</span>
-                                                            Revue de presse
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">âœ“</span>
+                                                            VidÃ©o rÃ©capitulative hebdomadaire
                                                         </li>
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">483€ TTC/an</span>
+                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">199â‚¬ HT/an</span>
                                                 </div>
                                                 
                                                 <!-- Carte Ã‰tudiant -->
