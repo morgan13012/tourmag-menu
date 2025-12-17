@@ -1272,16 +1272,9 @@
                                     <!-- Colonne 1 - Navigation compacte -->
                                     <div class="mega-column" style="max-width: 280px; min-width: 280px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium <span class="premium-badge">PREMIUM</span></a></li>
+                                            <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie <span class="premium-badge">PREMIUM</span></a></li>
                                             <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club <span class="premium-badge">PREMIUM</span></a></li>
-                                            <li class="media-item">
-                                                <button type="button" class="mega-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Articles abonnÃ©s <span class="premium-badge">PREMIUM</span><span class="chevron">▼</span></button>
-                                                <div class="media-submenu">
-                                                    <ul>
-                                                        <li><a href="https://www.tourmag.com/futuroscopie/">Futuroscopie</a></li>
-                                                        <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html">Premium</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
                                             <li><a href="https://www.tourmag.com/faq/Foire-aux-questions-Abonnements-articles_fi4792.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; font-weight: 600; padding: 0.75rem 1rem; font-size: 1.15rem;">â“ FAQ</a></li>
                                         </ul>
                                     </div>
