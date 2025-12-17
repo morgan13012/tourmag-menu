@@ -120,11 +120,13 @@
 
         .nav-list {
             display: flex;
+            flex-wrap: nowrap;
             list-style: none;
             gap: 0;
         }
 
         .nav-item {
+            flex-shrink: 0;
             position: relative;
         }
 
