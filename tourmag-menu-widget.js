@@ -1272,9 +1272,15 @@
                                     <!-- Colonne 1 - Navigation compacte -->
                                     <div class="mega-column" style="max-width: 280px; min-width: 280px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium <span class="premium-badge">PREMIUM</span></a></li>
-                                            <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie <span class="premium-badge">PREMIUM</span></a></li>
-                                            <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club <span class="premium-badge">PREMIUM</span></a></li>
+                                            <!-- Encadré Articles abonnés -->
+                                            <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
+                                                <div style="position: absolute; top: -15px; left: 20px; background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.4rem 1.2rem; border-radius: 20px; font-weight: 700; font-size: 1rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);">Articles abonnés</div>
+                                                <div style="margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
+                                            <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
+                                            <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club</a></li>
+                                                </div>
+                                            </div>
                                             <li><a href="https://www.tourmag.com/faq/Foire-aux-questions-Abonnements-articles_fi4792.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; font-weight: 600; padding: 0.75rem 1rem; font-size: 1.15rem;">â“ FAQ</a></li>
                                         </ul>
                                     </div>
