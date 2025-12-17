@@ -113,6 +113,7 @@
         }
 
         .nav-container {
+            overflow-x: auto;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 5rem;
@@ -144,11 +145,11 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 1.25rem 1.5rem;
+            padding: 1.25rem 1rem;
             color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
             position: relative;
             text-transform: uppercase;
