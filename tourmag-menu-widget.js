@@ -115,18 +115,16 @@
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 5rem;
         }
 
         .nav-list {
             display: flex;
-            flex-wrap: nowrap;
             list-style: none;
             gap: 0;
         }
 
         .nav-item {
-            flex-shrink: 0;
             position: relative;
         }
 
@@ -808,7 +806,9 @@
         }
 
 @media (max-width: 1400px) {
-            
+            .nav-list {
+                flex-wrap: nowrap;
+            }
 
             .mega-columns.cols-4,
             .mega-columns.cols-3 {
