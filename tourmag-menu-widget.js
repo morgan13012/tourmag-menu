@@ -113,7 +113,6 @@
         }
 
         .nav-container {
-            overflow-x: auto;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 5rem;
@@ -145,11 +144,11 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 1.25rem 1rem;
+            padding: 1.25rem 1.5rem;
             color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
             position: relative;
             text-transform: uppercase;
@@ -807,9 +806,7 @@
         }
 
 @media (max-width: 1400px) {
-            .nav-list {
-                flex-wrap: nowrap;
-            }
+            
 
             .mega-columns.cols-4,
             .mega-columns.cols-3 {
