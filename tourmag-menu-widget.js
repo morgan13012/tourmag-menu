@@ -1091,47 +1091,20 @@
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
-                                <div class="mega-columns cols-4">
-                                    <!-- Colonne 1 - Panoramas mÃ©tiers -->
+                                <div class="mega-columns cols-1">
                                     <div class="mega-column">
-                                        <h3 class="mega-column-title">Panoramas mÃ©tiers</h3>
                                         <ul class="mega-links">
                                             <li><a href="https://www.tourmag.com/Distribution_r4.html" class="media-simple-link">Distribution</a></li>
-                                            <li><a href="https://www.tourmag.com/Hebergement_r6.html" class="media-simple-link">HÃ©bergement</a></li>
                                             <li><a href="https://www.tourmag.com/Production_r8.html" class="media-simple-link">Production</a></li>
                                             <li><a href="https://www.tourmag.com/Transport_r7.html" class="media-simple-link">Transport</a></li>
                                             <li><a href="https://www.tourmag.com/Actus-Visas_r356.html" class="media-simple-link">Actus Visas</a></li>
-                                            <li><a href="https://www.tourmag.com/Dossiers-speciaux_r582.html" class="media-simple-link">Dossiers spÃ©ciaux</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- Colonne 2 - Contenus partenaires -->
-                                    <div class="mega-column">
-                                        <h3 class="mega-column-title">Contenus partenaires</h3>
-                                        <ul class="mega-links">
+                                            <li><a href="https://www.tourmag.com/Dossiers-speciaux_r582.html" class="media-simple-link">Dossiers spéciaux</a></li>
                                             <li><a href="https://www.tourmag.com/Brand-News_r330.html" class="media-simple-link">Brand News</a></li>
-                                            <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-RÃ©dactionnel</a></li>
+                                            <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-Rédactionnel</a></li>
                                             <li><a href="https://www.tourmag.com/Publi-news_r569.html" class="media-simple-link">Publi-News</a></li>
-                                            <li><a href="https://www.tourmag.com/Assurances-Voyages_r501.html" class="media-simple-link">Assurances Voyages</a></li>
                                             <li><a href="https://www.tourmag.com/Webinaires_r493.html" class="media-simple-link">Webinaires</a></li>
-                                            <li><a href="https://www.tourmag.com/E-learnings-avec-OTT_r570.html" class="media-simple-link">E-learnings avec OTT</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- Colonne 3 - La RÃ©daction -->
-                                    <div class="mega-column">
-                                        <h3 class="mega-column-title">La RÃ©daction</h3>
-                                        <ul class="mega-links">
                                             <li><a href="https://www.tourmag.com/Courrier-Lecteurs_r10.html" class="media-simple-link">Courrier des Lecteurs</a></li>
-                                            <li><a href="https://www.tourmag.com/Editorial_r1.html" class="media-simple-link">Editorial</a></li>
-                                            <li><a href="https://www.tourmag.com/Lea-la-life-de-l-agent-de-voyages-pas-si-blonde_r242.html" class="media-simple-link">La Life de LÃ©a</a></li>
                                             <li><a href="https://www.tourmag.com/TourMaG-com-le-groupe_r193.html" class="media-simple-link">TourMaG, le groupe</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- Colonne 4 - Quotidien pro / Vie du secteur -->
-                                    <div class="mega-column">
-                                        <h3 class="mega-column-title">Quotidien pro / Vie du secteur</h3>
-                                        <ul class="mega-links">
-                                            <li><a href="https://www.tourmag.com/Groupes-CE_r299.html" class="media-simple-link">Groupes / CE</a></li>
-                                            <li><a href="https://www.tourmag.com/en/" class="media-simple-link">International Edition</a></li>
                                             <li><a href="https://www.tourmag.com/People_r2.html" class="media-simple-link">People</a></li>
                                             <li><a href="https://www.tourmag.com/Carnet_r57.html" class="media-simple-link">Carnet</a></li>
                                             <li><a href="https://www.tourmag.com/BONS-PLANS-AGV_r32.html" class="media-simple-link">Bons Plans AGV</a></li>
@@ -1173,7 +1146,6 @@
                                     <!-- Colonne 2 -->
                                     <div class="mega-column">
                                         <ul class="mega-links">
-                                            <li><a href="https://www.tourmag.com/Hebergement_r6.html" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/hotel.png" alt="HÃ´telMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">HÃ´telMaG</a></li>
                                             <li><a href="https://www.tourmag.com/latraveltech/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/la_travel_tech.png" alt="La TravelTech" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">La TravelTech</a></li>
                                             <li><a href="https://www.tourmag.com/luxurytravelmag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/luxury_travel_mag.png" alt="LuxuryTravelMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">LuxuryTravelMaG</a></li>
                                             <li class="media-item">
