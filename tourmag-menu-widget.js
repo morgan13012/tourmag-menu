@@ -1337,13 +1337,43 @@
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
-                                                            Futuroscopie
+                                                            Rédacteur en chef du mois
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
-                                                            Services additionnels
+                                                            Interview nouveaux "Members"
                                                         </li>
-                                                        
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative; color :#59DF7A ">
+                                            
+                                                            + fil d'infos WhatsApp avec : 
+                                                        </li>
+                                                   
+                                                   <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                            Shortcast quotidien
+                                                        </li>
+
+                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                            Une du journal la veille
+                                                        </li>
+
+                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                            Informations confidentielles
+                                                        </li>
+                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                            Articles en avant-première
+                                                        </li>
+                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                            Revue de presse
+                                                        </li>
+                                                   
+                                                   
+                                                   
+                                                   
                                                     </ul>
                                                     <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">483Ã¢â€šÂ¬ TTC/an</span>
                                                 </div>
@@ -1358,11 +1388,11 @@
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
-                                                            Futuroscopie
+                                                            Trombinoscope
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
-                                                            VidÃƒÂ©o rÃƒÂ©capitulative hebdomadaire
+                                                            Shortcast (podcast d'articles résumés)
                                                         </li>
                                                     </ul>
                                                     <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">199Ã¢â€šÂ¬ HT/an</span>
