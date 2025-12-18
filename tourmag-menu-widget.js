@@ -1298,9 +1298,9 @@
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
-                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 500px 600px; gap: 4rem;">
+                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 550px 550px; gap: 4rem; justify-content: center; max-width: 1400px; margin: 0 auto;">
                                     <!-- Colonne 1 - Navigation compacte -->
-                                    <div class="mega-column" style="max-width: 500px; min-width: 500px;">
+                                    <div class="mega-column" style="max-width: 550px; min-width: 550px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
                                             <!-- Encadré Articles abonnés -->
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
