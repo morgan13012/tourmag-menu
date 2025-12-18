@@ -1338,23 +1338,25 @@
                                     </div>
                                     <!-- Colonne 2 - Offres d'abonnement avec accordéon -->
                                     <div class="mega-column" style="flex: 1;">
-                                        <div style="background: linear-gradient(135deg, #59DF7A, #0956E7); padding: 3px; border-radius: 12px;">
-                                            <div style="background: linear-gradient(135deg, rgba(89, 223, 122, 0.08), rgba(9, 86, 231, 0.08)); border-radius: 10px; padding: 1.5rem;">
-                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.6rem; font-weight: 700; color: #0066cc; margin-bottom: 1.5rem; text-align: center;">Nos Offres d'Abonnement</h4>
+                                        <div style="background: #57C6C6; padding: 3px; border-radius: 12px;">
+                                            <div style="background: #F3FFFF; border-radius: 10px; padding: 1.5rem;">
+                                                <div style="border: 2px solid #57C6C6; border-radius: 12px; padding: 1rem; background: #F3FFFF; position: relative; margin-bottom: 2rem;">
+                                                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #57C6C6, #4ab8b8); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.2rem; color: #ffffff; box-shadow: 0 2px 8px rgba(87, 198, 198, 0.3); white-space: nowrap; min-width: 280px; text-align: center;">Nos Offres d'Abonnement</div>
+                                                </div>
                                                 
                                                 <!-- Boutons des offres -->
                                                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
                                                     <button class="offer-tab active" data-offer="premium" style="background: #0066cc; border: 2px solid #0066cc; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 700; color: #ffffff; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);">
-                                                        Premium<br><span style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">83€ TTC/an</span>
+                                                        Premium<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #ffffff;">83€ TTC/an</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="membership" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        MemberShip Club<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
+                                                        MemberShip Club<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="agences" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Spécial agences<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
+                                                        Spécial agences<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="etudiant" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Étudiant<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
+                                                        Étudiant<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
                                                     </button>
                                                 </div>
                                                 
