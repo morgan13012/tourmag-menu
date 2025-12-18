@@ -1300,7 +1300,7 @@
                             <div class="mega-menu-content">
                                 <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 450px 750px; gap: 2.5rem;">
                                     <!-- Colonne 1 - Navigation compacte -->
-                                    <div class="mega-column" style="max-width: 450px; min-width: 450px;">
+                                    <div class="mega-column" style="max-width: 500px; min-width: 500px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
                                             <!-- Encadré Articles abonnés -->
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
@@ -1344,16 +1344,16 @@
                                                 
                                                 <!-- Boutons des offres -->
                                                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
-                                                    <button class="offer-tab active" data-offer="premium" style="background: #0066cc; border: 2px solid #0066cc; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 700; color: #ffffff; cursor: pointer; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);">
+                                                    <button class="offer-tab active" data-offer="premium" style="background: #0066cc; border: 2px solid #0066cc; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 700; color: #ffffff; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);">
                                                         Premium<br><span style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">83€ TTC/an</span>
                                                     </button>
-                                                    <button class="offer-tab" data-offer="membership" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                    <button class="offer-tab" data-offer="membership" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
                                                         MemberShip Club<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
                                                     </button>
-                                                    <button class="offer-tab" data-offer="agences" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                    <button class="offer-tab" data-offer="agences" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
                                                         Spécial agences<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
                                                     </button>
-                                                    <button class="offer-tab" data-offer="etudiant" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                    <button class="offer-tab" data-offer="etudiant" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
                                                         Étudiant<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
                                                     </button>
                                                 </div>
