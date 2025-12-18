@@ -25,7 +25,7 @@
             --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
- /* FORCER L'AFFICHAGE DU WIDGET - AJOUTER ICI Ã¢Â¬â€¡Ã¯Â¸Â */
+ /* FORCER L'AFFICHAGE DU WIDGET - AJOUTER ICI â¬‡ï¸ */
     #tourmag-menu {
         display: block !important;
         visibility: visible !important;
@@ -40,7 +40,7 @@
     #tourmag-menu .main-nav {
         display: block !important;
     }
-    /* FIN DU CODE AJOUTÃƒâ€° Ã¢Â¬â€ Ã¯Â¸Â */
+    /* FIN DU CODE AJOUTÃ‰ â¬†ï¸ */
 
 
 
@@ -59,7 +59,7 @@
             overflow-x: hidden ;
         }
 
-        /* En-tÃƒÂªte et navigation principale */
+        /* En-tÃªte et navigation principale */
         .header {
             background: var(--white);
             box-shadow: var(--shadow-sm);
@@ -128,7 +128,7 @@
             position: relative;
         }
 
-        /* CrÃƒÂ©er un "pont" invisible entre le nav-item et le mega menu */
+        /* CrÃ©er un "pont" invisible entre le nav-item et le mega menu */
         .nav-item::after {
             content: '';
             position: absolute;
@@ -317,7 +317,7 @@
             font-weight: 500;
         }
 
-        /* Sous-menus imbriquÃƒÂ©s */
+        /* Sous-menus imbriquÃ©s */
         .mega-sublinks {
             list-style: none;
             margin-left: 1rem;
@@ -340,7 +340,7 @@
             padding-left: 0.5rem;
         }
 
-        /* SystÃƒÂ¨me de menu ÃƒÂ  2 niveaux pour newsletters */
+        /* SystÃ¨me de menu Ã  2 niveaux pour newsletters */
         .newsletter-list {
             position: relative;
             overflow: visible;
@@ -437,7 +437,7 @@
             border-left: 3px solid #59DF7A;
         }
 
-        /* Sous-menu vertical (dÃƒÂ©ploiement en dessous au clic) */
+        /* Sous-menu vertical (dÃ©ploiement en dessous au clic) */
        .newsletter-submenu {
     position: relative;
     left: 0;
@@ -494,7 +494,7 @@
             padding-left: 1.25rem;
         }
 
-        /* Styles identiques pour les mÃƒÂ©dias avec sous-sections */
+        /* Styles identiques pour les mÃ©dias avec sous-sections */
         .media-item {
             position: relative;
             overflow: visible;
@@ -622,7 +622,7 @@
             padding-left: 1.25rem;
         }
 
-        /* Style pour les liens mÃƒÂ©dias simples (sans sous-menu) */
+        /* Style pour les liens mÃ©dias simples (sans sous-menu) */
         .media-simple-link {
             display: block;
             background: var(--bg-light);
@@ -642,7 +642,7 @@
             transform: translateY(-1px);
         }
 
-        /* BoÃƒÂ®te spÃƒÂ©ciale pour TourMaG TV et Futuroscopie */
+        /* BoÃ®te spÃ©ciale pour TourMaG TV et Futuroscopie */
         .special-media-box {
             background: linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(255, 102, 0, 0.08));
             border: 2px solid #ffd700;
@@ -661,7 +661,7 @@
             box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
         }
 
-        /* BoÃƒÂ®te des offres d'abonnement */
+        /* BoÃ®te des offres d'abonnement */
         .subscription-offers-box {
             background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(255, 102, 0, 0.05));
             border-radius: 12px;
@@ -723,7 +723,7 @@
             margin-left: auto;
         }
 
-        /* Menu compact (pour AbonnÃ©s, Petites Annonces, Contacts) */
+        /* Menu compact (pour Abonnés, Petites Annonces, Contacts) */
         .mega-menu.compact {
             width: 400px;
             left: auto;
@@ -731,7 +731,7 @@
         }
 
 
-        /* Contenu dÃƒÂ©mo */
+        /* Contenu dÃ©mo */
         .demo-content {
             max-width: 1400px;
             margin: 4rem auto;
@@ -774,12 +774,12 @@
     display: block;
 }
 
-/* Par dÃƒÂ©faut : hamburger visible, croix cachÃƒÂ©e */
+/* Par dÃ©faut : hamburger visible, croix cachÃ©e */
 .mobile-menu-toggle .close-icon {
     display: none;
 }
 
-/* Quand actif : hamburger cachÃƒÂ©, croix visible */
+/* Quand actif : hamburger cachÃ©, croix visible */
 .mobile-menu-toggle.active .hamburger-icon {
     display: none !important;
 }
@@ -793,7 +793,7 @@
 
         /* Responsive */
         @media (max-width: 1200px) {
-            /* Ajustement pour l'onglet AbonnÃ©s sur ÃƒÂ©crans moyens */
+            /* Ajustement pour l'onglet Abonnés sur Ã©crans moyens */
             .mega-columns.abonnes-grid {
                 grid-template-columns: 1fr !important;
                 gap: 1.5rem !important;
@@ -821,7 +821,7 @@
         }
 
       @media (max-width: 768px) {
-    /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÃƒâ€° */
+    /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÃ‰ */
     #tourmag-menu {
         display: block !important;
         position: relative !important;
@@ -829,7 +829,7 @@
     }
 
 
-  /* Ã¢Â¬â€¡Ã¯Â¸Â AJOUTEZ CE CODE ICI Ã¢Â¬â€¡Ã¯Â¸Â */
+  /* â¬‡ï¸ AJOUTEZ CE CODE ICI â¬‡ï¸ */
     /* Uniformiser la taille des pictos sur mobile */
     .newsletter-item .mega-link .newsletter-icon img,
     .media-item .mega-link .media-icon img,
@@ -841,7 +841,7 @@
         margin-right: 0.5rem !important;
     }
     
-    /* Assurer que les conteneurs d'icÃƒÂ´nes ont aussi une taille fixe */
+    /* Assurer que les conteneurs d'icÃ´nes ont aussi une taille fixe */
     .newsletter-item .mega-link .newsletter-icon,
     .media-item .mega-link .media-icon {
         width: 40px !important;
@@ -851,7 +851,7 @@
         justify-content: center !important;
         flex-shrink: 0 !important;
     }
-    /* Ã¢Â¬â€ Ã¯Â¸Â FIN DU CODE Ãƒâ‚¬ AJOUTER Ã¢Â¬â€ Ã¯Â¸Â */
+    /* â¬†ï¸ FIN DU CODE Ã€ AJOUTER â¬†ï¸ */
 
 
 
@@ -891,7 +891,7 @@
         padding: 0 1rem 0 4rem;
     }
 
-    /* Cacher la liste par dÃƒÂ©faut */
+    /* Cacher la liste par dÃ©faut */
     .nav-list {
         display: none;
         flex-direction: column;
@@ -903,7 +903,7 @@
         box-shadow: var(--shadow-lg) !important;
         padding: 0.5rem 0 !important;
         gap: 0;
-        z-index: 2147483647 !important;  /* Ã¢â€ Â AJOUTE CETTE LIGNE avec une valeur trÃƒÂ¨s ÃƒÂ©levÃƒÂ©e */
+        z-index: 2147483647 !important;  /* â† AJOUTE CETTE LIGNE avec une valeur trÃ¨s Ã©levÃ©e */
     }
 
     .header {
@@ -917,7 +917,7 @@
     /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
-        z-index: 2147483647 !important;  /* Ã¢â€ Â AJOUTE AUSSI ICI */
+        z-index: 2147483647 !important;  /* â† AJOUTE AUSSI ICI */
     }
     
     /* Style des liens en mobile */
@@ -925,7 +925,7 @@
         padding: 0.75rem 1.5rem;
     }
     
-    /* DÃƒÂ©sactiver le hover sur mobile */
+    /* DÃ©sactiver le hover sur mobile */
     .nav-item:hover .mega-menu {
         opacity: 0;
         visibility: hidden;
@@ -945,7 +945,7 @@
         padding : 0 !important;
     }
     
-    /* Afficher le mega menu quand activÃƒÂ© */
+    /* Afficher le mega menu quand activÃ© */
     .mega-menu[style*="display: block"] {
         display: block !important;
         opacity: 1;
@@ -1008,7 +1008,7 @@
     
     }
 
-    /* Style spÃƒÂ©cifique pour le bouton newsletter sur mobile */
+    /* Style spÃ©cifique pour le bouton newsletter sur mobile */
     .newsletter-subscribe-btn {
         width: 100% !important;
         padding: 1.25rem 1rem !important;
@@ -1074,20 +1074,20 @@
         <nav class="main-nav">
             <div class="nav-container">
               <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" id="mobileMenuToggle">
-    <span class="hamburger-icon">Ã¢ËœÂ°</span>
-    <span class="close-icon">Ã¢Å“â€¢</span>
+    <span class="hamburger-icon">â˜°</span>
+    <span class="close-icon">âœ•</span>
 </button>
                 <ul class="nav-list" id="navList">
-                    <!-- IcÃ´ne Accueil -->
+                    <!-- Icône Accueil -->
                     <li class="nav-item">
-                        <a href="https://www.tourmag.com/" class="nav-link">ðŸ </a>
+                        <a href="https://www.tourmag.com/" class="nav-link">🏠</a>
                     </li>
                     
-                    <!-- 1. ACTUALITÃ‰S -->
+                    <!-- 1. ACTUALITÉS -->
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            ACTUALITÃ‰S
-                            <span class="nav-icon">â–¼</span>
+                            ACTUALITÉS
+                            <span class="nav-icon">▼</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
@@ -1097,7 +1097,7 @@
                                             <li><a href="https://www.tourmag.com/Distribution_r4.html" class="media-simple-link">Distribution</a></li>
                                             <li><a href="https://www.tourmag.com/Production_r8.html" class="media-simple-link">Production</a></li>
                                             <li><a href="https://www.tourmag.com/Transport_r7.html" class="media-simple-link">Transport</a></li>
-                                            <li><a href="https://www.tourmag.com/Dossiers-speciaux_r582.html" class="media-simple-link">Dossiers spÃ©ciaux</a></li>
+                                            <li><a href="https://www.tourmag.com/Dossiers-speciaux_r582.html" class="media-simple-link">Dossiers spéciaux</a></li>
                                             <li><a href="https://www.tourmag.com/Actus-Visas_r356.html" class="media-simple-link">Actus Visas</a></li>
                                         </ul>
                                     </div>
@@ -1113,17 +1113,17 @@
                                     <div class="mega-column">
                                         <ul class="mega-links">
                                             <li><a href="https://www.tourmag.com/Brand-News_r330.html" class="media-simple-link">Brand News</a></li>
-                                            <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-RÃ©dactionnel</a></li>
+                                            <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-Rédactionnel</a></li>
                                             <li><a href="https://www.tourmag.com/Publi-news_r569.html" class="media-simple-link">Publi-News</a></li>
                                             <li><a href="https://www.tourmag.com/Webinaires_r493.html" class="media-simple-link">Webinaires</a></li>
                                         </ul>
                                     </div>
-                                    <!-- Colonne 4 - Articles abonnÃ©s -->
+                                    <!-- Colonne 4 - Articles abonnés -->
                                     <div class="mega-column">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                            <!-- EncadrÃ© Articles abonnÃ©s -->
+                                            <!-- Encadré Articles abonnés -->
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
-                                                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 180px; text-align: center;">Articles abonnÃ©s</div>
+                                                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 180px; text-align: center;">Articles abonnés</div>
                                                 <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
                                             <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
                                             <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
@@ -1137,11 +1137,11 @@
                         </div>
                     </li>
 
-                    <!-- 2. THÃ‰MATIQUES -->
+                    <!-- 2. THÉMATIQUES -->
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            THÃ‰MATIQUES
-                            <span class="nav-icon">â–¼</span>
+                            THÉMATIQUES
+                            <span class="nav-icon">▼</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
@@ -1153,13 +1153,13 @@
                                             <li><a href="https://www.brochuresenligne.com/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/brochures_en_ligne1.png" alt="Brochures en ligne" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">Brochures en ligne</a></li>
                                             <li><a href="https://www.tourmag.com/cruisemag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/cruisemag.png" alt="CruiseMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">CruiseMaG</a></li>
                                             <li class="media-item">
-                                                <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/destimag.png" alt="DestiMaG"></span>DestiMaG<span class="chevron">â–¼</span></button>
+                                                <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/destimag.png" alt="DestiMaG"></span>DestiMaG<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.tourmag.com/dmcmag/">DerniÃƒÂ¨res actualitÃƒÂ©s / carte interactive</a></li>
-                                                        <li><a href="https://www.tourmag.com/Annuaire-des-agences-touristiques-locales_r404.html">Annuaire des rÃƒÂ©ceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/dmcmag/">DerniÃ¨res actualitÃ©s / carte interactive</a></li>
+                                                        <li><a href="https://www.tourmag.com/Annuaire-des-agences-touristiques-locales_r404.html">Annuaire des rÃ©ceptifs</a></li>
                                                         <li><a href="https://www.tourmag.com/Dossiers-destinations_r562.html">Dossiers destinations</a></li>
-                                                        <li><a href="https://www.tourmag.com/Communiques-des-agences-touristiques-locales_r408.html">Les offres des rÃƒÂ©ceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/Communiques-des-agences-touristiques-locales_r408.html">Les offres des rÃ©ceptifs</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -1171,11 +1171,11 @@
                                             <li><a href="https://www.tourmag.com/latraveltech/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/la_travel_tech.png" alt="La TravelTech" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">La TravelTech</a></li>
                                             <li><a href="https://www.tourmag.com/luxurytravelmag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/luxury_travel_mag.png" alt="LuxuryTravelMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">LuxuryTravelMaG</a></li>
                                             <li class="media-item">
-                                                <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/partez_en_france.png" alt="Partez en France"></span>Partez en France<span class="chevron">â–¼</span></button>
+                                                <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/partez_en_france.png" alt="Partez en France"></span>Partez en France<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.tourmag.com/Annuaire-Partez-en-France_r390.html">Annuaire des rÃƒÂ©ceptifs</a></li>
-                                                        <li><a href="https://www.tourmag.com/Les-offres-Partez-en-France_r450.html">Les offres des rÃƒÂ©ceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/Annuaire-Partez-en-France_r390.html">Annuaire des rÃ©ceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/Les-offres-Partez-en-France_r450.html">Les offres des rÃ©ceptifs</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -1186,7 +1186,7 @@
                                         <ul class="mega-links">
                                             <li><a href="https://www.tourmag.com/agv/" class="media-simple-link" style="padding-left: 4rem;">Super AGV</a></li>
                                             <li class="media-item">
-                                                <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/traveljobs.png" alt="TravelJobs"></span>TravelJobs<span class="chevron">â–¼</span></button>
+                                                <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/traveljobs.png" alt="TravelJobs"></span>TravelJobs<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
                                                         <li><a href="https://www.tourmag.com/Emploi-Formation_r153.html">Actus emploi</a></li>
@@ -1206,20 +1206,29 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             Newsletters
-                            <span class="nav-icon">â–¼</span>
+                            <span class="nav-icon">▼</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-columns cols-3">
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">
-                                            <li><a href="https://www.tourmag.com/my/newsletter/newst1.htm" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/g.png" alt="TourMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>TourMaG</a></li>
-                                            <li><a href="https://www.tourmag.com/my/tourmag/news_airmag/news_airmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/airmag1.png" alt="AirMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>AirMaG</a></li>
                                             <li class="newsletter-item">
-                                                <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/brochures_en_ligne1.png" alt="Brochures en ligne"></span>Brochures en ligne<span class="chevron">â–¼</span></button>
+                                                <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/g.png" alt="TourMaG"></span>TourMaG<span class="chevron">▼</span></button>
                                                 <div class="newsletter-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.brochuresenligne.com/docs/newsletters/archives/news_pro.html">DerniÃƒÂ¨re newsletter</a></li>
+                                                        <li><a href="https://www.tourmag.com/my/newsletter/newst1.htm">Newsletter du jour</a></li>
+                                                        <li><a href="https://tourmag.insc.edt02.net/300335/20150403/">Inscription</a></li>
+                                                        <li><a href="https://www.tourmag.com/Toutes-les-Archives-des-Newsletters-TourMaG-com-2025-a-votre-disposition_a125207.html">Archives</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="https://www.tourmag.com/my/tourmag/news_airmag/news_airmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/airmag1.png" alt="AirMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>AirMaG</a></li>
+                                            <li class="newsletter-item">
+                                                <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/brochures_en_ligne1.png" alt="Brochures en ligne"></span>Brochures en ligne<span class="chevron">▼</span></button>
+                                                <div class="newsletter-submenu">
+                                                    <ul>
+                                                        <li><a href="https://www.brochuresenligne.com/docs/newsletters/archives/news_pro.html">DerniÃ¨re newsletter</a></li>
                                                         <li><a href="https://tourmag.insc.edt02.net/300335/20150403/">Inscription pros</a></li>
                                                         <li><a href="https://tourmag.insc.edt02.net/252490/20150311/inscription.php">Inscription Particuliers</a></li>
                                                     </ul>
@@ -1239,34 +1248,18 @@
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">                                        </ul>
                                         
-                                        <!-- Bouton Écouter la dernière newsletter TourMaG -->
-                                        <div style="margin-top: 1rem;">
-                                            <a href="https://www.tourmag.com/my/newsletter/newst1.htm" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
-                                                <span style="font-size: 1.3rem;">🔊</span>
-                                                Écouter la dernière newsletter TourMaG
-                                            </a>
-                                        </div>
-                                        
-                                        <!-- Bouton Archives des newsletters TourMaG -->
-                                        <div style="margin-top: 1rem;">
-                                            <a href="https://www.tourmag.com/Toutes-les-Archives-des-Newsletters-TourMaG-com-2025-a-votre-disposition_a125207.html" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
-                                                <span style="font-size: 1.3rem;">📂</span>
-                                                Archives des newsletters TourMaG
-                                            </a>
-                                        </div>
-                                        
                                         <!-- Bouton d'inscription aux newsletters -->
-                                        <div style="margin-top: 1.5rem;">
+                                        <div style="margin-top: 2rem;">
                                             <a href="https://tourmag.insc.edt02.net/300335/20150403/" target="_blank" class="newsletter-subscribe-btn" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 700; font-size: 1.15rem; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
-                                                <span style="font-size: 1.4rem;">Ã¢Å“â€°Ã¯Â¸Â</span>
+                                                <span style="font-size: 1.4rem;">âœ‰ï¸</span>
                                                 S'abonner aux newsletters
                                             </a>
                                         </div>
                                         
-                                        <!-- FAQ traitÃƒÂ©e diffÃƒÂ©remment -->
+                                        <!-- FAQ traitÃ©e diffÃ©remment -->
                                         <div style="margin-top: 1.5rem; padding-top: 1.5rem; ">
                                             <a href="https://www.tourmag.com/faq/Foire-aux-questions-Newsletter_fi1063.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; padding: 0.75rem 1rem; border-radius: 6px;">
-                                                <span style="font-size: 1.2rem;">Ã¢Ââ€œ</span>
+                                                <span style="font-size: 1.2rem;">â“</span>
                                                 FAQ
                                             </a>
                                         </div>
@@ -1285,145 +1278,153 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             ABONNEMENTS
-                            <span class="nav-icon">â–¼</span>
+                            <span class="nav-icon">▼</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
-                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 280px 1fr; gap: 2rem;">
+                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 400px 1fr; gap: 2.5rem;">
                                     <!-- Colonne 1 - Navigation compacte -->
-                                    <div class="mega-column" style="max-width: 280px; min-width: 280px;">
+                                    <div class="mega-column" style="max-width: 400px; min-width: 400px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                            <!-- EncadrÃ© Articles abonnÃ©s -->
+                                            <!-- Encadré Articles abonnés -->
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
-                                                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 180px; text-align: center;">Articles abonnÃ©s</div>
+                                                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 180px; text-align: center;">Articles abonnés</div>
                                                 <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
                                             <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
                                             <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
                                             <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club</a></li>
                                                 </div>
                                             </div>
-                                            <li><a href="https://www.tourmag.com/faq/Foire-aux-questions-Abonnements-articles_fi4792.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; font-weight: 600; padding: 0.75rem 1rem; font-size: 1.15rem;">Ã¢Ââ€œ FAQ</a></li>
+                                            <li><a href="https://www.tourmag.com/faq/Foire-aux-questions-Abonnements-articles_fi4792.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; font-weight: 600; padding: 0.75rem 1rem; font-size: 1.15rem;">â“ FAQ</a></li>
                                         </ul>
                                     </div>
-                                    <!-- Colonne 2 - Offres d'abonnement -->
+                                    <!-- Colonne 2 - Offres d'abonnement avec accordéon -->
                                     <div class="mega-column" style="flex: 1;">
                                         <div style="background: linear-gradient(135deg, #59DF7A, #0956E7); padding: 2px; border-radius: 12px;">
                                             <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(255, 102, 0, 0.05)); border-radius: 10px; padding: 1.5rem;">
-                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.6rem; font-weight: 600; color: #ffffff; margin-bottom: 1rem; text-align: center;">Nos Offres d'Abonnement</h4>
+                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.6rem; font-weight: 600; color: #0066cc; margin-bottom: 1.5rem; text-align: center;">Nos Offres d'Abonnement</h4>
                                                 
-                                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
-                                                <!-- Carte Premium -->
-                                                <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Premium</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
-                                                            AccÃƒÂ¨s illimitÃƒÂ© aux articles Premium
-                                                        </li>
-                                                        
-                                                    </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">83Ã¢â€šÂ¬ TTC/an</span>
+                                                <!-- Boutons des offres -->
+                                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
+                                                    <button class="offer-tab" data-offer="premium" style="background: var(--white); border: 2px solid #0066cc; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #0066cc; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                        Premium<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">83€ TTC/an</span>
+                                                    </button>
+                                                    <button class="offer-tab" data-offer="membership" style="background: var(--white); border: 2px solid #e0e0e0; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #4a4a4a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                        MemberShip Club<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">483€ TTC/an</span>
+                                                    </button>
+                                                    <button class="offer-tab" data-offer="agences" style="background: var(--white); border: 2px solid #e0e0e0; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #4a4a4a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                        Spécial agences<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">199€ HT/an</span>
+                                                    </button>
+                                                    <button class="offer-tab" data-offer="etudiant" style="background: var(--white); border: 2px solid #e0e0e0; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #4a4a4a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                        Étudiant<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">10€ TTC/an</span>
+                                                    </button>
                                                 </div>
                                                 
-                                    
+                                                <!-- Contenu des offres -->
+                                                <div class="offer-content" data-content="premium" style="background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
+                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Premium</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
+                                                            Accès illimité aux articles Premium
+                                                        </li>
+                                                    </ul>
+                                                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">83€ TTC/an</span>
+                                                    </div>
+                                                </div>
                                                 
-                                                <!-- Carte MemberShip Club -->
-                                                <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">MemberShip Club</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                <div class="offer-content" data-content="membership" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
+                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre MemberShip Club</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 1.8;">
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Articles Premium
                                                         </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Rédacteur en chef du mois
                                                         </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Interview nouveaux "Members"
                                                         </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative; color :#59DF7A ">
-                                            
-                                                            + fil d'infos WhatsApp avec : 
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: #59DF7A; font-weight: 600;">
+                                                            + fil d'infos WhatsApp avec :
                                                         </li>
-                                                   
-                                                   <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 2.5rem; position: relative; font-size: 1rem;">
+                                                            <span style="position: absolute; left: 1rem; color: #59DF7A; font-size: 1rem;">✓</span>
                                                             Shortcast quotidien
                                                         </li>
-
-                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 2.5rem; position: relative; font-size: 1rem;">
+                                                            <span style="position: absolute; left: 1rem; color: #59DF7A; font-size: 1rem;">✓</span>
                                                             Une du journal la veille
                                                         </li>
-
-                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 2.5rem; position: relative; font-size: 1rem;">
+                                                            <span style="position: absolute; left: 1rem; color: #59DF7A; font-size: 1rem;">✓</span>
                                                             Informations confidentielles
                                                         </li>
-                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 2.5rem; position: relative; font-size: 1rem;">
+                                                            <span style="position: absolute; left: 1rem; color: #59DF7A; font-size: 1rem;">✓</span>
                                                             Articles en avant-première
                                                         </li>
-                                                              <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 2.5rem; position: relative; font-size: 1rem;">
+                                                            <span style="position: absolute; left: 1rem; color: #59DF7A; font-size: 1rem;">✓</span>
                                                             Revue de presse
                                                         </li>
-                                                   
-                                                   
-                                                   
-                                                   
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">483Ã¢â€šÂ¬ TTC/an</span>
+                                                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
+                                                    </div>
                                                 </div>
                                                 
-                                                <!-- Carte SpÃƒÂ©cial agences -->
-                                                <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">SpÃƒÂ©cial agences</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                <div class="offer-content" data-content="agences" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
+                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Spécial agences</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Articles Premium
                                                         </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Trombinoscope
                                                         </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Shortcast (podcast d'articles résumés)
                                                         </li>
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">199Ã¢â€šÂ¬ HT/an</span>
+                                                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
+                                                    </div>
                                                 </div>
                                                 
-                                                <!-- Carte Ãƒâ€°tudiant -->
-                                                <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Ãƒâ€°tudiant</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                <div class="offer-content" data-content="etudiant" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
+                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Étudiant</h5>
+                                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Articles Premium
                                                         </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
+                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
                                                             Futuroscopie
                                                         </li>
-                                                        
                                                     </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">10Ã¢â€šÂ¬ TTC/an</span>
+                                                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             
-                                            <div style="text-align: center; margin-top: 1rem;">
-                                                <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: #ffffff; color: #0956E7; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.3rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" onmouseover="this.style.background='#0956E7'; this.style.color='#ffffff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(9, 86, 231, 0.3)'" onmouseout="this.style.background='#ffffff'; this.style.color='#0956E7'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)'">
-                                                    Voir toutes les offres Ã¢â€ â€™
-                                                </a>
-                                            </div>
+                                                <div style="text-align: center; margin-top: 1.5rem;">
+                                                    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: #ffffff; color: #0956E7; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.3rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" onmouseover="this.style.background='#0956E7'; this.style.color='#ffffff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(9, 86, 231, 0.3)'" onmouseout="this.style.background='#ffffff'; this.style.color='#0956E7'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)'">
+                                                        Voir toutes les offres →
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1461,14 +1462,14 @@
     }
 };
     
-    // Initialiser les fonctionnalitÃƒÂ©s JavaScript
+    // Initialiser les fonctionnalitÃ©s JavaScript
     function initializeJS() {
 
 
         
-        console.log('TourMag Widget: initializeJS() appelÃƒÂ©');
+        console.log('TourMag Widget: initializeJS() appelÃ©');
         
-        // Fonction pour positionner les mega menus correctement (sans dÃƒÂ©calage)
+        // Fonction pour positionner les mega menus correctement (sans dÃ©calage)
         function updateMegaMenuPositions() {
             const mainNav = document.querySelector('#tourmag-menu .main-nav');
             if (!mainNav) return;
@@ -1479,15 +1480,15 @@
             const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
             megaMenus.forEach(menu => {
                 // Positionner le menu exactement sous la navigation, sans espace
-                // En soustrayant 1px pour crÃƒÂ©er un lÃƒÂ©ger chevauchement et ÃƒÂ©viter les gaps
+                // En soustrayant 1px pour crÃ©er un lÃ©ger chevauchement et Ã©viter les gaps
                 menu.style.top = (navBottom - 1) + 'px';
                 
-                // Ajouter une classe pour indiquer que le positionnement est prÃƒÂªt
+                // Ajouter une classe pour indiquer que le positionnement est prÃªt
                 menu.classList.add('positioned');
             });
         }
         
-        // Appliquer le positionnement initial immÃƒÂ©diatement
+        // Appliquer le positionnement initial immÃ©diatement
         setTimeout(updateMegaMenuPositions, 0);
         
         // Variable pour optimiser avec requestAnimationFrame
@@ -1503,16 +1504,16 @@
             }
         }
         
-        // Mettre ÃƒÂ  jour la position au chargement
+        // Mettre Ã  jour la position au chargement
         updateMegaMenuPositions();
         
-        // Mettre ÃƒÂ  jour lors du scroll avec requestAnimationFrame (fluiditÃƒÂ© maximale)
+        // Mettre Ã  jour lors du scroll avec requestAnimationFrame (fluiditÃ© maximale)
         window.addEventListener('scroll', requestTick, { passive: true });
         
-        // Mettre ÃƒÂ  jour lors du resize
+        // Mettre Ã  jour lors du resize
         window.addEventListener('resize', updateMegaMenuPositions);
         
-        // Gestion amÃƒÂ©liorÃƒÂ©e du hover pour ÃƒÂ©viter la fermeture prÃƒÂ©maturÃƒÂ©e (desktop uniquement)
+        // Gestion amÃ©liorÃ©e du hover pour Ã©viter la fermeture prÃ©maturÃ©e (desktop uniquement)
         if (window.innerWidth > 768) {
             const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
             
@@ -1561,7 +1562,7 @@
         
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
-        console.log('TourMag Widget: Newsletter items trouvÃƒÂ©s:', newsletterItems.length);
+        console.log('TourMag Widget: Newsletter items trouvÃ©s:', newsletterItems.length);
 
         newsletterItems.forEach(item => {
             const link = item.querySelector('.mega-link');
@@ -1597,7 +1598,7 @@
                     clearTimeout(closeTimeout);
                 });
 
-                // Fermeture avec dÃƒÂ©lai quand la souris quitte la zone newsletter + sous-menu
+                // Fermeture avec dÃ©lai quand la souris quitte la zone newsletter + sous-menu
                 item.addEventListener('mouseleave', function() {
                     // Seulement si le sous-menu est ouvert
                     if (item.classList.contains('active')) {
@@ -1608,9 +1609,9 @@
                 });
             });
 
-            // Gestion identique pour les mÃƒÂ©dias
+            // Gestion identique pour les mÃ©dias
             const mediaItems = document.querySelectorAll('#tourmag-menu .media-item');
-            console.log('TourMag Widget: Media items trouvÃƒÂ©s:', mediaItems.length);
+            console.log('TourMag Widget: Media items trouvÃ©s:', mediaItems.length);
 
             mediaItems.forEach(item => {
                 const link = item.querySelector('.mega-link');
@@ -1644,7 +1645,7 @@
                     clearTimeout(closeTimeout);
                 });
 
-                // Fermeture avec dÃƒÂ©lai quand la souris quitte la zone
+                // Fermeture avec dÃ©lai quand la souris quitte la zone
                 item.addEventListener('mouseleave', function() {
                     // Seulement si le sous-menu est ouvert
                     if (item.classList.contains('active')) {
@@ -1655,6 +1656,40 @@
                 });
             });
 
+
+        // Gestion de l'accordéon des offres d'abonnement
+        const offerTabs = document.querySelectorAll('.offer-tab');
+        const offerContents = document.querySelectorAll('.offer-content');
+        
+        offerTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const offerType = this.getAttribute('data-offer');
+                
+                // Réinitialiser tous les boutons
+                offerTabs.forEach(t => {
+                    t.style.border = '2px solid #e0e0e0';
+                    t.style.color = '#4a4a4a';
+                    t.style.background = 'var(--white)';
+                });
+                
+                // Activer le bouton cliqué
+                this.style.border = '2px solid #0066cc';
+                this.style.color = '#0066cc';
+                this.style.background = 'linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(89, 223, 122, 0.05))';
+                
+                // Masquer tous les contenus
+                offerContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+                
+                // Afficher le contenu correspondant
+                const targetContent = document.querySelector(`.offer-content[data-content="${offerType}"]`);
+                if (targetContent) {
+                    targetContent.style.display = 'block';
+                }
+            });
+        });
+
             // Gestion des sous-menus sur mobile ET desktop
             const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
             
@@ -1662,10 +1697,10 @@
                 const link = item.querySelector('.nav-link');
                 const megaMenu = item.querySelector('.mega-menu');
                 
-                // EmpÃƒÂªcher la navigation uniquement pour les onglets avec mega menu
+                // EmpÃªcher la navigation uniquement pour les onglets avec mega menu
                 if (megaMenu) {
                     link.addEventListener('click', function(e) {
-                        // Sur mobile (largeur <= 768px), gÃƒÂ©rer l'ouverture/fermeture
+                        // Sur mobile (largeur <= 768px), gÃ©rer l'ouverture/fermeture
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
                             
@@ -1688,8 +1723,8 @@
                                 megaMenu.style.visibility = 'visible';
                             }
                         } else {
-                            // Sur desktop, empÃƒÂªcher la navigation mais ne rien faire
-                            // (le hover gÃƒÂ¨re l'affichage)
+                            // Sur desktop, empÃªcher la navigation mais ne rien faire
+                            // (le hover gÃ¨re l'affichage)
                             e.preventDefault();
                         }
                     });
@@ -1711,7 +1746,7 @@
             }
         });
 
-        // RÃƒÂ©initialiser les styles lors du redimensionnement
+        // RÃ©initialiser les styles lors du redimensionnement
         let resizeTimer;
         window.addEventListener('resize', function() {
             clearTimeout(resizeTimer);
