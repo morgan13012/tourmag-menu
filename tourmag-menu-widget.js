@@ -1184,7 +1184,7 @@
                                     <!-- Colonne 3 -->
                                     <div class="mega-column">
                                         <ul class="mega-links">
-                                            <li><a href="https://www.tourmag.com/agv/" class="media-simple-link" style="padding-left: 4rem;">Super AGV</a></li>
+                                            <li><a href="https://www.tourmag.com/agv/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/superagv.png" alt="Super AGV" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">Super AGV</a></li>
                                             <li class="media-item">
                                                 <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/traveljobs.png" alt="TravelJobs"></span>TravelJobs<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
@@ -1194,7 +1194,7 @@
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li><a href="https://www.tourmag.com/voyageursmag/" class="media-simple-link" style="padding-left: 4rem;">VoyageursMaG</a></li>
+                                            <li><a href="https://www.tourmag.com/voyageursmag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/voyageursmag.png" alt="VoyageursMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">VoyageursMaG</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1213,16 +1213,7 @@
                                 <div class="mega-columns cols-3">
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">
-                                            <li class="newsletter-item">
-                                                <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/g.png" alt="TourMaG"></span>TourMaG<span class="chevron">▼</span></button>
-                                                <div class="newsletter-submenu">
-                                                    <ul>
-                                                        <li><a href="https://www.tourmag.com/my/newsletter/newst1.htm">Newsletter du jour</a></li>
-                                                        <li><a href="https://tourmag.insc.edt02.net/300335/20150403/">Inscription</a></li>
-                                                        <li><a href="https://www.tourmag.com/Toutes-les-Archives-des-Newsletters-TourMaG-com-2025-a-votre-disposition_a125207.html">Archives</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
+                                            <li><a href="https://www.tourmag.com/my/newsletter/newst1.htm" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/g.png" alt="TourMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>TourMaG</a></li>
                                             <li><a href="https://www.tourmag.com/my/tourmag/news_airmag/news_airmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/airmag1.png" alt="AirMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>AirMaG</a></li>
                                             <li class="newsletter-item">
                                                 <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/brochures_en_ligne1.png" alt="Brochures en ligne"></span>Brochures en ligne<span class="chevron">▼</span></button>
