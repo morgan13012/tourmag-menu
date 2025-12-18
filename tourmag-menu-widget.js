@@ -1298,7 +1298,7 @@
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
-                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 450px 750px; gap: 2.5rem;">
+                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 500px 600px; gap: 4rem;">
                                     <!-- Colonne 1 - Navigation compacte -->
                                     <div class="mega-column" style="max-width: 500px; min-width: 500px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
