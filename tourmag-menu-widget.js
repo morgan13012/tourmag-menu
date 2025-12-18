@@ -663,7 +663,7 @@
 
         /* BoÃ®te des offres d'abonnement */
         .subscription-offers-box {
-            background: #ffffff;
+            background: linear-gradient(135deg, rgba(89, 223, 122, 0.03), rgba(9, 86, 231, 0.03));
             border-radius: 12px;
             padding: 1.5rem;
         }
@@ -1693,7 +1693,8 @@
                 });
                 
                 // Activer le bouton cliqué
-                this.style.border = '2px solid #0066cc';
+                this.style.border = '3px solid #ffffff';
+                this.style.boxShadow = '0 4px 12px rgba(0, 102, 204, 0.3)';
                 this.style.color = '#ffffff';
                 this.style.background = 'linear-gradient(135deg, #0066cc, #0056b3)';
                 this.classList.add('active');
