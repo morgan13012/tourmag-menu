@@ -1213,16 +1213,7 @@
                                 <div class="mega-columns cols-3">
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">
-                                            <li class="newsletter-item">
-                                                <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/g.png" alt="TourMaG"></span>TourMaG<span class="chevron">â–¼</span></button>
-                                                <div class="newsletter-submenu">
-                                                    <ul>
-                                                        <li><a href="https://www.tourmag.com/my/newsletter/newst1.htm">Newsletter du jour</a></li>
-                                                        <li><a href="https://tourmag.insc.edt02.net/300335/20150403/">Inscription</a></li>
-                                                        <li><a href="https://www.tourmag.com/Toutes-les-Archives-des-Newsletters-TourMaG-com-2025-a-votre-disposition_a125207.html">Archives</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
+                                            <li><a href="https://www.tourmag.com/my/newsletter/newst1.htm" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/g.png" alt="TourMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>TourMaG</a></li>
                                             <li><a href="https://www.tourmag.com/my/tourmag/news_airmag/news_airmag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/airmag1.png" alt="AirMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>AirMaG</a></li>
                                             <li class="newsletter-item">
                                                 <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/brochures_en_ligne1.png" alt="Brochures en ligne"></span>Brochures en ligne<span class="chevron">â–¼</span></button>
@@ -1250,7 +1241,7 @@
                                         
                                         <!-- Bouton Écouter la dernière newsletter TourMaG -->
                                         <div style="margin-top: 1rem;">
-                                            <a href="https://www.tourmag.com/my/newsletter/newst1.htm" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, #6c757d, #495057); color: #ffffff; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(108, 117, 125, 0.25); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(108, 117, 125, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(108, 117, 125, 0.25)';">
+                                            <a href="https://www.tourmag.com/my/newsletter/newst1.htm" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
                                                 <span style="font-size: 1.3rem;">🔊</span>
                                                 Écouter la dernière newsletter TourMaG
                                             </a>
@@ -1258,7 +1249,7 @@
                                         
                                         <!-- Bouton Archives des newsletters TourMaG -->
                                         <div style="margin-top: 1rem;">
-                                            <a href="https://www.tourmag.com/Toutes-les-Archives-des-Newsletters-TourMaG-com-2025-a-votre-disposition_a125207.html" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, #6c757d, #495057); color: #ffffff; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(108, 117, 125, 0.25); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(108, 117, 125, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(108, 117, 125, 0.25)';">
+                                            <a href="https://www.tourmag.com/Toutes-les-Archives-des-Newsletters-TourMaG-com-2025-a-votre-disposition_a125207.html" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
                                                 <span style="font-size: 1.3rem;">📂</span>
                                                 Archives des newsletters TourMaG
                                             </a>
