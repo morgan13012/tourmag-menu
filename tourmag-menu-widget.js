@@ -1325,22 +1325,7 @@
                                                     <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">83Ã¢â€šÂ¬ TTC/an</span>
                                                 </div>
                                                 
-                                                <!-- Carte Futuroscopie -->
-                                                <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
-                                                    <h5 style="font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 0.5rem;">Futuroscopie</h5>
-                                                    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; flex-grow: 1; font-size: 1.05rem; color: var(--text-gray); line-height: 1.6;">
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
-                                                            Articles Premium
-                                                        </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.2rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A;">Ã¢Å“â€œ</span>
-                                                            Futuroscopie (analyses de Josette Sicsic)
-                                                        </li>
-                                                        
-                                                    </ul>
-                                                    <span style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffed4e); color: var(--text-dark); font-size: 1.15rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; text-align: center;">133Ã¢â€šÂ¬ TTC/an</span>
-                                                </div>
+                                    
                                                 
                                                 <!-- Carte MemberShip Club -->
                                                 <div style="background: var(--white); border-radius: 8px; padding: 1rem; transition: all 0.2s ease; border-left: 3px solid var(--primary-blue); display: flex; flex-direction: column;">
