@@ -663,7 +663,7 @@
 
         /* BoÃ®te des offres d'abonnement */
         .subscription-offers-box {
-            background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(255, 102, 0, 0.05));
+            background: #ffffff;
             border-radius: 12px;
             padding: 1.5rem;
         }
@@ -1248,8 +1248,24 @@
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">                                        </ul>
                                         
+                                        <!-- Bouton Écouter la dernière newsletter TourMaG -->
+                                        <div style="margin-top: 1rem;">
+                                            <a href="https://www.tourmag.com/my/newsletter/newst1.htm" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
+                                                <span style="font-size: 1.3rem;">🔊</span>
+                                                Écouter la dernière newsletter TourMaG
+                                            </a>
+                                        </div>
+                                        
+                                        <!-- Bouton Archives des newsletters TourMaG -->
+                                        <div style="margin-top: 1rem;">
+                                            <a href="https://www.tourmag.com/Toutes-les-Archives-des-Newsletters-TourMaG-com-2025-a-votre-disposition_a125207.html" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
+                                                <span style="font-size: 1.3rem;">📂</span>
+                                                Archives des newsletters TourMaG
+                                            </a>
+                                        </div>
+                                        
                                         <!-- Bouton d'inscription aux newsletters -->
-                                        <div style="margin-top: 2rem;">
+                                        <div style="margin-top: 1.5rem;">
                                             <a href="https://tourmag.insc.edt02.net/300335/20150403/" target="_blank" class="newsletter-subscribe-btn" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 700; font-size: 1.15rem; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
                                                 <span style="font-size: 1.4rem;">âœ‰ï¸</span>
                                                 S'abonner aux newsletters
@@ -1282,9 +1298,9 @@
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
-                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 400px 1fr; gap: 2.5rem;">
+                                <div class="mega-columns cols-2 abonnes-grid" style="grid-template-columns: 450px 750px; gap: 2.5rem;">
                                     <!-- Colonne 1 - Navigation compacte -->
-                                    <div class="mega-column" style="max-width: 400px; min-width: 400px;">
+                                    <div class="mega-column" style="max-width: 450px; min-width: 450px;">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
                                             <!-- Encadré Articles abonnés -->
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
@@ -1300,23 +1316,22 @@
                                     </div>
                                     <!-- Colonne 2 - Offres d'abonnement avec accordéon -->
                                     <div class="mega-column" style="flex: 1;">
-                                        <div style="background: linear-gradient(135deg, #59DF7A, #0956E7); padding: 2px; border-radius: 12px;">
-                                            <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(255, 102, 0, 0.05)); border-radius: 10px; padding: 1.5rem;">
-                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.6rem; font-weight: 600; color: #0066cc; margin-bottom: 1.5rem; text-align: center;">Nos Offres d'Abonnement</h4>
+                                        <div style="background: #ffffff; border: 2px solid #e0e0e0; border-radius: 12px; padding: 1.5rem;">
+                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.5rem; font-weight: 700; color: #0066cc; margin-bottom: 1.5rem; text-align: center; padding-bottom: 0.75rem; border-bottom: 2px solid #0066cc;">Nos Offres d'Abonnement</h4>
                                                 
                                                 <!-- Boutons des offres -->
                                                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
-                                                    <button class="offer-tab" data-offer="premium" style="background: var(--white); border: 2px solid #0066cc; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #0066cc; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Premium<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">83€ TTC/an</span>
+                                                    <button class="offer-tab active" data-offer="premium" style="background: #0066cc; border: 2px solid #0066cc; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 700; color: #ffffff; cursor: pointer; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);">
+                                                        Premium<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">83€ TTC/an</span>
                                                     </button>
-                                                    <button class="offer-tab" data-offer="membership" style="background: var(--white); border: 2px solid #e0e0e0; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #4a4a4a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        MemberShip Club<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">483€ TTC/an</span>
+                                                    <button class="offer-tab" data-offer="membership" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                        MemberShip Club<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
                                                     </button>
-                                                    <button class="offer-tab" data-offer="agences" style="background: var(--white); border: 2px solid #e0e0e0; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #4a4a4a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Spécial agences<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">199€ HT/an</span>
+                                                    <button class="offer-tab" data-offer="agences" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                        Spécial agences<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
                                                     </button>
-                                                    <button class="offer-tab" data-offer="etudiant" style="background: var(--white); border: 2px solid #e0e0e0; border-radius: 8px; padding: 1rem; font-size: 1.1rem; font-weight: 600; color: #4a4a4a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Étudiant<br><span style="font-size: 1.2rem; font-weight: 700; color: #ffd700;">10€ TTC/an</span>
+                                                    <button class="offer-tab" data-offer="etudiant" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                        Étudiant<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
                                                     </button>
                                                 </div>
                                                 
@@ -1421,7 +1436,6 @@
                                                         Voir toutes les offres →
                                                     </a>
                                                 </div>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -1667,16 +1681,28 @@
                 
                 // Réinitialiser tous les boutons
                 offerTabs.forEach(t => {
-                    t.style.border = '2px solid #e0e0e0';
-                    t.style.color = '#4a4a4a';
-                    t.style.background = 'var(--white)';
+                    t.style.border = '2px solid #d0d0d0';
+                    t.style.color = '#1a1a1a';
+                    t.style.background = '#f8f9fa';
+                    t.classList.remove('active');
+                    // Remettre la couleur du prix en bleu
+                    const priceSpan = t.querySelector('span');
+                    if (priceSpan) {
+                        priceSpan.style.color = '#0066cc';
+                    }
                 });
                 
                 // Activer le bouton cliqué
                 this.style.border = '2px solid #0066cc';
-                this.style.color = '#0066cc';
-                this.style.background = 'linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(89, 223, 122, 0.05))';
-                
+                this.style.color = '#ffffff';
+                this.style.background = 'linear-gradient(135deg, #0066cc, #0056b3)';
+                this.classList.add('active');
+                // Changer la couleur du prix en blanc aussi
+                const activePriceSpan = this.querySelector('span');
+                if (activePriceSpan) {
+                    activePriceSpan.style.color = '#ffffff';
+                }
+
                 // Masquer tous les contenus
                 offerContents.forEach(content => {
                     content.style.display = 'none';
