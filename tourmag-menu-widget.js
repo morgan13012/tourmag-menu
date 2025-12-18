@@ -1313,6 +1313,20 @@
                                             </div>
                                             <li><a href="https://www.tourmag.com/faq/Foire-aux-questions-Abonnements-articles_fi4792.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; font-weight: 600; padding: 0.75rem 1rem; font-size: 1.15rem;">â“ FAQ</a></li>
                                         </ul>
+                                        
+                                        <!-- Contact Gentiane -->
+                                        <div style="margin-top: 1.5rem;">
+                                            <a href="https://meetings-eu1.hubspot.com/gentiane/iftm?uuid=888913e6-b871-4dfe-a95d-a638089438d0" target="_blank" style="display: block; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(89, 223, 122, 0.05)); border: 2px solid rgba(0, 102, 204, 0.2); border-radius: 12px; padding: 1.25rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.2)'; this.style.borderColor='rgba(0, 102, 204, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.1)'; this.style.borderColor='rgba(0, 102, 204, 0.2)';">
+                                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                                    <img src="https://www.tourmag.com/my/tourmag/site/menu/gentiane.png" alt="Gentiane ROMANET" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #0066cc;">
+                                                    <div style="flex: 1;">
+                                                        <p style="margin: 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600; line-height: 1.4;">Pour toute question relative aux abonnements, contactez</p>
+                                                        <p style="margin: 0.25rem 0 0 0; font-size: 1.15rem; color: #0066cc; font-weight: 700;">Gentiane ROMANET</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
                                     </div>
                                     <!-- Colonne 2 - Offres d'abonnement avec accordéon -->
                                     <div class="mega-column" style="flex: 1;">
