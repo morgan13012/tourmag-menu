@@ -792,6 +792,22 @@
 
 
         /* Responsive */
+        /* Ajustement pour écrans laptop (15 pouces) */
+        @media (min-width: 1200px) and (max-width: 1600px) {
+            .nav-link {
+                font-size: 1.1rem;
+            }
+            
+            .mega-link {
+                font-size: 1.25rem;
+            }
+            
+            .mega-sublink {
+                font-size: 1.15rem;
+            }
+        }
+
+
         @media (max-width: 1200px) {
             /* Ajustement pour l'onglet Abonnés sur Ã©crans moyens */
             .mega-columns.abonnes-grid {
@@ -1258,7 +1274,7 @@
                                         <!-- Bouton d'inscription aux newsletters -->
                                         <div style="margin-top: 1.5rem;">
                                             <a href="https://tourmag.insc.edt02.net/300335/20150403/" target="_blank" class="newsletter-subscribe-btn" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 700; font-size: 1.15rem; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
-                                                <span style="font-size: 1.4rem;">âœ‰ï¸</span>
+                                                <span style="font-size: 1.4rem;">✉️</span>
                                                 S'abonner aux newsletters
                                             </a>
                                         </div>
@@ -1266,7 +1282,7 @@
                                         <!-- FAQ traitÃ©e diffÃ©remment -->
                                         <div style="margin-top: 1.5rem; padding-top: 1.5rem; ">
                                             <a href="https://www.tourmag.com/faq/Foire-aux-questions-Newsletter_fi1063.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; padding: 0.75rem 1rem; border-radius: 6px;">
-                                                <span style="font-size: 1.2rem;">â“</span>
+                                                <span style="font-size: 1.2rem;">❓</span>
                                                 FAQ
                                             </a>
                                         </div>
@@ -1305,7 +1321,7 @@
                                             </ul>
                                         
                                         <!-- Contact Gentiane -->
-                                        <div style="margin-top: 1.5rem;">
+                                        <div style="margin-top: 3rem;">
                                             <a href="https://meetings-eu1.hubspot.com/gentiane/iftm?uuid=888913e6-b871-4dfe-a95d-a638089438d0" target="_blank" style="display: block; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(89, 223, 122, 0.05)); border: 2px solid rgba(0, 102, 204, 0.2); border-radius: 12px; padding: 1.25rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.2)'; this.style.borderColor='rgba(0, 102, 204, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.1)'; this.style.borderColor='rgba(0, 102, 204, 0.2)';">
                                                 <div style="display: flex; align-items: center; gap: 1rem;">
                                                     <img src="https://www.tourmag.com/my/tourmag/site/menu/gentiane.png" alt="Gentiane ROMANET" style="width: 80px; height: 80px; border-radius: 50%; object-position: center 30%; object-fit: cover; border: 2px solid #0066cc;">
