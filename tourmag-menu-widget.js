@@ -1340,8 +1340,8 @@
                                     <div class="mega-column" style="flex: 1;">
                                         <div style="background: #57C6C6; padding: 3px; border-radius: 12px;">
                                             <div style="background: #F3FFFF; border-radius: 10px; padding: 1.5rem;">
-                                                <div style="border: 2px solid #57C6C6; border-radius: 12px; padding: 1rem; background: #F3FFFF; position: relative; margin-bottom: 2rem;">
-                                                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #57C6C6, #4ab8b8); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.2rem; color: #ffffff; box-shadow: 0 2px 8px rgba(87, 198, 198, 0.3); white-space: nowrap; min-width: 280px; text-align: center;">Nos Offres d'Abonnement</div>
+                                                <div style="position: relative; margin-bottom: 1.5rem;">
+                                                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #57C6C6, #4ab8b8); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.2rem; color: #ffffff; box-shadow: 0 2px 8px rgba(87, 198, 198, 0.3); white-space: nowrap; min-width: 280px; text-align: center; z-index: 10;">Nos Offres d'Abonnement</div>
                                                 </div>
                                                 
                                                 <!-- Boutons des offres -->
