@@ -1316,13 +1316,14 @@
                                     </div>
                                     <!-- Colonne 2 - Offres d'abonnement avec accordéon -->
                                     <div class="mega-column" style="flex: 1;">
-                                        <div style="background: #ffffff; border: 2px solid #e0e0e0; border-radius: 12px; padding: 1.5rem;">
-                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.5rem; font-weight: 700; color: #0066cc; margin-bottom: 1.5rem; text-align: center; padding-bottom: 0.75rem; border-bottom: 2px solid #0066cc;">Nos Offres d'Abonnement</h4>
+                                        <div style="background: linear-gradient(135deg, #59DF7A, #0956E7); padding: 3px; border-radius: 12px;">
+                                            <div style="background: linear-gradient(135deg, rgba(89, 223, 122, 0.08), rgba(9, 86, 231, 0.08)); border-radius: 10px; padding: 1.5rem;">
+                                                <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.6rem; font-weight: 700; color: #0066cc; margin-bottom: 1.5rem; text-align: center;">Nos Offres d'Abonnement</h4>
                                                 
                                                 <!-- Boutons des offres -->
                                                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
                                                     <button class="offer-tab active" data-offer="premium" style="background: #0066cc; border: 2px solid #0066cc; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 700; color: #ffffff; cursor: pointer; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);">
-                                                        Premium<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">83€ TTC/an</span>
+                                                        Premium<br><span style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">83€ TTC/an</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="membership" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; cursor: pointer; transition: all 0.3s ease; text-align: center;">
                                                         MemberShip Club<br><span style="font-size: 1.15rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
@@ -1436,6 +1437,7 @@
                                                         Voir toutes les offres →
                                                     </a>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
 
