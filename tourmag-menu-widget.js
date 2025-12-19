@@ -40,7 +40,7 @@
     #tourmag-menu .main-nav {
         display: block !important;
     }
-    /* FIN DU CODE AJOUTÃ‰ â¬†ï¸ */
+    /* FIN DU CODE AJOUTÉ â¬†ï¸ */
 
 
 
@@ -59,7 +59,7 @@
             overflow-x: hidden ;
         }
 
-        /* En-tÃªte et navigation principale */
+        /* En-tête et navigation principale */
         .header {
             background: var(--white);
             box-shadow: var(--shadow-sm);
@@ -128,7 +128,7 @@
             position: relative;
         }
 
-        /* CrÃ©er un "pont" invisible entre le nav-item et le mega menu */
+        /* Créer un "pont" invisible entre le nav-item et le mega menu */
         .nav-item::after {
             content: '';
             position: absolute;
@@ -317,7 +317,7 @@
             font-weight: 500;
         }
 
-        /* Sous-menus imbriquÃ©s */
+        /* Sous-menus imbriqués */
         .mega-sublinks {
             list-style: none;
             margin-left: 1rem;
@@ -340,7 +340,7 @@
             padding-left: 0.5rem;
         }
 
-        /* SystÃ¨me de menu Ã  2 niveaux pour newsletters */
+        /* Système de menu Ã  2 niveaux pour newsletters */
         .newsletter-list {
             position: relative;
             overflow: visible;
@@ -437,7 +437,7 @@
             border-left: 3px solid #59DF7A;
         }
 
-        /* Sous-menu vertical (dÃ©ploiement en dessous au clic) */
+        /* Sous-menu vertical (déploiement en dessous au clic) */
        .newsletter-submenu {
     position: relative;
     left: 0;
@@ -494,7 +494,7 @@
             padding-left: 1.25rem;
         }
 
-        /* Styles identiques pour les mÃ©dias avec sous-sections */
+        /* Styles identiques pour les médias avec sous-sections */
         .media-item {
             position: relative;
             overflow: visible;
@@ -622,7 +622,7 @@
             padding-left: 1.25rem;
         }
 
-        /* Style pour les liens mÃ©dias simples (sans sous-menu) */
+        /* Style pour les liens médias simples (sans sous-menu) */
         .media-simple-link {
             display: block;
             background: var(--bg-light);
@@ -642,7 +642,7 @@
             transform: translateY(-1px);
         }
 
-        /* BoÃ®te spÃ©ciale pour TourMaG TV et Futuroscopie */
+        /* BoÃ®te spéciale pour TourMaG TV et Futuroscopie */
         .special-media-box {
             background: linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(255, 102, 0, 0.08));
             border: 2px solid #ffd700;
@@ -731,7 +731,7 @@
         }
 
 
-        /* Contenu dÃ©mo */
+        /* Contenu démo */
         .demo-content {
             max-width: 1400px;
             margin: 4rem auto;
@@ -774,12 +774,12 @@
     display: block;
 }
 
-/* Par dÃ©faut : hamburger visible, croix cachÃ©e */
+/* Par défaut : hamburger visible, croix cachée */
 .mobile-menu-toggle .close-icon {
     display: none;
 }
 
-/* Quand actif : hamburger cachÃ©, croix visible */
+/* Quand actif : hamburger caché, croix visible */
 .mobile-menu-toggle.active .hamburger-icon {
     display: none !important;
 }
@@ -809,7 +809,7 @@
 
 
         @media (max-width: 1200px) {
-            /* Ajustement pour l'onglet Abonnés sur Ã©crans moyens */
+            /* Ajustement pour l'onglet Abonnés sur écrans moyens */
             .mega-columns.abonnes-grid {
                 grid-template-columns: 1fr !important;
                 gap: 1.5rem !important;
@@ -837,7 +837,7 @@
         }
 
       @media (max-width: 768px) {
-    /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÃ‰ */
+    /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÉ */
     #tourmag-menu {
         display: block !important;
         position: relative !important;
@@ -857,7 +857,7 @@
         margin-right: 0.5rem !important;
     }
     
-    /* Assurer que les conteneurs d'icÃ´nes ont aussi une taille fixe */
+    /* Assurer que les conteneurs d'icônes ont aussi une taille fixe */
     .newsletter-item .mega-link .newsletter-icon,
     .media-item .mega-link .media-icon {
         width: 40px !important;
@@ -867,7 +867,7 @@
         justify-content: center !important;
         flex-shrink: 0 !important;
     }
-    /* â¬†ï¸ FIN DU CODE Ã€ AJOUTER â¬†ï¸ */
+    /* â¬†ï¸ FIN DU CODE À AJOUTER â¬†ï¸ */
 
 
 
@@ -907,7 +907,7 @@
         padding: 0 1rem 0 4rem;
     }
 
-    /* Cacher la liste par dÃ©faut */
+    /* Cacher la liste par défaut */
     .nav-list {
         display: none;
         flex-direction: column;
@@ -919,7 +919,7 @@
         box-shadow: var(--shadow-lg) !important;
         padding: 0.5rem 0 !important;
         gap: 0;
-        z-index: 2147483647 !important;  /* â† AJOUTE CETTE LIGNE avec une valeur trÃ¨s Ã©levÃ©e */
+        z-index: 2147483647 !important;  /* â† AJOUTE CETTE LIGNE avec une valeur très élevée */
     }
 
     .header {
@@ -941,7 +941,7 @@
         padding: 0.75rem 1.5rem;
     }
     
-    /* DÃ©sactiver le hover sur mobile */
+    /* Désactiver le hover sur mobile */
     .nav-item:hover .mega-menu {
         opacity: 0;
         visibility: hidden;
@@ -961,7 +961,7 @@
         padding : 0 !important;
     }
     
-    /* Afficher le mega menu quand activÃ© */
+    /* Afficher le mega menu quand activé */
     .mega-menu[style*="display: block"] {
         display: block !important;
         opacity: 1;
@@ -1024,7 +1024,7 @@
     
     }
 
-    /* Style spÃ©cifique pour le bouton newsletter sur mobile */
+    /* Style spécifique pour le bouton newsletter sur mobile */
     .newsletter-subscribe-btn {
         width: 100% !important;
         padding: 1.25rem 1rem !important;
@@ -1139,7 +1139,7 @@
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
                                             <!-- Encadré Articles abonnés -->
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
-                                                <div style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
+                                                <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
                                                 <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
                                             <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
                                             <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
@@ -1172,10 +1172,10 @@
                                                 <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/destimag.png" alt="DestiMaG"></span>DestiMaG<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.tourmag.com/dmcmag/">DerniÃ¨res actualitÃ©s / carte interactive</a></li>
-                                                        <li><a href="https://www.tourmag.com/Annuaire-des-agences-touristiques-locales_r404.html">Annuaire des rÃ©ceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/dmcmag/">Dernières actualités / carte interactive</a></li>
+                                                        <li><a href="https://www.tourmag.com/Annuaire-des-agences-touristiques-locales_r404.html">Annuaire des réceptifs</a></li>
                                                         <li><a href="https://www.tourmag.com/Dossiers-destinations_r562.html">Dossiers destinations</a></li>
-                                                        <li><a href="https://www.tourmag.com/Communiques-des-agences-touristiques-locales_r408.html">Les offres des rÃ©ceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/Communiques-des-agences-touristiques-locales_r408.html">Les offres des réceptifs</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -1190,8 +1190,8 @@
                                                 <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/partez_en_france.png" alt="Partez en France"></span>Partez en France<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.tourmag.com/Annuaire-Partez-en-France_r390.html">Annuaire des rÃ©ceptifs</a></li>
-                                                        <li><a href="https://www.tourmag.com/Les-offres-Partez-en-France_r450.html">Les offres des rÃ©ceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/Annuaire-Partez-en-France_r390.html">Annuaire des réceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/Les-offres-Partez-en-France_r450.html">Les offres des réceptifs</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -1235,7 +1235,7 @@
                                                 <button type="button" class="mega-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/brochures_en_ligne1.png" alt="Brochures en ligne"></span>Brochures en ligne<span class="chevron">▼</span></button>
                                                 <div class="newsletter-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.brochuresenligne.com/docs/newsletters/archives/news_pro.html">DerniÃ¨re newsletter</a></li>
+                                                        <li><a href="https://www.brochuresenligne.com/docs/newsletters/archives/news_pro.html">Dernière newsletter</a></li>
                                                         <li><a href="https://tourmag.insc.edt02.net/300335/20150403/">Inscription pros</a></li>
                                                         <li><a href="https://tourmag.insc.edt02.net/252490/20150311/inscription.php">Inscription Particuliers</a></li>
                                                     </ul>
@@ -1279,7 +1279,7 @@
                                             </a>
                                         </div>
                                         
-                                        <!-- FAQ traitÃ©e diffÃ©remment -->
+                                        <!-- FAQ traitée différemment -->
                                         <div style="margin-top: 1.5rem; padding-top: 1.5rem; ">
                                             <a href="https://www.tourmag.com/faq/Foire-aux-questions-Newsletter_fi1063.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.1)); color: #ff6600; padding: 0.75rem 1rem; border-radius: 6px;">
                                                 <span style="font-size: 1.2rem;">❓</span>
@@ -1311,7 +1311,7 @@
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
                                             <!-- Encadré Articles abonnés -->
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
-                                                <div style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
+                                                <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
                                                 <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
                                             <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
                                             <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
@@ -1347,7 +1347,7 @@
                                     <div class="mega-column" style="flex: 1;">
                                         <div style="background: #57C6C6; padding: 2px; border-radius: 12px;">
                                             <div style="background: #F3FFFF; border-radius: 10px; padding: 1.5rem; position: relative;">
-                                                <div style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #57C6C6, #4ab8b8); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #ffffff; box-shadow: 0 2px 8px rgba(87, 198, 198, 0.3); white-space: nowrap; min-width: 300px; text-align: center; z-index: 10;">Nos Offres d'Abonnement</div>
+                                                <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #57C6C6, #4ab8b8); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #ffffff; box-shadow: 0 2px 8px rgba(87, 198, 198, 0.3); white-space: nowrap; min-width: 300px; text-align: center; z-index: 10;">Nos Offres d'Abonnement</div>
                                                 <div style="margin-top: 1.5rem;"></div>
                                                 
                                                 <!-- Boutons des offres -->
@@ -1508,14 +1508,14 @@
     }
 };
     
-    // Initialiser les fonctionnalitÃ©s JavaScript
+    // Initialiser les fonctionnalités JavaScript
     function initializeJS() {
 
 
         
-        console.log('TourMag Widget: initializeJS() appelÃ©');
+        console.log('TourMag Widget: initializeJS() appelé');
         
-        // Fonction pour positionner les mega menus correctement (sans dÃ©calage)
+        // Fonction pour positionner les mega menus correctement (sans décalage)
         function updateMegaMenuPositions() {
             const mainNav = document.querySelector('#tourmag-menu .main-nav');
             if (!mainNav) return;
@@ -1526,15 +1526,15 @@
             const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
             megaMenus.forEach(menu => {
                 // Positionner le menu exactement sous la navigation, sans espace
-                // En soustrayant 1px pour crÃ©er un lÃ©ger chevauchement et Ã©viter les gaps
+                // En soustrayant 1px pour créer un léger chevauchement et éviter les gaps
                 menu.style.top = (navBottom - 1) + 'px';
                 
-                // Ajouter une classe pour indiquer que le positionnement est prÃªt
+                // Ajouter une classe pour indiquer que le positionnement est prêt
                 menu.classList.add('positioned');
             });
         }
         
-        // Appliquer le positionnement initial immÃ©diatement
+        // Appliquer le positionnement initial immédiatement
         setTimeout(updateMegaMenuPositions, 0);
         
         // Variable pour optimiser avec requestAnimationFrame
@@ -1553,13 +1553,13 @@
         // Mettre Ã  jour la position au chargement
         updateMegaMenuPositions();
         
-        // Mettre Ã  jour lors du scroll avec requestAnimationFrame (fluiditÃ© maximale)
+        // Mettre Ã  jour lors du scroll avec requestAnimationFrame (fluidité maximale)
         window.addEventListener('scroll', requestTick, { passive: true });
         
         // Mettre Ã  jour lors du resize
         window.addEventListener('resize', updateMegaMenuPositions);
         
-        // Gestion amÃ©liorÃ©e du hover pour Ã©viter la fermeture prÃ©maturÃ©e (desktop uniquement)
+        // Gestion améliorée du hover pour éviter la fermeture prématurée (desktop uniquement)
         if (window.innerWidth > 768) {
             const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
             
@@ -1608,7 +1608,7 @@
         
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
-        console.log('TourMag Widget: Newsletter items trouvÃ©s:', newsletterItems.length);
+        console.log('TourMag Widget: Newsletter items trouvés:', newsletterItems.length);
 
         newsletterItems.forEach(item => {
             const link = item.querySelector('.mega-link');
@@ -1644,7 +1644,7 @@
                     clearTimeout(closeTimeout);
                 });
 
-                // Fermeture avec dÃ©lai quand la souris quitte la zone newsletter + sous-menu
+                // Fermeture avec délai quand la souris quitte la zone newsletter + sous-menu
                 item.addEventListener('mouseleave', function() {
                     // Seulement si le sous-menu est ouvert
                     if (item.classList.contains('active')) {
@@ -1655,9 +1655,9 @@
                 });
             });
 
-            // Gestion identique pour les mÃ©dias
+            // Gestion identique pour les médias
             const mediaItems = document.querySelectorAll('#tourmag-menu .media-item');
-            console.log('TourMag Widget: Media items trouvÃ©s:', mediaItems.length);
+            console.log('TourMag Widget: Media items trouvés:', mediaItems.length);
 
             mediaItems.forEach(item => {
                 const link = item.querySelector('.mega-link');
@@ -1691,7 +1691,7 @@
                     clearTimeout(closeTimeout);
                 });
 
-                // Fermeture avec dÃ©lai quand la souris quitte la zone
+                // Fermeture avec délai quand la souris quitte la zone
                 item.addEventListener('mouseleave', function() {
                     // Seulement si le sous-menu est ouvert
                     if (item.classList.contains('active')) {
@@ -1757,10 +1757,10 @@
                 const link = item.querySelector('.nav-link');
                 const megaMenu = item.querySelector('.mega-menu');
                 
-                // EmpÃªcher la navigation uniquement pour les onglets avec mega menu
+                // Empêcher la navigation uniquement pour les onglets avec mega menu
                 if (megaMenu) {
                     link.addEventListener('click', function(e) {
-                        // Sur mobile (largeur <= 768px), gÃ©rer l'ouverture/fermeture
+                        // Sur mobile (largeur <= 768px), gérer l'ouverture/fermeture
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
                             
@@ -1783,8 +1783,8 @@
                                 megaMenu.style.visibility = 'visible';
                             }
                         } else {
-                            // Sur desktop, empÃªcher la navigation mais ne rien faire
-                            // (le hover gÃ¨re l'affichage)
+                            // Sur desktop, empêcher la navigation mais ne rien faire
+                            // (le hover gère l'affichage)
                             e.preventDefault();
                         }
                     });
@@ -1806,7 +1806,7 @@
             }
         });
 
-        // RÃ©initialiser les styles lors du redimensionnement
+        // Réinitialiser les styles lors du redimensionnement
         let resizeTimer;
         window.addEventListener('resize', function() {
             clearTimeout(resizeTimer);
