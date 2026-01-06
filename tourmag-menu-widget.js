@@ -897,7 +897,7 @@
         position: absolute;
         left: 1rem;
         top: calc(50% +30px);
-        transform: translateY(-90%);
+        transform: translateY(-260%);
         z-index: 2147483647 !important;
     }
     
