@@ -901,14 +901,14 @@
         display: block !important;
     }
     
-.mobile-menu-toggle {
-    display: block !important;
-    position: absolute;
-    left: 1rem;
-    top: calc(50% +30px);
-    transform: translateY(-215%);
-    z-index: 2147483647 !important;
-}
+    .mobile-menu-toggle {
+        display: block !important;
+        position: absolute;
+        left: 1rem;
+        top: calc(50% +30px);
+        transform: translateY(-215%);
+        z-index: 2147483647 !important;
+    }
     
     /* Ajuster le container pour faire de la place au hamburger */
     .nav-container {
