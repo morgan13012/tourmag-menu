@@ -856,6 +856,15 @@
         vertical-align: middle !important;
         margin-right: 0.5rem !important;
     }
+
+     .nav-item .nav-link img {
+        width: 24px !important;
+        height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+    }
     
     /* Assurer que les conteneurs d'icônes ont aussi une taille fixe */
     .newsletter-item .mega-link .newsletter-icon,
@@ -897,7 +906,7 @@
         position: absolute;
         left: 1rem;
         top: calc(50% +30px);
-        transform: translateY(-210%);
+        transform: translateY(-215%);
         z-index: 2147483647 !important;
     }
     
