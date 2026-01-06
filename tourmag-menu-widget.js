@@ -788,7 +788,14 @@
     display: block !important;
 }
 
-
+  .nav-item .nav-link img {
+        width: 24px !important;
+        height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+    }
 
 
         /* Responsive */
@@ -857,14 +864,7 @@
         margin-right: 0.5rem !important;
     }
 
-     .nav-item .nav-link img {
-        width: 24px !important;
-        height: 24px !important;
-        max-width: 24px !important;
-        max-height: 24px !important;
-        object-fit: contain !important;
-        flex-shrink: 0 !important;
-    }
+   
     
     /* Assurer que les conteneurs d'icônes ont aussi une taille fixe */
     .newsletter-item .mega-link .newsletter-icon,
