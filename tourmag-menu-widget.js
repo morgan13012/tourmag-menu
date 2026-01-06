@@ -843,6 +843,21 @@
             }
         }
 
+/* Ajustement pour écrans de 480px à 768px (petites tablettes) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block !important;
+        position: absolute;
+        left: 1rem;
+         top: calc(50% +30px);
+        transform: translateY(-245%);
+        z-index: 2147483647 !important;
+    }
+}
+
+
+        
+
       @media (max-width: 768px) {
     /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÉ */
     #tourmag-menu {
