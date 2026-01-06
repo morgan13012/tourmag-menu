@@ -1090,8 +1090,8 @@
         <nav class="main-nav">
             <div class="nav-container">
               <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" id="mobileMenuToggle">
-    <span class="hamburger-icon">â˜°</span>
-    <span class="close-icon">âœ•</span>
+    <span class="hamburger-icon">☰</span>
+    <span class="close-icon">✕</span>
 </button>
                 <ul class="nav-list" id="navList">
                     <!-- Icône Accueil -->
