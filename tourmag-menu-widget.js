@@ -901,12 +901,12 @@
         display: block !important;
     }
     
- .mobile-menu-toggle {
+.mobile-menu-toggle {
     display: block !important;
     position: absolute;
     left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    top: calc(50% +30px);
+    transform: translateY(-215%);
     z-index: 2147483647 !important;
 }
     
