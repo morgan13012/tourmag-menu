@@ -879,19 +879,6 @@
     }
 
 
-
-  /* â¬‡ï¸ AJOUTEZ CE CODE ICI â¬‡ï¸ */
-    /* Uniformiser la taille des pictos sur mobile */
-    .newsletter-item .mega-link .newsletter-icon img,
-    .media-item .mega-link .media-icon img,
-    .media-simple-link img {
-        width: 40px !important;
-        height: 40px !important;
-        object-fit: contain !important;
-        vertical-align: middle !important;
-        margin-right: 0.5rem !important;
-    }
-
     /* Icônes dans les boutons newsletters (Écouter/Archives) */
     .mega-column a[href*="newsletter"] img,
     .mega-column a[href*="Archives"] img {
