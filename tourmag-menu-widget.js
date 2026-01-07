@@ -879,6 +879,28 @@
         margin-right: 0.5rem !important;
     }
 
+    /* Icônes dans les boutons newsletters (Écouter/Archives) */
+    .mega-column a[href*="newsletter"] img,
+    .mega-column a[href*="Archives"] img {
+        width: 20px !important;
+        height: 20px !important;
+        max-width: 20px !important;
+        max-height: 20px !important;
+        object-fit: contain !important;
+    }
+    
+    /* Photo de Gentiane dans l'onglet Abonnements */
+    .mega-column a[href*="gentiane"] img,
+    .mega-column a[href*="meetings"] img,
+    img[alt*="Gentiane"] {
+        width: 60px !important;
+        height: 60px !important;
+        max-width: 60px !important;
+        max-height: 60px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+
    
     
     /* Assurer que les conteneurs d'icônes ont aussi une taille fixe */
