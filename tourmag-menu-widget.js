@@ -1012,6 +1012,8 @@ a img {
         margin-right : 0 !important ;
         display: none;
         padding : 0 !important;
+        max-height: none !important; 
+    overflow: visible !important;
     }
     
     /* Afficher le mega menu quand activé */
