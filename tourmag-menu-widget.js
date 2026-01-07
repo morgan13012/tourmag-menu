@@ -866,6 +866,19 @@
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
 
+/* Uniformiser TOUTES les icônes newsletters y compris TourMaG et DestiMaG */
+    .newsletter-item .mega-link .newsletter-icon img,
+    .media-item .mega-link .media-icon img,
+    .media-simple-link img,
+    .media-simple-link .newsletter-icon img {
+        width: 40px !important;
+        height: 40px !important;
+        object-fit: contain !important;
+        vertical-align: middle !important;
+        margin-right: 0.5rem !important;
+    }
+
+
 
   /* â¬‡ï¸ AJOUTEZ CE CODE ICI â¬‡ï¸ */
     /* Uniformiser la taille des pictos sur mobile */
