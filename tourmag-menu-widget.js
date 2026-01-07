@@ -866,17 +866,24 @@
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
 
-/* FORCER toutes les images des newsletters à 40px (surcharge les styles inline) */
-    .newsletter-list img[src],
-    .mega-links img[src] {
-        width: 40px !important;
-        height: 40px !important;
-        max-width: 40px !important;
-        max-height: 40px !important;
-        object-fit: contain !important;
-        vertical-align: middle !important;
-        margin-right: 0.5rem !important;
-    }
+/* FORCER ABSOLUMENT toutes les images à 40px dans les newsletters */
+.mega-column img,
+.newsletter-list img,
+.mega-links img,
+.newsletter-icon img,
+.media-icon img,
+span img,
+a img {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    object-fit: contain !important;
+    vertical-align: middle !important;
+    margin-right: 0.5rem !important;
+}
 
 
     /* Icônes dans les boutons newsletters (Écouter/Archives) */
