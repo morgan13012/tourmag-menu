@@ -866,13 +866,13 @@
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
 
-/* Uniformiser TOUTES les icônes newsletters y compris TourMaG et DestiMaG */
-    .newsletter-item .mega-link .newsletter-icon img,
-    .media-item .mega-link .media-icon img,
-    .media-simple-link img,
-    .media-simple-link .newsletter-icon img {
+/* FORCER toutes les images des newsletters à 40px (surcharge les styles inline) */
+    .newsletter-list img[src],
+    .mega-links img[src] {
         width: 40px !important;
         height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
         object-fit: contain !important;
         vertical-align: middle !important;
         margin-right: 0.5rem !important;
