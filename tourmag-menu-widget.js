@@ -1170,7 +1170,7 @@ a img {
                                             <li><a href="https://www.tourmag.com/Transport_r7.html" class="media-simple-link">Transport</a></li>
 											<li><a href="https://www.tourmag.com/Hebergement_r6.html" class="media-simple-link">Hébergement</a></li>
                                             <li><a href="https://www.tourmag.com/Dossiers-speciaux_r582.html" class="media-simple-link">Dossiers spéciaux</a></li>
-                                            <li><a href="https://www.tourmag.com/Actus-Visas_r356.html" class="media-simple-link">Actus Visas</a></li>
+                                           
                                         </ul>
                                     </div>
                                     <div class="mega-column">
@@ -1190,6 +1190,7 @@ a img {
                                             <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-Rédactionnel</a></li>
                                             <li><a href="https://www.tourmag.com/Publi-news_r569.html" class="media-simple-link">Publi-News</a></li>
                                             <li><a href="https://www.tourmag.com/Webinaires_r493.html" class="media-simple-link">Webinaires</a></li>
+											 <li><a href="https://www.tourmag.com/Actus-Visas_r356.html" class="media-simple-link">Actus Visas</a></li>
                                         </ul>
                                     </div>
                                     <!-- Colonne 4 - Articles abonnés -->
