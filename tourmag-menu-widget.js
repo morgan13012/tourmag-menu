@@ -1263,7 +1263,7 @@ a img {
                                     <!-- Colonne 3 -->
                                     <div class="mega-column">
                                         <ul class="mega-links">
-                                            
+                                            <li><a href="https://www.tourmag.com/travelmanagermag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/tmcmag.png" alt="VoyageursMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">TMCMaG</a></li>
                                             <li class="media-item">
                                                 <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/traveljobs.png" alt="TravelJobs"></span>TravelJobs<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
