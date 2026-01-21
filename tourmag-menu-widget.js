@@ -129,16 +129,18 @@
         }
 
         /* Créer un "pont" invisible entre le nav-item et le mega menu */
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: -30px;
-            left: 0;
-            right: 0;
-            height: 30px;
-            background: transparent;
-            pointer-events: auto;
-        }
+   
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -200px; /* Augmenté pour couvrir plusieurs lignes */
+    left: 0;
+    right: 0;
+    height: 200px; /* Augmenté pour couvrir plusieurs lignes */
+    background: transparent;
+    pointer-events: auto;
+    z-index: 1999; /* Juste en dessous du mega menu */
+}
 
         .nav-link {
             display: flex;
