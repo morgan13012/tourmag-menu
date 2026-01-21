@@ -1233,7 +1233,7 @@ a img {
                                                 <div class="media-submenu">
                                                     <ul>
                                                         <li><a href="https://www.tourmag.com/dmcmag/">Dernières actualités / carte interactive</a></li>
-                                                        <li><a href="https://www.tourmag.com/Annuaire-des-agences-touristiques-locales_r404.html">Annuaire des réceptifs</a></li>
+                                                        <li><a href="https://www.tourmag.com/Annuaire-des-agences-touristiques-locales_r404.html">Annuaire des réceptifréceptifs</a></li>
                                                         <li><a href="https://www.tourmag.com/Dossiers-destinations_r562.html">Dossiers destinations</a></li>
                                                         <li><a href="https://www.tourmag.com/Communiques-des-agences-touristiques-locales_r408.html">Les offres des réceptifs</a></li>
                                                     </ul>
@@ -1266,7 +1266,8 @@ a img {
                                                 <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/traveljobs.png" alt="TravelJobs"></span>TravelJobs<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.tourmag.com/Emploi-Formation_r153.html">Actus emploi</a></li>
+                                                        <li><a href="https://www.tourmag.com/Emploi-Formation_r153.html">Actus emploi et formation</a></li>
+														<li><a href="https://www.tourmag.com/Recruteurs_r326.html">Les recruteurs</a></li>
                                                         <li><a href="https://www.tourmag.com/welcometothetravel/">Annonces</a></li>
                                                     </ul>
                                                 </div>
