@@ -1170,13 +1170,14 @@ a img {
                                             <li><a href="https://www.tourmag.com/Transport_r7.html" class="media-simple-link">Transport</a></li>
 											<li><a href="https://www.tourmag.com/Hebergement_r6.html" class="media-simple-link">Hébergement</a></li>
                                             <li><a href="https://www.tourmag.com/Dossiers-speciaux_r582.html" class="media-simple-link">Dossiers spéciaux</a></li>
+											<li><a href="https://www.tourmag.com/Salons-Evenements_r5.html" class="media-simple-link">Salons et Evénements</a></li>
                                            
                                         </ul>
                                     </div>
                                     <div class="mega-column">
                                         <ul class="mega-links">
                                             <li><a href="https://www.tourmag.com/BONS-PLANS-AGV_r32.html" class="media-simple-link">Bons Plans AGV</a></li>
-											<li><a href="https://www.tourmag.com/Salons-Evenements_r5.html" class="media-simple-link">Salons et Evénements</a></li>
+											
                                             <li><a href="https://www.tourmag.com/Courrier-Lecteurs_r10.html" class="media-simple-link">Courrier des Lecteurs</a></li>
                                             <li><a href="https://www.tourmag.com/People_r2.html" class="media-simple-link">People</a></li>
                                             <li><a href="https://www.tourmag.com/Carnet_r57.html" class="media-simple-link">Carnet</a></li>
