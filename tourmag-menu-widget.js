@@ -1244,14 +1244,15 @@ a img {
                                     <!-- Colonne 2 -->
                                     <div class="mega-column">
                                         <ul class="mega-links">
-                                            <li><a href="https://www.tourmag.com/latraveltech/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/la_travel_tech.png" alt="La TravelTech" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">La TravelTech</a></li>
+                                            <li><a href="https://www.tourmag.com/latraveltech/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/la_travel_tech.png" alt="La TravelTech" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">La Travel Tech</a></li>
                                             <li><a href="https://www.tourmag.com/luxurytravelmag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/luxury_travel_mag.png" alt="LuxuryTravelMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">LuxuryTravelMaG</a></li>
                                             <li class="media-item">
                                                 <button type="button" class="mega-link"><span class="media-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/partez_en_france.png" alt="Partez en France"></span>Partez en France<span class="chevron">▼</span></button>
                                                 <div class="media-submenu">
                                                     <ul>
-                                                        <li><a href="https://www.tourmag.com/Annuaire-Partez-en-France_r390.html">Annuaire des réceptifs</a></li>
-                                                        <li><a href="https://www.tourmag.com/Les-offres-Partez-en-France_r450.html">Les offres des réceptifs</a></li>
+														<li><a href="https://www.tourmag.com/partezenfrance/">Dernières actualités</a></li>
+                                                        <li><a href="https://www.tourmag.com/Annuaire-Partez-en-France_r390.html">Annuaire</a></li>
+                                                        <li><a href="https://www.tourmag.com/Les-offres-Partez-en-France_r450.html">Les offres Partez en France</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
