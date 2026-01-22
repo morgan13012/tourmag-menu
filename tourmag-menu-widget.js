@@ -780,14 +780,15 @@ body.hover-mode .mega-menu:hover {
     display: block !important;
 }
 
-  .nav-item .nav-link img {
-        width: 24px !important;
-        height: 24px !important;
-        max-width: 24px !important;
-        max-height: 24px !important;
-        object-fit: contain !important;
-        flex-shrink: 0 !important;
-    }
+ /* Icône d'accueil - taille desktop */
+.nav-item .nav-link img {
+    width: 24px !important;
+    height: 24px !important;
+    max-width: 24px !important;
+    max-height: 24px !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+}
 
 
         /* Responsive */
@@ -858,12 +859,13 @@ body.hover-mode .mega-menu:hover {
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
 
-/* Réduire l'icône d'accueil en mobile */
-    .nav-item .nav-link img {
+ #tourmag-menu .nav-list .nav-item:first-child .nav-link img {
         width: 16px !important;
         height: 16px !important;
         max-width: 16px !important;
         max-height: 16px !important;
+        min-width: 16px !important;
+        min-height: 16px !important;
     }
 
 
