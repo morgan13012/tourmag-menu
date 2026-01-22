@@ -858,6 +858,15 @@ body.hover-mode .mega-menu:hover {
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
 
+/* Réduire l'icône d'accueil en mobile */
+    .nav-item .nav-link img {
+        width: 20px !important;
+        height: 20px !important;
+        max-width: 20px !important;
+        max-height: 20px !important;
+    }
+
+
 /* FORCER ABSOLUMENT toutes les images à 40px dans les newsletters */
 .mega-column img,
 .newsletter-list img,
