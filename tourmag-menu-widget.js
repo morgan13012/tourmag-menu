@@ -1856,41 +1856,47 @@ function initializeJS() {
     });
     
     // Gestion des sous-menus sur mobile
-    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    // Gestion des sous-menus sur mobile
+const mobileNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+
+mobileNavItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const megaMenu = item.querySelector('.mega-menu');
     
-    navItems.forEach(item => {
-        const link = item.querySelector('.nav-link');
-        const megaMenu = item.querySelector('.mega-menu');
-        
-        if (megaMenu) {
-            const existingMobileHandler = link.getAttribute('data-mobile-handler');
-            if (!existingMobileHandler) {
-                link.setAttribute('data-mobile-handler', 'true');
-                link.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        
-                        navItems.forEach(otherItem => {
-                            if (otherItem !== item) {
-                                const otherMenu = otherItem.querySelector('.mega-menu');
-                                if (otherMenu) {
-                                    otherMenu.style.display = 'none';
-                                }
+    // Seulement pour les onglets AVEC mega menu
+    if (megaMenu && link) {
+        const existingMobileHandler = link.getAttribute('data-mobile-handler');
+        if (!existingMobileHandler) {
+            link.setAttribute('data-mobile-handler', 'true');
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Fermer les autres menus
+                    mobileNavItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherMenu = otherItem.querySelector('.mega-menu');
+                            if (otherMenu) {
+                                otherMenu.style.display = 'none';
                             }
-                        });
-                        
-                        if (megaMenu.style.display === 'block') {
-                            megaMenu.style.display = 'none';
-                        } else {
-                            megaMenu.style.display = 'block';
-                            megaMenu.style.opacity = '1';
-                            megaMenu.style.visibility = 'visible';
                         }
+                    });
+                    
+                    // Toggle le menu actuel
+                    if (megaMenu.style.display === 'block') {
+                        megaMenu.style.display = 'none';
+                    } else {
+                        megaMenu.style.display = 'block';
+                        megaMenu.style.opacity = '1';
+                        megaMenu.style.visibility = 'visible';
                     }
-                });
-            }
+                }
+            });
         }
-    });
+    }
+    // Les onglets SANS mega menu (TV, Petites Annonces, Contacts) gardent leur comportement par défaut
+});
     
     // Fermer le menu mobile si on clique en dehors
     document.addEventListener('click', function(event) {
