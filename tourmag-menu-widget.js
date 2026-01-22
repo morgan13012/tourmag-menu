@@ -204,25 +204,25 @@
     pointer-events: none;
 }
 
-        .nav-item:hover .mega-menu {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
+       /* Mode HOVER uniquement si la classe 'hover-mode' est présente */
+body.hover-mode .nav-item:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
-        /* Maintenir le mega menu ouvert quand on le survole directement */
-        .mega-menu:hover {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
+body.hover-mode .mega-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
-        /* Gestion par JavaScript avec la classe hovering */
-        .nav-item.hovering .mega-menu {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
+/* Mode CLIC : ouverture avec la classe 'active' */
+.nav-item.active .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
         .mega-menu-content {
             max-width: 1600px;
@@ -1655,6 +1655,7 @@ function initializeJS() {
     
     // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
    // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
+// Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
 function setupHoverBehavior() {
     const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
     
@@ -1671,6 +1672,10 @@ function setupHoverBehavior() {
     
     if (window.innerWidth > 768 && !isMenuMultiline()) {
         console.log('✅ MODE HOVER activé (menu sur 1 ligne)');
+        
+        // ACTIVER le mode hover via CSS
+        document.body.classList.add('hover-mode');
+        
         // HOVER : Menu sur une seule ligne
         freshNavItems.forEach(navItem => {
             const megaMenu = navItem.querySelector('.mega-menu');
@@ -1713,11 +1718,18 @@ function setupHoverBehavior() {
         });
     } else if (window.innerWidth > 768) {
         console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
+        
+        // DÉSACTIVER le mode hover via CSS
+        document.body.classList.remove('hover-mode');
+        
         // CLIC : Menu sur plusieurs lignes (desktop)
         setupClickBehavior(freshNavItems);
         setupClickOutsideHandler(freshNavItems);
     } else {
         console.log('📱 MODE MOBILE');
+        
+        // DÉSACTIVER le mode hover en mobile aussi
+        document.body.classList.remove('hover-mode');
     }
 }
     
