@@ -860,10 +860,10 @@ body.hover-mode .mega-menu:hover {
 
 /* Réduire l'icône d'accueil en mobile */
     .nav-item .nav-link img {
-        width: 20px !important;
-        height: 20px !important;
-        max-width: 20px !important;
-        max-height: 20px !important;
+        width: 16px !important;
+        height: 16px !important;
+        max-width: 16px !important;
+        max-height: 16px !important;
     }
 
 
