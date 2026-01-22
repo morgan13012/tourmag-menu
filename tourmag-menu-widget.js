@@ -1659,6 +1659,7 @@ function setupClickBehavior(items) {
    // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
 // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
 // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
+// Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
 function setupHoverBehavior() {
     console.log('🔧 setupHoverBehavior appelé');
     console.log('📏 Largeur fenêtre:', window.innerWidth);
@@ -1672,16 +1673,9 @@ function setupHoverBehavior() {
         // ACTIVER le mode hover via CSS
         document.body.classList.add('hover-mode');
         
-        // Retirer les event listeners de clic
+        // Retirer les classes active
         navItems.forEach(navItem => {
-            const megaMenu = navItem.querySelector('.mega-menu');
-            if (!megaMenu) return;
-            
-            const link = navItem.querySelector('.nav-link');
-            if (link) {
-                // Retirer la classe active au cas où
-                navItem.classList.remove('active');
-            }
+            navItem.classList.remove('active');
         });
         
     } else if (window.innerWidth > 768) {
@@ -1690,39 +1684,61 @@ function setupHoverBehavior() {
         // DÉSACTIVER le mode hover via CSS
         document.body.classList.remove('hover-mode');
         
-        // Ajouter les event listeners de clic (sans cloner)
-        navItems.forEach(item => {
+        // Retirer TOUS les anciens event listeners en recréant les nav-items
+        navItems.forEach((oldItem, index) => {
+            const newItem = oldItem.cloneNode(true);
+            oldItem.parentNode.replaceChild(newItem, oldItem);
+        });
+        
+        // Récupérer les NOUVEAUX éléments après clonage
+        const freshNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+        
+        // Ajouter les event listeners de clic sur les NOUVEAUX éléments
+        freshNavItems.forEach(item => {
             const link = item.querySelector('.nav-link');
             const megaMenu = item.querySelector('.mega-menu');
             
             if (megaMenu && link) {
-                // Retirer d'abord l'ancien listener s'il existe
-                const newLink = link.cloneNode(true);
-                link.parentNode.replaceChild(newLink, link);
-                
-                // Ajouter le nouveau listener
-                newLink.addEventListener('click', function(e) {
+                link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    console.log('🖱️ Clic détecté sur:', newLink.textContent.trim());
+                    console.log('🖱️ Clic détecté sur:', link.textContent.trim());
                     
                     const wasActive = item.classList.contains('active');
                     
                     // Fermer tous les autres menus
-                    navItems.forEach(otherItem => {
+                    freshNavItems.forEach(otherItem => {
                         if (otherItem !== item) {
                             otherItem.classList.remove('active');
                         }
                     });
                     
                     // Toggle le menu actuel
-                    item.classList.toggle('active', !wasActive);
-                    console.log('📊 Active?', item.classList.contains('active'));
+                    if (wasActive) {
+                        item.classList.remove('active');
+                        console.log('❌ Menu fermé');
+                    } else {
+                        item.classList.add('active');
+                        console.log('✅ Menu ouvert');
+                    }
                 });
             }
         });
         
         // Ajouter la fermeture au clic en dehors
-        setupClickOutsideHandler(navItems);
+        if (clickOutsideHandler) {
+            document.removeEventListener('click', clickOutsideHandler);
+        }
+        
+        clickOutsideHandler = function(event) {
+            const mainNav = document.querySelector('#tourmag-menu .main-nav');
+            if (mainNav && !mainNav.contains(event.target)) {
+                freshNavItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        };
+        
+        document.addEventListener('click', clickOutsideHandler);
         
     } else {
         console.log('📱 MODE MOBILE');
