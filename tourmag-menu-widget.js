@@ -1580,6 +1580,21 @@ a img {
 
         
         console.log('TourMag Widget: initializeJS() appelé');
+
+// Fonction pour détecter si le menu est sur plusieurs lignes
+function isMenuMultiline() {
+    const navList = document.querySelector('#tourmag-menu .nav-list');
+    if (!navList) return false;
+    
+    const navItems = Array.from(navList.querySelectorAll('.nav-item'));
+    if (navItems.length < 2) return false;
+    
+    // Comparer la position verticale du premier et dernier élément
+    const firstItemTop = navItems[0].getBoundingClientRect().top;
+    const lastItemTop = navItems[navItems.length - 1].getBoundingClientRect().top;
+    
+    return Math.abs(lastItemTop - firstItemTop) > 5; // Tolérance de 5px
+}
         
         // Fonction pour positionner les mega menus correctement (sans décalage)
         function updateMegaMenuPositions() {
@@ -1625,52 +1640,103 @@ a img {
         // Mettre Ã  jour lors du resize
         window.addEventListener('resize', updateMegaMenuPositions);
         
-        // Gestion améliorée du hover pour éviter la fermeture prématurée (desktop uniquement)
-        if (window.innerWidth > 768) {
-            const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+       // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
+function setupHoverBehavior() {
+    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    
+    // Retirer tous les anciens listeners en clonant les éléments
+    navItems.forEach(navItem => {
+        const newNavItem = navItem.cloneNode(true);
+        navItem.parentNode.replaceChild(newNavItem, navItem);
+    });
+    
+    // Récupérer les nouveaux éléments
+    const freshNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    
+    if (window.innerWidth > 768 && !isMenuMultiline()) {
+        // HOVER : Menu sur une seule ligne
+        freshNavItems.forEach(navItem => {
+            const megaMenu = navItem.querySelector('.mega-menu');
+            if (!megaMenu) return;
             
-            navItems.forEach(navItem => {
-                const megaMenu = navItem.querySelector('.mega-menu');
-                if (!megaMenu) return;
+            let hoverTimeout;
+            let isHoveringItem = false;
+            let isHoveringMenu = false;
+            
+            function checkAndClose() {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = setTimeout(() => {
+                    if (!isHoveringItem && !isHoveringMenu) {
+                        navItem.classList.remove('active');
+                    }
+                }, 150);
+            }
+		
+		// Fonction pour gérer le comportement au clic
+function setupClickBehavior(items) {
+    items.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const megaMenu = item.querySelector('.mega-menu');
+        
+        if (megaMenu) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                let hoverTimeout;
-                let isHoveringItem = false;
-                let isHoveringMenu = false;
+                const wasActive = item.classList.contains('active');
                 
-                function checkAndClose() {
-                    clearTimeout(hoverTimeout);
-                    hoverTimeout = setTimeout(() => {
-                        if (!isHoveringItem && !isHoveringMenu) {
-                            navItem.classList.remove('hovering');
-                        }
-                    }, 150);
-                }
-                
-                // Hover sur le nav-item
-                navItem.addEventListener('mouseenter', () => {
-                    clearTimeout(hoverTimeout);
-                    isHoveringItem = true;
-                    navItem.classList.add('hovering');
+                // Fermer tous les autres menus
+                items.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
                 });
                 
-                navItem.addEventListener('mouseleave', () => {
-                    isHoveringItem = false;
-                    checkAndClose();
-                });
-                
-                // Hover sur le mega-menu
-                megaMenu.addEventListener('mouseenter', () => {
-                    clearTimeout(hoverTimeout);
-                    isHoveringMenu = true;
-                    navItem.classList.add('hovering');
-                });
-                
-                megaMenu.addEventListener('mouseleave', () => {
-                    isHoveringMenu = false;
-                    checkAndClose();
-                });
+                // Toggle le menu actuel
+                item.classList.toggle('active', !wasActive);
             });
         }
+    });
+    
+    // Fermer au clic en dehors
+    document.addEventListener('click', function(event) {
+        const mainNav = document.querySelector('#tourmag-menu .main-nav');
+        if (!mainNav.contains(event.target)) {
+            items.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    });
+}
+            
+            // Hover sur le nav-item
+            navItem.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+                isHoveringItem = true;
+                navItem.classList.add('active');
+            });
+            
+            navItem.addEventListener('mouseleave', () => {
+                isHoveringItem = false;
+                checkAndClose();
+            });
+            
+            // Hover sur le mega-menu
+            megaMenu.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+                isHoveringMenu = true;
+                navItem.classList.add('active');
+            });
+            
+            megaMenu.addEventListener('mouseleave', () => {
+                isHoveringMenu = false;
+                checkAndClose();
+            });
+        });
+    } else if (window.innerWidth > 768) {
+        // CLIC : Menu sur plusieurs lignes (desktop)
+        setupClickBehavior(freshNavItems);
+    }
+}
         
         // Gestion du clic pour les newsletters
         const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
@@ -1872,19 +1938,24 @@ a img {
             }
         });
 
-        // Réinitialiser les styles lors du redimensionnement
-        let resizeTimer;
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-                if (window.innerWidth > 768) {
-                    document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
-                        menu.style.display = '';
-                    });
-                    document.getElementById('navList').classList.remove('active');
-                }
-            }, 250);
-        });
+        // Initialiser le comportement au chargement
+setupHoverBehavior();
+
+// Réinitialiser les styles lors du redimensionnement
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        if (window.innerWidth > 768) {
+            document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
+                menu.style.display = '';
+            });
+            document.getElementById('navList').classList.remove('active');
+            // Réinitialiser le comportement selon le nombre de lignes
+            setupHoverBehavior();
+        }
+    }, 250);
+});
     }
     
     // Initialisation au chargement du DOM
