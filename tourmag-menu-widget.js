@@ -1606,6 +1606,23 @@ a img {
 function initializeJS() {
     console.log('TourMag Widget: initializeJS() appelé');
 
+// DÉSACTIVER L'OVERLAY QUI BLOQUE LES CLICS EN MOBILE
+    const tabletBg = document.querySelector('.tablet-bg');
+    if (tabletBg) {
+        console.log('🚫 Désactivation de .tablet-bg qui bloque les clics');
+        tabletBg.style.pointerEvents = 'none';
+        tabletBg.style.display = 'none'; // Ou carrément le cacher
+    }
+
+// Vérifier régulièrement au cas où l'élément serait recréé
+    setInterval(function() {
+        const bg = document.querySelector('.tablet-bg');
+        if (bg && bg.style.pointerEvents !== 'none') {
+            console.log('🔄 Re-désactivation de .tablet-bg');
+            bg.style.pointerEvents = 'none';
+        }
+    }, 1000);
+
     // Fonction pour détecter si le menu est sur plusieurs lignes
     function isMenuMultiline() {
         const navList = document.querySelector('#tourmag-menu .nav-list');
