@@ -859,6 +859,31 @@ body.hover-mode .mega-menu:hover {
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
 
+.tablet-bg {
+        pointer-events: none !important;
+    }
+    
+    /* S'assurer que le menu et tous ses enfants sont cliquables */
+    #tourmag-menu,
+    #tourmag-menu *,
+    #tourmag-menu .header,
+    #tourmag-menu .main-nav,
+    #tourmag-menu .nav-list,
+    #tourmag-menu .nav-item,
+    #tourmag-menu .nav-link,
+    #tourmag-menu .mega-menu-content,
+    #tourmag-menu .mega-link,
+    #tourmag-menu a,
+    #tourmag-menu button {
+        pointer-events: auto !important;
+    }
+    
+    /* SAUF les mega menus fermés */
+    #tourmag-menu .mega-menu:not([style*="display: block"]) {
+        pointer-events: none !important;
+    }
+
+
  #tourmag-menu .nav-list .nav-item:first-child .nav-link img {
         width: 16px !important;
         height: 16px !important;
