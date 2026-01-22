@@ -1654,63 +1654,72 @@ function initializeJS() {
     }
     
     // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
-    function setupHoverBehavior() {
-        const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
-        
-        navItems.forEach(navItem => {
-            const newNavItem = navItem.cloneNode(true);
-            navItem.parentNode.replaceChild(newNavItem, navItem);
-        });
-        
-        const freshNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
-        
-        if (window.innerWidth > 768 && !isMenuMultiline()) {
-            // HOVER : Menu sur une seule ligne
-            freshNavItems.forEach(navItem => {
-                const megaMenu = navItem.querySelector('.mega-menu');
-                if (!megaMenu) return;
-                
-                let hoverTimeout;
-                let isHoveringItem = false;
-                let isHoveringMenu = false;
-                
-                function checkAndClose() {
-                    clearTimeout(hoverTimeout);
-                    hoverTimeout = setTimeout(() => {
-                        if (!isHoveringItem && !isHoveringMenu) {
-                            navItem.classList.remove('active');
-                        }
-                    }, 150);
-                }
-                
-                navItem.addEventListener('mouseenter', () => {
-                    clearTimeout(hoverTimeout);
-                    isHoveringItem = true;
-                    navItem.classList.add('active');
-                });
-                
-                navItem.addEventListener('mouseleave', () => {
-                    isHoveringItem = false;
-                    checkAndClose();
-                });
-                
-                megaMenu.addEventListener('mouseenter', () => {
-                    clearTimeout(hoverTimeout);
-                    isHoveringMenu = true;
-                    navItem.classList.add('active');
-                });
-                
-                megaMenu.addEventListener('mouseleave', () => {
-                    isHoveringMenu = false;
-                    checkAndClose();
-                });
+   // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
+function setupHoverBehavior() {
+    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    
+    console.log('🔧 setupHoverBehavior appelé');
+    console.log('📏 Largeur fenêtre:', window.innerWidth);
+    console.log('📊 Menu multiline?', isMenuMultiline());
+    
+    navItems.forEach(navItem => {
+        const newNavItem = navItem.cloneNode(true);
+        navItem.parentNode.replaceChild(newNavItem, navItem);
+    });
+    
+    const freshNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    
+    if (window.innerWidth > 768 && !isMenuMultiline()) {
+        console.log('✅ MODE HOVER activé (menu sur 1 ligne)');
+        // HOVER : Menu sur une seule ligne
+        freshNavItems.forEach(navItem => {
+            const megaMenu = navItem.querySelector('.mega-menu');
+            if (!megaMenu) return;
+            
+            let hoverTimeout;
+            let isHoveringItem = false;
+            let isHoveringMenu = false;
+            
+            function checkAndClose() {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = setTimeout(() => {
+                    if (!isHoveringItem && !isHoveringMenu) {
+                        navItem.classList.remove('active');
+                    }
+                }, 150);
+            }
+            
+            navItem.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+                isHoveringItem = true;
+                navItem.classList.add('active');
             });
-        } else if (window.innerWidth > 768) {
-            // CLIC : Menu sur plusieurs lignes (desktop)
-            setupClickBehavior(freshNavItems);
-            setupClickOutsideHandler(freshNavItems);
-        }
+            
+            navItem.addEventListener('mouseleave', () => {
+                isHoveringItem = false;
+                checkAndClose();
+            });
+            
+            megaMenu.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+                isHoveringMenu = true;
+                navItem.classList.add('active');
+            });
+            
+            megaMenu.addEventListener('mouseleave', () => {
+                isHoveringMenu = false;
+                checkAndClose();
+            });
+        });
+    } else if (window.innerWidth > 768) {
+        console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
+        // CLIC : Menu sur plusieurs lignes (desktop)
+        setupClickBehavior(freshNavItems);
+        setupClickOutsideHandler(freshNavItems);
+    } else {
+        console.log('📱 MODE MOBILE');
     }
+}
     
     // Appliquer le positionnement
     setTimeout(updateMegaMenuPositions, 0);
