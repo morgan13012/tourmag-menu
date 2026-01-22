@@ -780,15 +780,14 @@ body.hover-mode .mega-menu:hover {
     display: block !important;
 }
 
- /* Icône d'accueil - taille desktop */
-.nav-item .nav-link img {
-    width: 24px !important;
-    height: 24px !important;
-    max-width: 24px !important;
-    max-height: 24px !important;
-    object-fit: contain !important;
-    flex-shrink: 0 !important;
-}
+  .nav-item .nav-link img {
+        width: 24px !important;
+        height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+    }
 
 
         /* Responsive */
@@ -859,38 +858,12 @@ body.hover-mode .mega-menu:hover {
     z-index: 2147483647 !important; /* plus haut que le header TourMaG */
     }
 
-.tablet-bg {
-        pointer-events: none !important;
-    }
-    
-    /* S'assurer que le menu et tous ses enfants sont cliquables */
-    #tourmag-menu,
-    #tourmag-menu *,
-    #tourmag-menu .header,
-    #tourmag-menu .main-nav,
-    #tourmag-menu .nav-list,
-    #tourmag-menu .nav-item,
-    #tourmag-menu .nav-link,
-    #tourmag-menu .mega-menu-content,
-    #tourmag-menu .mega-link,
-    #tourmag-menu a,
-    #tourmag-menu button {
-        pointer-events: auto !important;
-    }
-    
-    /* SAUF les mega menus fermés */
-    #tourmag-menu .mega-menu:not([style*="display: block"]) {
-        pointer-events: none !important;
-    }
-
-
- #tourmag-menu .nav-list .nav-item:first-child .nav-link img {
-        width: 16px !important;
-        height: 16px !important;
-        max-width: 16px !important;
-        max-height: 16px !important;
-        min-width: 16px !important;
-        min-height: 16px !important;
+/* Réduire l'icône d'accueil en mobile */
+    .nav-item .nav-link img {
+        width: 20px !important;
+        height: 20px !important;
+        max-width: 20px !important;
+        max-height: 20px !important;
     }
 
 
@@ -1606,7 +1579,6 @@ a img {
 function initializeJS() {
     console.log('TourMag Widget: initializeJS() appelé');
 
-
     // Fonction pour détecter si le menu est sur plusieurs lignes
     function isMenuMultiline() {
         const navList = document.querySelector('#tourmag-menu .nav-list');
@@ -1882,47 +1854,41 @@ function initializeJS() {
     });
     
     // Gestion des sous-menus sur mobile
-    // Gestion des sous-menus sur mobile
-const mobileNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
-
-mobileNavItems.forEach(item => {
-    const link = item.querySelector('.nav-link');
-    const megaMenu = item.querySelector('.mega-menu');
+    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
     
-    // Seulement pour les onglets AVEC mega menu
-    if (megaMenu && link) {
-        const existingMobileHandler = link.getAttribute('data-mobile-handler');
-        if (!existingMobileHandler) {
-            link.setAttribute('data-mobile-handler', 'true');
-            link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Fermer les autres menus
-                    mobileNavItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            const otherMenu = otherItem.querySelector('.mega-menu');
-                            if (otherMenu) {
-                                otherMenu.style.display = 'none';
+    navItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const megaMenu = item.querySelector('.mega-menu');
+        
+        if (megaMenu) {
+            const existingMobileHandler = link.getAttribute('data-mobile-handler');
+            if (!existingMobileHandler) {
+                link.setAttribute('data-mobile-handler', 'true');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        
+                        navItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                const otherMenu = otherItem.querySelector('.mega-menu');
+                                if (otherMenu) {
+                                    otherMenu.style.display = 'none';
+                                }
                             }
+                        });
+                        
+                        if (megaMenu.style.display === 'block') {
+                            megaMenu.style.display = 'none';
+                        } else {
+                            megaMenu.style.display = 'block';
+                            megaMenu.style.opacity = '1';
+                            megaMenu.style.visibility = 'visible';
                         }
-                    });
-                    
-                    // Toggle le menu actuel
-                    if (megaMenu.style.display === 'block') {
-                        megaMenu.style.display = 'none';
-                    } else {
-                        megaMenu.style.display = 'block';
-                        megaMenu.style.opacity = '1';
-                        megaMenu.style.visibility = 'visible';
                     }
-                }
-            });
+                });
+            }
         }
-    }
-    // Les onglets SANS mega menu (TV, Petites Annonces, Contacts) gardent leur comportement par défaut
-});
+    });
     
     // Fermer le menu mobile si on clique en dehors
     document.addEventListener('click', function(event) {
