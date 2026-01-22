@@ -1579,6 +1579,60 @@ a img {
 function initializeJS() {
     console.log('TourMag Widget: initializeJS() appelé');
 
+ // CORRECTION AUTOMATIQUE DES CLICS BLOQUÉS EN MOBILE
+    function fixMobileClicks() {
+        if (window.innerWidth > 768) return; // Seulement en mobile
+        
+        console.log('🔧 Correction des clics bloqués en mobile...');
+        
+        // Désactiver tous les éléments suspects qui bloquent les clics
+        const allElements = document.querySelectorAll('*');
+        let fixed = 0;
+        
+        allElements.forEach(el => {
+            // Ignorer les éléments du menu TourMag
+            if (el.closest('#tourmag-menu')) return;
+            
+            const style = window.getComputedStyle(el);
+            const rect = el.getBoundingClientRect();
+            
+            // Détecter les éléments qui couvrent l'écran avec pointer-events: auto
+            const coversScreen = rect.width > window.innerWidth * 0.5 && 
+                                rect.height > window.innerHeight * 0.3;
+            const hasPointerEvents = style.pointerEvents === 'auto';
+            const isPositioned = style.position === 'fixed' || style.position === 'absolute';
+            
+            if (coversScreen && hasPointerEvents && isPositioned) {
+                el.style.pointerEvents = 'none';
+                console.log('✅ Désactivé:', el.tagName, el.className);
+                fixed++;
+            }
+        });
+        
+        // Forcer pointer-events sur le menu TourMag
+        const tourmagMenu = document.querySelector('#tourmag-menu');
+        if (tourmagMenu) {
+            tourmagMenu.style.pointerEvents = 'auto';
+            const allChildren = tourmagMenu.querySelectorAll('*');
+            allChildren.forEach(child => {
+                child.style.pointerEvents = 'auto';
+            });
+        }
+        
+        console.log(`✅ ${fixed} élément(s) bloquant(s) désactivé(s)`);
+    }
+    
+    // Appliquer la correction au chargement et au resize
+    if (window.innerWidth <= 768) {
+        setTimeout(fixMobileClicks, 100); // Petit délai pour que la page soit chargée
+    }
+    
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768) {
+            fixMobileClicks();
+        }
+    });
+
     // Fonction pour détecter si le menu est sur plusieurs lignes
     function isMenuMultiline() {
         const navList = document.querySelector('#tourmag-menu .nav-list');
