@@ -1612,28 +1612,30 @@ function initializeJS() {
     let clickOutsideHandler = null;
     
     // Fonction pour gérer le comportement au clic
-    function setupClickBehavior(items) {
-        items.forEach(item => {
-            const link = item.querySelector('.nav-link');
-            const megaMenu = item.querySelector('.mega-menu');
-            
-            if (megaMenu) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const wasActive = item.classList.contains('active');
-                    
-                    items.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    item.classList.toggle('active', !wasActive);
+    // Fonction pour gérer le comportement au clic
+function setupClickBehavior(items) {
+    items.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const megaMenu = item.querySelector('.mega-menu');
+        
+        if (megaMenu && link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('🖱️ Clic via setupClickBehavior sur:', link.textContent.trim());
+                
+                const wasActive = item.classList.contains('active');
+                
+                items.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
                 });
-            }
-        });
-    }
+                
+                item.classList.toggle('active', !wasActive);
+            });
+        }
+    });
+}
     
     // Fonction pour gérer la fermeture au clic en dehors
     function setupClickOutsideHandler(items) {
@@ -1656,19 +1658,13 @@ function initializeJS() {
     // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
    // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
 // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
+// Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
 function setupHoverBehavior() {
-    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
-    
     console.log('🔧 setupHoverBehavior appelé');
     console.log('📏 Largeur fenêtre:', window.innerWidth);
     console.log('📊 Menu multiline?', isMenuMultiline());
     
-    navItems.forEach(navItem => {
-        const newNavItem = navItem.cloneNode(true);
-        navItem.parentNode.replaceChild(newNavItem, navItem);
-    });
-    
-    const freshNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
     
     if (window.innerWidth > 768 && !isMenuMultiline()) {
         console.log('✅ MODE HOVER activé (menu sur 1 ligne)');
@@ -1676,59 +1672,60 @@ function setupHoverBehavior() {
         // ACTIVER le mode hover via CSS
         document.body.classList.add('hover-mode');
         
-        // HOVER : Menu sur une seule ligne
-        freshNavItems.forEach(navItem => {
+        // Retirer les event listeners de clic
+        navItems.forEach(navItem => {
             const megaMenu = navItem.querySelector('.mega-menu');
             if (!megaMenu) return;
             
-            let hoverTimeout;
-            let isHoveringItem = false;
-            let isHoveringMenu = false;
-            
-            function checkAndClose() {
-                clearTimeout(hoverTimeout);
-                hoverTimeout = setTimeout(() => {
-                    if (!isHoveringItem && !isHoveringMenu) {
-                        navItem.classList.remove('active');
-                    }
-                }, 150);
+            const link = navItem.querySelector('.nav-link');
+            if (link) {
+                // Retirer la classe active au cas où
+                navItem.classList.remove('active');
             }
-            
-            navItem.addEventListener('mouseenter', () => {
-                clearTimeout(hoverTimeout);
-                isHoveringItem = true;
-                navItem.classList.add('active');
-            });
-            
-            navItem.addEventListener('mouseleave', () => {
-                isHoveringItem = false;
-                checkAndClose();
-            });
-            
-            megaMenu.addEventListener('mouseenter', () => {
-                clearTimeout(hoverTimeout);
-                isHoveringMenu = true;
-                navItem.classList.add('active');
-            });
-            
-            megaMenu.addEventListener('mouseleave', () => {
-                isHoveringMenu = false;
-                checkAndClose();
-            });
         });
+        
     } else if (window.innerWidth > 768) {
         console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
         
         // DÉSACTIVER le mode hover via CSS
         document.body.classList.remove('hover-mode');
         
-        // CLIC : Menu sur plusieurs lignes (desktop)
-        setupClickBehavior(freshNavItems);
-        setupClickOutsideHandler(freshNavItems);
+        // Ajouter les event listeners de clic (sans cloner)
+        navItems.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const megaMenu = item.querySelector('.mega-menu');
+            
+            if (megaMenu && link) {
+                // Retirer d'abord l'ancien listener s'il existe
+                const newLink = link.cloneNode(true);
+                link.parentNode.replaceChild(newLink, link);
+                
+                // Ajouter le nouveau listener
+                newLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('🖱️ Clic détecté sur:', newLink.textContent.trim());
+                    
+                    const wasActive = item.classList.contains('active');
+                    
+                    // Fermer tous les autres menus
+                    navItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle le menu actuel
+                    item.classList.toggle('active', !wasActive);
+                    console.log('📊 Active?', item.classList.contains('active'));
+                });
+            }
+        });
+        
+        // Ajouter la fermeture au clic en dehors
+        setupClickOutsideHandler(navItems);
+        
     } else {
         console.log('📱 MODE MOBILE');
-        
-        // DÉSACTIVER le mode hover en mobile aussi
         document.body.classList.remove('hover-mode');
     }
 }
