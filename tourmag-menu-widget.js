@@ -1575,388 +1575,349 @@ a img {
 };
     
     // Initialiser les fonctionnalités JavaScript
-    function initializeJS() {
+   // Initialiser les fonctionnalités JavaScript
+function initializeJS() {
+    console.log('TourMag Widget: initializeJS() appelé');
 
-
+    // Fonction pour détecter si le menu est sur plusieurs lignes
+    function isMenuMultiline() {
+        const navList = document.querySelector('#tourmag-menu .nav-list');
+        if (!navList) return false;
         
-        console.log('TourMag Widget: initializeJS() appelé');
-
-// Fonction pour détecter si le menu est sur plusieurs lignes
-function isMenuMultiline() {
-    const navList = document.querySelector('#tourmag-menu .nav-list');
-    if (!navList) return false;
-    
-    const navItems = Array.from(navList.querySelectorAll('.nav-item'));
-    if (navItems.length < 2) return false;
-    
-    // Comparer la position verticale du premier et dernier élément
-    const firstItemTop = navItems[0].getBoundingClientRect().top;
-    const lastItemTop = navItems[navItems.length - 1].getBoundingClientRect().top;
-    
-    return Math.abs(lastItemTop - firstItemTop) > 5; // Tolérance de 5px
-}
+        const navItems = Array.from(navList.querySelectorAll('.nav-item'));
+        if (navItems.length < 2) return false;
         
-        // Fonction pour positionner les mega menus correctement (sans décalage)
-        function updateMegaMenuPositions() {
-            const mainNav = document.querySelector('#tourmag-menu .main-nav');
-            if (!mainNav) return;
+        const firstItemTop = navItems[0].getBoundingClientRect().top;
+        const lastItemTop = navItems[navItems.length - 1].getBoundingClientRect().top;
+        
+        return Math.abs(lastItemTop - firstItemTop) > 5;
+    }
+    
+    // Fonction pour positionner les mega menus correctement
+    function updateMegaMenuPositions() {
+        const mainNav = document.querySelector('#tourmag-menu .main-nav');
+        if (!mainNav) return;
+        
+        const navRect = mainNav.getBoundingClientRect();
+        const navBottom = navRect.bottom;
+        
+        const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
+        megaMenus.forEach(menu => {
+            menu.style.top = (navBottom - 1) + 'px';
+            menu.classList.add('positioned');
+        });
+    }
+    
+    // Variable pour la fermeture au clic en dehors
+    let clickOutsideHandler = null;
+    
+    // Fonction pour gérer le comportement au clic
+    function setupClickBehavior(items) {
+        items.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const megaMenu = item.querySelector('.mega-menu');
             
-            const navRect = mainNav.getBoundingClientRect();
-            const navBottom = navRect.bottom;
-            
-            const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
-            megaMenus.forEach(menu => {
-                // Positionner le menu exactement sous la navigation, sans espace
-                // En soustrayant 1px pour créer un léger chevauchement et éviter les gaps
-                menu.style.top = (navBottom - 1) + 'px';
-                
-                // Ajouter une classe pour indiquer que le positionnement est prêt
-                menu.classList.add('positioned');
-            });
-        }
-        
-        // Appliquer le positionnement initial immédiatement
-        setTimeout(updateMegaMenuPositions, 0);
-        
-        // Variable pour optimiser avec requestAnimationFrame
-        let ticking = false;
-        
-        function requestTick() {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    updateMegaMenuPositions();
-                    ticking = false;
+            if (megaMenu) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const wasActive = item.classList.contains('active');
+                    
+                    items.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    item.classList.toggle('active', !wasActive);
                 });
-                ticking = true;
             }
+        });
+    }
+    
+    // Fonction pour gérer la fermeture au clic en dehors
+    function setupClickOutsideHandler(items) {
+        if (clickOutsideHandler) {
+            document.removeEventListener('click', clickOutsideHandler);
         }
         
-        // Mettre Ã  jour la position au chargement
-        updateMegaMenuPositions();
+        clickOutsideHandler = function(event) {
+            const mainNav = document.querySelector('#tourmag-menu .main-nav');
+            if (mainNav && !mainNav.contains(event.target)) {
+                items.forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        };
         
-        // Mettre Ã  jour lors du scroll avec requestAnimationFrame (fluidité maximale)
-        window.addEventListener('scroll', requestTick, { passive: true });
-        
-        // Mettre Ã  jour lors du resize
-        window.addEventListener('resize', updateMegaMenuPositions);
-        
-       // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
-function setupHoverBehavior() {
-    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+        document.addEventListener('click', clickOutsideHandler);
+    }
     
-    // Retirer tous les anciens listeners en clonant les éléments
-    navItems.forEach(navItem => {
-        const newNavItem = navItem.cloneNode(true);
-        navItem.parentNode.replaceChild(newNavItem, navItem);
+    // Gestion du hover UNIQUEMENT si le menu est sur une seule ligne
+    function setupHoverBehavior() {
+        const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+        
+        navItems.forEach(navItem => {
+            const newNavItem = navItem.cloneNode(true);
+            navItem.parentNode.replaceChild(newNavItem, navItem);
+        });
+        
+        const freshNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+        
+        if (window.innerWidth > 768 && !isMenuMultiline()) {
+            // HOVER : Menu sur une seule ligne
+            freshNavItems.forEach(navItem => {
+                const megaMenu = navItem.querySelector('.mega-menu');
+                if (!megaMenu) return;
+                
+                let hoverTimeout;
+                let isHoveringItem = false;
+                let isHoveringMenu = false;
+                
+                function checkAndClose() {
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = setTimeout(() => {
+                        if (!isHoveringItem && !isHoveringMenu) {
+                            navItem.classList.remove('active');
+                        }
+                    }, 150);
+                }
+                
+                navItem.addEventListener('mouseenter', () => {
+                    clearTimeout(hoverTimeout);
+                    isHoveringItem = true;
+                    navItem.classList.add('active');
+                });
+                
+                navItem.addEventListener('mouseleave', () => {
+                    isHoveringItem = false;
+                    checkAndClose();
+                });
+                
+                megaMenu.addEventListener('mouseenter', () => {
+                    clearTimeout(hoverTimeout);
+                    isHoveringMenu = true;
+                    navItem.classList.add('active');
+                });
+                
+                megaMenu.addEventListener('mouseleave', () => {
+                    isHoveringMenu = false;
+                    checkAndClose();
+                });
+            });
+        } else if (window.innerWidth > 768) {
+            // CLIC : Menu sur plusieurs lignes (desktop)
+            setupClickBehavior(freshNavItems);
+            setupClickOutsideHandler(freshNavItems);
+        }
+    }
+    
+    // Appliquer le positionnement
+    setTimeout(updateMegaMenuPositions, 0);
+    
+    let ticking = false;
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateMegaMenuPositions();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    
+    updateMegaMenuPositions();
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', updateMegaMenuPositions);
+    
+    // Initialiser le comportement
+    setupHoverBehavior();
+    
+    // Gestion du clic pour les newsletters
+    const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
+    
+    newsletterItems.forEach(item => {
+        const link = item.querySelector('.mega-link');
+        let closeTimeout;
+        
+        if (!link) return;
+        
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            clearTimeout(closeTimeout);
+            
+            const wasActive = item.classList.contains('active');
+            
+            newsletterItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            if (!wasActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+        
+        item.addEventListener('mouseenter', function() {
+            clearTimeout(closeTimeout);
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            if (item.classList.contains('active')) {
+                closeTimeout = setTimeout(function() {
+                    item.classList.remove('active');
+                }, 200);
+            }
+        });
     });
     
-    // Récupérer les nouveaux éléments
-    const freshNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    // Gestion identique pour les médias
+    const mediaItems = document.querySelectorAll('#tourmag-menu .media-item');
     
-    if (window.innerWidth > 768 && !isMenuMultiline()) {
-        // HOVER : Menu sur une seule ligne
-        freshNavItems.forEach(navItem => {
-            const megaMenu = navItem.querySelector('.mega-menu');
-            if (!megaMenu) return;
+    mediaItems.forEach(item => {
+        const link = item.querySelector('.mega-link');
+        let closeTimeout;
+        
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            clearTimeout(closeTimeout);
             
-            let hoverTimeout;
-            let isHoveringItem = false;
-            let isHoveringMenu = false;
+            const wasActive = item.classList.contains('active');
             
-            function checkAndClose() {
-                clearTimeout(hoverTimeout);
-                hoverTimeout = setTimeout(() => {
-                    if (!isHoveringItem && !isHoveringMenu) {
-                        navItem.classList.remove('active');
-                    }
-                }, 150);
+            mediaItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            if (!wasActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
             }
-		
-		// Fonction pour gérer le comportement au clic
-function setupClickBehavior(items) {
-    items.forEach(item => {
+        });
+        
+        item.addEventListener('mouseenter', function() {
+            clearTimeout(closeTimeout);
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            if (item.classList.contains('active')) {
+                closeTimeout = setTimeout(function() {
+                    item.classList.remove('active');
+                }, 200);
+            }
+        });
+    });
+    
+    // Gestion de l'accordéon des offres d'abonnement
+    const offerTabs = document.querySelectorAll('.offer-tab');
+    const offerContents = document.querySelectorAll('.offer-content');
+    
+    offerTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const offerType = this.getAttribute('data-offer');
+            
+            offerTabs.forEach(t => {
+                t.style.border = '2px solid #d0d0d0';
+                t.style.color = '#1a1a1a';
+                t.style.background = '#f8f9fa';
+                t.style.boxShadow = 'none';
+                t.classList.remove('active');
+                const priceSpan = t.querySelector('span');
+                if (priceSpan) {
+                    priceSpan.style.color = '#0066cc';
+                }
+            });
+            
+            this.style.border = '2px solid #0066cc';
+            this.style.boxShadow = '0 4px 12px rgba(0, 102, 204, 0.3)';
+            this.style.color = '#ffffff';
+            this.style.background = 'linear-gradient(135deg, #0066cc, #0056b3)';
+            this.classList.add('active');
+            const activePriceSpan = this.querySelector('span');
+            if (activePriceSpan) {
+                activePriceSpan.style.color = '#ffffff';
+            }
+            
+            offerContents.forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            const targetContent = document.querySelector(`.offer-content[data-content="${offerType}"]`);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+            }
+        });
+    });
+    
+    // Gestion des sous-menus sur mobile
+    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+    
+    navItems.forEach(item => {
         const link = item.querySelector('.nav-link');
         const megaMenu = item.querySelector('.mega-menu');
         
         if (megaMenu) {
             link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const wasActive = item.classList.contains('active');
-                
-                // Fermer tous les autres menus
-                items.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    
+                    navItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherMenu = otherItem.querySelector('.mega-menu');
+                            if (otherMenu) {
+                                otherMenu.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    if (megaMenu.style.display === 'block') {
+                        megaMenu.style.display = 'none';
+                    } else {
+                        megaMenu.style.display = 'block';
+                        megaMenu.style.opacity = '1';
+                        megaMenu.style.visibility = 'visible';
                     }
-                });
-                
-                // Toggle le menu actuel
-                item.classList.toggle('active', !wasActive);
+                } else {
+                    e.preventDefault();
+                }
             });
         }
     });
     
-    // Fermer au clic en dehors
+    // Fermer le menu mobile si on clique en dehors
     document.addEventListener('click', function(event) {
-        const mainNav = document.querySelector('#tourmag-menu .main-nav');
-        if (!mainNav.contains(event.target)) {
-            items.forEach(item => {
-                item.classList.remove('active');
-            });
+        const nav = document.querySelector('#tourmag-menu .main-nav');
+        const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
+        const navList = document.getElementById('navList');
+        
+        if (window.innerWidth <= 768 && 
+            !nav.contains(event.target) && 
+            !toggle.contains(event.target)) {
+            navList.classList.remove('active');
+            toggle.classList.remove('active');
         }
     });
-}
-            
-            // Hover sur le nav-item
-            navItem.addEventListener('mouseenter', () => {
-                clearTimeout(hoverTimeout);
-                isHoveringItem = true;
-                navItem.classList.add('active');
-            });
-            
-            navItem.addEventListener('mouseleave', () => {
-                isHoveringItem = false;
-                checkAndClose();
-            });
-            
-            // Hover sur le mega-menu
-            megaMenu.addEventListener('mouseenter', () => {
-                clearTimeout(hoverTimeout);
-                isHoveringMenu = true;
-                navItem.classList.add('active');
-            });
-            
-            megaMenu.addEventListener('mouseleave', () => {
-                isHoveringMenu = false;
-                checkAndClose();
-            });
-        });
-    } else if (window.innerWidth > 768) {
-        // CLIC : Menu sur plusieurs lignes (desktop)
-        setupClickBehavior(freshNavItems);
-    }
-}
-        
-        // Gestion du clic pour les newsletters
-        const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
-        console.log('TourMag Widget: Newsletter items trouvés:', newsletterItems.length);
-
-        newsletterItems.forEach(item => {
-            const link = item.querySelector('.mega-link');
-            let closeTimeout;
-            
-            if (!link) return;
-            
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                    
-                    // Annuler tout timeout de fermeture en cours
-                    clearTimeout(closeTimeout);
-                    
-                    const wasActive = item.classList.contains('active');
-                    
-                    // Fermer tous les autres sous-menus
-                    newsletterItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle le sous-menu actuel
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
+    
+    // Réinitialiser lors du redimensionnement
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if (window.innerWidth > 768) {
+                document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
+                    menu.style.display = '';
                 });
-
-                // Annuler la fermeture si on entre dans la zone
-                item.addEventListener('mouseenter', function() {
-                    clearTimeout(closeTimeout);
-                });
-
-                // Fermeture avec délai quand la souris quitte la zone newsletter + sous-menu
-                item.addEventListener('mouseleave', function() {
-                    // Seulement si le sous-menu est ouvert
-                    if (item.classList.contains('active')) {
-                        closeTimeout = setTimeout(function() {
-                            item.classList.remove('active');
-                        }, 200);
-                    }
-                });
-            });
-
-            // Gestion identique pour les médias
-            const mediaItems = document.querySelectorAll('#tourmag-menu .media-item');
-            console.log('TourMag Widget: Media items trouvés:', mediaItems.length);
-
-            mediaItems.forEach(item => {
-                const link = item.querySelector('.mega-link');
-                let closeTimeout;
-                
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Annuler tout timeout de fermeture en cours
-                    clearTimeout(closeTimeout);
-                    
-                    const wasActive = item.classList.contains('active');
-                    
-                    // Fermer tous les autres sous-menus
-                    mediaItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle le sous-menu actuel
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-
-                // Annuler la fermeture si on entre dans la zone
-                item.addEventListener('mouseenter', function() {
-                    clearTimeout(closeTimeout);
-                });
-
-                // Fermeture avec délai quand la souris quitte la zone
-                item.addEventListener('mouseleave', function() {
-                    // Seulement si le sous-menu est ouvert
-                    if (item.classList.contains('active')) {
-                        closeTimeout = setTimeout(function() {
-                            item.classList.remove('active');
-                        }, 200);
-                    }
-                });
-            });
-
-
-        // Gestion de l'accordéon des offres d'abonnement
-        const offerTabs = document.querySelectorAll('.offer-tab');
-        const offerContents = document.querySelectorAll('.offer-content');
-        
-        offerTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const offerType = this.getAttribute('data-offer');
-                
-                // Réinitialiser tous les boutons
-                offerTabs.forEach(t => {
-                    t.style.border = '2px solid #d0d0d0';
-                    t.style.color = '#1a1a1a';
-                    t.style.background = '#f8f9fa';
-                    t.style.boxShadow = 'none';
-                    t.classList.remove('active');
-                    // Remettre la couleur du prix en bleu
-                    const priceSpan = t.querySelector('span');
-                    if (priceSpan) {
-                        priceSpan.style.color = '#0066cc';
-                    }
-                });
-                
-                // Activer le bouton cliqué
-                this.style.border = '2px solid #0066cc';
-                this.style.boxShadow = '0 4px 12px rgba(0, 102, 204, 0.3)';
-                this.style.color = '#ffffff';
-                this.style.background = 'linear-gradient(135deg, #0066cc, #0056b3)';
-                this.classList.add('active');
-                // Changer la couleur du prix en blanc aussi
-                const activePriceSpan = this.querySelector('span');
-                if (activePriceSpan) {
-                    activePriceSpan.style.color = '#ffffff';
-                }
-
-                // Masquer tous les contenus
-                offerContents.forEach(content => {
-                    content.style.display = 'none';
-                });
-                
-                // Afficher le contenu correspondant
-                const targetContent = document.querySelector(`.offer-content[data-content="${offerType}"]`);
-                if (targetContent) {
-                    targetContent.style.display = 'block';
-                }
-            });
-        });
-
-            // Gestion des sous-menus sur mobile ET desktop
-            const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
-            
-            navItems.forEach(item => {
-                const link = item.querySelector('.nav-link');
-                const megaMenu = item.querySelector('.mega-menu');
-                
-                // Empêcher la navigation uniquement pour les onglets avec mega menu
-                if (megaMenu) {
-                    link.addEventListener('click', function(e) {
-                        // Sur mobile (largeur <= 768px), gérer l'ouverture/fermeture
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            
-                            // Fermer les autres menus
-                            navItems.forEach(otherItem => {
-                                if (otherItem !== item) {
-                                    const otherMenu = otherItem.querySelector('.mega-menu');
-                                    if (otherMenu) {
-                                        otherMenu.style.display = 'none';
-                                    }
-                                }
-                            });
-                            
-                            // Toggle le menu actuel
-                            if (megaMenu.style.display === 'block') {
-                                megaMenu.style.display = 'none';
-                            } else {
-                                megaMenu.style.display = 'block';
-                                megaMenu.style.opacity = '1';
-                                megaMenu.style.visibility = 'visible';
-                            }
-                        } else {
-                            // Sur desktop, empêcher la navigation mais ne rien faire
-                            // (le hover gère l'affichage)
-                            e.preventDefault();
-                        }
-                    });
-                }
-                // Les onglets sans mega menu (Petites Annonces, Contacts) restent cliquables
-            });
-
-        // Fermer le menu mobile si on clique en dehors
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('#tourmag-menu .main-nav');
-            const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
-            const navList = document.getElementById('navList');
-            
-            if (window.innerWidth <= 768 && 
-                !nav.contains(event.target) && 
-                !toggle.contains(event.target)) {
-                navList.classList.remove('active');
-                toggle.classList.remove('active');
+                document.getElementById('navList').classList.remove('active');
+                setupHoverBehavior();
             }
-        });
-
-        // Initialiser le comportement au chargement
-setupHoverBehavior();
-
-// Réinitialiser les styles lors du redimensionnement
-let resizeTimer;
-window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-        if (window.innerWidth > 768) {
-            document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
-                menu.style.display = '';
-            });
-            document.getElementById('navList').classList.remove('active');
-            // Réinitialiser le comportement selon le nombre de lignes
-            setupHoverBehavior();
-        }
-    }, 250);
-});
-    }
+        }, 250);
+    });
+}
     
     // Initialisation au chargement du DOM
     if (document.readyState === 'loading') {
