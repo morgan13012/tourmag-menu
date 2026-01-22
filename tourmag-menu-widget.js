@@ -1908,41 +1908,54 @@ function initializeJS() {
     });
     
     // Gestion des sous-menus sur mobile
-    const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+   
+const mobileNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
+
+mobileNavItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const megaMenu = item.querySelector('.mega-menu');
     
-    navItems.forEach(item => {
-        const link = item.querySelector('.nav-link');
-        const megaMenu = item.querySelector('.mega-menu');
-        
-        if (megaMenu) {
-            const existingMobileHandler = link.getAttribute('data-mobile-handler');
-            if (!existingMobileHandler) {
-                link.setAttribute('data-mobile-handler', 'true');
-                link.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        
-                        navItems.forEach(otherItem => {
-                            if (otherItem !== item) {
-                                const otherMenu = otherItem.querySelector('.mega-menu');
-                                if (otherMenu) {
-                                    otherMenu.style.display = 'none';
-                                }
+    if (megaMenu && link) {
+        const existingMobileHandler = link.getAttribute('data-mobile-handler');
+        if (!existingMobileHandler) {
+            link.setAttribute('data-mobile-handler', 'true');
+            
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('📱 Clic mobile sur:', link.textContent.trim());
+                    
+                    // Vérifier l'état actuel
+                    const isCurrentlyOpen = megaMenu.style.display === 'block';
+                    console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
+                    
+                    // Fermer tous les autres menus
+                    mobileNavItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherMenu = otherItem.querySelector('.mega-menu');
+                            if (otherMenu) {
+                                otherMenu.style.display = 'none';
                             }
-                        });
-                        
-                        if (megaMenu.style.display === 'block') {
-                            megaMenu.style.display = 'none';
-                        } else {
-                            megaMenu.style.display = 'block';
-                            megaMenu.style.opacity = '1';
-                            megaMenu.style.visibility = 'visible';
                         }
+                    });
+                    
+                    // Toggle le menu actuel
+                    if (isCurrentlyOpen) {
+                        megaMenu.style.display = 'none';
+                        console.log('→ Fermé');
+                    } else {
+                        megaMenu.style.display = 'block';
+                        megaMenu.style.opacity = '1';
+                        megaMenu.style.visibility = 'visible';
+                        console.log('→ Ouvert');
                     }
-                });
-            }
+                }
+            });
         }
-    });
+    }
+});
     
     // Fermer le menu mobile si on clique en dehors
     document.addEventListener('click', function(event) {
