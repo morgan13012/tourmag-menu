@@ -1731,42 +1731,37 @@ function initializeJS() {
          // Ajouter les handlers de clic pour mobile
 // Gestion du clic sur les items de navigation (Mode Mobile/Tablette)
        // --- DEBUT DU BLOC CORRIGÉ ---
-        navItems.forEach(item => {
-            const link = item.querySelector('.nav-link');
-            const megaMenu = item.querySelector('.mega-menu');
+     // Gestion du clic sur les items de navigation (Mode Mobile/Tablette)
+navItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const megaMenu = item.querySelector('.mega-menu');
 
-            if (link) {
-                // On retire tout ancien écouteur pour éviter les doublons
-                link.onclick = null; 
-                
-                link.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 1200) {
-                        e.preventDefault();
-                        e.stopPropagation();
+    if (link) {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1200) {
+                e.preventDefault();
+                e.stopImmediatePropagation(); // On bloque TOUT autre script
 
-                        const isAlreadyOpen = item.classList.contains('active');
-                        console.log("Menu déjà ouvert ?", isAlreadyOpen);
+                // On vérifie l'état RÉEL du menu via son style plutôt que sa classe
+                const isActuallyVisible = megaMenu && (megaMenu.style.display === 'block');
 
-                        // 1. FERMETURE TOTALE
-                        navItems.forEach(other => {
-                            other.classList.remove('active');
-                            const otherMenu = other.querySelector('.mega-menu');
-                            if (otherMenu) {
-                                otherMenu.style.cssText = "display: none !important; opacity: 0; visibility: hidden;";
-                            }
-                        });
+                // 1. Reset total (On ferme tout)
+                navItems.forEach(other => {
+                    other.classList.remove('active');
+                    const otherMenu = other.querySelector('.mega-menu');
+                    if (otherMenu) otherMenu.style.display = 'none';
+                });
 
-                        // 2. OUVERTURE SEULEMENT SI FERMÉ
-                        if (!isAlreadyOpen) {
-                            item.classList.add('active');
-                            if (megaMenu) {
-                                megaMenu.style.cssText = "display: block !important; opacity: 1; visibility: visible;";
-                            }
-                        }
-                    }
-                }, true); // Le "true" ici est crucial, il donne la priorité à ce clic
+                // 2. Si ce n'était pas visible, on l'affiche
+                if (!isActuallyVisible) {
+                    item.classList.add('active');
+                    if (megaMenu) megaMenu.style.display = 'block';
+                } 
+                // Si c'était visible, le Reset de l'étape 1 l'a déjà fermé !
             }
-        });
+        }, true); // "true" pour intercepter le clic avant les autres scripts
+    }
+});
         // --- FIN DU BLOC CORRIGÉ ---
             
             // Handler pour fermer au clic en dehors
