@@ -1007,19 +1007,25 @@
             }
 
             /* Mega menu en mobile */
-            .mega-menu {
-                position: static;
-                box-shadow: none;
-                border-top: none;
-                border-left: 3px solid;
-                border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                display: none;
-                padding: 0 !important;
-                max-height: none !important; 
-                overflow: visible !important;
-            }
+.mega-menu {
+    position: fixed !important;
+    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-top: none;
+    border-left: 3px solid;
+    border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: none;
+    padding: 0 !important;
+    max-height: 70vh !important; 
+    overflow-y: auto !important;
+    z-index: 999999999 !important;
+    background: white !important;
+}
             
             /* Afficher le mega menu quand activé */
             .nav-item.active .mega-menu {
