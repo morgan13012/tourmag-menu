@@ -1732,38 +1732,47 @@ function initializeJS() {
 // Gestion du clic sur les items de navigation (Mode Mobile/Tablette)
        // --- DEBUT DU BLOC CORRIGÉ ---
        // REMPLACEZ VOTRE BLOC PAR CELUI-CI (Ligne ~1198)
-navItems.forEach(item => {
-    const link = item.querySelector('.nav-link');
-    const megaMenu = item.querySelector('.mega-menu');
+// SOLUTION FINALE : Utilisation d'un marqueur d'état indépendant
+        navItems.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const megaMenu = item.querySelector('.mega-menu');
 
-    if (link && megaMenu) {
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 1200) {
-                e.preventDefault();
-                e.stopImmediatePropagation(); // Bloque les autres scripts extérieurs
+            if (link) {
+                // On nettoie les anciens événements
+                link.onclick = null;
 
-                // 1. On vérifie l'état RÉEL d'affichage du menu
-                // Si le style display est 'block', c'est qu'il est ouvert
-                const isCurrentlyOpen = (megaMenu.style.display === 'block');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 1200) {
+                        e.preventDefault();
+                        e.stopImmediatePropagation(); // Bloque les autres scripts
 
-                // 2. FERMETURE GÉNÉRALE (Nettoyage)
-                navItems.forEach(other => {
-                    other.classList.remove('active');
-                    const otherM = other.querySelector('.mega-menu');
-                    if (otherM) otherM.style.setProperty('display', 'none', 'important');
-                });
+                        // On vérifie l'état via un attribut personnalisé "data-open"
+                        const isOpen = item.getAttribute('data-open') === 'true';
 
-                // 3. LOGIQUE D'OUVERTURE
-                if (!isCurrentlyOpen) {
-                    // On ne l'ouvre QUE s'il n'était pas déjà ouvert
-                    item.classList.add('active');
-                    megaMenu.style.setProperty('display', 'block', 'important');
-                } 
-                // Si isCurrentlyOpen était vrai, on s'arrête là : le menu reste fermé.
+                        // 1. FERMETURE DE TOUS LES MENUS
+                        navItems.forEach(other => {
+                            other.classList.remove('active');
+                            other.setAttribute('data-open', 'false'); // On remet tout à false
+                            const otherM = other.querySelector('.mega-menu');
+                            if (otherM) {
+                                otherM.style.setProperty('display', 'none', 'important');
+                            }
+                        });
+
+                        // 2. OUVERTURE UNIQUEMENT SI C'ÉTAIT FERMÉ
+                        if (!isOpen) {
+                            item.classList.add('active');
+                            item.setAttribute('data-open', 'true'); // On marque comme ouvert
+                            if (megaMenu) {
+                                megaMenu.style.setProperty('display', 'block', 'important');
+                            }
+                        }
+                        // Si c'était déjà ouvert (isOpen = true), le point 1 l'a fermé 
+                        // et le point 2 ne le réouvre pas. Problème réglé.
+                    }
+                }, true); // Priorité capture
             }
-        }, true); // Le 'true' ici est vital : il capture l'événement avant le widget externe
-    }
-});
+        });
         // --- FIN DU BLOC CORRIGÉ ---
             
             // Handler pour fermer au clic en dehors
