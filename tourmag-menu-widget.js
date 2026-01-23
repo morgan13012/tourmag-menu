@@ -1694,7 +1694,7 @@ function initializeJS() {
         
         const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
         const isMultiline = isMenuMultiline();
-        const isDesktop = window.innerWidth > 768;
+        const isDesktop = window.innerWidth > 1024;
         
         // Retirer tous les anciens handlers
         navItemHandlers.forEach((handlers, item) => {
