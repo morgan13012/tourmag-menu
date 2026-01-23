@@ -1726,44 +1726,57 @@ function initializeJS() {
             console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
             document.body.classList.remove('hover-mode');
             
-            // Ajouter les handlers de clic
-            navItems.forEach(item => {
-                const link = item.querySelector('.nav-link');
-                const megaMenu = item.querySelector('.mega-menu');
-                
-                if (megaMenu && link) {
-                    const clickHandler = function(e) {
-			
-			 console.log('🎯 CLIC CAPTURÉ SUR:', e.target);
-    console.log('🎯 CURRENT TARGET:', e.currentTarget);
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        console.log('🖱️ Clic sur:', link.textContent.trim());
-                        
-                        const wasActive = item.classList.contains('active');
-                        
-                        // Fermer tous les autres
-                        navItems.forEach(otherItem => {
-                            if (otherItem !== item) {
-                                otherItem.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle
-                        if (wasActive) {
-                            item.classList.remove('active');
-                            console.log('❌ Fermé');
-                        } else {
-                            item.classList.add('active');
-                            console.log('✅ Ouvert');
-                        }
-                    };
-                    
-                    link.addEventListener('click', clickHandler);
-                    navItemHandlers.set(item, { click: clickHandler });
+         // Ajouter les handlers de clic pour mobile
+navItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const megaMenu = item.querySelector('.mega-menu');
+    
+    if (megaMenu && link) {
+        // Mettre le handler sur le nav-item au lieu du link
+        const clickHandler = function(e) {
+            // Vérifier que le clic vient bien du link ou du nav-icon
+            const clickedOnLink = e.target === link || 
+                                  link.contains(e.target) || 
+                                  e.target.classList.contains('nav-link') ||
+                                  e.target.classList.contains('nav-icon');
+            
+            if (!clickedOnLink) return; // Ignorer si clic sur autre chose
+            
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('===== CLIC MOBILE DÉTECTÉ =====');
+            console.log('📱 Onglet cliqué:', link.textContent.trim());
+            console.log('🔍 Avant clic - Classe active?', item.classList.contains('active'));
+            
+            const wasActive = item.classList.contains('active');
+            console.log('💾 wasActive =', wasActive);
+            
+            // Fermer tous les autres
+            navItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
                 }
             });
+            
+            // Toggle
+            if (wasActive) {
+                console.log('➡️ Menu était ouvert, ON FERME');
+                item.classList.remove('active');
+            } else {
+                console.log('➡️ Menu était fermé, ON OUVRE');
+                item.classList.add('active');
+            }
+            
+            console.log('🔍 Après clic - Classe active?', item.classList.contains('active'));
+            console.log('===============================');
+        };
+        
+        // METTRE LE LISTENER SUR LE NAV-ITEM, PAS SUR LE LINK
+        item.addEventListener('click', clickHandler);
+        navItemHandlers.set(item, { click: clickHandler });
+    }
+});
             
             // Handler pour fermer au clic en dehors
             clickOutsideHandler = function(event) {
