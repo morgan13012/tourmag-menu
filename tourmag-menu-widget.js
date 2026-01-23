@@ -1907,8 +1907,9 @@ function initializeJS() {
         });
     });
     
-    // Gestion des sous-menus sur mobile
+  
    
+// Gestion des sous-menus sur mobile
 const mobileNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
 
 mobileNavItems.forEach(item => {
@@ -1927,28 +1928,23 @@ mobileNavItems.forEach(item => {
                     
                     console.log('📱 Clic mobile sur:', link.textContent.trim());
                     
-                    // Vérifier l'état actuel
-                    const isCurrentlyOpen = megaMenu.style.display === 'block';
+                    // Vérifier l'état actuel en utilisant la classe 'active'
+                    const isCurrentlyOpen = item.classList.contains('active');
                     console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
                     
                     // Fermer tous les autres menus
                     mobileNavItems.forEach(otherItem => {
                         if (otherItem !== item) {
-                            const otherMenu = otherItem.querySelector('.mega-menu');
-                            if (otherMenu) {
-                                otherMenu.style.display = 'none';
-                            }
+                            otherItem.classList.remove('active');
                         }
                     });
                     
                     // Toggle le menu actuel
                     if (isCurrentlyOpen) {
-                        megaMenu.style.display = 'none';
+                        item.classList.remove('active');
                         console.log('→ Fermé');
                     } else {
-                        megaMenu.style.display = 'block';
-                        megaMenu.style.opacity = '1';
-                        megaMenu.style.visibility = 'visible';
+                        item.classList.add('active');
                         console.log('→ Ouvert');
                     }
                 }
