@@ -867,6 +867,16 @@
                 z-index: 2147483647 !important;
             }
 
+/* FORCER le mega menu au-dessus du contenu de la page */
+    #tourmag-menu .mega-menu {
+        z-index: 2147483647 !important;
+        position: relative !important;
+    }
+
+    #tourmag-menu .nav-item.active .mega-menu {
+        z-index: 2147483647 !important;
+    }
+
             /* Réduire l'icône d'accueil en mobile */
             .nav-item .nav-link img {
                 width: 20px !important;
