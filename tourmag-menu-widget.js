@@ -1730,41 +1730,44 @@ function initializeJS() {
             
          // Ajouter les handlers de clic pour mobile
 // Gestion du clic sur les items de navigation (Mode Mobile/Tablette)
+       // --- DEBUT DU BLOC CORRIGÉ ---
         navItems.forEach(item => {
             const link = item.querySelector('.nav-link');
             const megaMenu = item.querySelector('.mega-menu');
 
             if (link) {
+                // On retire tout ancien écouteur pour éviter les doublons
+                link.onclick = null; 
+                
                 link.addEventListener('click', function(e) {
-                    // On n'active cette logique que sur mobile/tablette
                     if (window.innerWidth <= 1200) {
                         e.preventDefault();
-                        e.stopPropagation(); // Empêche le clic de se propager et de fermer le menu par erreur
+                        e.stopPropagation();
 
-                        // On vérifie si CET onglet est déjà ouvert AVANT de nettoyer
-                        const isCurrentlyActive = item.classList.contains('active');
+                        const isAlreadyOpen = item.classList.contains('active');
+                        console.log("Menu déjà ouvert ?", isAlreadyOpen);
 
-                        // 1. On ferme TOUS les onglets (Reset complet)
+                        // 1. FERMETURE TOTALE
                         navItems.forEach(other => {
                             other.classList.remove('active');
                             const otherMenu = other.querySelector('.mega-menu');
                             if (otherMenu) {
-                                otherMenu.style.display = 'none';
+                                otherMenu.style.cssText = "display: none !important; opacity: 0; visibility: hidden;";
                             }
                         });
 
-                        // 2. Si l'onglet n'était pas ouvert, on l'ouvre.
-                        // S'il était déjà ouvert, il reste fermé grâce au reset ci-dessus.
-                        if (!isCurrentlyActive) {
+                        // 2. OUVERTURE SEULEMENT SI FERMÉ
+                        if (!isAlreadyOpen) {
                             item.classList.add('active');
                             if (megaMenu) {
-                                megaMenu.style.display = 'block';
+                                megaMenu.style.cssText = "display: block !important; opacity: 1; visibility: visible;";
                             }
                         }
                     }
-                });
+                }, true); // Le "true" ici est crucial, il donne la priorité à ce clic
             }
         });
+        // --- FIN DU BLOC CORRIGÉ ---
             
             // Handler pour fermer au clic en dehors
             clickOutsideHandler = function(event) {
