@@ -1006,14 +1006,11 @@
                 transform: translateY(-10px);
             }
 
-            /* Mega menu en mobile */
+    /* Mega menu en mobile */
 .mega-menu {
-    position: fixed !important;
-    top: auto !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    box-shadow: var(--shadow-lg) !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    box-shadow: none;
     border-top: none;
     border-left: 3px solid;
     border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
@@ -1021,10 +1018,8 @@
     margin-right: 0 !important;
     display: none;
     padding: 0 !important;
-    max-height: 70vh !important; 
-    overflow-y: auto !important;
-    z-index: 999999999 !important;
-    background: white !important;
+    max-height: none !important; 
+    overflow: visible !important;
 }
             
             /* Afficher le mega menu quand activé */
