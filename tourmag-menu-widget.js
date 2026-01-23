@@ -1018,11 +1018,11 @@ a img {
     }
     
     /* Afficher le mega menu quand activé */
-    .mega-menu[style*="display: block"] {
-        display: block !important;
-        opacity: 1;
-        visibility: visible;
-    }
+.nav-item.active .mega-menu {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
 
     /* Une seule colonne sur mobile */
     .mega-columns {
