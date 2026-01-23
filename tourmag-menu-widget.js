@@ -1731,35 +1731,37 @@ function initializeJS() {
          // Ajouter les handlers de clic pour mobile
 // Gestion du clic sur les items de navigation (Mode Mobile/Tablette)
        // --- DEBUT DU BLOC CORRIGÉ ---
-     // Gestion du clic sur les items de navigation (Mode Mobile/Tablette)
+       // REMPLACEZ VOTRE BLOC PAR CELUI-CI (Ligne ~1198)
 navItems.forEach(item => {
     const link = item.querySelector('.nav-link');
     const megaMenu = item.querySelector('.mega-menu');
 
-    if (link) {
+    if (link && megaMenu) {
         link.addEventListener('click', function(e) {
             if (window.innerWidth <= 1200) {
                 e.preventDefault();
-                e.stopImmediatePropagation(); // On bloque TOUT autre script
+                e.stopImmediatePropagation(); // Bloque les autres scripts extérieurs
 
-                // On vérifie l'état RÉEL du menu via son style plutôt que sa classe
-                const isActuallyVisible = megaMenu && (megaMenu.style.display === 'block');
+                // 1. On vérifie l'état RÉEL d'affichage du menu
+                // Si le style display est 'block', c'est qu'il est ouvert
+                const isCurrentlyOpen = (megaMenu.style.display === 'block');
 
-                // 1. Reset total (On ferme tout)
+                // 2. FERMETURE GÉNÉRALE (Nettoyage)
                 navItems.forEach(other => {
                     other.classList.remove('active');
-                    const otherMenu = other.querySelector('.mega-menu');
-                    if (otherMenu) otherMenu.style.display = 'none';
+                    const otherM = other.querySelector('.mega-menu');
+                    if (otherM) otherM.style.setProperty('display', 'none', 'important');
                 });
 
-                // 2. Si ce n'était pas visible, on l'affiche
-                if (!isActuallyVisible) {
+                // 3. LOGIQUE D'OUVERTURE
+                if (!isCurrentlyOpen) {
+                    // On ne l'ouvre QUE s'il n'était pas déjà ouvert
                     item.classList.add('active');
-                    if (megaMenu) megaMenu.style.display = 'block';
+                    megaMenu.style.setProperty('display', 'block', 'important');
                 } 
-                // Si c'était visible, le Reset de l'étape 1 l'a déjà fermé !
+                // Si isCurrentlyOpen était vrai, on s'arrête là : le menu reste fermé.
             }
-        }, true); // "true" pour intercepter le clic avant les autres scripts
+        }, true); // Le 'true' ici est vital : il capture l'événement avant le widget externe
     }
 });
         // --- FIN DU BLOC CORRIGÉ ---
