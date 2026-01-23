@@ -1726,70 +1726,45 @@ function initializeJS() {
             console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
             document.body.classList.remove('hover-mode');
 			
-		// DIAGNOSTIC : Capturer TOUS les clics sur la page
-document.addEventListener('click', function(e) {
-    console.log('🌍 CLIC GLOBAL DÉTECTÉ');
-    console.log('Target:', e.target);
-    console.log('CurrentTarget:', e.currentTarget);
-    console.log('Path:', e.composedPath().map(el => el.tagName || el.nodeName).join(' > '));
-}, true); // true = phase de capture
-
-console.log('📱 MODE MOBILE');
-document.body.classList.remove('hover-mode');	
-			
-			
+		
             
          // Ajouter les handlers de clic pour mobile
-navItems.forEach(item => {
-    const link = item.querySelector('.nav-link');
-    const megaMenu = item.querySelector('.mega-menu');
-    
-    if (megaMenu && link) {
-        // Mettre le handler sur le nav-item au lieu du link
-        const clickHandler = function(e) {
-            // Vérifier que le clic vient bien du link ou du nav-icon
-            const clickedOnLink = e.target === link || 
-                                  link.contains(e.target) || 
-                                  e.target.classList.contains('nav-link') ||
-                                  e.target.classList.contains('nav-icon');
-            
-            if (!clickedOnLink) return; // Ignorer si clic sur autre chose
-            
-            e.preventDefault();
-            e.stopPropagation();
-            
-            console.log('===== CLIC MOBILE DÉTECTÉ =====');
-            console.log('📱 Onglet cliqué:', link.textContent.trim());
-            console.log('🔍 Avant clic - Classe active?', item.classList.contains('active'));
-            
-            const wasActive = item.classList.contains('active');
-            console.log('💾 wasActive =', wasActive);
-            
-            // Fermer tous les autres
-            navItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
-            
-            // Toggle
-            if (wasActive) {
-                console.log('➡️ Menu était ouvert, ON FERME');
-                item.classList.remove('active');
-            } else {
-                console.log('➡️ Menu était fermé, ON OUVRE');
-                item.classList.add('active');
+// Gestion du clic sur les items de navigation (Mode Mobile/Tablette)
+        navItems.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const megaMenu = item.querySelector('.mega-menu');
+
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    // On n'active cette logique que sur mobile/tablette
+                    if (window.innerWidth <= 1200) {
+                        e.preventDefault();
+                        e.stopPropagation(); // Empêche le clic de se propager et de fermer le menu par erreur
+
+                        // On vérifie si CET onglet est déjà ouvert AVANT de nettoyer
+                        const isCurrentlyActive = item.classList.contains('active');
+
+                        // 1. On ferme TOUS les onglets (Reset complet)
+                        navItems.forEach(other => {
+                            other.classList.remove('active');
+                            const otherMenu = other.querySelector('.mega-menu');
+                            if (otherMenu) {
+                                otherMenu.style.display = 'none';
+                            }
+                        });
+
+                        // 2. Si l'onglet n'était pas ouvert, on l'ouvre.
+                        // S'il était déjà ouvert, il reste fermé grâce au reset ci-dessus.
+                        if (!isCurrentlyActive) {
+                            item.classList.add('active');
+                            if (megaMenu) {
+                                megaMenu.style.display = 'block';
+                            }
+                        }
+                    }
+                });
             }
-            
-            console.log('🔍 Après clic - Classe active?', item.classList.contains('active'));
-            console.log('===============================');
-        };
-        
-        // METTRE LE LISTENER SUR LE NAV-ITEM, PAS SUR LE LINK
-        item.addEventListener('click', clickHandler);
-        navItemHandlers.set(item, { click: clickHandler });
-    }
-});
+        });
             
             // Handler pour fermer au clic en dehors
             clickOutsideHandler = function(event) {
