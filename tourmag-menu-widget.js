@@ -1,3 +1,4 @@
+
 /**
  * TourMag Navigation Menu Widget
  * Version: 1.0.0
@@ -332,7 +333,7 @@ body.hover-mode .mega-menu:hover {
             padding-left: 0.5rem;
         }
 
-        /* Système de menu Ã  2 niveaux pour newsletters */
+        /* Système de menu Ã  2 niveaux pour newsletters */
         .newsletter-list {
             position: relative;
             overflow: visible;
@@ -1631,7 +1632,49 @@ function initializeJS() {
         if (window.innerWidth <= 768) {
             fixMobileClicks();
         }
+    
+// TOGGLE DU MEGA MENU EN MOBILE (OUVRIR / REFERMER AU RE-CLIC)
+const navLinks = document.querySelectorAll('#tourmag-menu .nav-item > .nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        if (window.innerWidth > 768) return;
+
+        const navItem = this.closest('.nav-item');
+        const megaMenu = navItem.querySelector('.mega-menu');
+
+        if (!megaMenu) return;
+
+        e.preventDefault();
+
+        const isOpen = navItem.classList.contains('active');
+
+        // Fermer tous les menus ouverts
+        document.querySelectorAll('#tourmag-menu .nav-item.active').forEach(item => {
+            item.classList.remove('active');
+            const menu = item.querySelector('.mega-menu');
+            if (menu) menu.style.display = 'none';
+        });
+
+        // Toggle sur celui cliqué
+        if (!isOpen) {
+            navItem.classList.add('active');
+            megaMenu.style.display = 'block';
+        }
     });
+});
+
+
+
+
+
+
+
+
+
+
+
+});
 
     // Fonction pour détecter si le menu est sur plusieurs lignes
     function isMenuMultiline() {
