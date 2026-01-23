@@ -1529,7 +1529,32 @@
     
     // Initialiser les fonctionnalités JavaScript
     function initializeJS() {
-        console.log('TourMag Widget: Initialisation...');
+    console.log('TourMag Widget: Initialisation...');
+
+    // FORCER LE Z-INDEX DU MENU AU-DESSUS DE TOUT EN MOBILE
+    if (window.innerWidth <= 768) {
+        // Trouver tous les éléments de la page TourMag
+        const allPageElements = document.querySelectorAll('body > *:not(#tourmag-menu)');
+        allPageElements.forEach(el => {
+            const currentZIndex = window.getComputedStyle(el).zIndex;
+            if (currentZIndex !== 'auto' && parseInt(currentZIndex) > 1000) {
+                el.style.zIndex = '1000'; // Réduire le z-index des éléments TourMag
+            }
+        });
+        
+        // Forcer le menu à être au top
+        const tourmagMenu = document.querySelector('#tourmag-menu');
+        if (tourmagMenu) {
+            tourmagMenu.style.zIndex = '999999999';
+            tourmagMenu.style.position = 'relative';
+        }
+        
+        // Forcer tous les mega menus
+        const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
+        megaMenus.forEach(menu => {
+            menu.style.zIndex = '999999999';
+        });
+    }
 
         // CORRECTION DES CLICS BLOQUÉS EN MOBILE
         function fixMobileClicks() {
