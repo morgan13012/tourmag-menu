@@ -1725,6 +1725,19 @@ function initializeJS() {
         } else if (isDesktop && isMultiline) {
             console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
             document.body.classList.remove('hover-mode');
+			
+		// DIAGNOSTIC : Capturer TOUS les clics sur la page
+document.addEventListener('click', function(e) {
+    console.log('🌍 CLIC GLOBAL DÉTECTÉ');
+    console.log('Target:', e.target);
+    console.log('CurrentTarget:', e.currentTarget);
+    console.log('Path:', e.composedPath().map(el => el.tagName || el.nodeName).join(' > '));
+}, true); // true = phase de capture
+
+console.log('📱 MODE MOBILE');
+document.body.classList.remove('hover-mode');	
+			
+			
             
          // Ajouter les handlers de clic pour mobile
 navItems.forEach(item => {
