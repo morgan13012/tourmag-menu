@@ -1733,6 +1733,9 @@ function initializeJS() {
                 
                 if (megaMenu && link) {
                     const clickHandler = function(e) {
+			
+			 console.log('🎯 CLIC CAPTURÉ SUR:', e.target);
+    console.log('🎯 CURRENT TARGET:', e.currentTarget);
                         e.preventDefault();
                         e.stopPropagation();
                         
