@@ -1785,26 +1785,39 @@ function initializeJS() {
                 const megaMenu = item.querySelector('.mega-menu');
                 
                 if (megaMenu && link) {
-                    const clickHandler = function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        const wasActive = item.classList.contains('active');
-                        
-                        // Fermer tous les autres
-                        navItems.forEach(otherItem => {
-                            if (otherItem !== item) {
-                                otherItem.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle
-                        if (wasActive) {
-                            item.classList.remove('active');
-                        } else {
-                            item.classList.add('active');
-                        }
-                    };
+                 const clickHandler = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    console.log('===== CLIC MOBILE DÉTECTÉ =====');
+    console.log('📱 Onglet cliqué:', link.textContent.trim());
+    console.log('🔍 Avant clic - classList:', item.classList.toString());
+    console.log('🔍 Avant clic - Classe active?', item.classList.contains('active'));
+    
+    const wasActive = item.classList.contains('active');
+    console.log('💾 wasActive =', wasActive);
+    
+    // Fermer tous les autres
+    navItems.forEach(otherItem => {
+        if (otherItem !== item) {
+            console.log('🔒 Fermeture de:', otherItem.querySelector('.nav-link').textContent.trim());
+            otherItem.classList.remove('active');
+        }
+    });
+    
+    // Toggle
+    if (wasActive) {
+        console.log('➡️ Menu était ouvert, ON FERME');
+        item.classList.remove('active');
+    } else {
+        console.log('➡️ Menu était fermé, ON OUVRE');
+        item.classList.add('active');
+    }
+    
+    console.log('🔍 Après clic - classList:', item.classList.toString());
+    console.log('🔍 Après clic - Classe active?', item.classList.contains('active'));
+    console.log('===============================');
+};
                     
                     link.addEventListener('click', clickHandler);
                     navItemHandlers.set(item, { click: clickHandler });
