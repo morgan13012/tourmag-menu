@@ -1100,6 +1100,25 @@ a img {
     position: static !important;
 }
 
+/* Forcer le lien à rester cliquable même quand le menu est ouvert */
+.nav-item .nav-link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+/* Le mega menu ne doit pas bloquer le lien au-dessus */
+.nav-item.active .mega-menu {
+    pointer-events: none !important;
+}
+
+/* Mais les liens à l'intérieur du mega menu doivent rester cliquables */
+.nav-item.active .mega-menu a,
+.nav-item.active .mega-menu button {
+    pointer-events: auto !important;
+}
+
     /* Une seule colonne sur mobile */
     .mega-columns {
         grid-template-columns: 1fr !important;
