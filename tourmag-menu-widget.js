@@ -835,6 +835,10 @@ body.hover-mode .mega-menu:hover {
         font-size: 1rem;
     }
     
+    .nav-list {
+        flex-wrap: wrap;
+    }
+    
     .mega-columns.cols-4,
     .mega-columns.cols-3 {
         grid-template-columns: repeat(2, 1fr);
@@ -852,6 +856,10 @@ body.hover-mode .mega-menu:hover {
         gap: 0.3rem;
     }
     
+    .nav-list {
+        flex-wrap: wrap;
+    }
+    
     .nav-icon {
         font-size: 0.6rem;
     }
@@ -862,6 +870,10 @@ body.hover-mode .mega-menu:hover {
         padding: 1.25rem 0.6rem;
         font-size: 0.85rem;
         gap: 0.2rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
     }
     
     /* Ajustement pour l'onglet Abonnés sur écrans moyens */
@@ -881,8 +893,11 @@ body.hover-mode .mega-menu:hover {
         padding: 1.25rem 0.5rem;
         font-size: 0.8rem;
     }
+    
+    .nav-list {
+        flex-wrap: wrap;
+    }
 }
-
 /* Ajustement pour écrans de 480px à 768px (petites tablettes) */
 @media (min-width: 481px) and (max-width: 768px) {
     .mobile-menu-toggle {
