@@ -141,15 +141,15 @@
    
 
 
-        .nav-link {
+       .nav-link {
     display: flex;
     align-items: center;
-    gap: 0.2rem;
-    padding: 1.25rem 0.5rem;
+    gap: 0.5rem;
+    padding: 1.25rem 1.5rem;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
     position: relative;
     text-transform: uppercase;
@@ -831,14 +831,10 @@ body.hover-mode .mega-menu:hover {
 
 @media (max-width: 1400px) {
     .nav-link {
-        padding: 1.25rem 1rem;
-        font-size: 0.95rem;
+        padding: 1.25rem 1.2rem;
+        font-size: 1rem;
     }
     
-    .nav-list {
-        flex-wrap: wrap;
-    }
-
     .mega-columns.cols-4,
     .mega-columns.cols-3 {
         grid-template-columns: repeat(2, 1fr);
@@ -851,8 +847,8 @@ body.hover-mode .mega-menu:hover {
 
 @media (max-width: 1300px) {
     .nav-link {
-        padding: 1rem 0.75rem;
-        font-size: 0.85rem;
+        padding: 1.25rem 0.9rem;
+        font-size: 0.95rem;
         gap: 0.3rem;
     }
     
@@ -863,7 +859,26 @@ body.hover-mode .mega-menu:hover {
 
 @media (max-width: 1200px) {
     .nav-link {
-        padding: 1rem 0.6rem;
+        padding: 1.25rem 0.6rem;
+        font-size: 0.85rem;
+        gap: 0.2rem;
+    }
+    
+    /* Ajustement pour l'onglet Abonnés sur écrans moyens */
+    .mega-columns.abonnes-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .mega-columns.abonnes-grid .mega-column {
+        max-width: 100% !important;
+        min-width: auto !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .nav-link {
+        padding: 1.25rem 0.5rem;
         font-size: 0.8rem;
     }
 }
