@@ -948,8 +948,7 @@ body.hover-mode .mega-menu:hover {
 .mega-links img,
 .newsletter-icon img,
 .media-icon img,
-span img,
-a img {
+span img {
     width: 40px !important;
     height: 40px !important;
     max-width: 40px !important;
@@ -959,6 +958,16 @@ a img {
     object-fit: contain !important;
     vertical-align: middle !important;
     margin-right: 0.5rem !important;
+}
+
+/* Images dans les mega menus uniquement (pas l'icône d'accueil) */
+.mega-menu a img {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
 }
 
 
