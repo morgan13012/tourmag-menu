@@ -1993,47 +1993,53 @@ mobileNavItems.forEach(item => {
     const megaMenu = item.querySelector('.mega-menu');
     
     if (megaMenu && link) {
-        const existingMobileHandler = link.getAttribute('data-mobile-handler');
-        if (!existingMobileHandler) {
-            link.setAttribute('data-mobile-handler', 'true');
-            
-            link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    console.log('📱 Clic mobile sur:', link.textContent.trim());
-                    
-                    // Vérifier l'état actuel en utilisant la classe 'active'
-                    const isCurrentlyOpen = item.classList.contains('active');
-                    console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
-                    
-                    // Fermer tous les autres menus
-                    mobileNavItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                   // Toggle le menu actuel
-if (isCurrentlyOpen) {
-    item.classList.remove('active');
-    console.log('→ Fermé');
-} else {
-    item.classList.add('active');
-    console.log('→ Ouvert');
-    
-    // Scroll vers le haut de l'onglet en mobile
-    setTimeout(() => {
-        link.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
-        });
-    }, 100);
-}
-                }
-            });
+        // Retirer l'ancien event listener s'il existe
+        const oldHandler = link._mobileClickHandler;
+        if (oldHandler) {
+            link.removeEventListener('click', oldHandler);
         }
+        
+        // Créer un nouveau handler
+        const newHandler = function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                console.log('📱 Clic mobile sur:', link.textContent.trim());
+                
+                // Vérifier l'état actuel
+                const isCurrentlyOpen = item.classList.contains('active');
+                console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
+                
+                // Fermer tous les autres menus
+                mobileNavItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle le menu actuel
+                if (isCurrentlyOpen) {
+                    item.classList.remove('active');
+                    console.log('→ Fermé');
+                } else {
+                    item.classList.add('active');
+                    console.log('→ Ouvert');
+                    
+                    // Scroll vers le haut de l'onglet
+                    setTimeout(() => {
+                        link.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start' 
+                        });
+                    }, 100);
+                }
+            }
+        };
+        
+        // Stocker le handler et l'attacher
+        link._mobileClickHandler = newHandler;
+        link.addEventListener('click', newHandler);
     }
 });
     
