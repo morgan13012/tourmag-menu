@@ -1992,33 +1992,31 @@ mobileNavItems.forEach(item => {
     const link = item.querySelector('.nav-link');
     const megaMenu = item.querySelector('.mega-menu');
     
-    if (megaMenu && link) {
-        // Retirer l'ancien event listener s'il existe
-        const oldHandler = link._mobileClickHandler;
-        if (oldHandler) {
-            link.removeEventListener('click', oldHandler);
-        }
-        
-        // Créer un nouveau handler
-        const newHandler = function(e) {
+    if (megaMenu) {
+        // Attacher l'event sur l'item entier au lieu du link
+        item.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
+                // Vérifier si on clique sur un lien à l'intérieur du mega menu
+                if (e.target.closest('.mega-menu') && !e.target.closest('.nav-link')) {
+                    return; // Laisser les liens du mega menu fonctionner normalement
+                }
+                
                 e.preventDefault();
                 e.stopPropagation();
                 
-                console.log('📱 Clic mobile sur:', link.textContent.trim());
+                console.log('📱 Clic mobile sur item');
                 
-                // Vérifier l'état actuel
                 const isCurrentlyOpen = item.classList.contains('active');
                 console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
                 
-                // Fermer tous les autres menus
+                // Fermer tous les autres
                 mobileNavItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
                 
-                // Toggle le menu actuel
+                // Toggle
                 if (isCurrentlyOpen) {
                     item.classList.remove('active');
                     console.log('→ Fermé');
@@ -2026,7 +2024,6 @@ mobileNavItems.forEach(item => {
                     item.classList.add('active');
                     console.log('→ Ouvert');
                     
-                    // Scroll vers le haut de l'onglet
                     setTimeout(() => {
                         link.scrollIntoView({ 
                             behavior: 'smooth', 
@@ -2035,11 +2032,7 @@ mobileNavItems.forEach(item => {
                     }, 100);
                 }
             }
-        };
-        
-        // Stocker le handler et l'attacher
-        link._mobileClickHandler = newHandler;
-        link.addEventListener('click', newHandler);
+        });
     }
 });
     
