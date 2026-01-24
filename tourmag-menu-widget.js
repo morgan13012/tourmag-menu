@@ -1992,19 +1992,14 @@ mobileNavItems.forEach(item => {
     const link = item.querySelector('.nav-link');
     const megaMenu = item.querySelector('.mega-menu');
     
-    if (megaMenu) {
-        // Attacher l'event sur l'item entier au lieu du link
-        item.addEventListener('click', function(e) {
+    if (megaMenu && link) {
+        // Attacher l'event UNIQUEMENT sur le lien, pas sur l'item
+        link.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
-                // Vérifier si on clique sur un lien à l'intérieur du mega menu
-                if (e.target.closest('.mega-menu') && !e.target.closest('.nav-link')) {
-                    return; // Laisser les liens du mega menu fonctionner normalement
-                }
-                
                 e.preventDefault();
                 e.stopPropagation();
                 
-                console.log('📱 Clic mobile sur item');
+                console.log('📱 Clic mobile sur link');
                 
                 const isCurrentlyOpen = item.classList.contains('active');
                 console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
@@ -2025,7 +2020,7 @@ mobileNavItems.forEach(item => {
                     console.log('→ Ouvert');
                     
                     setTimeout(() => {
-                        link.scrollIntoView({ 
+                        this.scrollIntoView({ 
                             behavior: 'smooth', 
                             block: 'start' 
                         });
