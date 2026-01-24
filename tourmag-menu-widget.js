@@ -2015,14 +2015,22 @@ mobileNavItems.forEach(item => {
                         }
                     });
                     
-                    // Toggle le menu actuel
-                    if (isCurrentlyOpen) {
-                        item.classList.remove('active');
-                        console.log('→ Fermé');
-                    } else {
-                        item.classList.add('active');
-                        console.log('→ Ouvert');
-                    }
+                   // Toggle le menu actuel
+if (isCurrentlyOpen) {
+    item.classList.remove('active');
+    console.log('→ Fermé');
+} else {
+    item.classList.add('active');
+    console.log('→ Ouvert');
+    
+    // Scroll vers le haut de l'onglet en mobile
+    setTimeout(() => {
+        link.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }, 100);
+}
                 }
             });
         }
