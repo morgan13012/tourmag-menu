@@ -129,6 +129,7 @@
     list-style: none;
     gap: 0;
     width: 100%;
+flex-wrap: wrap;
 }
 
 .nav-item {
@@ -892,6 +893,17 @@ body.hover-mode .mega-menu:hover {
     .nav-link {
         padding: 1.25rem 0.5rem;
         font-size: 0.8rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1050px) {
+    .nav-link {
+        padding: 1rem 0.4rem;
+        font-size: 0.75rem;
     }
     
     .nav-list {
