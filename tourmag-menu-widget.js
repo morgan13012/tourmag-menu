@@ -846,6 +846,25 @@ body.hover-mode .mega-menu:hover {
     }
 }
 
+@media (max-width: 1300px) {
+    .nav-link {
+        padding: 1rem 0.75rem;
+        font-size: 0.85rem;
+        gap: 0.3rem;
+    }
+    
+    .nav-icon {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-link {
+        padding: 1rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
 /* Ajustement pour écrans de 480px à 768px (petites tablettes) */
 @media (min-width: 481px) and (max-width: 768px) {
     .mobile-menu-toggle {
