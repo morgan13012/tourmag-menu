@@ -1070,34 +1070,35 @@ a img {
         padding: 0.75rem 1.5rem;
     }
     
-    /* Désactiver le hover sur mobile */
-    .nav-item:hover .mega-menu {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-    }
+/* Désactiver le hover sur mobile */
+.nav-item:hover .mega-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
 
-    /* Mega menu en mobile */
-    .mega-menu {
-        position: static;
-        box-shadow: none;
-        border-top: none;
-        border-left: 3px solid;
-        border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
-        margin-left: 0 !important;
-        margin-right : 0 !important ;
-        display: none;
-        padding : 0 !important;
-        max-height: none !important; 
+/* Mega menu en mobile */
+.mega-menu {
+    position: static;
+    box-shadow: none;
+    border-top: none;
+    border-left: 3px solid;
+    border-image: linear-gradient(180deg, #59DF7A, #0956E7) 1;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: none;
+    padding: 0 !important;
+    max-height: none !important; 
     overflow: visible !important;
-    }
-    
-    /* Afficher le mega menu quand activé */
-    .mega-menu[style*="display: block"] {
-        display: block !important;
-        opacity: 1;
-        visibility: visible;
-    }
+}
+
+/* Afficher le mega menu quand l'item parent a la classe active */
+.nav-item.active .mega-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: static !important;
+}
 
     /* Une seule colonne sur mobile */
     .mega-columns {
