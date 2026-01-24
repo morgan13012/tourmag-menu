@@ -934,12 +934,12 @@ body.hover-mode .mega-menu:hover {
     }
 
 /* Réduire l'icône d'accueil en mobile */
-    .nav-item .nav-link img {
-        width: 20px !important;
-        height: 20px !important;
-        max-width: 20px !important;
-        max-height: 20px !important;
-    }
+.nav-item .nav-link img {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+}
 
 
 /* FORCER ABSOLUMENT toutes les images à 40px dans les newsletters */
@@ -1065,10 +1065,10 @@ a img {
         z-index: 2147483647 !important;  /* â† AJOUTE AUSSI ICI */
     }
     
-    /* Style des liens en mobile */
-    .nav-link {
-        padding: 0.75rem 1.5rem;
-    }
+   /* Supprimer le trait bleu-vert quand l'onglet est actif en mobile */
+.nav-item.active .nav-link::after {
+    width: 0 !important;
+}
     
 /* Désactiver le hover sur mobile */
 .nav-item:hover .mega-menu {
