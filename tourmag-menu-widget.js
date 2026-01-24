@@ -179,13 +179,19 @@ flex-wrap: wrap;
         }
 
         .nav-icon {
-            font-size: 0.7rem;
-            transition: transform 0.3s ease;
-        }
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
 
-        .nav-item:hover .nav-icon {
-            transform: rotate(180deg);
-        }
+/* Rotation du triangle SEULEMENT en mode hover */
+body.hover-mode .nav-item:hover .nav-icon {
+    transform: rotate(180deg);
+}
+
+/* Rotation du triangle quand l'onglet est actif (mode clic) */
+.nav-item.active .nav-icon {
+    transform: rotate(180deg);
+}
 
         /* Mega Menu */
        .mega-menu {
