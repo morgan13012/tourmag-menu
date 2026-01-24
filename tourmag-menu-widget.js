@@ -1993,36 +1993,14 @@ mobileNavItems.forEach(item => {
     const megaMenu = item.querySelector('.mega-menu');
     
     if (megaMenu && link) {
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                console.log('📱 Clic mobile sur:', link.textContent.trim());
-                
-                // Vérifier l'état actuel en utilisant la classe 'active'
-                const isCurrentlyOpen = item.classList.contains('active');
-                console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
-                
-                // Fermer tous les autres menus
-                mobileNavItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Toggle le menu actuel
-                if (isCurrentlyOpen) {
-                    item.classList.remove('active');
-                    console.log('→ Fermé');
-                } else {
-                    item.classList.add('active');
-                    console.log('→ Ouvert');
-                }
-            }
-        });
-    }
-});
+        const existingMobileHandler = link.getAttribute('data-mobile-handler');
+        if (!existingMobileHandler) {
+            link.setAttribute('data-mobile-handler', 'true');
+            
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     
                     console.log('📱 Clic mobile sur:', link.textContent.trim());
                     
