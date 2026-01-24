@@ -128,7 +128,6 @@
     display: flex;
     list-style: none;
     gap: 0;
-    justify-content: space-between;
     width: 100%;
 }
 
@@ -145,12 +144,12 @@
         .nav-link {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 1.25rem clamp(0.5rem, 1vw, 1.5rem);  /* padding qui s'adapte à la largeur */
+    gap: 0.2rem;
+    padding: 1.25rem 0.5rem;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    font-size: clamp(0.75rem, 0.9vw, 1.05rem);  /* taille qui s'adapte */
+    font-size: 0.85rem;
     transition: all 0.3s ease;
     position: relative;
     text-transform: uppercase;
