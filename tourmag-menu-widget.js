@@ -112,8 +112,8 @@
             position: relative;
         }
 
-        .nav-container {
-    max-width: 1400px;
+   .nav-container {
+    max-width: 1600px;  /* ← Au lieu de 1400px */
     margin: 0 auto;
     padding: 0 2rem;
 }
