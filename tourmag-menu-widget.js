@@ -836,10 +836,29 @@ body.hover-mode .mega-menu:hover {
             }
         }
 
-@media (max-width: 1400px) {
+/* Commencer à réduire dès 1600px */
+@media (max-width: 1600px) {
     .nav-link {
         padding: 1.25rem 1.2rem;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    .nav-link {
+        padding: 1.25rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1400px) {
+    .nav-link {
+        padding: 1.25rem 0.9rem;
+        font-size: 0.9rem;
     }
     
     .nav-list {
@@ -853,6 +872,17 @@ body.hover-mode .mega-menu:hover {
     
     .mega-columns.cols-2:not(.abonnes-grid) {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1300px) {
+    .nav-link {
+        padding: 1.25rem 0.7rem;
+        font-size: 0.85rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
     }
 }
 
@@ -2026,6 +2056,7 @@ mobileNavItems.forEach(item => {
     const link = item.querySelector('.nav-link');
     const megaMenu = item.querySelector('.mega-menu');
     
+
     if (megaMenu && link) {
         // Attacher l'event UNIQUEMENT sur le lien, pas sur l'item
         link.addEventListener('click', function(e) {
