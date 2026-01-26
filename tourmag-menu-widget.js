@@ -146,11 +146,11 @@ flex-wrap: wrap;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1.1rem;  /* ← RÉDUIT */
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.05rem;
+    font-size: 0.98rem;  /* ← RÉDUIT */
     transition: all 0.3s ease;
     position: relative;
     text-transform: uppercase;
