@@ -850,9 +850,7 @@ body.hover-mode .mega-menu:hover {
         font-size: 0.95rem;
     }
     
-    .nav-list {
-        flex-wrap: wrap;
-    }
+    
 }
 
 @media (max-width: 1400px) {
