@@ -1307,7 +1307,7 @@ span img {
                                             <li><a href="https://www.tourmag.com/Transport_r7.html" class="media-simple-link">Transport</a></li>
 											<li><a href="https://www.tourmag.com/Hebergement_r6.html" class="media-simple-link">Hébergement</a></li>
                                             <li><a href="https://www.tourmag.com/Dossiers-speciaux_r582.html" class="media-simple-link">Dossiers spéciaux</a></li>
-											<li><a href="https://www.tourmag.com/Salons-Evenements_r5.html" class="media-simple-link">Salons et Evénements</a></li>
+											<li><a href="https://www.tourmag.com/Salons-et-evenements_r365.html" class="media-simple-link">Salons et Evénements</a></li>
                                            
                                         </ul>
                                     </div>
@@ -1458,7 +1458,7 @@ span img {
                                         
                                         <!-- Bouton Écouter la dernière newsletter TourMaG -->
                                         <div style="margin-top: 1rem;">
-                                            <a href="https://abo.tourmagmarketing.com/podnews" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
+                                            <a href="https://www.tourmag.com/Shortcast-Newsletter-TourMaG-l-essentiel-de-l-info-au-format-audio-ABO_a130097.html" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12)); color: #0066cc; padding: 0.9rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15); border: 1px solid rgba(0, 102, 204, 0.2); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.25)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.12), rgba(0, 102, 204, 0.16))';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.15)'; this.style.background='linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(0, 102, 204, 0.12))';">
                                                 <img src="https://www.tourmag.com/my/tourmag/site/menu/casque1.png" alt="Écouter" style="width: 24px; height: 24px; object-fit: contain;">
                                                 Écouter la newsletter
                                             </a>
