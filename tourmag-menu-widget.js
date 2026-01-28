@@ -55,7 +55,7 @@
             font-family: 'Josefin Sans', sans-serif;
             color: var(--text-dark);
             line-height: 1.6;
-            background: var(--bg-light);
+          
             overflow-x: hidden ;
         }
 
@@ -1067,7 +1067,7 @@ span img {
         position: absolute;
         left: 1rem;
         top: calc(50% +30px);
-        transform: translateX(-5%) translateY(-205%)
+        transform: translateX(-2%) translateY(-215%)
         z-index: 2147483647 !important;
     }
     
