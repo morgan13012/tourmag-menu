@@ -958,11 +958,9 @@ body.hover-mode .mega-menu:hover {
         
 
       @media (max-width: 768px) {
-    /* FORCER L'AFFICHAGE SUR MOBILE - RENFORCÉ */
+    /* MASQUER LE MENU SUR MOBILE */
     #tourmag-menu {
-        display: block !important;
-        position: relative !important;
-    z-index: 2147483647 !important; /* plus haut que le header TourMaG */
+        display: none !important;
     }
 
 /* Réduire l'icône d'accueil en mobile */
