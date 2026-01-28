@@ -1744,6 +1744,62 @@ body.hover-mode .mega-menu:hover {
 function initializeJS() {
     console.log('TourMag Widget: initializeJS() appelé');
 
+console.log('TourMag Widget: initializeJS() appelé');
+
+// FORCER LA TAILLE DES IMAGES EN JAVASCRIPT (ne peut pas être écrasé !)
+function forceImageSizes() {
+    if (window.innerWidth > 768) return;
+    
+    console.log('🖼️ Forçage des tailles d\'images...');
+    
+    const selectors = [
+        '#tourmag-menu .mega-column img',
+        '#tourmag-menu .newsletter-list img',
+        '#tourmag-menu .mega-links img',
+        '#tourmag-menu .newsletter-icon img',
+        '#tourmag-menu .media-icon img',
+        '#tourmag-menu .mega-menu a img'
+    ];
+    
+    // Déterminer la taille selon la largeur d'écran
+    let size = 40;
+    if (window.innerWidth <= 350) {
+        size = 24;
+    } else if (window.innerWidth <= 400) {
+        size = 30;
+    }
+    
+    selectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(img => {
+            // Ignorer l'icône d'accueil
+            if (img.alt === 'Accueil') return;
+            
+            img.style.width = size + 'px';
+            img.style.height = size + 'px';
+            img.style.maxWidth = size + 'px';
+            img.style.maxHeight = size + 'px';
+            img.style.minWidth = size + 'px';
+            img.style.minHeight = size + 'px';
+            img.style.objectFit = 'contain';
+        });
+    });
+    
+    console.log(`✅ Images forcées à ${size}px`);
+}
+
+// Appliquer immédiatement
+if (window.innerWidth <= 768) {
+    setTimeout(forceImageSizes, 200);
+    setTimeout(forceImageSizes, 500); // Double appel pour être sûr
+}
+
+// Réappliquer au resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth <= 768) {
+        forceImageSizes();
+    }
+});
+
  // CORRECTION AUTOMATIQUE DES CLICS BLOQUÉS EN MOBILE
     function fixMobileClicks() {
         if (window.innerWidth > 768) return; // Seulement en mobile
