@@ -45,21 +45,19 @@
 
 
 
-        /* Cibler UNIQUEMENT les éléments du widget */
-#tourmag-menu,
-#tourmag-menu * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* NE PAS toucher au body global ! */
-#tourmag-menu .header,
-#tourmag-menu .main-nav,
-#tourmag-menu .mega-menu {
+        /* Reset UNIQUEMENT dans le widget, pas sur tout le site */
+#tourmag-menu {
     font-family: 'Josefin Sans', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
+}
+
+/* Reset basique pour les éléments du widget */
+#tourmag-menu .header,
+#tourmag-menu .main-nav,
+#tourmag-menu .mega-menu,
+#tourmag-menu .mega-menu * {
+    box-sizing: border-box;
 }
 
         /* En-tête et navigation principale */
