@@ -1131,6 +1131,7 @@ span img {
     padding: 0 !important;
     max-height: none !important; 
     overflow: visible !important;
+	pointer-events: none;
 }
 
 /* Afficher le mega menu quand l'item parent a la classe active */
@@ -1139,6 +1140,7 @@ span img {
     opacity: 1 !important;
     visibility: visible !important;
     position: static !important;
+pointer-events: auto !important;
 }
 
 /* Forcer le lien à rester cliquable même quand le menu est ouvert */
