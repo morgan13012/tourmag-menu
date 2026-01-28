@@ -1797,6 +1797,45 @@ function initializeJS() {
         if (window.innerWidth <= 768) {
             fixMobileClicks();
         }
+
+
+// Fix pour les événements tactiles bloqués sur la boîte à cookies
+function fixCookieBoxTouchEvents() {
+    if (window.innerWidth > 768) return; // Seulement en mobile
+    
+    console.log('🔧 Correction des événements tactiles pour cookies...');
+    
+    // Attendre que la boîte à cookies apparaisse
+    const checkCookieBox = setInterval(() => {
+        const cookieBox = document.querySelector('#__abconsent-cmp');
+        
+        if (cookieBox && window.getComputedStyle(cookieBox).display !== 'none') {
+            console.log('✅ Boîte à cookies détectée, correction en cours...');
+            
+            // Trouver tous les boutons dans la boîte à cookies
+            const buttons = cookieBox.querySelectorAll('button, a, [role="button"]');
+            
+            buttons.forEach(button => {
+                // Intercepter les événements tactiles et les convertir en clics
+                button.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('👆 Touch détecté, conversion en clic:', this.textContent);
+                    this.click();
+                }, { passive: false, capture: true });
+            });
+            
+            console.log(`✅ ${buttons.length} bouton(s) corrigé(s)`);
+            clearInterval(checkCookieBox);
+        }
+    }, 100);
+    
+    // Arrêter après 10 secondes
+    setTimeout(() => clearInterval(checkCookieBox), 10000);
+}
+
+// Lancer la correction
+fixCookieBoxTouchEvents();
     });
 
     // Fonction pour détecter si le menu est sur plusieurs lignes
