@@ -1746,6 +1746,7 @@ function initializeJS() {
 
 console.log('TourMag Widget: initializeJS() appelé');
 
+
 // FORCER LA TAILLE DES IMAGES EN JAVASCRIPT (ne peut pas être écrasé !)
 function forceImageSizes() {
     if (window.innerWidth > 768) return;
@@ -1769,22 +1770,54 @@ function forceImageSizes() {
         size = 30;
     }
     
+    let count = 0;
     selectors.forEach(selector => {
         document.querySelectorAll(selector).forEach(img => {
             // Ignorer l'icône d'accueil
             if (img.alt === 'Accueil') return;
             
-            img.style.width = size + 'px';
-            img.style.height = size + 'px';
-            img.style.maxWidth = size + 'px';
-            img.style.maxHeight = size + 'px';
-            img.style.minWidth = size + 'px';
-            img.style.minHeight = size + 'px';
-            img.style.objectFit = 'contain';
+            // UTILISER setProperty avec 'important' !
+            img.style.setProperty('width', size + 'px', 'important');
+            img.style.setProperty('height', size + 'px', 'important');
+            img.style.setProperty('max-width', size + 'px', 'important');
+            img.style.setProperty('max-height', size + 'px', 'important');
+            img.style.setProperty('min-width', size + 'px', 'important');
+            img.style.setProperty('min-height', size + 'px', 'important');
+            img.style.setProperty('object-fit', 'contain', 'important');
+            count++;
         });
     });
     
-    console.log(`✅ Images forcées à ${size}px`);
+    console.log(`✅ ${count} images forcées à ${size}px`);
+}
+
+// Appliquer avec plusieurs délais pour être SÛR que ça marche
+if (window.innerWidth <= 768) {
+    setTimeout(forceImageSizes, 100);
+    setTimeout(forceImageSizes, 300);
+    setTimeout(forceImageSizes, 500);
+    setTimeout(forceImageSizes, 1000);
+    setTimeout(forceImageSizes, 2000); // Ultime sécurité
+}
+
+// Réappliquer au resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth <= 768) {
+        forceImageSizes();
+    }
+});
+
+// Observer les changements du DOM pour forcer les nouvelles images
+const observer = new MutationObserver(function() {
+    if (window.innerWidth <= 768) {
+        forceImageSizes();
+    }
+});
+
+// Observer le menu pour détecter les nouvelles images
+const menu = document.querySelector('#tourmag-menu');
+if (menu) {
+    observer.observe(menu, { childList: true, subtree: true });
 }
 
 // Appliquer immédiatement
