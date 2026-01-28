@@ -975,13 +975,14 @@ body.hover-mode .mega-menu:hover {
 }
 
 
-/* FORCER ABSOLUMENT toutes les images à 40px dans les newsletters */
-.mega-column img,
-.newsletter-list img,
-.mega-links img,
-.newsletter-icon img,
-.media-icon img,
-span img {
+/* FORCER ABSOLUMENT toutes les images - ULTRA SPÉCIFIQUE */
+#tourmag-menu .mega-column img,
+#tourmag-menu .newsletter-list img,
+#tourmag-menu .mega-links img,
+#tourmag-menu .newsletter-icon img,
+#tourmag-menu .media-icon img,
+#tourmag-menu span img,
+#tourmag-menu .mega-menu a img {
     width: 40px !important;
     height: 40px !important;
     max-width: 40px !important;
@@ -991,6 +992,7 @@ span img {
     object-fit: contain !important;
     vertical-align: middle !important;
     margin-right: 0.5rem !important;
+    border: none !important;
 }
 
 /* Images dans les mega menus uniquement (pas l'icône d'accueil) */
@@ -1230,15 +1232,14 @@ span img {
 
 }
 
-/* Ajustements pour très petits écrans  */
+/* Ajustements pour très petits écrans */
 @media (max-width: 400px) {
-    /* Réduire TOUTES les images des newsletters */
-    .mega-column img,
-    .newsletter-list img,
-    .mega-links img,
-    .newsletter-icon img,
-    .media-icon img,
-    span img {
+    #tourmag-menu .mega-column img,
+    #tourmag-menu .newsletter-list img,
+    #tourmag-menu .mega-links img,
+    #tourmag-menu .newsletter-icon img,
+    #tourmag-menu .media-icon img,
+    #tourmag-menu span img {
         width: 30px !important;
         height: 30px !important;
         max-width: 30px !important;
@@ -1247,56 +1248,15 @@ span img {
         min-height: 30px !important;
     }
     
-    /* Réduire les containers d'icônes aussi */
-    .newsletter-item .mega-link .newsletter-icon,
-    .media-item .mega-link .media-icon {
-        width: 30px !important;
-        height: 30px !important;
-    }
-    
-    /* Réduire la taille du texte */
-    .newsletter-item .mega-link,
-    .media-item .mega-link,
-    .media-simple-link {
-        font-size: 0.95rem !important;
+    #tourmag-menu .newsletter-item .mega-link,
+    #tourmag-menu .media-item .mega-link,
+    #tourmag-menu .media-simple-link {
+        font-size: 0.9rem !important;
         padding: 0.6rem 0.8rem !important;
-    }
-    
-    /* Réduire les colonnes mega menu */
-    .mega-menu-content {
-        padding: 0.75rem 0.5rem !important;
     }
 }
 
-/* Pour les TRÈS TRÈS petits écrans (< 350px) */
-@media (max-width: 350px) {
-    .mega-column img,
-    .newsletter-list img,
-    .mega-links img,
-    .newsletter-icon img,
-    .media-icon img,
-    span img {
-        width: 24px !important;
-        height: 24px !important;
-        max-width: 24px !important;
-        max-height: 24px !important;
-        min-width: 24px !important;
-        min-height: 24px !important;
-    }
-    
-    .newsletter-item .mega-link .newsletter-icon,
-    .media-item .mega-link .media-icon {
-        width: 24px !important;
-        height: 24px !important;
-    }
-    
-    .newsletter-item .mega-link,
-    .media-item .mega-link,
-    .media-simple-link {
-        font-size: 0.85rem !important;
-        padding: 0.5rem 0.6rem !important;
-    }
-}
+
 
         /* Badge Premium */
         .premium-badge {
