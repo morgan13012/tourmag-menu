@@ -1764,51 +1764,69 @@ function initializeJS() {
     }
 								
 
+// Fix ULTRA AGRESSIF pour les cookies
 function fixCookieBoxTouchEvents() {
     if (window.innerWidth > 768) return;
     
-    console.log('🔧 FIX RADICAL pour cookies...');
+    console.log('🔧 FIX ULTRA AGRESSIF pour cookies...');
     
     const checkCookieBox = setInterval(() => {
         const cookieBox = document.querySelector('#__abconsent-cmp');
         
         if (cookieBox && window.getComputedStyle(cookieBox).display !== 'none') {
-            console.log('✅ Cookies détectée !');
+            console.log('✅ Boîte cookies trouvée !');
             
-            cookieBox.style.zIndex = '9999999999';
+            // Désactiver TOUT sauf les cookies
+            document.body.style.pointerEvents = 'none';
+            
+            // Réactiver uniquement la boîte cookies
+            cookieBox.style.pointerEvents = 'auto';
+            cookieBox.style.zIndex = '2147483647';
             cookieBox.style.position = 'fixed';
             
-            const overlay = document.createElement('div');
-            overlay.id = 'cookie-fix-overlay';
-            overlay.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 9999999998;
-                pointer-events: auto;
-                background: rgba(0,0,0,0.5);
-            `;
-            
-            overlay.addEventListener('click', function(e) {
-                const rect = cookieBox.getBoundingClientRect();
-                if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
-                    overlay.style.pointerEvents = 'none';
-                    setTimeout(() => overlay.style.pointerEvents = 'auto', 100);
-                }
+            // Forcer TOUS les éléments de la boîte à être cliquables
+            const allElements = cookieBox.querySelectorAll('*');
+            allElements.forEach(el => {
+                el.style.pointerEvents = 'auto';
+                el.style.cursor = 'pointer';
             });
             
-            document.body.appendChild(overlay);
-            
+            // Trouver et forcer les boutons
             const buttons = cookieBox.querySelectorAll('button, a, [role="button"]');
-            buttons.forEach(button => {
+            console.log(`📍 ${buttons.length} boutons trouvés`);
+            
+            buttons.forEach((button, index) => {
+                console.log(`Bouton ${index}: ${button.textContent.trim()}`);
+                
+                // Forcer styles
                 button.style.pointerEvents = 'auto';
-                button.style.zIndex = '10000000000';
+                button.style.cursor = 'pointer';
                 button.style.position = 'relative';
+                button.style.zIndex = '2147483647';
+                
+                // Intercepter TOUS les événements
+                ['touchstart', 'touchend', 'click', 'mousedown', 'mouseup'].forEach(eventType => {
+                    button.addEventListener(eventType, function(e) {
+                        console.log(`🎯 ${eventType} détecté sur: ${this.textContent.trim()}`);
+                        
+                        if (eventType === 'touchend') {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            e.stopImmediatePropagation();
+                            
+                            console.log('👆 Conversion en clic...');
+                            
+                            // Forcer le clic
+                            setTimeout(() => {
+                                this.click();
+                                console.log('✅ Clic forcé !');
+                            }, 10);
+                        }
+                    }, { passive: false, capture: true });
+                });
             });
             
-            console.log(`✅ ${buttons.length} boutons + overlay`);
+            console.log('✅ Configuration terminée !');
             clearInterval(checkCookieBox);
         }
     }, 100);
@@ -1819,7 +1837,7 @@ function fixCookieBoxTouchEvents() {
 // Lancer au chargement
 if (window.innerWidth <= 768) {
     fixCookieBoxTouchEvents();
-}							
+}
 								
     
     window.addEventListener('resize', function() {
