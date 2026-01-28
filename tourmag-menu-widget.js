@@ -25,34 +25,6 @@
             --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
-/* CORRECTION URGENTE - Désactiver les clics sur les images responsives en mobile */
-@media (max-width: 768px) {
-    img.responsive {
-        pointer-events: none !important;
-    }
-    
-    /* S'assurer que tous les éléments en display:none ne bloquent pas */
-    [style*="display:none"],
-    [style*="display: none"] {
-        pointer-events: none !important;
-    }
-    
-    /* Réactiver les clics sur les éléments de cookies */
-    #__abconsent-cmp,
-    #__abconsent-cmp *,
-    [id*="consent"],
-    [id*="consent"] *,
-    [class*="consent"],
-    [class*="consent"] * {
-        pointer-events: auto !important;
-    }
-}
-
-
-
-
-
-
  /* FORCER L'AFFICHAGE DU WIDGET - AJOUTER ICI â¬‡ï¸ */
     #tourmag-menu {
         display: block !important;
@@ -1159,7 +1131,6 @@ span img {
     padding: 0 !important;
     max-height: none !important; 
     overflow: visible !important;
-	pointer-events: none;
 }
 
 /* Afficher le mega menu quand l'item parent a la classe active */
@@ -1168,7 +1139,6 @@ span img {
     opacity: 1 !important;
     visibility: visible !important;
     position: static !important;
-pointer-events: auto !important;
 }
 
 /* Forcer le lien à rester cliquable même quand le menu est ouvert */
@@ -1788,35 +1758,57 @@ function initializeJS() {
         console.log(`✅ ${fixed} élément(s) bloquant(s) désactivé(s)`);
     }
     
-   // Appliquer la correction au chargement et au resize
-if (window.innerWidth <= 768) {
-    setTimeout(fixMobileClicks, 100);
-}
+    // Appliquer la correction au chargement et au resize
+    if (window.innerWidth <= 768) {
+        setTimeout(fixMobileClicks, 100);
+    }
+								
 
-// Fix pour les événements tactiles bloqués sur la boîte à cookies
 function fixCookieBoxTouchEvents() {
     if (window.innerWidth > 768) return;
     
-    console.log('🔧 Correction des événements tactiles pour cookies...');
+    console.log('🔧 FIX RADICAL pour cookies...');
     
     const checkCookieBox = setInterval(() => {
         const cookieBox = document.querySelector('#__abconsent-cmp');
         
         if (cookieBox && window.getComputedStyle(cookieBox).display !== 'none') {
-            console.log('✅ Boîte à cookies détectée, correction en cours...');
+            console.log('✅ Cookies détectée !');
             
-            const buttons = cookieBox.querySelectorAll('button, a, [role="button"]');
+            cookieBox.style.zIndex = '9999999999';
+            cookieBox.style.position = 'fixed';
             
-            buttons.forEach(button => {
-                button.addEventListener('touchend', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('👆 Touch détecté, conversion en clic:', this.textContent);
-                    this.click();
-                }, { passive: false, capture: true });
+            const overlay = document.createElement('div');
+            overlay.id = 'cookie-fix-overlay';
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 9999999998;
+                pointer-events: auto;
+                background: rgba(0,0,0,0.5);
+            `;
+            
+            overlay.addEventListener('click', function(e) {
+                const rect = cookieBox.getBoundingClientRect();
+                if (e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                    overlay.style.pointerEvents = 'none';
+                    setTimeout(() => overlay.style.pointerEvents = 'auto', 100);
+                }
             });
             
-            console.log(`✅ ${buttons.length} bouton(s) corrigé(s)`);
+            document.body.appendChild(overlay);
+            
+            const buttons = cookieBox.querySelectorAll('button, a, [role="button"]');
+            buttons.forEach(button => {
+                button.style.pointerEvents = 'auto';
+                button.style.zIndex = '10000000000';
+                button.style.position = 'relative';
+            });
+            
+            console.log(`✅ ${buttons.length} boutons + overlay`);
             clearInterval(checkCookieBox);
         }
     }, 100);
@@ -1824,17 +1816,31 @@ function fixCookieBoxTouchEvents() {
     setTimeout(() => clearInterval(checkCookieBox), 10000);
 }
 
-// Lancer la correction au chargement
+// Lancer au chargement
 if (window.innerWidth <= 768) {
     fixCookieBoxTouchEvents();
-}
+}							
+								
+    
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768) {
+            fixMobileClicks();
+        }
+    });
 
-// MAINTENANT le resize listener
-window.addEventListener('resize', function() {
-    if (window.innerWidth <= 768) {
-        fixMobileClicks();
+    // Fonction pour détecter si le menu est sur plusieurs lignes
+    function isMenuMultiline() {
+        const navList = document.querySelector('#tourmag-menu .nav-list');
+        if (!navList) return false;
+        
+        const navItems = Array.from(navList.querySelectorAll('.nav-item'));
+        if (navItems.length < 2) return false;
+        
+        const firstItemTop = navItems[0].getBoundingClientRect().top;
+        const lastItemTop = navItems[navItems.length - 1].getBoundingClientRect().top;
+        
+        return Math.abs(lastItemTop - firstItemTop) > 5;
     }
-});
     
     // Fonction pour positionner les mega menus correctement
     function updateMegaMenuPositions() {
