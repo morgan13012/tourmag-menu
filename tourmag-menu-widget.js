@@ -45,19 +45,22 @@
 
 
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* Cibler UNIQUEMENT les éléments du widget */
+#tourmag-menu,
+#tourmag-menu * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-          
-            overflow-x: hidden ;
-        }
+/* NE PAS toucher au body global ! */
+#tourmag-menu .header,
+#tourmag-menu .main-nav,
+#tourmag-menu .mega-menu {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
 
         /* En-tête et navigation principale */
         .header {
