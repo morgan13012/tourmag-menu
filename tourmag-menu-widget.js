@@ -1230,6 +1230,74 @@ span img {
 
 }
 
+/* Ajustements pour très petits écrans  */
+@media (max-width: 400px) {
+    /* Réduire TOUTES les images des newsletters */
+    .mega-column img,
+    .newsletter-list img,
+    .mega-links img,
+    .newsletter-icon img,
+    .media-icon img,
+    span img {
+        width: 30px !important;
+        height: 30px !important;
+        max-width: 30px !important;
+        max-height: 30px !important;
+        min-width: 30px !important;
+        min-height: 30px !important;
+    }
+    
+    /* Réduire les containers d'icônes aussi */
+    .newsletter-item .mega-link .newsletter-icon,
+    .media-item .mega-link .media-icon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    /* Réduire la taille du texte */
+    .newsletter-item .mega-link,
+    .media-item .mega-link,
+    .media-simple-link {
+        font-size: 0.95rem !important;
+        padding: 0.6rem 0.8rem !important;
+    }
+    
+    /* Réduire les colonnes mega menu */
+    .mega-menu-content {
+        padding: 0.75rem 0.5rem !important;
+    }
+}
+
+/* Pour les TRÈS TRÈS petits écrans (< 350px) */
+@media (max-width: 350px) {
+    .mega-column img,
+    .newsletter-list img,
+    .mega-links img,
+    .newsletter-icon img,
+    .media-icon img,
+    span img {
+        width: 24px !important;
+        height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
+        min-width: 24px !important;
+        min-height: 24px !important;
+    }
+    
+    .newsletter-item .mega-link .newsletter-icon,
+    .media-item .mega-link .media-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    
+    .newsletter-item .mega-link,
+    .media-item .mega-link,
+    .media-simple-link {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 0.6rem !important;
+    }
+}
+
         /* Badge Premium */
         .premium-badge {
             display: inline-block;
@@ -1326,8 +1394,8 @@ span img {
                                     <div class="mega-column">
                                         <ul class="mega-links">
                                             <li><a href="https://www.tourmag.com/Brand-News_r330.html" class="media-simple-link">Brand News</a></li>
+											<li><a href="https://www.tourmag.com/Publi-news_r569.html" class="media-simple-link">Publi-News</a></li>
                                             <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-Rédactionnel</a></li>
-                                            <li><a href="https://www.tourmag.com/Publi-news_r569.html" class="media-simple-link">Publi-News</a></li>
                                             <li><a href="https://www.tourmag.com/Webinaires_r493.html" class="media-simple-link">Webinaires</a></li>
 											 <li><a href="https://www.tourmag.com/Actus-Visas_r356.html" class="media-simple-link">Actus Visas</a></li>
                                         </ul>
