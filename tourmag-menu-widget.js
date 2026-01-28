@@ -1747,7 +1747,7 @@ function initializeJS() {
 console.log('TourMag Widget: initializeJS() appelé');
 
 
-// FORCER LA TAILLE DES IMAGES EN JAVASCRIPT (ne peut pas être écrasé !)
+// FORCER LA TAILLE DES IMAGES EN JAVASCRIPT
 function forceImageSizes() {
     if (window.innerWidth > 768) return;
     
@@ -1762,7 +1762,6 @@ function forceImageSizes() {
         '#tourmag-menu .mega-menu a img'
     ];
     
-    // Déterminer la taille selon la largeur d'écran
     let size = 40;
     if (window.innerWidth <= 350) {
         size = 24;
@@ -1773,10 +1772,8 @@ function forceImageSizes() {
     let count = 0;
     selectors.forEach(selector => {
         document.querySelectorAll(selector).forEach(img => {
-            // Ignorer l'icône d'accueil
             if (img.alt === 'Accueil') return;
             
-            // UTILISER setProperty avec 'important' !
             img.style.setProperty('width', size + 'px', 'important');
             img.style.setProperty('height', size + 'px', 'important');
             img.style.setProperty('max-width', size + 'px', 'important');
@@ -1788,16 +1785,16 @@ function forceImageSizes() {
         });
     });
     
-    console.log(`✅ ${count} images forcées à ${size}px`);
+    console.log(`✅ ${count} images forcées à ${size}px`);  // ← CORRECTION ICI
 }
 
-// Appliquer avec plusieurs délais pour être SÛR que ça marche
+// Appliquer avec plusieurs délais
 if (window.innerWidth <= 768) {
     setTimeout(forceImageSizes, 100);
     setTimeout(forceImageSizes, 300);
     setTimeout(forceImageSizes, 500);
     setTimeout(forceImageSizes, 1000);
-    setTimeout(forceImageSizes, 2000); // Ultime sécurité
+    setTimeout(forceImageSizes, 2000);
 }
 
 // Réappliquer au resize
@@ -1807,31 +1804,17 @@ window.addEventListener('resize', function() {
     }
 });
 
-// Observer les changements du DOM pour forcer les nouvelles images
+// Observer les changements du DOM
 const observer = new MutationObserver(function() {
     if (window.innerWidth <= 768) {
         forceImageSizes();
     }
 });
 
-// Observer le menu pour détecter les nouvelles images
 const menu = document.querySelector('#tourmag-menu');
 if (menu) {
     observer.observe(menu, { childList: true, subtree: true });
 }
-
-// Appliquer immédiatement
-if (window.innerWidth <= 768) {
-    setTimeout(forceImageSizes, 200);
-    setTimeout(forceImageSizes, 500); // Double appel pour être sûr
-}
-
-// Réappliquer au resize
-window.addEventListener('resize', function() {
-    if (window.innerWidth <= 768) {
-        forceImageSizes();
-    }
-});
 
  // CORRECTION AUTOMATIQUE DES CLICS BLOQUÉS EN MOBILE
     function fixMobileClicks() {
