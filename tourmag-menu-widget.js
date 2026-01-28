@@ -1067,7 +1067,7 @@ span img {
         position: absolute;
         left: 1rem;
         top: calc(50% +30px);
-        transform: translateX(-25%) translateY(-205%)
+        transform: translateX(-5%) translateY(-205%)
         z-index: 2147483647 !important;
     }
     
