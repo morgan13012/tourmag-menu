@@ -1788,35 +1788,26 @@ function initializeJS() {
         console.log(`✅ ${fixed} élément(s) bloquant(s) désactivé(s)`);
     }
     
-    // Appliquer la correction au chargement et au resize
-    if (window.innerWidth <= 768) {
-        setTimeout(fixMobileClicks, 100); // Petit délai pour que la page soit chargée
-    }
-    
-    window.addEventListener('resize', function() {
-        if (window.innerWidth <= 768) {
-            fixMobileClicks();
-        }
-
+   // Appliquer la correction au chargement et au resize
+if (window.innerWidth <= 768) {
+    setTimeout(fixMobileClicks, 100);
+}
 
 // Fix pour les événements tactiles bloqués sur la boîte à cookies
 function fixCookieBoxTouchEvents() {
-    if (window.innerWidth > 768) return; // Seulement en mobile
+    if (window.innerWidth > 768) return;
     
     console.log('🔧 Correction des événements tactiles pour cookies...');
     
-    // Attendre que la boîte à cookies apparaisse
     const checkCookieBox = setInterval(() => {
         const cookieBox = document.querySelector('#__abconsent-cmp');
         
         if (cookieBox && window.getComputedStyle(cookieBox).display !== 'none') {
             console.log('✅ Boîte à cookies détectée, correction en cours...');
             
-            // Trouver tous les boutons dans la boîte à cookies
             const buttons = cookieBox.querySelectorAll('button, a, [role="button"]');
             
             buttons.forEach(button => {
-                // Intercepter les événements tactiles et les convertir en clics
                 button.addEventListener('touchend', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -1830,27 +1821,20 @@ function fixCookieBoxTouchEvents() {
         }
     }, 100);
     
-    // Arrêter après 10 secondes
     setTimeout(() => clearInterval(checkCookieBox), 10000);
 }
 
-// Lancer la correction
-fixCookieBoxTouchEvents();
-    });
+// Lancer la correction au chargement
+if (window.innerWidth <= 768) {
+    fixCookieBoxTouchEvents();
+}
 
-    // Fonction pour détecter si le menu est sur plusieurs lignes
-    function isMenuMultiline() {
-        const navList = document.querySelector('#tourmag-menu .nav-list');
-        if (!navList) return false;
-        
-        const navItems = Array.from(navList.querySelectorAll('.nav-item'));
-        if (navItems.length < 2) return false;
-        
-        const firstItemTop = navItems[0].getBoundingClientRect().top;
-        const lastItemTop = navItems[navItems.length - 1].getBoundingClientRect().top;
-        
-        return Math.abs(lastItemTop - firstItemTop) > 5;
+// MAINTENANT le resize listener
+window.addEventListener('resize', function() {
+    if (window.innerWidth <= 768) {
+        fixMobileClicks();
     }
+});
     
     // Fonction pour positionner les mega menus correctement
     function updateMegaMenuPositions() {
