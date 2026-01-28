@@ -25,6 +25,34 @@
             --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
+/* CORRECTION URGENTE - Désactiver les clics sur les images responsives en mobile */
+@media (max-width: 768px) {
+    img.responsive {
+        pointer-events: none !important;
+    }
+    
+    /* S'assurer que tous les éléments en display:none ne bloquent pas */
+    [style*="display:none"],
+    [style*="display: none"] {
+        pointer-events: none !important;
+    }
+    
+    /* Réactiver les clics sur les éléments de cookies */
+    #__abconsent-cmp,
+    #__abconsent-cmp *,
+    [id*="consent"],
+    [id*="consent"] *,
+    [class*="consent"],
+    [class*="consent"] * {
+        pointer-events: auto !important;
+    }
+}
+
+
+
+
+
+
  /* FORCER L'AFFICHAGE DU WIDGET - AJOUTER ICI â¬‡ï¸ */
     #tourmag-menu {
         display: block !important;
