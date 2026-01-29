@@ -1827,8 +1827,17 @@ if (menu) {
         let fixed = 0;
         
         allElements.forEach(el => {
-            // Ignorer les éléments du menu TourMag
-            if (el.closest('#tourmag-menu')) return;
+    // Ignorer les éléments du menu TourMag
+    if (el.closest('#tourmag-menu')) return;
+    
+    // ⭐ NOUVEAU : Ignorer les pop-ups/modales/overlays de connexion
+    if (el.closest('[role="dialog"]') || 
+        el.closest('.modal') || 
+        el.closest('.popup') ||
+        el.closest('[class*="login"]') ||
+        el.closest('[class*="connexion"]') ||
+        el.id.includes('login') ||
+        el.id.includes('connexion')) return;
             
             const style = window.getComputedStyle(el);
             const rect = el.getBoundingClientRect();
