@@ -1874,12 +1874,23 @@ function fixCookieBoxTouchEvents() {
     const checkCookieBox = setInterval(() => {
         const cookieBox = document.querySelector('#__abconsent-cmp');
         
+        // ⭐ DEBUG : Afficher les infos de la bannière
+        if (cookieBox) {
+            console.log('📦 Bannière trouvée !');
+            console.log('Display:', window.getComputedStyle(cookieBox).display);
+            console.log('Visibility:', window.getComputedStyle(cookieBox).visibility);
+            console.log('offsetParent:', cookieBox.offsetParent);
+            console.log('Height:', cookieBox.getBoundingClientRect().height);
+        }
+        
         // Vérifier que la bannière est VRAIMENT visible
         const isVisible = cookieBox && 
                          window.getComputedStyle(cookieBox).display !== 'none' &&
                          window.getComputedStyle(cookieBox).visibility !== 'hidden' &&
                          cookieBox.offsetParent !== null &&
                          cookieBox.getBoundingClientRect().height > 0;
+        
+        console.log('✅ isVisible?', isVisible);
         
         if (isVisible) {
             console.log('✅ Bannière cookies visible - activation du fix');
