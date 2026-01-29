@@ -1884,11 +1884,11 @@ function fixCookieBoxTouchEvents() {
         }
         
         // Vérifier que la bannière est VRAIMENT visible
-        const isVisible = cookieBox && 
-                         window.getComputedStyle(cookieBox).display !== 'none' &&
-                         window.getComputedStyle(cookieBox).visibility !== 'hidden' &&
-                         cookieBox.offsetParent !== null &&
-                         cookieBox.getBoundingClientRect().height > 0;
+       const isVisible = cookieBox && 
+                 window.getComputedStyle(cookieBox).display !== 'none' &&
+                 window.getComputedStyle(cookieBox).visibility !== 'hidden' &&
+                 cookieBox.offsetParent !== null;
+                 // ⭐ RETIRÉ la vérification de height car la bannière peut être en cours d'animation
         
         console.log('✅ isVisible?', isVisible);
         
