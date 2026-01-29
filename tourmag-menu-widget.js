@@ -1865,17 +1865,25 @@ if (menu) {
     }
 								
 
-// Fix ULTRA AGRESSIF pour les cookies
+// Fix pour les cookies avec réactivation du site
 function fixCookieBoxTouchEvents() {
     if (window.innerWidth > 768) return;
     
-    console.log('🔧 FIX ULTRA AGRESSIF pour cookies...');
+    console.log('🔧 FIX pour cookies...');
     
     const checkCookieBox = setInterval(() => {
         const cookieBox = document.querySelector('#__abconsent-cmp');
         
-        if (cookieBox && window.getComputedStyle(cookieBox).display !== 'none') {
-            console.log('✅ Boîte cookies trouvée !');
+        // Vérifier que la bannière est VRAIMENT visible
+        const isVisible = cookieBox && 
+                         window.getComputedStyle(cookieBox).display !== 'none' &&
+                         window.getComputedStyle(cookieBox).visibility !== 'hidden' &&
+                         cookieBox.offsetParent !== null &&
+                         cookieBox.getBoundingClientRect().height > 0;
+        
+        if (isVisible) {
+            console.log('✅ Bannière cookies visible - activation du fix');
+            clearInterval(checkCookieBox);
             
             // Désactiver TOUT sauf les cookies
             document.body.style.pointerEvents = 'none';
@@ -1897,42 +1905,75 @@ function fixCookieBoxTouchEvents() {
             console.log(`📍 ${buttons.length} boutons trouvés`);
             
             buttons.forEach((button, index) => {
-                console.log(`Bouton ${index}: ${button.textContent.trim()}`);
-                
-                // Forcer styles
                 button.style.pointerEvents = 'auto';
                 button.style.cursor = 'pointer';
                 button.style.position = 'relative';
                 button.style.zIndex = '2147483647';
                 
+                // ⭐ NOUVEAU : Réactiver le site après clic
+                button.addEventListener('click', function() {
+                    console.log('🎯 Clic détecté sur bouton cookie');
+                    setTimeout(() => {
+                        document.body.style.pointerEvents = 'auto';
+                        console.log('✅ Site réactivé après validation cookies');
+                    }, 500);
+                }, { once: true });
+                
                 // Intercepter TOUS les événements
                 ['touchstart', 'touchend', 'click', 'mousedown', 'mouseup'].forEach(eventType => {
                     button.addEventListener(eventType, function(e) {
-                        console.log(`🎯 ${eventType} détecté sur: ${this.textContent.trim()}`);
-                        
                         if (eventType === 'touchend') {
                             e.preventDefault();
                             e.stopPropagation();
                             e.stopImmediatePropagation();
                             
-                            console.log('👆 Conversion en clic...');
-                            
-                            // Forcer le clic
                             setTimeout(() => {
                                 this.click();
-                                console.log('✅ Clic forcé !');
                             }, 10);
                         }
                     }, { passive: false, capture: true });
                 });
             });
             
-            console.log('✅ Configuration terminée !');
-            clearInterval(checkCookieBox);
+            // ⭐ NOUVEAU : Observer la disparition de la bannière
+            const observer = new MutationObserver(() => {
+                const stillVisible = window.getComputedStyle(cookieBox).display !== 'none' &&
+                                   cookieBox.getBoundingClientRect().height > 0;
+                
+                if (!stillVisible) {
+                    document.body.style.pointerEvents = 'auto';
+                    console.log('✅ Site réactivé (bannière disparue)');
+                    observer.disconnect();
+                }
+            });
+            
+            observer.observe(cookieBox, { 
+                attributes: true, 
+                childList: true,
+                subtree: true
+            });
+            
+            // ⭐ NOUVEAU : Timeout de sécurité (15 secondes)
+            setTimeout(() => {
+
+                if (document.body.style.pointerEvents === 'none') {
+                    document.body.style.pointerEvents = 'auto';
+                    console.log('⚠️ Site réactivé (timeout sécurité)');
+                }
+            }, 15000);
+            
+            console.log('✅ Configuration cookies terminée !');
         }
     }, 100);
     
-    setTimeout(() => clearInterval(checkCookieBox), 10000);
+    // ⭐ NOUVEAU : Vérification finale après 10 secondes
+    setTimeout(() => {
+        clearInterval(checkCookieBox);
+        if (document.body.style.pointerEvents === 'none') {
+            document.body.style.pointerEvents = 'auto';
+            console.log('⚠️ Pas de bannière trouvée - site laissé actif');
+        }
+    }, 10000);
 }
 
 // Lancer au chargement
@@ -1941,6 +1982,7 @@ if (window.innerWidth <= 768) {
 }
 								
     
+
     window.addEventListener('resize', function() {
         if (window.innerWidth <= 768) {
             fixMobileClicks();
@@ -2044,6 +2086,7 @@ if (window.innerWidth <= 768) {
             navItems.forEach(item => {
                 const link = item.querySelector('.nav-link');
                 const megaMenu = item.querySelector('.mega-menu');
+
                 
                 if (megaMenu && link) {
                     const clickHandler = function(e) {
