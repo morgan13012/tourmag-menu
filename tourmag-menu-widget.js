@@ -894,9 +894,7 @@
         @media (max-width: 768px) {
             #tourmag-menu {
                 display: block !important;
-                position: relative !important;
-                z-index: 2147483647 !important;
-                isolation: isolate !important;
+                z-index: 1000 !important;
             }
 
             .nav-item .nav-link img {
@@ -1101,15 +1099,15 @@
 
             #tourmag-menu .nav-container {
                 position: relative !important;
-                z-index: 2147483646 !important;
+                z-index: 1000 !important;
             }
 
             #tourmag-menu .nav-list {
-                position: absolute !important;
-                top: 100% !important;
+                position: fixed !important;
+                top: 3.5rem !important;
                 left: 0 !important;
                 width: 100% !important;
-                z-index: 2147483647 !important;
+                z-index: 2147483646 !important;
             }
 
             #tourmag-menu .nav-list.active {
@@ -1117,7 +1115,7 @@
             }
             
             #tourmag-menu .mobile-menu-toggle {
-                position: absolute !important;
+                position: fixed !important;
                 z-index: 2147483647 !important;
             }
 
@@ -1813,7 +1811,6 @@
                     const priceSpan = t.querySelector('span');
                     if (priceSpan) {
                         priceSpan.style.color = '#0066cc';
-
                     }
                 });
                 
