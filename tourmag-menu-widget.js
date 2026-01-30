@@ -975,20 +975,19 @@
                 display: block !important;
             }
             
-         .mobile-menu-toggle {
+     .mobile-menu-toggle {
     display: block !important;
-    position: fixed !important;  /* Fixed au lieu d'absolute */
+    position: absolute !important;
     left: 1rem !important;
-    top: 80px !important;  /* Ajuste cette valeur selon ton header */
-    z-index: 9999 !important;  /* Z-index très élevé */
+    top: 1.25rem !important;  /* Valeur fixe simple */
+    z-index: 1002 !important;
     transform: none !important;
-    background: rgba(255, 0, 0, 0.3) !important;  /* Rouge semi-transparent pour debug */
-    padding: 1rem !important;
 }
             
-            .nav-container {
-                position: relative;
-                padding: 0 1rem 0 4rem;
+             .nav-container {
+        position: relative;
+        padding: 0 1rem 0 4rem;
+        min-height: 60px;  /* Hauteur fixe pour stabiliser */
             }
 
             .nav-list {
