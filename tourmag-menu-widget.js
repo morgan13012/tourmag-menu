@@ -2336,12 +2336,12 @@ mobileNavItems.forEach(item => {
     }
 });
     
-    // Fermer le menu mobile si on clique en dehors
-document.addEventListener('click', function(event) {
+   // Fermer le menu mobile si on clique/touche en dehors
+function handleCloseMenu(event) {
     // ⭐ D'ABORD vérifier si on est en mobile
     if (window.innerWidth > 768) return;
     
-    // ⭐ Vérifier si on clique dans une modale (plusieurs méthodes)
+    // ⭐ Vérifier si on clique dans une modale
     const clickedElement = event.target;
     
     // Méthode 1: Vérifier les classes parentes
@@ -2349,14 +2349,16 @@ document.addEventListener('click', function(event) {
         clickedElement.closest('.modal-dialog') ||
         clickedElement.closest('.modal-content') ||
         clickedElement.closest('.membership_auth')) {
-        console.log('⛔ Clic dans modale ignoré');
+        console.log('⛔ Touch/Click dans modale ignoré');
+        event.stopPropagation();
         return;
     }
     
     // Méthode 2: Vérifier les attributs
     if (clickedElement.closest('[role="dialog"]') ||
         clickedElement.closest('[aria-modal="true"]')) {
-        console.log('⛔ Clic dans dialog ignoré');
+        console.log('⛔ Touch/Click dans dialog ignoré');
+        event.stopPropagation();
         return;
     }
     
@@ -2365,7 +2367,8 @@ document.addEventListener('click', function(event) {
     for (let i = 0; i < 10; i++) {
         if (!parent) break;
         if (parent.id && (parent.id.includes('modal') || parent.id.includes('login') || parent.id.includes('auth'))) {
-            console.log('⛔ Clic dans élément auth ignoré');
+            console.log('⛔ Touch/Click dans élément auth ignoré');
+            event.stopPropagation();
             return;
         }
         parent = parent.parentElement;
@@ -2380,7 +2383,11 @@ document.addEventListener('click', function(event) {
         navList.classList.remove('active');
         toggle.classList.remove('active');
     }
-});
+}
+
+// Écouter à la fois les clics ET les touches
+document.addEventListener('click', handleCloseMenu);
+document.addEventListener('touchend', handleCloseMenu);
     
     // Réinitialiser lors du redimensionnement
     let resizeTimer;
