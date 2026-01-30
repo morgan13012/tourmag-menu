@@ -111,7 +111,6 @@
             max-width: 1600px;
             margin: 0 auto;
             padding: 0 2rem;
-            position: relative;
         }
 
         @media (max-width: 1300px) {
@@ -1101,19 +1100,19 @@
             #tourmag-menu .nav-container {
                 position: relative !important;
                 z-index: 1001 !important;
-                min-height: 60px !important;
             }
 
             #tourmag-menu .nav-list {
-                position: static !important;
-                top: auto !important;
-                left: auto !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
                 width: 100% !important;
                 z-index: 1001 !important;
             }
 
             #tourmag-menu .nav-list.active {
                 display: flex !important;
+                position: relative !important;
             }
 
             .newsletter-subscribe-btn {
