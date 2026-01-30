@@ -975,13 +975,15 @@
                 display: block !important;
             }
             
-            .mobile-menu-toggle {
+         .mobile-menu-toggle {
     display: block !important;
-    position: absolute;
-    left: 1rem;
-    top: 1rem;  /* Position fixe simple */
-    transform: none;  /* Supprime les transformations */
-    z-index: 1002 !important;
+    position: fixed !important;  /* Fixed au lieu d'absolute */
+    left: 1rem !important;
+    top: 80px !important;  /* Ajuste cette valeur selon ton header */
+    z-index: 9999 !important;  /* Z-index très élevé */
+    transform: none !important;
+    background: rgba(255, 0, 0, 0.3) !important;  /* Rouge semi-transparent pour debug */
+    padding: 1rem !important;
 }
             
             .nav-container {
