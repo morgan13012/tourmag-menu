@@ -895,7 +895,7 @@
             #tourmag-menu {
                 display: block !important;
                 position: relative !important;
-                z-index: 1000 !important;
+                z-index: 10000 !important;
             }
 
             .nav-item .nav-link img {
@@ -1100,7 +1100,7 @@
 
             #tourmag-menu .nav-container {
                 position: relative !important;
-                z-index: 1001 !important;
+                z-index: 10000 !important;
             }
 
             #tourmag-menu .nav-list {
@@ -1108,7 +1108,7 @@
                 top: 100% !important;
                 left: 0 !important;
                 width: 100% !important;
-                z-index: 1001 !important;
+                z-index: 9999 !important;
             }
 
             #tourmag-menu .nav-list.active {
@@ -1117,7 +1117,7 @@
             
             #tourmag-menu .mobile-menu-toggle {
                 position: absolute !important;
-                z-index: 1003 !important;
+                z-index: 10001 !important;
             }
 
             .newsletter-subscribe-btn {
