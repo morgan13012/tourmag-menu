@@ -891,7 +891,32 @@
         }
 
         @media (max-width: 768px) {
-            #tourmag-menu {
+            
+
+/* Désactive TOUS les fonds bleu-vert sur mobile */
+    #tourmag-menu .nav-link:hover,
+    #tourmag-menu .media-simple-link:hover,
+    #tourmag-menu .newsletter-item .mega-link:hover,
+    #tourmag-menu .media-item .mega-link:hover {
+        background: transparent !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+    
+    /* Désactive le tap highlight du navigateur */
+    * {
+        -webkit-tap-highlight-color: transparent !important;
+    }
+
+
+
+
+
+
+
+
+
+#tourmag-menu {
                 display: block !important;
                 position: relative !important;
                 z-index: 1000 !important;
@@ -978,16 +1003,15 @@ margin-top: -90px !important;
             
 .mobile-menu-toggle {
     display: block !important;
-    position: absolute !important;
-    left: 1rem !important;
-    top: -3rem !important;  /* Position par défaut */
-    transform: none !important;
-    z-index: 9999 !important;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    padding: 0.75rem;
-    transition: top 0.3s ease;  /* Animation douce pour le changement */
+    position: absolute;
+    left: 1rem;
+    top: -3rem;  /* Au-dessus de la barre noire */
+    transform: none;
+    z-index: 1002 !important;
+    background: #ffffff;  /* Fond blanc pour le détacher */
+    border-radius: 8px;  /* Coins arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);  /* Ombre légère */
+    padding: 0.75rem;  /* Padding pour agrandir la zone cliquable */
 }
             
             .nav-container {
@@ -1602,57 +1626,6 @@ margin-top: -90px !important;
     function initializeJS() {
         const navItemHandlers = new Map();
         let clickOutsideHandler = null;
-
-// Variables pour tracker la hauteur du header
-const baseHeaderHeight = 41.6; // Hauteur de base du header
-
-// Fonction pour ajuster la position du widget entier
-function adjustWidgetPosition() {
-    if (window.innerWidth > 768) return;
-    
-    const widget = document.getElementById('tourmag-menu');
-    const siteHeader = document.querySelector('#z_col0_responsive') || 
-                      document.querySelector('.z_col0_inner');
-    
-    if (!widget || !siteHeader) return;
-    
-    const currentHeaderHeight = siteHeader.offsetHeight;
-    const heightDifference = currentHeaderHeight - baseHeaderHeight;
-    
-    // Ajuste le margin-top négatif du widget pour compenser
-    const newMarginTop = -90 + heightDifference;
-    widget.style.marginTop = newMarginTop + 'px';
-    
-    console.log('Header:', currentHeaderHeight, 'Widget margin-top:', newMarginTop + 'px');
-}
-
-// Observer pour détecter les changements du header
-const headerObserver = new MutationObserver(function() {
-    adjustWidgetPosition();
-});
-
-const siteHeader = document.querySelector('#z_col0_responsive') || 
-                   document.querySelector('.z_col0_inner');
-
-if (siteHeader) {
-    headerObserver.observe(siteHeader, {
-        attributes: true,
-        childList: true,
-        subtree: true,
-        attributeFilter: ['class', 'style']
-    });
-}
-
-// Appel initial
-setTimeout(adjustWidgetPosition, 100);
-
-// Recalcule au resize
-window.addEventListener('resize', adjustWidgetPosition);
-
-// Détecte les clics
-document.addEventListener('click', function() {
-    setTimeout(adjustWidgetPosition, 50);
-});
         
         function isMenuMultiline() {
             const navList = document.querySelector('#tourmag-menu .nav-list');
