@@ -1101,19 +1101,23 @@
             #tourmag-menu .nav-container {
                 position: relative !important;
                 z-index: 1001 !important;
-                min-height: 60px !important;
             }
 
             #tourmag-menu .nav-list {
-                position: static !important;
-                top: auto !important;
-                left: auto !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
                 width: 100% !important;
                 z-index: 1001 !important;
             }
 
             #tourmag-menu .nav-list.active {
                 display: flex !important;
+            }
+            
+            #tourmag-menu .mobile-menu-toggle {
+                position: absolute !important;
+                z-index: 1003 !important;
             }
 
             .newsletter-subscribe-btn {
