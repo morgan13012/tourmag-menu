@@ -1912,6 +1912,51 @@ margin-top: -90px !important;
                 }
             }, 250);
         });
+				
+	      // AJOUTE ICI LE NOUVEAU CODE
+        // Détecte le retour sur la page (back navigation)
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+                console.log('Page restaurée depuis le cache');
+                
+                const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                const navList = document.getElementById('navList');
+                const toggleBtn = document.getElementById('mobileMenuToggle');
+                if (navList) navList.classList.remove('active');
+                if (toggleBtn) toggleBtn.classList.remove('active');
+                
+                const mainNav = document.querySelector('#tourmag-menu .main-nav');
+                if (mainNav) {
+                    mainNav.style.display = 'none';
+                    setTimeout(() => {
+                        mainNav.style.display = 'block';
+                    }, 10);
+                }
+                
+                setupBehavior();
+            }
+        });
+        
+        window.addEventListener('focus', function() {
+            if (window.innerWidth <= 768) {
+                const navLinks = document.querySelectorAll('#tourmag-menu .nav-link');
+                navLinks.forEach(link => {
+                    link.style.pointerEvents = 'auto';
+                });
+            }
+        });			
+				
+				
+				
+				
+				
+				
+				
+				
     }
     
     if (document.readyState === 'loading') {
