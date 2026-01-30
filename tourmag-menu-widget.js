@@ -1016,7 +1016,7 @@ margin-top: -90px !important;
 
             .main-nav {
     position: relative;
-    margin-top: 3.5rem;  /* Espace pour le bouton au-dessus */
+    
     z-index: 1000 !important;
 }
 
