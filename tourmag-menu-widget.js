@@ -903,18 +903,7 @@
         transform: none !important;
     }
     
-    /* Désactive le tap highlight du navigateur */
-    * {
-        -webkit-tap-highlight-color: transparent !important;
-    }
-
-
-
-
-
-
-
-
+    
 
 #tourmag-menu {
                 display: block !important;
