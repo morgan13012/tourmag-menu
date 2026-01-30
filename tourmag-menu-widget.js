@@ -2135,12 +2135,23 @@ if (window.innerWidth <= 768) {
             
             clickOutsideHandler = function(event) {
                 const mainNav = document.querySelector('#tourmag-menu .main-nav');
-                if (mainNav && !mainNav.contains(event.target)) {
+                const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
+                
+                // Vérifier si le clic est dans le menu OU dans un mega-menu ouvert
+                let isInsideMenu = mainNav && mainNav.contains(event.target);
+                megaMenus.forEach(menu => {
+                    if (menu.contains(event.target)) {
+                        isInsideMenu = true;
+                    }
+                });
+                
+                // Ne fermer QUE si le clic est vraiment en dehors du widget
+                if (!isInsideMenu && !event.target.closest('#tourmag-menu')) {
                     navItems.forEach(item => item.classList.remove('active'));
                 }
             };
             
-            document.addEventListener('click', clickOutsideHandler);
+            document.addEventListener('click', clickOutsideHandler, { capture: false });
             
         } else {
             console.log('📱 MODE MOBILE');
