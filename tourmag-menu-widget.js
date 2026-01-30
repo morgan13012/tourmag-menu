@@ -976,13 +976,13 @@
             }
             
             .mobile-menu-toggle {
-                display: block !important;
-                position: absolute;
-                left: 1rem;
-                top: calc(50% + 30px);
-                transform: translateX(-10%) translateY(-215%);
-                z-index: 1002 !important;
-            }
+    display: block !important;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;  /* Position fixe simple */
+    transform: none;  /* Supprime les transformations */
+    z-index: 1002 !important;
+}
             
             .nav-container {
                 position: relative;
@@ -991,6 +991,7 @@
 
             .nav-list {
                 display: none;
+
                 flex-direction: column;
                 position: absolute !important;
                 top: 100% !important;
