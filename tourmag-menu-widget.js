@@ -1978,26 +1978,26 @@ function fixCookieBoxTouchEvents() {
                 subtree: true
             });
             
-            // ⭐ Timeout de sécurité (15 secondes)
-            securityTimeout = setTimeout(() => {
-                if (document.body.style.pointerEvents === 'none') {
-                    unlockSite();
-                    console.log('⚠️ Site réactivé (timeout sécurité)');
-                }
-            }, 15000);
+            // Timeout désactivé - causait des conflits avec les modales
+// securityTimeout = setTimeout(() => {
+//     if (document.body.style.pointerEvents === 'none') {
+//         unlockSite();
+//         console.log('⚠️ Site réactivé (timeout sécurité)');
+//     }
+// }, 15000);
             
             console.log('✅ Configuration cookies terminée !');
         }
     }, 100);
     
-    // ⭐ Vérification finale après 10 secondes
-    finalTimeout = setTimeout(() => {
-        clearInterval(checkCookieBox);
-        if (document.body.style.pointerEvents === 'none') {
-            document.body.style.pointerEvents = 'auto';
-            console.log('⚠️ Pas de bannière trouvée - site laissé actif');
-        }
-    }, 10000);
+    // Timeout désactivé - causait des conflits avec les modales après 10s
+// finalTimeout = setTimeout(() => {
+//     clearInterval(checkCookieBox);
+//     if (document.body.style.pointerEvents === 'none') {
+//         document.body.style.pointerEvents = 'auto';
+//         console.log('⚠️ Pas de bannière trouvée - site laissé actif');
+//     }
+// }, 10000);
 }
 // Lancer au chargement
 if (window.innerWidth <= 768) {
