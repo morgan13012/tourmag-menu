@@ -737,7 +737,7 @@
             cursor: pointer;
             padding: 1rem;
             z-index: 1002;
-            position: fixed !important;
+            position: absolute !important;
         }
 
         .mobile-menu-toggle .hamburger-icon,
@@ -882,10 +882,10 @@
         @media (min-width: 481px) and (max-width: 768px) {
             .mobile-menu-toggle {
                 display: block !important;
-                position: absolute;
-                left: 1rem;
-                top: calc(50% + 30px);
-                transform: translateY(-245%);
+                position: absolute !important;
+                left: 4rem !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
                 z-index: 1002 !important;
             }
         }
