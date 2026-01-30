@@ -1826,24 +1826,16 @@ if (menu) {
         const allElements = document.querySelectorAll('*');
         let fixed = 0;
         
-       allElements.forEach(el => {
+        allElements.forEach(el => {
     // Ignorer les éléments du menu TourMag
     if (el.closest('#tourmag-menu')) return;
     
-    // ⭐ Ignorer TOUTES les modales (pop-ups de connexion, etc.)
+    // ⭐ NOUVEAU : Ignorer les pop-ups/modales/overlays de connexion
     if (el.closest('[role="dialog"]') || 
-        el.closest('[role="alertdialog"]') ||
-        el.closest('.modal') ||
-        el.closest('.modal-dialog') ||
-        el.closest('.modal-content') ||
-        el.closest('.modal-backdrop') ||
-        el.closest('.membership_auth') ||
+        el.closest('.modal') || 
         el.closest('.popup') ||
-        el.closest('.overlay') ||
         el.closest('[class*="login"]') ||
         el.closest('[class*="connexion"]') ||
-        el.closest('[class*="modal"]') ||
-        el.id.includes('modal') ||
         el.id.includes('login') ||
         el.id.includes('connexion')) return;
             
@@ -1888,17 +1880,26 @@ function fixCookieBoxTouchEvents() {
     
     console.log('🔧 FIX pour cookies...');
     
-    let checkCookieBox;
-    let securityTimeout;
-    let finalTimeout;
-    
-    checkCookieBox = setInterval(() => {
+    const checkCookieBox = setInterval(() => {
         const cookieBox = document.querySelector('#__abconsent-cmp');
         
-        const isVisible = cookieBox && 
-                         window.getComputedStyle(cookieBox).display !== 'none' &&
-                         window.getComputedStyle(cookieBox).visibility !== 'hidden' &&
-                         cookieBox.offsetParent !== null;
+        // ⭐ DEBUG : Afficher les infos de la bannière
+        if (cookieBox) {
+            console.log('📦 Bannière trouvée !');
+            console.log('Display:', window.getComputedStyle(cookieBox).display);
+            console.log('Visibility:', window.getComputedStyle(cookieBox).visibility);
+            console.log('offsetParent:', cookieBox.offsetParent);
+            console.log('Height:', cookieBox.getBoundingClientRect().height);
+        }
+        
+        // Vérifier que la bannière est VRAIMENT visible
+       const isVisible = cookieBox && 
+                 window.getComputedStyle(cookieBox).display !== 'none' &&
+                 window.getComputedStyle(cookieBox).visibility !== 'hidden' &&
+                 cookieBox.offsetParent !== null;
+                 // ⭐ RETIRÉ la vérification de height car la bannière peut être en cours d'animation
+        
+        console.log('✅ isVisible?', isVisible);
         
         if (isVisible) {
             console.log('✅ Bannière cookies visible - activation du fix');
@@ -1919,16 +1920,6 @@ function fixCookieBoxTouchEvents() {
                 el.style.cursor = 'pointer';
             });
             
-            // ⭐ Fonction pour tout nettoyer et réactiver le site
-            function unlockSite() {
-                document.body.style.pointerEvents = 'auto';
-                clearInterval(checkCookieBox);
-                clearTimeout(securityTimeout);
-                clearTimeout(finalTimeout);
-                if (observer) observer.disconnect();
-                console.log('✅ Site complètement débloqué');
-            }
-            
             // Trouver et forcer les boutons
             const buttons = cookieBox.querySelectorAll('button, a, [role="button"]');
             console.log(`📍 ${buttons.length} boutons trouvés`);
@@ -1939,14 +1930,16 @@ function fixCookieBoxTouchEvents() {
                 button.style.position = 'relative';
                 button.style.zIndex = '2147483647';
                 
-                // ⭐ Réactiver le site après clic et TOUT annuler
+                // ⭐ NOUVEAU : Réactiver le site après clic
                 button.addEventListener('click', function() {
                     console.log('🎯 Clic détecté sur bouton cookie');
                     setTimeout(() => {
-                        unlockSite();
+                        document.body.style.pointerEvents = 'auto';
+                        console.log('✅ Site réactivé après validation cookies');
                     }, 500);
                 }, { once: true });
                 
+                // Intercepter TOUS les événements
                 ['touchstart', 'touchend', 'click', 'mousedown', 'mouseup'].forEach(eventType => {
                     button.addEventListener(eventType, function(e) {
                         if (eventType === 'touchend') {
@@ -1962,13 +1955,15 @@ function fixCookieBoxTouchEvents() {
                 });
             });
             
-            // ⭐ Observer la disparition de la bannière
+            // ⭐ NOUVEAU : Observer la disparition de la bannière
             const observer = new MutationObserver(() => {
                 const stillVisible = window.getComputedStyle(cookieBox).display !== 'none' &&
                                    cookieBox.getBoundingClientRect().height > 0;
                 
                 if (!stillVisible) {
-                    unlockSite();
+                    document.body.style.pointerEvents = 'auto';
+                    console.log('✅ Site réactivé (bannière disparue)');
+                    observer.disconnect();
                 }
             });
             
@@ -1978,27 +1973,29 @@ function fixCookieBoxTouchEvents() {
                 subtree: true
             });
             
-            // Timeout désactivé - causait des conflits avec les modales
-// securityTimeout = setTimeout(() => {
-//     if (document.body.style.pointerEvents === 'none') {
-//         unlockSite();
-//         console.log('⚠️ Site réactivé (timeout sécurité)');
-//     }
-// }, 15000);
+            // ⭐ NOUVEAU : Timeout de sécurité (15 secondes)
+            setTimeout(() => {
+
+                if (document.body.style.pointerEvents === 'none') {
+                    document.body.style.pointerEvents = 'auto';
+                    console.log('⚠️ Site réactivé (timeout sécurité)');
+                }
+            }, 15000);
             
             console.log('✅ Configuration cookies terminée !');
         }
     }, 100);
     
-    // Timeout désactivé - causait des conflits avec les modales après 10s
-// finalTimeout = setTimeout(() => {
-//     clearInterval(checkCookieBox);
-//     if (document.body.style.pointerEvents === 'none') {
-//         document.body.style.pointerEvents = 'auto';
-//         console.log('⚠️ Pas de bannière trouvée - site laissé actif');
-//     }
-// }, 10000);
+    // ⭐ NOUVEAU : Vérification finale après 10 secondes
+    setTimeout(() => {
+        clearInterval(checkCookieBox);
+        if (document.body.style.pointerEvents === 'none') {
+            document.body.style.pointerEvents = 'auto';
+            console.log('⚠️ Pas de bannière trouvée - site laissé actif');
+        }
+    }, 10000);
 }
+
 // Lancer au chargement
 if (window.innerWidth <= 768) {
     fixCookieBoxTouchEvents();
@@ -2336,58 +2333,19 @@ mobileNavItems.forEach(item => {
     }
 });
     
-   // Fermer le menu mobile si on clique/touche en dehors
-function handleCloseMenu(event) {
-    // ⭐ D'ABORD vérifier si on est en mobile
-    if (window.innerWidth > 768) return;
-    
-    // ⭐ Vérifier si on clique dans une modale
-    const clickedElement = event.target;
-    
-    // Méthode 1: Vérifier les classes parentes
-    if (clickedElement.closest('.modal') || 
-        clickedElement.closest('.modal-dialog') ||
-        clickedElement.closest('.modal-content') ||
-        clickedElement.closest('.membership_auth')) {
-        console.log('⛔ Touch/Click dans modale ignoré');
-        event.stopPropagation();
-        return;
-    }
-    
-    // Méthode 2: Vérifier les attributs
-    if (clickedElement.closest('[role="dialog"]') ||
-        clickedElement.closest('[aria-modal="true"]')) {
-        console.log('⛔ Touch/Click dans dialog ignoré');
-        event.stopPropagation();
-        return;
-    }
-    
-    // Méthode 3: Vérifier les IDs contenant "modal" ou "login"
-    let parent = clickedElement;
-    for (let i = 0; i < 10; i++) {
-        if (!parent) break;
-        if (parent.id && (parent.id.includes('modal') || parent.id.includes('login') || parent.id.includes('auth'))) {
-            console.log('⛔ Touch/Click dans élément auth ignoré');
-            event.stopPropagation();
-            return;
+    // Fermer le menu mobile si on clique en dehors
+    document.addEventListener('click', function(event) {
+        const nav = document.querySelector('#tourmag-menu .main-nav');
+        const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
+        const navList = document.getElementById('navList');
+        
+        if (window.innerWidth <= 768 && 
+            !nav.contains(event.target) && 
+            !toggle.contains(event.target)) {
+            navList.classList.remove('active');
+            toggle.classList.remove('active');
         }
-        parent = parent.parentElement;
-    }
-    
-    const nav = document.querySelector('#tourmag-menu .main-nav');
-    const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
-    const navList = document.getElementById('navList');
-    
-    if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-        console.log('✅ Fermeture menu mobile');
-        navList.classList.remove('active');
-        toggle.classList.remove('active');
-    }
-}
-
-// Écouter à la fois les clics ET les touches
-document.addEventListener('click', handleCloseMenu);
-document.addEventListener('touchend', handleCloseMenu);
+    });
     
     // Réinitialiser lors du redimensionnement
     let resizeTimer;
