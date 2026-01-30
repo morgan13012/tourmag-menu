@@ -1296,6 +1296,21 @@ body.hover-mode .mega-menu:hover {
                 .mega-menu::-webkit-scrollbar-thumb:hover {
             background: var(--primary-dark);
         }
+
+/* 🔥 FORCER les popups externes à être AU-DESSUS du widget */
+body [class*="popup"]:not(#tourmag-menu *),
+body [class*="modal"]:not(#tourmag-menu *),
+body [class*="dialog"]:not(#tourmag-menu *),
+body [id*="popup"]:not(#tourmag-menu *),
+body [id*="modal"]:not(#tourmag-menu *),
+body [id*="login"]:not(#tourmag-menu *),
+body [id*="connexion"]:not(#tourmag-menu *),
+body .fancybox-container,
+body .mfp-wrap,
+body .ui-dialog {
+    z-index: 99999 !important;
+    position: relative !important;
+}
 `;
         document.head.appendChild(style);
 
@@ -2071,7 +2086,7 @@ if (window.innerWidth <= 768) {
         
         if (!navList) return;
         
-        // 🔥 NETTOYER TOUS LES ANCIENS LISTENERS AVANT D'EN CRÉER DE NOUVEAUX
+        // 🔥 NETTOYER TOUS LES ANCIENS LISTENERS
         navItemHandlers.forEach((handlers, item) => {
             const link = item.querySelector('.nav-link');
             if (link && handlers.click) {
@@ -2081,7 +2096,7 @@ if (window.innerWidth <= 768) {
         navItemHandlers.clear();
         
         if (clickOutsideHandler) {
-            document.removeEventListener('click', clickOutsideHandler);
+            document.removeEventListener('click', clickOutsideHandler, true);
             clickOutsideHandler = null;
         }
         
@@ -2097,11 +2112,9 @@ if (window.innerWidth <= 768) {
         navItems.forEach(item => item.classList.remove('active'));
         
         if (isDesktop && !isMultiline) {
-            console.log('✅ MODE HOVER activé (menu sur 1 ligne)');
             document.body.classList.add('hover-mode');
             
         } else if (isDesktop && isMultiline) {
-            console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
             document.body.classList.remove('hover-mode');
             
             navItems.forEach(item => {
@@ -2121,11 +2134,7 @@ if (window.innerWidth <= 768) {
                             }
                         });
                         
-                        if (wasActive) {
-                            item.classList.remove('active');
-                        } else {
-                            item.classList.add('active');
-                        }
+                        item.classList.toggle('active', !wasActive);
                     };
                     
                     link.addEventListener('click', clickHandler);
@@ -2133,28 +2142,41 @@ if (window.innerWidth <= 768) {
                 }
             });
             
+            // 🔥 NOUVEAU clickOutsideHandler SÉCURISÉ
             clickOutsideHandler = function(event) {
-                const mainNav = document.querySelector('#tourmag-menu .main-nav');
-                const megaMenus = document.querySelectorAll('#tourmag-menu .mega-menu');
-                
-                // Vérifier si le clic est dans le menu OU dans un mega-menu ouvert
-                let isInsideMenu = mainNav && mainNav.contains(event.target);
-                megaMenus.forEach(menu => {
-                    if (menu.contains(event.target)) {
-                        isInsideMenu = true;
-                    }
-                });
-                
-                // Ne fermer QUE si le clic est vraiment en dehors du widget
-                if (!isInsideMenu && !event.target.closest('#tourmag-menu')) {
-                    navItems.forEach(item => item.classList.remove('active'));
+                // Ignorer si le clic est sur le widget TourMag
+                if (event.target.closest('#tourmag-menu')) {
+                    return;
                 }
+                
+                // Ignorer si le clic est sur une popup externe (connexion, cookies, etc.)
+                const popupSelectors = [
+                    '[class*="popup"]',
+                    '[class*="modal"]',
+                    '[class*="dialog"]',
+                    '[id*="popup"]',
+                    '[id*="modal"]',
+                    '[id*="login"]',
+                    '[id*="connexion"]',
+                    '.fancybox-container',
+                    '.mfp-wrap',
+                    '.ui-dialog'
+                ];
+                
+                for (let selector of popupSelectors) {
+                    if (event.target.closest(selector)) {
+                        return;
+                    }
+                }
+                
+                // Fermer les mega-menus
+                navItems.forEach(item => item.classList.remove('active'));
             };
             
-            document.addEventListener('click', clickOutsideHandler, { capture: false });
+            // ⚠️ IMPORTANT : utiliser mode capture = true pour intercepter en premier
+            document.addEventListener('click', clickOutsideHandler, { capture: true, passive: true });
             
         } else {
-            console.log('📱 MODE MOBILE');
             document.body.classList.remove('hover-mode');
         }
     }
@@ -2328,28 +2350,49 @@ function setupMobileNavigation() {
 
 setupMobileNavigation();
     
-   // Fermer le menu mobile si on clique en dehors
-    document.addEventListener('click', function(event) {
+ // Fermer le menu mobile si on clique en dehors
+    let mobileClickOutsideHandler = function(event) {
         if (window.innerWidth > 768) return;
         
-        const nav = document.querySelector('#tourmag-menu .main-nav');
-        const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
-        const navList = document.getElementById('navList');
-        
-        // Ne rien faire si on clique sur un élément du menu
-        if (nav?.contains(event.target) || toggle?.contains(event.target)) {
+        // Ignorer si clic sur le widget
+        if (event.target.closest('#tourmag-menu')) {
             return;
         }
         
+        // 🔥 Ignorer si clic sur une popup
+        const popupSelectors = [
+            '[class*="popup"]',
+            '[class*="modal"]',
+            '[class*="dialog"]',
+            '[id*="popup"]',
+            '[id*="modal"]',
+            '[id*="login"]',
+            '[id*="connexion"]',
+            '.fancybox-container',
+            '.mfp-wrap',
+            '.ui-dialog'
+        ];
+        
+        for (let selector of popupSelectors) {
+            if (event.target.closest(selector)) {
+                return;
+            }
+        }
+        
         // Fermer le menu hamburger
+        const navList = document.getElementById('navList');
+        const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
+        
         if (navList) navList.classList.remove('active');
         if (toggle) toggle.classList.remove('active');
         
-        // Fermer tous les mega-menus ouverts
+        // Fermer tous les mega-menus
         document.querySelectorAll('#tourmag-menu .nav-item.active').forEach(item => {
             item.classList.remove('active');
         });
-    }, { passive: true });
+    };
+    
+    document.addEventListener('click', mobileClickOutsideHandler, { capture: true, passive: true });
     
     // Réinitialiser lors du redimensionnement
     let resizeTimer;
