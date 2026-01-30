@@ -2338,21 +2338,45 @@ mobileNavItems.forEach(item => {
     
     // Fermer le menu mobile si on clique en dehors
 document.addEventListener('click', function(event) {
-    // ⭐ Ignorer si on clique dans une modale
-    if (event.target.closest('.modal') || 
-        event.target.closest('.modal-dialog') ||
-        event.target.closest('.membership_auth') ||
-        event.target.closest('[role="dialog"]')) {
-        return; // Ne rien faire si on clique dans une pop-up
+    // ⭐ D'ABORD vérifier si on est en mobile
+    if (window.innerWidth > 768) return;
+    
+    // ⭐ Vérifier si on clique dans une modale (plusieurs méthodes)
+    const clickedElement = event.target;
+    
+    // Méthode 1: Vérifier les classes parentes
+    if (clickedElement.closest('.modal') || 
+        clickedElement.closest('.modal-dialog') ||
+        clickedElement.closest('.modal-content') ||
+        clickedElement.closest('.membership_auth')) {
+        console.log('⛔ Clic dans modale ignoré');
+        return;
+    }
+    
+    // Méthode 2: Vérifier les attributs
+    if (clickedElement.closest('[role="dialog"]') ||
+        clickedElement.closest('[aria-modal="true"]')) {
+        console.log('⛔ Clic dans dialog ignoré');
+        return;
+    }
+    
+    // Méthode 3: Vérifier les IDs contenant "modal" ou "login"
+    let parent = clickedElement;
+    for (let i = 0; i < 10; i++) {
+        if (!parent) break;
+        if (parent.id && (parent.id.includes('modal') || parent.id.includes('login') || parent.id.includes('auth'))) {
+            console.log('⛔ Clic dans élément auth ignoré');
+            return;
+        }
+        parent = parent.parentElement;
     }
     
     const nav = document.querySelector('#tourmag-menu .main-nav');
     const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
     const navList = document.getElementById('navList');
     
-    if (window.innerWidth <= 768 && 
-        !nav.contains(event.target) && 
-        !toggle.contains(event.target)) {
+    if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+        console.log('✅ Fermeture menu mobile');
         navList.classList.remove('active');
         toggle.classList.remove('active');
     }
