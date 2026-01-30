@@ -1016,7 +1016,7 @@ margin-top: -90px !important;
 
             .main-nav {
     position: relative;
-    
+    margin-top: 3.5rem;  /* Espace pour le bouton au-dessus */
     z-index: 1000 !important;
 }
 
@@ -1604,44 +1604,37 @@ margin-top: -90px !important;
         let clickOutsideHandler = null;
 
 // Variables pour tracker la hauteur du header
-let lastHeaderHeight = 41.6; // Hauteur par défaut
 const baseHeaderHeight = 41.6; // Hauteur de base du header
-const baseBurgerTop = -3; // Position de base du burger en rem
 
-// Fonction pour ajuster la position du burger menu
-function adjustBurgerPosition() {
+// Fonction pour ajuster la position du widget entier
+function adjustWidgetPosition() {
     if (window.innerWidth > 768) return;
     
-    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const widget = document.getElementById('tourmag-menu');
     const siteHeader = document.querySelector('#z_col0_responsive') || 
                       document.querySelector('.z_col0_inner');
     
-    if (!toggleBtn || !siteHeader) return;
+    if (!widget || !siteHeader) return;
     
     const currentHeaderHeight = siteHeader.offsetHeight;
-    const heightDifference = currentHeaderHeight - baseHeaderHeight; // Différence en pixels
+    const heightDifference = currentHeaderHeight - baseHeaderHeight;
     
-    // Convertit la différence en rem (en supposant 16px = 1rem)
-    const offsetInRem = heightDifference / 16;
+    // Ajuste le margin-top négatif du widget pour compenser
+    const newMarginTop = -90 + heightDifference;
+    widget.style.marginTop = newMarginTop + 'px';
     
-    // Nouvelle position = position de base - offset (pour compenser la poussée vers le bas)
-    const newTop = baseBurgerTop - offsetInRem;
-    
-    toggleBtn.style.top = newTop + 'rem';
-    
-    console.log('Header:', currentHeaderHeight, 'Burger top:', newTop + 'rem');
+    console.log('Header:', currentHeaderHeight, 'Widget margin-top:', newMarginTop + 'px');
 }
 
 // Observer pour détecter les changements du header
 const headerObserver = new MutationObserver(function() {
-    adjustBurgerPosition();
+    adjustWidgetPosition();
 });
 
 const siteHeader = document.querySelector('#z_col0_responsive') || 
                    document.querySelector('.z_col0_inner');
 
 if (siteHeader) {
-    // Observe les changements de taille/style du header
     headerObserver.observe(siteHeader, {
         attributes: true,
         childList: true,
@@ -1650,15 +1643,15 @@ if (siteHeader) {
     });
 }
 
-// Appel initial après un court délai
-setTimeout(adjustBurgerPosition, 100);
+// Appel initial
+setTimeout(adjustWidgetPosition, 100);
 
 // Recalcule au resize
-window.addEventListener('resize', adjustBurgerPosition);
+window.addEventListener('resize', adjustWidgetPosition);
 
-// Détecte aussi les clics qui pourraient ouvrir recherche/connexion
+// Détecte les clics
 document.addEventListener('click', function() {
-    setTimeout(adjustBurgerPosition, 50);
+    setTimeout(adjustWidgetPosition, 50);
 });
         
         function isMenuMultiline() {
