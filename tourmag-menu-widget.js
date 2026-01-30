@@ -2062,31 +2062,33 @@ if (window.innerWidth <= 768) {
     // Variable pour la fermeture au clic en dehors
     let clickOutsideHandler = null;
     
-    // Gestion du comportement selon le mode
-    function setupBehavior() {
-        console.log('🔧 setupBehavior appelé');
-        console.log('📏 Largeur fenêtre:', window.innerWidth);
-        console.log('📊 Menu multiline?', isMenuMultiline());
-        
-        const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
-        const isMultiline = isMenuMultiline();
+   function setupBehavior() {
         const isDesktop = window.innerWidth > 768;
+        const navList = document.querySelector('#tourmag-menu .nav-list');
+        const navItems = document.querySelectorAll('#tourmag-menu .nav-item');
         
-        // Retirer tous les anciens handlers
+        if (!navList) return;
+        
+        // 🔥 NETTOYER TOUS LES ANCIENS LISTENERS AVANT D'EN CRÉER DE NOUVEAUX
         navItemHandlers.forEach((handlers, item) => {
-            if (handlers.mouseenter) item.removeEventListener('mouseenter', handlers.mouseenter);
-            if (handlers.mouseleave) item.removeEventListener('mouseleave', handlers.mouseleave);
-            if (handlers.click) {
-                const link = item.querySelector('.nav-link');
-                if (link) link.removeEventListener('click', handlers.click);
+            const link = item.querySelector('.nav-link');
+            if (link && handlers.click) {
+                link.removeEventListener('click', handlers.click);
             }
         });
         navItemHandlers.clear();
         
-        // Retirer le handler de clic en dehors
         if (clickOutsideHandler) {
             document.removeEventListener('click', clickOutsideHandler);
             clickOutsideHandler = null;
+        }
+        
+        // Vérifier si le menu est sur plusieurs lignes
+        let isMultiline = false;
+        if (navItems.length > 1) {
+            const firstItemTop = navItems[0].getBoundingClientRect().top;
+            const lastItemTop = navItems[navItems.length - 1].getBoundingClientRect().top;
+            isMultiline = Math.abs(lastItemTop - firstItemTop) > 10;
         }
         
         // Retirer toutes les classes active
@@ -2096,41 +2098,31 @@ if (window.innerWidth <= 768) {
             console.log('✅ MODE HOVER activé (menu sur 1 ligne)');
             document.body.classList.add('hover-mode');
             
-            // Pas besoin d'ajouter de handlers, le CSS :hover fait le travail
-            
         } else if (isDesktop && isMultiline) {
             console.log('🖱️ MODE CLIC activé (menu sur plusieurs lignes)');
             document.body.classList.remove('hover-mode');
             
-            // Ajouter les handlers de clic
             navItems.forEach(item => {
                 const link = item.querySelector('.nav-link');
                 const megaMenu = item.querySelector('.mega-menu');
-
                 
                 if (megaMenu && link) {
                     const clickHandler = function(e) {
                         e.preventDefault();
                         e.stopPropagation();
                         
-                        console.log('🖱️ Clic sur:', link.textContent.trim());
-                        
                         const wasActive = item.classList.contains('active');
                         
-                        // Fermer tous les autres
                         navItems.forEach(otherItem => {
                             if (otherItem !== item) {
                                 otherItem.classList.remove('active');
                             }
                         });
                         
-                        // Toggle
                         if (wasActive) {
                             item.classList.remove('active');
-                            console.log('❌ Fermé');
                         } else {
                             item.classList.add('active');
-                            console.log('✅ Ouvert');
                         }
                     };
                     
@@ -2139,7 +2131,6 @@ if (window.innerWidth <= 768) {
                 }
             });
             
-            // Handler pour fermer au clic en dehors
             clickOutsideHandler = function(event) {
                 const mainNav = document.querySelector('#tourmag-menu .main-nav');
                 if (mainNav && !mainNav.contains(event.target)) {
@@ -2147,10 +2138,7 @@ if (window.innerWidth <= 768) {
                 }
             };
             
-            // Petit délai pour éviter que le clic actuel ne déclenche la fermeture
-            setTimeout(() => {
-                document.addEventListener('click', clickOutsideHandler);
-            }, 100);
+            document.addEventListener('click', clickOutsideHandler);
             
         } else {
             console.log('📱 MODE MOBILE');
@@ -2286,80 +2274,90 @@ if (window.innerWidth <= 768) {
     
   
    
-// Gestion des sous-menus sur mobile
-const mobileNavItems = document.querySelectorAll('#tourmag-menu .nav-item');
-
-mobileNavItems.forEach(item => {
-    const link = item.querySelector('.nav-link');
-    const megaMenu = item.querySelector('.mega-menu');
+// 🔥 GESTION MOBILE UNIFIÉE - Un seul listener par délégation
+function setupMobileNavigation() {
+    const mainNav = document.querySelector('#tourmag-menu .main-nav');
+    if (!mainNav) return;
     
-
-    if (megaMenu && link) {
-        // Attacher l'event UNIQUEMENT sur le lien, pas sur l'item
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                console.log('📱 Clic mobile sur link');
-                
-                const isCurrentlyOpen = item.classList.contains('active');
-                console.log('État actuel:', isCurrentlyOpen ? 'ouvert' : 'fermé');
-                
-                // Fermer tous les autres
-                mobileNavItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Toggle
-                if (isCurrentlyOpen) {
-                    item.classList.remove('active');
-                    console.log('→ Fermé');
-                } else {
-                    item.classList.add('active');
-                    console.log('→ Ouvert');
-                    
-                    setTimeout(() => {
-                        this.scrollIntoView({ 
-                            behavior: 'smooth', 
-                            block: 'start' 
-                        });
-                    }, 100);
-                }
-            }
-        });
+    // Supprimer l'ancien listener s'il existe
+    if (mainNav._mobileClickHandler) {
+        mainNav.removeEventListener('click', mainNav._mobileClickHandler);
     }
-});
     
-    // Fermer le menu mobile si on clique en dehors
+    // Créer le nouveau listener
+    mainNav._mobileClickHandler = function(e) {
+        if (window.innerWidth > 768) return;
+        
+        const navLink = e.target.closest('.nav-link');
+        if (!navLink) return;
+        
+        const navItem = navLink.closest('.nav-item');
+        const megaMenu = navItem?.querySelector('.mega-menu');
+        
+        if (megaMenu) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const wasActive = navItem.classList.contains('active');
+            
+            document.querySelectorAll('#tourmag-menu .nav-item').forEach(item => {
+                if (item !== navItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            navItem.classList.toggle('active', !wasActive);
+        }
+    };
+    
+    mainNav.addEventListener('click', mainNav._mobileClickHandler);
+}
+
+setupMobileNavigation();
+    
+   // Fermer le menu mobile si on clique en dehors
     document.addEventListener('click', function(event) {
+        if (window.innerWidth > 768) return;
+        
         const nav = document.querySelector('#tourmag-menu .main-nav');
         const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
         const navList = document.getElementById('navList');
         
-        if (window.innerWidth <= 768 && 
-            !nav.contains(event.target) && 
-            !toggle.contains(event.target)) {
-            navList.classList.remove('active');
-            toggle.classList.remove('active');
+        // Ne rien faire si on clique sur un élément du menu
+        if (nav?.contains(event.target) || toggle?.contains(event.target)) {
+            return;
         }
-    });
+        
+        // Fermer le menu hamburger
+        if (navList) navList.classList.remove('active');
+        if (toggle) toggle.classList.remove('active');
+        
+        // Fermer tous les mega-menus ouverts
+        document.querySelectorAll('#tourmag-menu .nav-item.active').forEach(item => {
+            item.classList.remove('active');
+        });
+    }, { passive: true });
     
     // Réinitialiser lors du redimensionnement
     let resizeTimer;
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            if (window.innerWidth > 768) {
-                document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
-                    menu.style.display = '';
-                });
-                document.getElementById('navList').classList.remove('active');
-                setupBehavior();
+            document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
+                menu.style.display = '';
+            });
+            document.querySelectorAll('#tourmag-menu .nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            const navList = document.getElementById('navList');
+            if (navList) {
+                navList.classList.remove('active');
             }
-        }, 250);
+            
+            setupBehavior();
+            setupMobileNavigation();
+        }, 500);
     });
 }
     
