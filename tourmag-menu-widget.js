@@ -979,9 +979,9 @@
     display: block !important;
     position: absolute !important;
     left: 1rem !important;
-    top: 1.25rem !important;  /* Valeur fixe simple */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     z-index: 1002 !important;
-    transform: none !important;
 }
             
              .nav-container {
@@ -1010,6 +1010,7 @@
             }
 
             .main-nav {
+position: relative;  /* Important : référence pour le positionnement */
                 z-index: 1000 !important;
             }
 
