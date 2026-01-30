@@ -896,6 +896,7 @@
                 display: block !important;
                 position: relative !important;
                 z-index: 10000 !important;
+                isolation: isolate !important;
             }
 
             .nav-item .nav-link img {
@@ -1104,11 +1105,11 @@
             }
 
             #tourmag-menu .nav-list {
-                position: absolute !important;
-                top: 100% !important;
+                position: fixed !important;
+                top: auto !important;
                 left: 0 !important;
                 width: 100% !important;
-                z-index: 9999 !important;
+                z-index: 999999 !important;
             }
 
             #tourmag-menu .nav-list.active {
@@ -1588,6 +1589,15 @@
         
         if (navList) {
             navList.classList.toggle('active');
+            
+            // Positionner le menu mobile
+            if (navList.classList.contains('active') && window.innerWidth <= 768) {
+                const mainNav = document.querySelector('#tourmag-menu .main-nav');
+                if (mainNav) {
+                    const navRect = mainNav.getBoundingClientRect();
+                    navList.style.top = (navRect.bottom) + 'px';
+                }
+            }
         }
         
         if (toggleBtn) {
@@ -1595,9 +1605,22 @@
         }
     };
     
-    function initializeJS() {
+            function initializeJS() {
         const navItemHandlers = new Map();
         let clickOutsideHandler = null;
+        
+        // Positionner dynamiquement le menu mobile
+        function positionMobileMenu() {
+            if (window.innerWidth <= 768) {
+                const mainNav = document.querySelector('#tourmag-menu .main-nav');
+                const navList = document.querySelector('#tourmag-menu .nav-list');
+                
+                if (mainNav && navList) {
+                    const navRect = mainNav.getBoundingClientRect();
+                    navList.style.top = (navRect.bottom) + 'px';
+                }
+            }
+        }
         
         function isMenuMultiline() {
             const navList = document.querySelector('#tourmag-menu .nav-list');
