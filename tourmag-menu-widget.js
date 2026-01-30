@@ -2337,18 +2337,26 @@ mobileNavItems.forEach(item => {
 });
     
     // Fermer le menu mobile si on clique en dehors
-    document.addEventListener('click', function(event) {
-        const nav = document.querySelector('#tourmag-menu .main-nav');
-        const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
-        const navList = document.getElementById('navList');
-        
-        if (window.innerWidth <= 768 && 
-            !nav.contains(event.target) && 
-            !toggle.contains(event.target)) {
-            navList.classList.remove('active');
-            toggle.classList.remove('active');
-        }
-    });
+document.addEventListener('click', function(event) {
+    // ⭐ Ignorer si on clique dans une modale
+    if (event.target.closest('.modal') || 
+        event.target.closest('.modal-dialog') ||
+        event.target.closest('.membership_auth') ||
+        event.target.closest('[role="dialog"]')) {
+        return; // Ne rien faire si on clique dans une pop-up
+    }
+    
+    const nav = document.querySelector('#tourmag-menu .main-nav');
+    const toggle = document.querySelector('#tourmag-menu .mobile-menu-toggle');
+    const navList = document.getElementById('navList');
+    
+    if (window.innerWidth <= 768 && 
+        !nav.contains(event.target) && 
+        !toggle.contains(event.target)) {
+        navList.classList.remove('active');
+        toggle.classList.remove('active');
+    }
+});
     
     // Réinitialiser lors du redimensionnement
     let resizeTimer;
