@@ -891,21 +891,7 @@
         }
 
         @media (max-width: 768px) {
-            
-
-/* Désactive TOUS les fonds bleu-vert sur mobile */
-    #tourmag-menu .nav-link:hover,
-    #tourmag-menu .media-simple-link:hover,
-    #tourmag-menu .newsletter-item .mega-link:hover,
-    #tourmag-menu .media-item .mega-link:hover {
-        background: transparent !important;
-        box-shadow: none !important;
-        transform: none !important;
-    }
-    
-    
-
-#tourmag-menu {
+            #tourmag-menu {
                 display: block !important;
                 position: relative !important;
                 z-index: 1000 !important;
