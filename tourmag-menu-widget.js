@@ -1132,8 +1132,10 @@ body.hover-mode .mega-menu:hover {
     margin-right: 0 !important;
     display: none;
     padding: 0 !important;
-    max-height: none !important; 
-    overflow: visible !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
 }
 
 /* Afficher le mega menu quand l'item parent a la classe active */
