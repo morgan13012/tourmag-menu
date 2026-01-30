@@ -949,9 +949,9 @@ body.hover-mode .mega-menu:hover {
         display: block !important;
         position: absolute;
         left: 1rem;
-         top: calc(50% +30px);
+        top: calc(50% +30px);
         transform: translateY(-245%);
-        z-index: 2147483647 !important;
+        z-index: 1001 !important;
     }
 }
 
@@ -963,7 +963,7 @@ body.hover-mode .mega-menu:hover {
     #tourmag-menu {
         display: block !important;
         position: relative !important;
-    z-index: 2147483647 !important; /* plus haut que le header TourMaG */
+        z-index: 999 !important;
     }
 
 /* Réduire l'icône d'accueil en mobile */
@@ -1065,13 +1065,13 @@ body.hover-mode .mega-menu:hover {
         display: block !important;
     }
     
-    .mobile-menu-toggle {
+   .mobile-menu-toggle {
         display: block !important;
         position: absolute;
         left: 1rem;
         top: calc(50% +30px);
         transform: translateX(-10%) translateY(-215%);
-        z-index: 2147483647 !important;
+        z-index: 1001 !important;
     }
     
     /* Ajuster le container pour faire de la place au hamburger */
@@ -1092,21 +1092,21 @@ body.hover-mode .mega-menu:hover {
         box-shadow: var(--shadow-lg) !important;
         padding: 0.5rem 0 !important;
         gap: 0;
-        z-index: 2147483647 !important;  /* â† AJOUTE CETTE LIGNE avec une valeur très élevée */
+        z-index: 1000 !important;  /* â† AJOUTE CETTE LIGNE avec une valeur très élevée */
     }
 
     .header {
-        z-index: 2147483647 !important;
+         z-index: 999 !important;
     }
 
     .main-nav {
-        z-index: 2147483647 !important;
+         z-index: 1000 !important;
     }
 
     /* Afficher la liste quand active */
     .nav-list.active {
         display: flex !important;
-        z-index: 2147483647 !important;  /* â† AJOUTE AUSSI ICI */
+        z-index: 1000 !important;   /* â† AJOUTE AUSSI ICI */
     }
     
    /* Supprimer le trait bleu-vert quand l'onglet est actif en mobile */
@@ -1202,9 +1202,9 @@ body.hover-mode .mega-menu:hover {
     }
 
 
- #tourmag-menu .nav-container {
+#tourmag-menu .nav-container {
         position: relative !important;
-        z-index: 2147483647 !important;
+        z-index: 1000 !important;
     }
 
     #tourmag-menu .nav-list {
@@ -1212,7 +1212,7 @@ body.hover-mode .mega-menu:hover {
         top: 100% !important;
         left: 0 !important;
         width: 100% !important;
-        z-index: 2147483647 !important;
+        z-index: 1000 !important;
     }
 
     #tourmag-menu .nav-list.active {
