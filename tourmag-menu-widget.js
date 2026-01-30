@@ -975,19 +975,22 @@
                 display: block !important;
             }
             
-     .mobile-menu-toggle {
+.mobile-menu-toggle {
     display: block !important;
-    position: absolute !important;
-    left: 1rem !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
+    position: absolute;
+    left: 1rem;
+    top: -3rem;  /* Au-dessus de la barre noire */
+    transform: none;
     z-index: 1002 !important;
+    background: #ffffff;  /* Fond blanc pour le détacher */
+    border-radius: 8px;  /* Coins arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);  /* Ombre légère */
+    padding: 0.75rem;  /* Padding pour agrandir la zone cliquable */
 }
             
-             .nav-container {
-        position: relative;
-        padding: 0 1rem 0 4rem;
-        min-height: 60px;  /* Hauteur fixe pour stabiliser */
+            .nav-container {
+                position: relative;
+                padding: 0 1rem 0 4rem;
             }
 
             .nav-list {
@@ -1010,9 +1013,10 @@
             }
 
             .main-nav {
-position: relative;  /* Important : référence pour le positionnement */
-                z-index: 1000 !important;
-            }
+    position: relative;
+    margin-top: 3.5rem;  /* Espace pour le bouton au-dessus */
+    z-index: 1000 !important;
+}
 
             .nav-list.active {
                 display: flex !important;
