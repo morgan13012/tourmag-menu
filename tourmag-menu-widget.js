@@ -978,15 +978,16 @@ margin-top: -90px !important;
             
 .mobile-menu-toggle {
     display: block !important;
-    position: absolute;
-    left: 1rem;
-    top: -3rem;  /* Au-dessus de la barre noire */
-    transform: none;
-    z-index: 1002 !important;
-    background: #ffffff;  /* Fond blanc pour le détacher */
-    border-radius: 8px;  /* Coins arrondis */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);  /* Ombre légère */
-    padding: 0.75rem;  /* Padding pour agrandir la zone cliquable */
+    position: absolute !important;
+    left: 1rem !important;
+    top: -3rem !important;  /* Position par défaut */
+    transform: none !important;
+    z-index: 9999 !important;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0.75rem;
+    transition: top 0.3s ease;  /* Animation douce pour le changement */
 }
             
             .nav-container {
@@ -1601,6 +1602,64 @@ margin-top: -90px !important;
     function initializeJS() {
         const navItemHandlers = new Map();
         let clickOutsideHandler = null;
+
+// Variables pour tracker la hauteur du header
+let lastHeaderHeight = 41.6; // Hauteur par défaut
+const baseHeaderHeight = 41.6; // Hauteur de base du header
+const baseBurgerTop = -3; // Position de base du burger en rem
+
+// Fonction pour ajuster la position du burger menu
+function adjustBurgerPosition() {
+    if (window.innerWidth > 768) return;
+    
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const siteHeader = document.querySelector('#z_col0_responsive') || 
+                      document.querySelector('.z_col0_inner');
+    
+    if (!toggleBtn || !siteHeader) return;
+    
+    const currentHeaderHeight = siteHeader.offsetHeight;
+    const heightDifference = currentHeaderHeight - baseHeaderHeight; // Différence en pixels
+    
+    // Convertit la différence en rem (en supposant 16px = 1rem)
+    const offsetInRem = heightDifference / 16;
+    
+    // Nouvelle position = position de base - offset (pour compenser la poussée vers le bas)
+    const newTop = baseBurgerTop - offsetInRem;
+    
+    toggleBtn.style.top = newTop + 'rem';
+    
+    console.log('Header:', currentHeaderHeight, 'Burger top:', newTop + 'rem');
+}
+
+// Observer pour détecter les changements du header
+const headerObserver = new MutationObserver(function() {
+    adjustBurgerPosition();
+});
+
+const siteHeader = document.querySelector('#z_col0_responsive') || 
+                   document.querySelector('.z_col0_inner');
+
+if (siteHeader) {
+    // Observe les changements de taille/style du header
+    headerObserver.observe(siteHeader, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+        attributeFilter: ['class', 'style']
+    });
+}
+
+// Appel initial après un court délai
+setTimeout(adjustBurgerPosition, 100);
+
+// Recalcule au resize
+window.addEventListener('resize', adjustBurgerPosition);
+
+// Détecte aussi les clics qui pourraient ouvrir recherche/connexion
+document.addEventListener('click', function() {
+    setTimeout(adjustBurgerPosition, 50);
+});
         
         function isMenuMultiline() {
             const navList = document.querySelector('#tourmag-menu .nav-list');
