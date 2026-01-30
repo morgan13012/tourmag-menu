@@ -891,7 +891,10 @@
         }
 
         @media (max-width: 768px) {
-            #tourmag-menu {
+            
+
+
+#tourmag-menu {
                 display: block !important;
                 position: relative !important;
                 z-index: 1000 !important;
@@ -1863,6 +1866,13 @@ margin-top: -90px !important;
                             item.classList.remove('active');
                         } else {
                             item.classList.add('active');
+				
+				// AJOUTE CETTE LIGNE : Force le blur sur tous les éléments
+                    setTimeout(() => {
+                        if (document.activeElement) {
+                            document.activeElement.blur();
+                        }
+                    }, 10);
                             
                             setTimeout(() => {
                                 this.scrollIntoView({ 
