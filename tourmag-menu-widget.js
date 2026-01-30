@@ -895,7 +895,7 @@
                 display: block !important;
                 position: relative !important;
                 z-index: 1000 !important;
-margin-top: -50px !important;
+margin-top: -75px !important;
             }
 
             .nav-item .nav-link img {
