@@ -1826,16 +1826,24 @@ if (menu) {
         const allElements = document.querySelectorAll('*');
         let fixed = 0;
         
-        allElements.forEach(el => {
+       allElements.forEach(el => {
     // Ignorer les éléments du menu TourMag
     if (el.closest('#tourmag-menu')) return;
     
-    // ⭐ NOUVEAU : Ignorer les pop-ups/modales/overlays de connexion
+    // ⭐ Ignorer TOUTES les modales (pop-ups de connexion, etc.)
     if (el.closest('[role="dialog"]') || 
-        el.closest('.modal') || 
+        el.closest('[role="alertdialog"]') ||
+        el.closest('.modal') ||
+        el.closest('.modal-dialog') ||
+        el.closest('.modal-content') ||
+        el.closest('.modal-backdrop') ||
+        el.closest('.membership_auth') ||
         el.closest('.popup') ||
+        el.closest('.overlay') ||
         el.closest('[class*="login"]') ||
         el.closest('[class*="connexion"]') ||
+        el.closest('[class*="modal"]') ||
+        el.id.includes('modal') ||
         el.id.includes('login') ||
         el.id.includes('connexion')) return;
             
