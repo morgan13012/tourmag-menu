@@ -1717,9 +1717,49 @@ margin-top: -90px !important;
             }
         }
         
-        setupBehavior();
+       setupBehavior();
+
+// Ajuster la position du bouton hamburger en fonction de la hauteur du menu natif
+function adjustHamburgerPosition() {
+    if (window.innerWidth <= 768) {
+        const nativeMenu = document.querySelector('div.tablet-bg');
+        const toggleBtn = document.querySelector('#tourmag-menu .mobile-menu-toggle');
+        const mainNav = document.querySelector('#tourmag-menu .main-nav');
         
-        const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
+        if (nativeMenu && toggleBtn && mainNav) {
+            const menuHeight = nativeMenu.offsetHeight;
+            const baseOffset = 44; // Hauteur de base du menu
+            const extraOffset = menuHeight - baseOffset; // Différence (0 ou 41.6px)
+            
+            // Ajuster le top du bouton (base: -3rem = -48px)
+            const newTopRem = -3 - (extraOffset / 16); // Convertir px en rem
+            toggleBtn.style.top = `${newTopRem}rem`;
+            
+            // Ajuster le margin-top du main-nav (base: 3.5rem = 56px)
+            const newMarginRem = 3.5 + (extraOffset / 16);
+            mainNav.style.marginTop = `${newMarginRem}rem`;
+        }
+    }
+}
+
+// Observer les changements de hauteur du menu natif
+const nativeMenu = document.querySelector('div.tablet-bg');
+if (nativeMenu) {
+    const observer = new MutationObserver(adjustHamburgerPosition);
+    observer.observe(nativeMenu, { 
+        attributes: true, 
+        childList: true, 
+        subtree: true 
+    });
+    
+    // Ajustement initial
+    adjustHamburgerPosition();
+}
+
+// Réajuster au redimensionnement
+window.addEventListener('resize', adjustHamburgerPosition);
+
+const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
         
         newsletterItems.forEach(item => {
             const link = item.querySelector('.mega-link');
