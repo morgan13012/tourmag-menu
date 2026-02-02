@@ -1733,11 +1733,11 @@ function adjustHamburgerPosition() {
             
             // Ajuster le top du bouton (base: -3rem = -48px)
             const newTopRem = -3 - (extraOffset / 16); // Convertir px en rem
-            toggleBtn.style.top = `${newTopRem}rem` +0.2;
+            toggleBtn.style.top = `${newTopRem}rem`;
             
             // Ajuster le margin-top du main-nav (base: 3.5rem = 56px)
             const newMarginRem = 3.5 + (extraOffset / 16);
-            mainNav.style.marginTop = `${newMarginRem}rem` + 3.025;
+            mainNav.style.marginTop = `${newMarginRem}rem` + 3.225;
         }
     }
 }
