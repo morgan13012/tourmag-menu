@@ -1732,8 +1732,8 @@ function adjustHamburgerPosition() {
             const extraOffset = menuHeight - baseOffset; // Différence (0 ou 41.6px)
             
             // Ajuster le top du bouton (base: -3rem = -48px)
-            const newTopRem = -6.025 - (extraOffset / 16); // Convertir px en rem
-            toggleBtn.style.top = `${newTopRem}rem`;
+            const newTopRem = -3 - (extraOffset / 16); // Convertir px en rem
+            toggleBtn.style.top = -8.625;
             
             // Ajuster le margin-top du main-nav (base: 3.5rem = 56px)
             const newMarginRem = 3.5 + (extraOffset / 16);
