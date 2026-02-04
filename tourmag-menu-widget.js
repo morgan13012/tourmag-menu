@@ -909,9 +909,13 @@
         font-size: 0.95rem;
     }
     
-    /* Articles abonnés - Actualités */
-    #tourmag-menu .mega-menu a.media-simple-link {
-        font-size: 1rem;
+    /* Articles abonnés - Actualités - CIBLAGE ULTRA PRÉCIS */
+    #tourmag-menu .mega-menu a.media-simple-link,
+    #tourmag-menu .mega-column div[style*="border: 2px solid #ffd700"] a.media-simple-link,
+    #tourmag-menu .mega-column a[href*="CLUB-ABONNES"],
+    #tourmag-menu .mega-column a[href*="futuroscopie"],
+    #tourmag-menu .mega-column a[href*="MEMBERSHIP-CLUB"] {
+        font-size: 1rem !important;
         padding: 0.6rem 0.85rem !important;
     }
     
@@ -951,7 +955,6 @@
     
     /* Bouton "Abonnez-vous" */
     #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
-
         font-size: 1.2rem !important;
         padding: 0.75rem 1.6rem !important;
     }
@@ -1022,9 +1025,13 @@
         padding: 2rem 2rem;
     }
     
-    /* Articles abonnés - Actualités */
-    #tourmag-menu .mega-menu a.media-simple-link {
-        font-size: 0.95rem;
+    /* Articles abonnés - Actualités - CIBLAGE ULTRA PRÉCIS */
+    #tourmag-menu .mega-menu a.media-simple-link,
+    #tourmag-menu .mega-column div[style*="border: 2px solid #ffd700"] a.media-simple-link,
+    #tourmag-menu .mega-column a[href*="CLUB-ABONNES"],
+    #tourmag-menu .mega-column a[href*="futuroscopie"],
+    #tourmag-menu .mega-column a[href*="MEMBERSHIP-CLUB"] {
+        font-size: 0.95rem !important;
         padding: 0.55rem 0.8rem !important;
     }
     
@@ -1118,7 +1125,6 @@
         font-size: 0.8rem;
         padding: 0.7rem;
     }
-
     
     .offer-tab span {
         font-size: 0.9rem;
@@ -1145,9 +1151,13 @@
         padding: 1.5rem 1.5rem;
     }
     
-    /* Articles abonnés - Actualités */
-    #tourmag-menu .mega-menu a.media-simple-link {
-        font-size: 0.9rem;
+    /* Articles abonnés - Actualités - CIBLAGE ULTRA PRÉCIS */
+    #tourmag-menu .mega-menu a.media-simple-link,
+    #tourmag-menu .mega-column div[style*="border: 2px solid #ffd700"] a.media-simple-link,
+    #tourmag-menu .mega-column a[href*="CLUB-ABONNES"],
+    #tourmag-menu .mega-column a[href*="futuroscopie"],
+    #tourmag-menu .mega-column a[href*="MEMBERSHIP-CLUB"] {
+        font-size: 0.9rem !important;
         padding: 0.5rem 0.75rem !important;
     }
     
