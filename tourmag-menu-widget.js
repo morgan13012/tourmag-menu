@@ -1954,12 +1954,6 @@ margin-top: -90px !important;
         Merci de contacter <a href="mailto:commercial@dmcmag.com" target="_blank" style="color: #0066cc; font-weight: 600; text-decoration: underline;">Gentiane Romanet</a>.
     </p>
 </div>
-
-<div class="offer-content" data-content="premium"	
-												
-												
-												
-												</div>
                                                 
                                                 <div class="offer-content" data-content="premium" style="background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
                                                     <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Premium</h5>
