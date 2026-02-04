@@ -912,12 +912,18 @@
     /* Articles abonnés - Actualités */
     #tourmag-menu .mega-menu a.media-simple-link {
         font-size: 1rem;
+        padding: 0.6rem 0.85rem !important;
     }
     
-    /* Boutons newsletters */
+    /* Boutons newsletters - ciblage renforcé */
     #tourmag-menu a[href*="Shortcast"],
-    #tourmag-menu a[href*="Archives"],
-    #tourmag-menu a.newsletter-subscribe-btn {
+    #tourmag-menu a[href*="Archives"] {
+        font-size: 1rem !important;
+        padding: 0.7rem 1.2rem !important;
+    }
+    
+    #tourmag-menu a.newsletter-subscribe-btn,
+    #tourmag-menu a[href*="insc.edt02.net"] {
         font-size: 1rem !important;
         padding: 0.7rem 1.2rem !important;
     }
@@ -945,6 +951,7 @@
     
     /* Bouton "Abonnez-vous" */
     #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
+
         font-size: 1.2rem !important;
         padding: 0.75rem 1.6rem !important;
     }
@@ -1018,13 +1025,18 @@
     /* Articles abonnés - Actualités */
     #tourmag-menu .mega-menu a.media-simple-link {
         font-size: 0.95rem;
-        padding: 0.65rem 0.85rem;
+        padding: 0.55rem 0.8rem !important;
     }
     
-    /* Boutons newsletters */
+    /* Boutons newsletters - ciblage renforcé */
     #tourmag-menu a[href*="Shortcast"],
-    #tourmag-menu a[href*="Archives"],
-    #tourmag-menu a.newsletter-subscribe-btn {
+    #tourmag-menu a[href*="Archives"] {
+        font-size: 0.95rem !important;
+        padding: 0.6rem 1.1rem !important;
+    }
+    
+    #tourmag-menu a.newsletter-subscribe-btn,
+    #tourmag-menu a[href*="insc.edt02.net"] {
         font-size: 0.95rem !important;
         padding: 0.6rem 1.1rem !important;
     }
@@ -1106,6 +1118,7 @@
         font-size: 0.8rem;
         padding: 0.7rem;
     }
+
     
     .offer-tab span {
         font-size: 0.9rem;
@@ -1135,13 +1148,18 @@
     /* Articles abonnés - Actualités */
     #tourmag-menu .mega-menu a.media-simple-link {
         font-size: 0.9rem;
-        padding: 0.6rem 0.75rem;
+        padding: 0.5rem 0.75rem !important;
     }
     
-    /* Boutons newsletters */
+    /* Boutons newsletters - ciblage renforcé */
     #tourmag-menu a[href*="Shortcast"],
-    #tourmag-menu a[href*="Archives"],
-    #tourmag-menu a.newsletter-subscribe-btn {
+    #tourmag-menu a[href*="Archives"] {
+        font-size: 0.9rem !important;
+        padding: 0.55rem 1rem !important;
+    }
+    
+    #tourmag-menu a.newsletter-subscribe-btn,
+    #tourmag-menu a[href*="insc.edt02.net"] {
         font-size: 0.9rem !important;
         padding: 0.55rem 1rem !important;
     }
