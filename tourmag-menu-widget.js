@@ -824,6 +824,37 @@
     .media-submenu ul li a {
         font-size: 1rem;
     }
+    
+    /* Articles abonnés - Actualités */
+    #tourmag-menu .mega-menu a.media-simple-link {
+        font-size: 1.05rem;
+    }
+    
+    /* Boutons newsletters */
+    #tourmag-menu a[href*="Shortcast"],
+    #tourmag-menu a[href*="Archives"],
+    #tourmag-menu a.newsletter-subscribe-btn {
+        font-size: 1.05rem !important;
+    }
+    
+    /* Titre encadré articles abonnés */
+    #tourmag-menu .mega-column div[style*="position: absolute"][style*="top: -20px"] {
+        font-size: 1.3rem !important;
+    }
+    
+    /* Abonnements - Titre encadré */
+    #tourmag-menu div[style*="background: #57C6C6"] div[style*="position: absolute"] {
+        font-size: 1.3rem !important;
+    }
+    
+    /* Contact Gentiane */
+    #tourmag-menu a[href*="gentiane"] p {
+        font-size: 1rem !important;
+    }
+    
+    #tourmag-menu a[href*="gentiane"] p:last-child {
+        font-size: 1.1rem !important;
+    }
 }
 
 /* Écrans entre 1200px et 1400px - Réduction moyenne */
@@ -876,6 +907,52 @@
     
     .subscription-offer-item p {
         font-size: 0.95rem;
+    }
+    
+    /* Articles abonnés - Actualités */
+    #tourmag-menu .mega-menu a.media-simple-link {
+        font-size: 1rem;
+    }
+    
+    /* Boutons newsletters */
+    #tourmag-menu a[href*="Shortcast"],
+    #tourmag-menu a[href*="Archives"],
+    #tourmag-menu a.newsletter-subscribe-btn {
+        font-size: 1rem !important;
+        padding: 0.85rem 1.3rem !important;
+    }
+    
+    /* Titre encadré articles abonnés */
+    #tourmag-menu .mega-column div[style*="position: absolute"][style*="top: -20px"] {
+        font-size: 1.25rem !important;
+        padding: 0.4rem 1.8rem !important;
+    }
+    
+    /* Abonnements - Titre encadré "Nos offres" */
+    #tourmag-menu div[style*="background: #57C6C6"] div[style*="position: absolute"] {
+        font-size: 1.25rem !important;
+        padding: 0.4rem 1.8rem !important;
+    }
+    
+    /* Contact Gentiane */
+    #tourmag-menu a[href*="gentiane"] p {
+        font-size: 0.95rem !important;
+    }
+    
+    #tourmag-menu a[href*="gentiane"] p:last-child {
+        font-size: 1.05rem !important;
+    }
+    
+    /* Bouton "Abonnez-vous" */
+    #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
+        font-size: 1.2rem !important;
+        padding: 0.9rem 1.8rem !important;
+    }
+    
+    /* FAQ liens */
+    #tourmag-menu a[href*="faq"] {
+        font-size: 1rem !important;
+        padding: 0.65rem 0.9rem !important;
     }
 }
 
@@ -937,6 +1014,63 @@
     .mega-menu-content {
         padding: 2rem 2rem;
     }
+    
+    /* Articles abonnés - Actualités */
+    #tourmag-menu .mega-menu a.media-simple-link {
+        font-size: 0.95rem;
+        padding: 0.65rem 0.85rem;
+    }
+    
+    /* Boutons newsletters */
+    #tourmag-menu a[href*="Shortcast"],
+    #tourmag-menu a[href*="Archives"],
+    #tourmag-menu a.newsletter-subscribe-btn {
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.2rem !important;
+    }
+    
+    /* Titre encadré articles abonnés */
+    #tourmag-menu .mega-column div[style*="position: absolute"][style*="top: -20px"] {
+        font-size: 1.15rem !important;
+        padding: 0.35rem 1.5rem !important;
+    }
+    
+    /* Abonnements - Titre encadré "Nos offres" */
+    #tourmag-menu div[style*="background: #57C6C6"] div[style*="position: absolute"] {
+        font-size: 1.15rem !important;
+        padding: 0.35rem 1.5rem !important;
+    }
+    
+    /* Contact Gentiane */
+    #tourmag-menu a[href*="gentiane"] p {
+        font-size: 0.9rem !important;
+    }
+    
+    #tourmag-menu a[href*="gentiane"] p:last-child {
+        font-size: 1rem !important;
+    }
+    
+    #tourmag-menu a[href*="gentiane"] img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    /* Bouton "Abonnez-vous" */
+    #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
+        font-size: 1.1rem !important;
+        padding: 0.85rem 1.6rem !important;
+    }
+    
+    /* FAQ liens */
+    #tourmag-menu a[href*="faq"] {
+        font-size: 0.95rem !important;
+        padding: 0.6rem 0.85rem !important;
+    }
+    
+    /* Texte prix dans offer-content */
+    .offer-content div[style*="font-size: 1.5rem"] {
+        font-size: 1.3rem !important;
+    }
 }
 
 /* Écrans entre 769px et 900px - Réduction maximale avant mobile */
@@ -996,6 +1130,68 @@
     
     .mega-menu-content {
         padding: 1.5rem 1.5rem;
+    }
+    
+    /* Articles abonnés - Actualités */
+    #tourmag-menu .mega-menu a.media-simple-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.75rem;
+    }
+    
+    /* Boutons newsletters */
+    #tourmag-menu a[href*="Shortcast"],
+    #tourmag-menu a[href*="Archives"],
+    #tourmag-menu a.newsletter-subscribe-btn {
+        font-size: 0.9rem !important;
+        padding: 0.7rem 1.1rem !important;
+    }
+    
+    /* Titre encadré articles abonnés */
+    #tourmag-menu .mega-column div[style*="position: absolute"][style*="top: -20px"] {
+        font-size: 1.05rem !important;
+        padding: 0.35rem 1.3rem !important;
+    }
+    
+    /* Abonnements - Titre encadré "Nos offres" */
+    #tourmag-menu div[style*="background: #57C6C6"] div[style*="position: absolute"] {
+        font-size: 1.05rem !important;
+        padding: 0.35rem 1.3rem !important;
+    }
+    
+    /* Contact Gentiane */
+    #tourmag-menu a[href*="gentiane"] p {
+        font-size: 0.85rem !important;
+    }
+    
+    #tourmag-menu a[href*="gentiane"] p:last-child {
+        font-size: 0.95rem !important;
+    }
+    
+    #tourmag-menu a[href*="gentiane"] img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    /* Bouton "Abonnez-vous" */
+    #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
+        font-size: 1rem !important;
+        padding: 0.8rem 1.4rem !important;
+    }
+    
+    /* FAQ liens */
+    #tourmag-menu a[href*="faq"] {
+        font-size: 0.9rem !important;
+        padding: 0.55rem 0.75rem !important;
+    }
+    
+    /* Texte prix dans offer-content */
+    .offer-content div[style*="font-size: 1.5rem"] {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Colonnes abonnements plus compactes */
+    .mega-columns.abonnes-grid {
+        gap: 2rem !important;
     }
 }
 
