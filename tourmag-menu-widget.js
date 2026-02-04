@@ -919,7 +919,7 @@
     #tourmag-menu a[href*="Archives"],
     #tourmag-menu a.newsletter-subscribe-btn {
         font-size: 1rem !important;
-        padding: 0.85rem 1.3rem !important;
+        padding: 0.7rem 1.2rem !important;
     }
     
     /* Titre encadré articles abonnés */
@@ -946,13 +946,13 @@
     /* Bouton "Abonnez-vous" */
     #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
         font-size: 1.2rem !important;
-        padding: 0.9rem 1.8rem !important;
+        padding: 0.75rem 1.6rem !important;
     }
     
     /* FAQ liens */
     #tourmag-menu a[href*="faq"] {
         font-size: 1rem !important;
-        padding: 0.65rem 0.9rem !important;
+        padding: 0.55rem 0.8rem !important;
     }
 }
 
@@ -1026,7 +1026,7 @@
     #tourmag-menu a[href*="Archives"],
     #tourmag-menu a.newsletter-subscribe-btn {
         font-size: 0.95rem !important;
-        padding: 0.75rem 1.2rem !important;
+        padding: 0.6rem 1.1rem !important;
     }
     
     /* Titre encadré articles abonnés */
@@ -1058,13 +1058,13 @@
     /* Bouton "Abonnez-vous" */
     #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
         font-size: 1.1rem !important;
-        padding: 0.85rem 1.6rem !important;
+        padding: 0.7rem 1.5rem !important;
     }
     
     /* FAQ liens */
     #tourmag-menu a[href*="faq"] {
         font-size: 0.95rem !important;
-        padding: 0.6rem 0.85rem !important;
+        padding: 0.5rem 0.75rem !important;
     }
     
     /* Texte prix dans offer-content */
@@ -1143,7 +1143,7 @@
     #tourmag-menu a[href*="Archives"],
     #tourmag-menu a.newsletter-subscribe-btn {
         font-size: 0.9rem !important;
-        padding: 0.7rem 1.1rem !important;
+        padding: 0.55rem 1rem !important;
     }
     
     /* Titre encadré articles abonnés */
@@ -1175,13 +1175,13 @@
     /* Bouton "Abonnez-vous" */
     #tourmag-menu a[href*="abo.tourmagmarketing.com"] {
         font-size: 1rem !important;
-        padding: 0.8rem 1.4rem !important;
+        padding: 0.65rem 1.3rem !important;
     }
     
     /* FAQ liens */
     #tourmag-menu a[href*="faq"] {
         font-size: 0.9rem !important;
-        padding: 0.55rem 0.75rem !important;
+        padding: 0.45rem 0.7rem !important;
     }
     
     /* Texte prix dans offer-content */
