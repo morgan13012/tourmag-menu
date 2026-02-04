@@ -1377,6 +1377,16 @@
                 position: relative !important;
                 z-index: 1000 !important;
 margin-top: -90px !important;
+
+/* Augmenter la police des boutons en mobile */
+    #tourmag-menu .media-simple-link,
+    #tourmag-menu .newsletter-item .mega-link,
+    #tourmag-menu .media-item .mega-link {
+        font-size: 1rem !important;
+    }
+    
+   
+
             }
 
             .nav-item .nav-link img {
