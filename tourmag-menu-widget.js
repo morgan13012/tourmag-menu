@@ -1365,7 +1365,7 @@
                 display: block !important;
                 position: absolute !important;
                 left: 4rem !important;
-                top: 50% !important;
+                
                 transform: translateY(-50%) !important;
                 z-index: 1002 !important;
             }
