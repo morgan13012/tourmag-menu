@@ -795,6 +795,212 @@
             }
         }
 
+/* ============================================
+   RESPONSIVE MEGA-MENU - À AJOUTER APRÈS LA LIGNE 828
+   (Juste après le bloc @media (max-width: 1200px) existant)
+   ============================================ */
+
+/* Écrans entre 1400px et 1600px - Réduction légère */
+@media (min-width: 1401px) and (max-width: 1600px) {
+    .mega-column-title {
+        font-size: 1.15rem;
+    }
+    
+    .mega-link {
+        font-size: 1.1rem;
+    }
+    
+    .mega-sublink {
+        font-size: 1rem;
+    }
+    
+    .newsletter-item .mega-link,
+    .media-item .mega-link,
+    .media-simple-link {
+        font-size: 1.05rem;
+    }
+    
+    .newsletter-submenu ul li a,
+    .media-submenu ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* Écrans entre 1200px et 1400px - Réduction moyenne */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .mega-column-title {
+        font-size: 1.1rem;
+    }
+    
+    .mega-link {
+        font-size: 1rem;
+    }
+    
+    .mega-sublink {
+        font-size: 0.95rem;
+    }
+    
+    .newsletter-item .mega-link,
+    .media-item .mega-link,
+    .media-simple-link {
+        font-size: 1rem;
+        padding: 0.65rem 0.9rem;
+    }
+    
+    .newsletter-submenu ul li a,
+    .media-submenu ul li a {
+        font-size: 0.95rem;
+        padding: 0.65rem 0.9rem;
+    }
+    
+    .offer-tab {
+        font-size: 0.95rem;
+        padding: 0.9rem;
+    }
+    
+    .offer-tab span {
+        font-size: 1.05rem;
+    }
+    
+    .offer-content h5 {
+        font-size: 1.2rem;
+    }
+    
+    .offer-content ul {
+        font-size: 1rem;
+    }
+    
+    .subscription-offer-item h5 {
+        font-size: 0.95rem;
+    }
+    
+    .subscription-offer-item p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Écrans entre 900px et 1200px - Réduction importante */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .mega-column-title {
+        font-size: 1rem;
+    }
+    
+    .mega-link {
+        font-size: 0.95rem;
+        padding: 0.55rem 0;
+    }
+    
+    .mega-sublink {
+        font-size: 0.9rem;
+        padding: 0.45rem 0;
+    }
+    
+    .newsletter-item .mega-link,
+    .media-item .mega-link,
+    .media-simple-link {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.85rem;
+    }
+    
+    .newsletter-submenu ul li a,
+    .media-submenu ul li a {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.85rem;
+    }
+    
+    .offer-tab {
+        font-size: 0.85rem;
+        padding: 0.8rem;
+    }
+    
+    .offer-tab span {
+        font-size: 0.95rem;
+    }
+    
+    .offer-content h5 {
+        font-size: 1.1rem;
+    }
+    
+    .offer-content ul {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .subscription-offer-item h5 {
+        font-size: 0.9rem;
+    }
+    
+    .subscription-offer-item p {
+        font-size: 0.9rem;
+    }
+    
+    .mega-menu-content {
+        padding: 2rem 2rem;
+    }
+}
+
+/* Écrans entre 769px et 900px - Réduction maximale avant mobile */
+@media (min-width: 769px) and (max-width: 900px) {
+    .mega-column-title {
+        font-size: 0.95rem;
+    }
+    
+    .mega-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+    
+    .mega-sublink {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+    }
+    
+    .newsletter-item .mega-link,
+    .media-item .mega-link,
+    .media-simple-link {
+        font-size: 0.9rem;
+        padding: 0.55rem 0.75rem;
+    }
+    
+    .newsletter-submenu ul li a,
+    .media-submenu ul li a {
+        font-size: 0.85rem;
+        padding: 0.55rem 0.75rem;
+    }
+    
+    .offer-tab {
+        font-size: 0.8rem;
+        padding: 0.7rem;
+    }
+    
+    .offer-tab span {
+        font-size: 0.9rem;
+    }
+    
+    .offer-content h5 {
+        font-size: 1rem;
+    }
+    
+    .offer-content ul {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .subscription-offer-item h5 {
+        font-size: 0.85rem;
+    }
+    
+    .subscription-offer-item p {
+        font-size: 0.85rem;
+    }
+    
+    .mega-menu-content {
+        padding: 1.5rem 1.5rem;
+    }
+}
+
+
+
         @media (max-width: 1600px) {
             .nav-link {
                 padding: 1.25rem 1.2rem;
