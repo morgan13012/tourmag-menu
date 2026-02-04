@@ -1919,6 +1919,11 @@ margin-top: -90px !important;
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
                                                         <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">83€ TTC/an</span>
                                                     </div>
+													<div style="margin-top: 1.5rem; text-align: center;">
+    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+        Abonnez-vous →
+    </a>
+</div>
                                                 </div>
                                                 
                                                 <div class="offer-content" data-content="membership" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
@@ -1963,6 +1968,12 @@ margin-top: -90px !important;
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
                                                         <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
                                                     </div>
+													
+<div style="margin-top: 1.5rem; text-align: center;">
+    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+        Abonnez-vous →
+    </a>
+</div>
                                                 </div>
                                                 
                                                 <div class="offer-content" data-content="agences" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
@@ -1984,6 +1995,11 @@ margin-top: -90px !important;
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
                                                         <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
                                                     </div>
+													<div style="margin-top: 1.5rem; text-align: center;">
+    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+        Abonnez-vous →
+    </a>
+</div>
                                                 </div>
                                                 
                                                 <div class="offer-content" data-content="etudiant" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
@@ -2001,13 +2017,14 @@ margin-top: -90px !important;
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
                                                         <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
                                                     </div>
+													<div style="margin-top: 1.5rem; text-align: center;">
+    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+        Abonnez-vous →
+    </a>
+</div>
                                                 </div>
                                             
-                                                <div style="text-align: center; margin-top: 1.5rem;">
-                                                    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: #ffffff; color: #0956E7; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.3rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" onmouseover="this.style.background='#0956E7'; this.style.color='#ffffff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(9, 86, 231, 0.3)'" onmouseout="this.style.background='#ffffff'; this.style.color='#0956E7'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)'">
-                                                        Abonnez-vous →
-                                                    </a>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
