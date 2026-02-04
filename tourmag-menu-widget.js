@@ -1541,9 +1541,127 @@
 
 
 
+}
 
 
+/* OPTIMISATION ULTRA AGRESSIVE DES BOUTONS ABONNEMENTS */
 
+/* Écrans entre 1200px et 1400px */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    /* Onglets Premium, MemberShip, etc. */
+    #tourmag-menu button.offer-tab,
+    #tourmag-menu .offer-tab {
+        padding: 0.6rem 0.5rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    #tourmag-menu .offer-tab br + span {
+        display: block !important;
+        margin-top: 0.25rem !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+/* Écrans entre 900px et 1200px */
+@media (min-width: 901px) and (max-width: 1200px) {
+    /* Onglets Premium, MemberShip, etc. */
+    #tourmag-menu button.offer-tab,
+    #tourmag-menu .offer-tab,
+    #tourmag-menu button[data-offer] {
+        padding: 0.5rem 0.4rem !important;
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    #tourmag-menu .offer-tab br + span,
+    #tourmag-menu button[data-offer] span {
+        display: block !important;
+        margin-top: 0.2rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Grille des onglets */
+    #tourmag-menu .mega-column div[style*="display: grid"][style*="grid-template-columns: repeat(2, 1fr)"] {
+        gap: 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Écrans entre 769px et 900px */
+@media (min-width: 769px) and (max-width: 900px) {
+    /* Onglets Premium, MemberShip, etc. */
+    #tourmag-menu button.offer-tab,
+    #tourmag-menu .offer-tab,
+    #tourmag-menu button[data-offer] {
+        padding: 0.4rem 0.3rem !important;
+        font-size: 0.7rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #tourmag-menu .offer-tab br + span,
+    #tourmag-menu button[data-offer] span {
+        display: block !important;
+        margin-top: 0.15rem !important;
+        font-size: 0.8rem !important;
+    }
+    
+    /* Grille des onglets */
+    #tourmag-menu .mega-column div[style*="display: grid"][style*="grid-template-columns: repeat(2, 1fr)"] {
+        gap: 0.4rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+}
+
+/* Mobile - Ultra compact */
+@media (max-width: 768px) {
+    /* Onglets Premium, MemberShip, etc. */
+    #tourmag-menu button.offer-tab,
+    #tourmag-menu .offer-tab,
+    #tourmag-menu button[data-offer] {
+        padding: 0.35rem 0.25rem !important;
+        font-size: 0.65rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #tourmag-menu .offer-tab br + span,
+    #tourmag-menu button[data-offer] span {
+        display: block !important;
+        margin-top: 0.1rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    /* Grille des onglets */
+    #tourmag-menu .mega-column div[style*="display: grid"][style*="grid-template-columns: repeat(2, 1fr)"] {
+        gap: 0.35rem !important;
+        margin-bottom: 0.6rem !important;
+    }
+    
+    /* Titre "Nos Offres d'Abonnement" plus petit */
+    #tourmag-menu div[style*="background: #57C6C6"] div[style*="position: absolute"][style*="top: -20px"] {
+        font-size: 0.95rem !important;
+        padding: 0.3rem 1rem !important;
+        min-width: 180px !important;
+    }
+    
+    /* Espacement après le titre */
+    #tourmag-menu div[style*="background: #57C6C6"] > div > div[style*="margin-top: 1.5rem"] {
+        margin-top: 1rem !important;
+    }
+}
+
+/* Réduction supplémentaire pour petits mobiles */
+@media (max-width: 480px) {
+    #tourmag-menu button.offer-tab,
+    #tourmag-menu .offer-tab,
+    #tourmag-menu button[data-offer] {
+        padding: 0.3rem 0.2rem !important;
+        font-size: 0.6rem !important;
+    }
+    
+    #tourmag-menu .offer-tab br + span,
+    #tourmag-menu button[data-offer] span {
+        font-size: 0.7rem !important;
+    }
 }
 
 
