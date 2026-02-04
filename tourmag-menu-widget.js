@@ -1378,12 +1378,31 @@
                 z-index: 1000 !important;
 margin-top: -90px !important;
 
-/* Augmenter la police des boutons en mobile */
-    #tourmag-menu .media-simple-link,
-    #tourmag-menu .newsletter-item .mega-link,
-    #tourmag-menu .media-item .mega-link {
-        font-size: 1.15rem !important;
+/* Augmenter la police des boutons en mobile - ULTRA SPÉCIFIQUE */
+    #tourmag-menu .mega-menu .media-simple-link,
+    #tourmag-menu .mega-links .media-simple-link,
+    #tourmag-menu .mega-column a.media-simple-link {
+        font-size: 1.1rem !important;
     }
+    
+    /* Boutons avec icônes (Thématiques) */
+    #tourmag-menu .mega-menu a[href*="airmag"],
+    #tourmag-menu .mega-menu a[href*="brochuresenligne"],
+    #tourmag-menu .mega-menu a[href*="cruisemag"],
+    #tourmag-menu .mega-menu a[href*="latraveltech"],
+    #tourmag-menu .mega-menu a[href*="luxurytravelmag"],
+    #tourmag-menu .mega-menu a[href*="travelmanagermag"],
+    #tourmag-menu .mega-menu a[href*="voyageursmag"],
+    #tourmag-menu .mega-menu a[href*="agv"] {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Boutons newsletters (avec icônes) */
+    #tourmag-menu .newsletter-list a.media-simple-link {
+        font-size: 1.1rem !important;
+    }
+    
+  
     
    
 
