@@ -1951,7 +1951,7 @@ margin-top: -90px !important;
 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(89, 223, 122, 0.05)); border-left: 3px solid #0066cc; border-radius: 6px;">
     <p style="margin: 0; font-size: 0.95rem; color: #1a1a1a; text-align: center; line-height: 1.5;">
         <strong style="color: #0066cc;">Abonnement "Spécial agences"</strong> sur demande.<br>
-        Merci de contacter <a href="malto:commercial@dmcmag.com" target="_blank" style="color: #0066cc; font-weight: 600; text-decoration: underline;">Gentiane Romanet</a>.
+        Merci de contacter <a href="mailto:commercial@dmcmag.com" target="_blank" style="color: #0066cc; font-weight: 600; text-decoration: underline;">Gentiane Romanet</a>.
     </p>
 </div>
 
