@@ -972,6 +972,18 @@
     }
 }
 
+/* ICÔNES - Réduction responsive */
+    #tourmag-menu .mega-menu a img,
+    #tourmag-menu .media-simple-link img,
+    #tourmag-menu .media-icon img,
+    #tourmag-menu .newsletter-icon img {
+        width: 35px !important;
+        height: 35px !important;
+        max-width: 35px !important;
+        max-height: 35px !important;
+    }
+}
+
 /* Écrans entre 900px et 1200px - Réduction importante */
 @media (min-width: 901px) and (max-width: 1200px) {
     .mega-column-title {
@@ -1101,6 +1113,17 @@
     /* Texte prix dans offer-content */
     .offer-content div[style*="font-size: 1.5rem"] {
         font-size: 1.3rem !important;
+    }
+
+/* ICÔNES - Réduction responsive */
+    #tourmag-menu .mega-menu a img,
+    #tourmag-menu .media-simple-link img,
+    #tourmag-menu .media-icon img,
+    #tourmag-menu .newsletter-icon img {
+        width: 30px !important;
+        height: 30px !important;
+        max-width: 30px !important;
+        max-height: 30px !important;
     }
 }
 
@@ -1238,6 +1261,17 @@
     /* Colonnes abonnements plus compactes */
     .mega-columns.abonnes-grid {
         gap: 2rem !important;
+    }
+
+/* ICÔNES - Réduction responsive */
+    #tourmag-menu .mega-menu a img,
+    #tourmag-menu .media-simple-link img,
+    #tourmag-menu .media-icon img,
+    #tourmag-menu .newsletter-icon img {
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
     }
 }
 
