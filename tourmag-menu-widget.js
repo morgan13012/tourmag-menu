@@ -919,15 +919,21 @@
         padding: 0.6rem 0.85rem !important;
     }
     
-    /* Boutons newsletters - ciblage renforcé */
+    /* Boutons newsletters - ciblage renforcé ULTRA PRÉCIS */
     #tourmag-menu a[href*="Shortcast"],
-    #tourmag-menu a[href*="Archives"] {
+    #tourmag-menu a[href*="shortcast"],
+    #tourmag-menu a[href*="Archives"],
+    #tourmag-menu a[href*="archives"],
+    #tourmag-menu .mega-menu a[href*="Shortcast-Newsletter"],
+    #tourmag-menu .mega-menu a[href*="Toutes-les-Archives"] {
         font-size: 1rem !important;
         padding: 0.7rem 1.2rem !important;
     }
     
     #tourmag-menu a.newsletter-subscribe-btn,
-    #tourmag-menu a[href*="insc.edt02.net"] {
+    #tourmag-menu a[href*="insc.edt02.net"],
+    #tourmag-menu a[href*="300335/20150403"],
+    #tourmag-menu .mega-menu a[target="_blank"][style*="linear-gradient(135deg, #59DF7A, #0956E7)"] {
         font-size: 1rem !important;
         padding: 0.7rem 1.2rem !important;
     }
@@ -1035,15 +1041,21 @@
         padding: 0.55rem 0.8rem !important;
     }
     
-    /* Boutons newsletters - ciblage renforcé */
+    /* Boutons newsletters - ciblage renforcé ULTRA PRÉCIS */
     #tourmag-menu a[href*="Shortcast"],
-    #tourmag-menu a[href*="Archives"] {
+    #tourmag-menu a[href*="shortcast"],
+    #tourmag-menu a[href*="Archives"],
+    #tourmag-menu a[href*="archives"],
+    #tourmag-menu .mega-menu a[href*="Shortcast-Newsletter"],
+    #tourmag-menu .mega-menu a[href*="Toutes-les-Archives"] {
         font-size: 0.95rem !important;
         padding: 0.6rem 1.1rem !important;
     }
     
     #tourmag-menu a.newsletter-subscribe-btn,
-    #tourmag-menu a[href*="insc.edt02.net"] {
+    #tourmag-menu a[href*="insc.edt02.net"],
+    #tourmag-menu a[href*="300335/20150403"],
+    #tourmag-menu .mega-menu a[target="_blank"][style*="linear-gradient(135deg, #59DF7A, #0956E7)"] {
         font-size: 0.95rem !important;
         padding: 0.6rem 1.1rem !important;
     }
@@ -1161,15 +1173,21 @@
         padding: 0.5rem 0.75rem !important;
     }
     
-    /* Boutons newsletters - ciblage renforcé */
+    /* Boutons newsletters - ciblage renforcé ULTRA PRÉCIS */
     #tourmag-menu a[href*="Shortcast"],
-    #tourmag-menu a[href*="Archives"] {
+    #tourmag-menu a[href*="shortcast"],
+    #tourmag-menu a[href*="Archives"],
+    #tourmag-menu a[href*="archives"],
+    #tourmag-menu .mega-menu a[href*="Shortcast-Newsletter"],
+    #tourmag-menu .mega-menu a[href*="Toutes-les-Archives"] {
         font-size: 0.9rem !important;
         padding: 0.55rem 1rem !important;
     }
     
     #tourmag-menu a.newsletter-subscribe-btn,
-    #tourmag-menu a[href*="insc.edt02.net"] {
+    #tourmag-menu a[href*="insc.edt02.net"],
+    #tourmag-menu a[href*="300335/20150403"],
+    #tourmag-menu .mega-menu a[target="_blank"][style*="linear-gradient(135deg, #59DF7A, #0956E7)"] {
         font-size: 0.9rem !important;
         padding: 0.55rem 1rem !important;
     }
@@ -1222,7 +1240,6 @@
         gap: 2rem !important;
     }
 }
-
 
 
         @media (max-width: 1600px) {
