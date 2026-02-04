@@ -984,8 +984,7 @@ margin-top: -90px !important;
     transform: none;
     z-index: 1002 !important;
     background: #ffffff;  /* Fond blanc pour le détacher */
-    border-radius: 8px;  /* Coins arrondis */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);  /* Ombre légère */
+  
     padding: 0.75rem;  /* Padding pour agrandir la zone cliquable */
 }
             
