@@ -1378,34 +1378,6 @@
                 z-index: 1000 !important;
 margin-top: -90px !important;
 
-/* Augmenter la police des boutons en mobile - ULTRA SPÉCIFIQUE */
-    #tourmag-menu .mega-menu .media-simple-link,
-    #tourmag-menu .mega-links .media-simple-link,
-    #tourmag-menu .mega-column a.media-simple-link {
-        font-size: 1.1rem !important;
-    }
-    
-    /* Boutons avec icônes (Thématiques) */
-    #tourmag-menu .mega-menu a[href*="airmag"],
-    #tourmag-menu .mega-menu a[href*="brochuresenligne"],
-    #tourmag-menu .mega-menu a[href*="cruisemag"],
-    #tourmag-menu .mega-menu a[href*="latraveltech"],
-    #tourmag-menu .mega-menu a[href*="luxurytravelmag"],
-    #tourmag-menu .mega-menu a[href*="travelmanagermag"],
-    #tourmag-menu .mega-menu a[href*="voyageursmag"],
-    #tourmag-menu .mega-menu a[href*="agv"] {
-        font-size: 1.1rem !important;
-    }
-    
-    /* Boutons newsletters (avec icônes) */
-    #tourmag-menu .newsletter-list a.media-simple-link {
-        font-size: 1.1rem !important;
-    }
-    
-  
-    
-   
-
             }
 
             .nav-item .nav-link img {
@@ -2464,6 +2436,49 @@ const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-ite
                 }
             }, 250);
         });
+				
+		let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                if (window.innerWidth > 768) {
+                    document.querySelectorAll('#tourmag-menu .mega-menu').forEach(menu => {
+                        menu.style.display = '';
+                    });
+                    document.getElementById('navList').classList.remove('active');
+                    setupBehavior();
+                }
+            }, 250);
+        });
+        
+        // ↓↓↓ AJOUTE LE CODE ICI ↓↓↓
+        function adjustMobileFontSize() {
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('#tourmag-menu .media-simple-link').forEach(btn => {
+                    btn.style.setProperty('font-size', '1.25rem', 'important');
+                });
+                
+                document.querySelectorAll('#tourmag-menu a[href*="Shortcast"], #tourmag-menu a[href*="Archives"], #tourmag-menu a.newsletter-subscribe-btn, #tourmag-menu a[href*="insc.edt02"]').forEach(btn => {
+                    btn.style.setProperty('font-size', '1.25rem', 'important');
+                });
+                
+                document.querySelectorAll('#tourmag-menu .newsletter-list a').forEach(btn => {
+                    btn.style.setProperty('font-size', '1.25rem', 'important');
+                });
+            }
+        }
+        
+        adjustMobileFontSize();
+        window.addEventListener('resize', adjustMobileFontSize);
+        // ↑↑↑ JUSQU'ICI ↑↑↑
+    }		
+				
+				
+				
+				
+				
+				
+				
     }
     
     if (document.readyState === 'loading') {
