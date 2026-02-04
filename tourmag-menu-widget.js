@@ -1633,7 +1633,7 @@ margin-top: -90px !important;
             #tourmag-menu .newsletter-item .mega-link,
             #tourmag-menu .media-item .mega-link,
             #tourmag-menu .media-simple-link {
-                font-size: 0.9rem !important;
+                font-size: 1.1rem !important;
                 padding: 0.6rem 0.8rem !important;
             }
         }
