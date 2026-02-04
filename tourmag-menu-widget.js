@@ -1901,7 +1901,7 @@ margin-top: -90px !important;
                                                         MemberShip Club<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="agences" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Spécial agences<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
+                                                        Futuroscopie<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">133€ TTC/an</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="etudiant" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
                                                         Étudiant<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
@@ -1920,7 +1920,7 @@ margin-top: -90px !important;
                                                         <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">83€ TTC/an</span>
                                                     </div>
 													<div style="margin-top: 1.5rem; text-align: center;">
-    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+    <a href="https://bit.ly/3O2yqnp" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
         Abonnez-vous →
     </a>
 </div>
@@ -1970,14 +1970,14 @@ margin-top: -90px !important;
                                                     </div>
 													
 <div style="margin-top: 1.5rem; text-align: center;">
-    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+    <a href="https://bit.ly/3MjWwcS" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
         Abonnez-vous →
     </a>
 </div>
                                                 </div>
                                                 
                                                 <div class="offer-content" data-content="agences" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
-                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Spécial agences</h5>
+                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Futuroscopie</h5>
                                                     <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
@@ -1985,18 +1985,15 @@ margin-top: -90px !important;
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Trombinoscope
+                                                            Articles Futuroscopie
                                                         </li>
-                                                        <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
-                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Shortcast (podcast d'articles résumés)
-                                                        </li>
+                                                      
                                                     </ul>
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
-                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">199€ HT/an</span>
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">133€ TTC/an</span>
                                                     </div>
 													<div style="margin-top: 1.5rem; text-align: center;">
-    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+    <a href="https://bit.ly/3ZhiDUc" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
         Abonnez-vous →
     </a>
 </div>
@@ -2018,7 +2015,7 @@ margin-top: -90px !important;
                                                         <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
                                                     </div>
 													<div style="margin-top: 1.5rem; text-align: center;">
-    <a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+    <a href="https://bit.ly/3OkRNbo" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
         Abonnez-vous →
     </a>
 </div>
