@@ -983,8 +983,7 @@ margin-top: -90px !important;
     top: -3rem;  /* Au-dessus de la barre noire */
     transform: none;
     z-index: 1002 !important;
-    background: #ffffff;  /* Fond blanc pour le détacher */
-  
+   
     padding: 0.75rem;  /* Padding pour agrandir la zone cliquable */
 }
             
