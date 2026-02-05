@@ -1157,6 +1157,7 @@
     }
     
     .offer-tab {
+
         font-size: 0.8rem;
         padding: 0.7rem;
     }
@@ -1564,6 +1565,7 @@ margin-top: -90px !important;
             .mega-column {
                 width: 100% !important;
                 padding: 0 !important;
+
             }
 
             .media-item .mega-link,
@@ -1837,6 +1839,7 @@ margin-top: -90px !important;
                                             <li><a href="https://www.tourmag.com/my/tourmag/news_cruisemag/news_cruisemag_derniere.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/cruisemag.png" alt="CruiseMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>CruiseMaG</a></li>
                                             <li><a href="https://www.tourmag.com/my/newsletter_DESTIMAG/archives/Newsletter_DESTIMAG.html" class="media-simple-link"><span class="newsletter-icon"><img src="https://www.tourmag.com/my/tourmag/site/menu/destimag.png" alt="DestiMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;"></span>DestiMaG</a></li>
                                         </ul>
+
                                     </div>
                                     <div class="mega-column">
                                         <ul class="mega-links newsletter-list">
@@ -1906,16 +1909,20 @@ margin-top: -90px !important;
                                             </div>
                                         </ul>
                                         
-                                        <div style="margin-top: 3rem;">
-                                            <a href="https://meetings-eu1.hubspot.com/gentiane/" target="_blank" style="display: block; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(89, 223, 122, 0.05)); border: 2px solid rgba(0, 102, 204, 0.2); border-radius: 12px; padding: 1.25rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.2)'; this.style.borderColor='rgba(0, 102, 204, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.1)'; this.style.borderColor='rgba(0, 102, 204, 0.2)';">
+                                        <div style="margin-top: 3rem; display: block; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(89, 223, 122, 0.05)); border: 2px solid rgba(0, 102, 204, 0.2); border-radius: 12px; padding: 1.25rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.2)'; this.style.borderColor='rgba(0, 102, 204, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 102, 204, 0.1)'; this.style.borderColor='rgba(0, 102, 204, 0.2)';">
                                                 <div style="display: flex; align-items: center; gap: 1rem;">
                                                     <img src="https://www.tourmag.com/my/tourmag/site/menu/gentiane.png" alt="Gentiane ROMANET" style="width: 80px; height: 80px; border-radius: 50%; object-position: center 30%; object-fit: cover; border: 2px solid #0066cc;">
                                                     <div style="flex: 1;">
-                                                        <p style="margin: 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600; line-height: 1.4;">Pour toute question relative aux abonnements, contactez</p>
-                                                        <p style="margin: 0.25rem 0 0 0; font-size: 1.15rem; color: #0066cc; font-weight: 700;">Gentiane ROMANET</p>
+                                                        <p style="margin: 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600; line-height: 1.4;">Pour toute question relative aux abonnements, contactez Gentiane ROMANET</p>
+                                                        <p style="margin: 0.25rem 0 0 0; font-size: 1.15rem; color: #0066cc; font-weight: 700;">Email<a href="mailto:gentiane@tourmag.com">gentiane@tourmag.com<br/>
+														Tél : +336 76 50 55 75<br>
+														<a href="https://meetings-eu1.hubspot.com/gentiane/" target="_blank">Rendez-vous visio</a>
+														
+														</p>
+														
                                                     </div>
                                                 </div>
-                                            </a>
+                                            
                                         </div>
                                         
                                         <div style="margin-top: 1rem;">
@@ -1951,7 +1958,7 @@ margin-top: -90px !important;
 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(89, 223, 122, 0.05)); border-left: 3px solid #0066cc; border-radius: 6px;">
     <p style="margin: 0; font-size: 0.95rem; color: #1a1a1a; text-align: center; line-height: 1.5;">
         <strong style="color: #0066cc;">Abonnement "Spécial agences"</strong> sur demande.<br>
-        Merci de contacter <a href="mailto:commercial@dmcmag.com" target="_blank" style="color: #0066cc; font-weight: 600; text-decoration: underline;">Gentiane Romanet</a>.
+        Merci de contacter <a href="mailto:gentiane@tourmag.com" target="_blank" style="color: #0066cc; font-weight: 600; text-decoration: underline;">Gentiane Romanet</a>.
     </p>
 </div>
                                                 
