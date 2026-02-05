@@ -1914,9 +1914,9 @@ margin-top: -90px !important;
                                                     <img src="https://www.tourmag.com/my/tourmag/site/menu/gentiane.png" alt="Gentiane ROMANET" style="width: 80px; height: 80px; border-radius: 50%; object-position: center 30%; object-fit: cover; border: 2px solid #0066cc;">
                                                     <div style="flex: 1;">
                                                         <p style="margin: 0; font-size: 1.05rem; color: #1a1a1a; font-weight: 600; line-height: 1.4;">Pour toute question relative aux abonnements, contactez <span style="color:#0066cc">Gentiane ROMANET</span></p>
-                                                        <p style="margin: 0.25rem 0 0 0; font-size: 1.15rem; text-decoration : none;">Email :<a href="mailto:gentiane@tourmag.com">gentiane@tourmag.com</a><br/>
+                                                        <p style="margin: 0.25rem 0 0 0; font-size: 1.15rem; text-decoration : none;">Email : <a href="mailto:gentiane@tourmag.com" style="text-decoration:none">gentiane@tourmag.com</a><br/>
 														Tél : +336 76 50 55 75<br>
-														<a href="https://meetings-eu1.hubspot.com/gentiane/" target="_blank">Rendez-vous visio</a>
+														<a href="https://meetings-eu1.hubspot.com/gentiane/" target="_blank" style="text-decoration:none">Rendez-vous visio</a>
 														
 														</p>
 														
