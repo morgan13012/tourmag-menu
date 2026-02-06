@@ -1158,6 +1158,7 @@
     
     .offer-tab {
 
+
         font-size: 0.8rem;
         padding: 0.7rem;
     }
@@ -1731,6 +1732,7 @@ margin-top: -90px !important;
                                             <li><a href="https://www.tourmag.com/Publi-redactionnel_r226.html" class="media-simple-link">Publi-Rédactionnel</a></li>
                                             <li><a href="https://www.tourmag.com/Webinaires_r493.html" class="media-simple-link">Webinaires</a></li>
 											 <li><a href="https://www.tourmag.com/Actus-Visas_r356.html" class="media-simple-link">Actus Visas</a></li>
+											<li><a href="https://www.tourmag.com/Assurances-Voyages_r501.html" class="media-simple-link">Assurances Voyages</a></li>
                                         </ul>
                                     </div>
                                     <div class="mega-column">
@@ -1806,6 +1808,7 @@ margin-top: -90px !important;
                                                     </ul>
                                                 </div>
                                             </li>
+											<li><a href="https://www.tourmag.com/voyagesresponsables/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/voyages_responsables.png" alt="VoyageursMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">Voyages Responsables</a></li>
                                             <li><a href="https://www.tourmag.com/voyageursmag/" class="media-simple-link"><img src="https://www.tourmag.com/my/tourmag/site/menu/voyageursmag.png" alt="VoyageursMaG" style="width: 40px; height: 40px; object-fit: contain; vertical-align: middle; margin-right: 0.5rem;">VoyageursMaG</a></li>
                                         </ul>
                                     </div>
