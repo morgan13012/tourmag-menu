@@ -1159,6 +1159,7 @@
     .offer-tab {
 
 
+
         font-size: 0.8rem;
         padding: 0.7rem;
     }
@@ -1375,16 +1376,11 @@
 
         @media (max-width: 768px) {
             #tourmag-menu {
-                display: block !important;
-                position: relative !important;
-                z-index: 1000 !important;
-margin-top: -90px !important;
-
-
-    
-   
-
-            }
+    display: block !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    margin-top: 0px !important;
+}
 
             .nav-item .nav-link img {
                 width: 16px !important;
@@ -1468,11 +1464,10 @@ margin-top: -90px !important;
     display: block !important;
     position: absolute;
     left: 1rem;
-    top: -3rem;  /* Au-dessus de la barre noire */
+    top: -6px;
     transform: none;
     z-index: 1002 !important;
-   
-    padding: 0.75rem;  /* Padding pour agrandir la zone cliquable */
+    padding: 0.75rem;
 }
             
             .nav-container {
@@ -1499,9 +1494,9 @@ margin-top: -90px !important;
                 z-index: 1000 !important;
             }
 
-            .main-nav {
+          .main-nav {
     position: relative;
-    margin-top: 3.5rem;  /* Espace pour le bouton au-dessus */
+    margin-top: 0;
     z-index: 1000 !important;
 }
 
@@ -2029,6 +2024,7 @@ margin-top: -90px !important;
 <div style="margin-top: 1.5rem; text-align: center;">
     <a href="https://bit.ly/3MjWwcS" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
         Abonnez-vous →
+
     </a>
 </div>
                                                 </div>
@@ -2234,46 +2230,23 @@ margin-top: -90px !important;
         }
         
        setupBehavior();
-
-// Ajuster la position du bouton hamburger en fonction de la hauteur du menu natif
-function adjustHamburgerPosition() {
-    if (window.innerWidth <= 768) {
-        const nativeMenu = document.querySelector('div.tablet-bg');
-        const toggleBtn = document.querySelector('#tourmag-menu .mobile-menu-toggle');
-        const mainNav = document.querySelector('#tourmag-menu .main-nav');
-        
-        if (nativeMenu && toggleBtn && mainNav) {
-            const menuHeight = nativeMenu.offsetHeight;
-            const baseOffset = 44; // Hauteur de base du menu
-            const extraOffset = menuHeight - baseOffset; // Différence (0 ou 41.6px)
-            
-            // Ajuster le top du bouton (base: -3rem = -48px)
-            const newTopRem = -3 - (extraOffset / 16); // Convertir px en rem
-            toggleBtn.style.top = `${newTopRem}rem`;
-            
-            // Ajuster le margin-top du main-nav (base: 3.5rem = 56px)
-            const newMarginRem = 3.5 + (extraOffset / 16);
-            mainNav.style.marginTop = `${newMarginRem}rem` + 3.225;
-        }
+		
+// Déplacer le bouton hamburger dans le header natif du site
+if (window.innerWidth <= 768) {
+    const toggleBtn = document.querySelector('#tourmag-menu .mobile-menu-toggle');
+    const nativeHeader = document.querySelector('div.tablet-bg');
+    if (toggleBtn && nativeHeader) {
+        nativeHeader.style.position = 'relative';
+        toggleBtn.style.position = 'absolute';
+        toggleBtn.style.left = '1rem';
+        toggleBtn.style.top = '-6px';
+        toggleBtn.style.transform = 'none';
+        toggleBtn.style.zIndex = '1002';
+        nativeHeader.insertBefore(toggleBtn, nativeHeader.firstChild);
     }
 }
 
-// Observer les changements de hauteur du menu natif
-const nativeMenu = document.querySelector('div.tablet-bg');
-if (nativeMenu) {
-    const observer = new MutationObserver(adjustHamburgerPosition);
-    observer.observe(nativeMenu, { 
-        attributes: true, 
-        childList: true, 
-        subtree: true 
-    });
-    
-    // Ajustement initial
-    adjustHamburgerPosition();
-}
 
-// Réajuster au redimensionnement
-window.addEventListener('resize', adjustHamburgerPosition);
 
 const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
         
@@ -2473,4 +2446,4 @@ const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-ite
             initializeJS();
         }
     }
-})();
+})();// JavaScript Document
