@@ -1735,7 +1735,7 @@
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
                                                 <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
                                                 <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
+                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Club Abonnés</a></li>
                                             <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
                                             <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club</a></li>
                                                 </div>
@@ -1900,7 +1900,7 @@
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
                                                 <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
                                                 <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Premium</a></li>
+                                            <li><a href="https://www.tourmag.com/CLUB-ABONNES_r523.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Club Abonnés</a></li>
                                             <li><a href="https://www.tourmag.com/futuroscopie/" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">Futuroscopie</a></li>
                                             <li><a href="https://www.tourmag.com/MEMBERSHIP-CLUB_r344.html" class="media-simple-link" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 237, 78, 0.1)); padding: 0.75rem 1rem; font-size: 1.15rem;">MemberShip Club</a></li>
                                                 </div>
@@ -1939,23 +1939,23 @@
                                                 
                                                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
                                                     <button class="offer-tab active" data-offer="premium" style="background: linear-gradient(135deg, #0066cc, #0056b3); border: 2px solid #0066cc; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3); border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 700; color: #ffffff; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Premium<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #ffffff;">83€ TTC/an</span>
+                                                        Premium<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #ffffff;">119 € TTC / 12 mois</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="membership" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        MemberShip Club<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
+                                                        MemberShip Club<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">499 € TTC / 12 mois</span>
                                                     </button>
-                                                    <button class="offer-tab" data-offer="agences" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                                                    <!--<button class="offer-tab" data-offer="agences" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
                                                         Futuroscopie<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">133€ TTC/an</span>
-                                                    </button>
+                                                    </button>-->
                                                     <button class="offer-tab" data-offer="etudiant" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Étudiant<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
+                                                        Étudiant<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">19 € TTC / 12 mois</span>
                                                     </button>
                                                 </div>
 												
 											<!-- Phrase Spécial agences -->
 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, rgba(0, 102, 204, 0.08), rgba(89, 223, 122, 0.05)); border-left: 3px solid #0066cc; border-radius: 6px;">
     <p style="margin: 0; font-size: 0.95rem; color: #1a1a1a; text-align: center; line-height: 1.5;">
-        <strong style="color: #0066cc;">Abonnement "Spécial agences"</strong> sur demande.<br>
+        <strong style="color: #0066cc;">Abonnement "multipostes"</strong> sur demande.<br>
         Merci de contacter <a href="mailto:gentiane@tourmag.com" target="_blank" style="color: #0066cc; font-weight: 600; text-decoration: underline;">Gentiane Romanet</a>.
     </p>
 </div>
@@ -1965,11 +1965,19 @@
                                                     <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Accès illimité aux articles Premium
+                                                            Accès aux articles du Club Abonnés
+                                                        </li>
+														<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
+                                                            Accès aux articles Futuroscopie
+                                                        </li>
+														<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
+                                                            Accès aux Shortcasts de la newsletter du jour (résumé audio de la newsletter et de tous ses articles, condensé en 10 minutes d'écoute)
                                                         </li>
                                                     </ul>
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
-                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">83€ TTC/an</span>
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">119 € TTC / 12 mois</span>
                                                     </div>
 													<div style="margin-top: 1.5rem; text-align: center;">
     <a href="https://bit.ly/3O2yqnp" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
@@ -1983,7 +1991,15 @@
                                                     <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 1.8;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Articles Premium
+                                                            Accès aux articles du Club Abonnés
+                                                        </li>
+														<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
+                                                            Accès aux articles Futuroscopie
+                                                        </li>
+														<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
+                                                            Accès aux Shortcasts de la newsletter du jour (résumé audio de la newsletter et de tous ses articles, condensé en 10 minutes d'écoute)
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
@@ -1991,7 +2007,7 @@
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Interview nouveaux "Members"
+                                                            Interview nouveaux "Membres"
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: #59DF7A; font-weight: 600;">
                                                             + fil d'infos WhatsApp avec :
@@ -2018,7 +2034,7 @@
                                                         </li>
                                                     </ul>
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
-                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">483€ TTC/an</span>
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">499 € TTC / 12 mois</span>
                                                     </div>
 													
 <div style="margin-top: 1.5rem; text-align: center;">
@@ -2029,7 +2045,7 @@
 </div>
                                                 </div>
                                                 
-                                                <div class="offer-content" data-content="agences" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
+                                                <!--<div class="offer-content" data-content="agences" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
                                                     <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Futuroscopie</h5>
                                                     <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
@@ -2050,22 +2066,26 @@
         Abonnez-vous →
     </a>
 </div>
-                                                </div>
+                                                </div>-->
                                                 
                                                 <div class="offer-content" data-content="etudiant" style="display: none; background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
                                                     <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Étudiant</h5>
                                                     <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Articles Premium
+                                                            Accès aux articles du Club Abonnés
+                                                        </li>
+														<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
+                                                            Accès aux articles Futuroscopie
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Futuroscopie
+                                                            Accès aux Shortcasts de la newsletter du jour (résumé audio de la newsletter et de tous ses articles, condensé en 10 minutes d'écoute)
                                                         </li>
                                                     </ul>
                                                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center;">
-                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">10€ TTC/an</span>
+                                                        <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">19 € TTC / 12 mois</span>
                                                     </div>
 													<div style="margin-top: 1.5rem; text-align: center;">
     <a href="https://bit.ly/3OkRNbo" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
@@ -2231,7 +2251,7 @@
         
        setupBehavior();
 		
-// Déplacer le bouton hamburger dans le header natif du site
+	// Déplacer le bouton hamburger dans le header natif du site
 if (window.innerWidth <= 768) {
     const toggleBtn = document.querySelector('#tourmag-menu .mobile-menu-toggle');
     const nativeHeader = document.querySelector('div.tablet-bg');
@@ -2245,7 +2265,6 @@ if (window.innerWidth <= 768) {
         nativeHeader.insertBefore(toggleBtn, nativeHeader.firstChild);
     }
 }
-
 
 
 const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-item');
@@ -2446,4 +2465,6 @@ const newsletterItems = document.querySelectorAll('#tourmag-menu .newsletter-ite
             initializeJS();
         }
     }
-})();// JavaScript Document
+})();
+
+// JavaScript Document
