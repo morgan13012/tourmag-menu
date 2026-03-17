@@ -1980,7 +1980,7 @@
                                                         <span style="font-size: 1.5rem; font-weight: 700; color: #0066cc;">119 € TTC / 12 mois</span>
                                                     </div>
 													<div style="margin-top: 1.5rem; text-align: center;">
-    <a href="https://bit.ly/3O2yqnp" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
+    <a href="https://membership.tourmag.com/signup/h3u97wG7w" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #59DF7A, #0956E7); color: #ffffff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(89, 223, 122, 0.3); text-transform: uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(89, 223, 122, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(89, 223, 122, 0.3)';">
         Abonnez-vous →
     </a>
 </div>
