@@ -1939,7 +1939,7 @@
                                                 
                                                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
                                                     <button class="offer-tab active" data-offer="premium" style="background: linear-gradient(135deg, #0066cc, #0056b3); border: 2px solid #0066cc; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3); border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 700; color: #ffffff; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
-                                                        Premium<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #ffffff;">119 € TTC / 12 mois</span>
+                                                        Premium +<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #ffffff;">119 € TTC / 12 mois</span>
                                                     </button>
                                                     <button class="offer-tab" data-offer="membership" style="background: #f8f9fa; border: 2px solid #d0d0d0; border-radius: 8px; padding: 1rem; font-size: 1.05rem; font-weight: 600; color: #1a1a1a; font-family: 'Josefin Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; text-align: center;">
                                                         MemberShip Club<br><span style="display: block; margin-top: 0.5rem; font-size: 1.15rem; font-weight: 700; color: #0066cc;">499 € TTC / 12 mois</span>
@@ -1961,7 +1961,7 @@
 </div>
                                                 
                                                 <div class="offer-content" data-content="premium" style="background: var(--white); border-radius: 8px; padding: 1.5rem; border-left: 4px solid #0066cc;">
-                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Premium</h5>
+                                                    <h5 style="font-size: 1.3rem; font-weight: 700; color: #0066cc; margin-bottom: 1rem;">Offre Premium +</h5>
                                                     <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; color: #4a4a4a; line-height: 2;">
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
