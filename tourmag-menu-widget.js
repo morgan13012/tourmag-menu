@@ -1,4 +1,4 @@
-/**
+	/**
  * TourMag Navigation Menu Widget
  * Version: 1.1.0 - CORRIGÉ
  * Description: Widget tout-en-un pour le mega menu TourMag
@@ -234,6 +234,11 @@
             height: 30px;
             background: transparent;
         }
+
+@keyframes crisePulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); }
+    50% { transform: scale(1.03); box-shadow: 0 6px 30px rgba(211, 47, 47, 0.6), 0 0 15px rgba(45, 27, 78, 0.5); }
+}
 
         /* Colonnes du mega menu */
         .mega-columns {
@@ -1160,6 +1165,7 @@
 
 
 
+
         font-size: 0.8rem;
         padding: 0.7rem;
     }
@@ -1732,6 +1738,10 @@
                                     </div>
                                     <div class="mega-column">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
+											<a href="https://www.tourmag.com/Clubs-de-vacances_r597.html?utm_source=menu-tourmag" style="display: block; background: linear-gradient(135deg, rgba(89,223,122,1), rgba(9,86,231,1)); color: #ffffff; padding: 1rem 1.2rem; border-radius: 10px; font-weight: 700; font-size: 1.15rem; text-decoration: none; text-align: center; margin-bottom: 2rem; position: relative; overflow: hidden; line-height: 1.3; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(9,86,231,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+    <span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 0.3rem;">Dossier Spécial</span>
+    Clubs de vacances
+</a>
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
                                                 <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
                                                 <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -2003,7 +2013,11 @@
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
-                                                            Rédacteur en chef du mois
+                                                            Trombinoscope sur le site et la newsletter
+                                                        </li>
+														<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
+                                                            <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
+                                                            Rédacteur en chef du mois (choix de la rédaction)
                                                         </li>
                                                         <li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative;">
                                                             <span style="position: absolute; left: 0; color: #59DF7A; font-size: 1.2rem;">✓</span>
