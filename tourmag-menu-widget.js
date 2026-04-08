@@ -1950,7 +1950,7 @@
                                     <div class="mega-column" style="flex: 1;">
                                         <div style="background: #57C6C6; padding: 2px; border-radius: 12px;">
                                             <div style="background: #F3FFFF; border-radius: 10px; padding: 1.5rem; position: relative;">
-                                                <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #57C6C6, #4ab8b8); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #ffffff; box-shadow: 0 2px 8px rgba(87, 198, 198, 0.3); white-space: nowrap; min-width: 300px; text-align: center; z-index: 10;">Nos Offres d'Abonnement</div>
+                                                <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #57C6C6, #4ab8b8); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #ffffff; box-shadow: 0 2px 8px rgba(87, 198, 198, 0.3); white-space: nowrap; min-width: 300px; text-align: center; z-index: 10;"><a href="https://abo.tourmagmarketing.com/abonnements" target="_blank" style="text-decoration:none; color:white">Nos Offres d'Abonnement</a></div>
                                                 <div style="margin-top: 1.5rem;"></div>
                                                 
                                                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem;">
