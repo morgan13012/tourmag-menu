@@ -1738,15 +1738,11 @@
                                     </div>
                                     <div class="mega-column">
                                         <ul class="mega-links" style="display: flex; flex-direction: column; gap: 0.5rem;">
-											<div style="display: flex; gap: 0.75rem; margin-bottom: 2rem;">
-    <a href="https://www.tourmag.com/Le-Forum-des-Pionniers-2026-en-direct-ABO_a131787.html?utm_source=menu-tourmag" style="display: block; flex: 1; background: linear-gradient(135deg, #d32f2f, #2d1b4e); color: #ffffff; padding: 0.85rem 0.8rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; position: relative; overflow: hidden; animation: crisePulse 1.5s ease-in-out infinite; line-height: 1.3;">
-    <span style="display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 0.3rem;">🔴 LIVE</span>
-    Le Forum des Pionniers 2026
-</a>
-    <a href="https://www.tourmag.com/Grand-Format-l-Australie_r602.html?utm_source=menu-tourmag" style="display: block; flex: 1; background: linear-gradient(135deg, #f4a020, #c0392b); color: #ffffff; padding: 0.85rem 0.8rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; position: relative; overflow: hidden; line-height: 1.3; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(196,79,31,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-    <span style="display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 0.3rem;">Dossier Spécial</span>
-    Grand Format : l'Australie
-</a>
+										<div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+    <a href="https://www.tourmag.com/Grand-Format-l-Australie_r602.html?utm_source=menu-tourmag" style="display: block; background: linear-gradient(135deg, #f4a020, #c0392b); color: #ffffff; padding: 0.85rem 1.5rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; position: relative; overflow: hidden; line-height: 1.3; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(196,79,31,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <span style="display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 0.3rem;">Dossier Spécial</span>
+        Grand Format : l'Australie
+    </a>
 </div>
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
                                                 <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); padding: 0.5rem 2rem; border-radius: 20px; font-weight: 700; font-size: 1.4rem; color: #1a1a1a; box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); white-space: nowrap; min-width: 200px; text-align: center;">Articles abonnés</div>
