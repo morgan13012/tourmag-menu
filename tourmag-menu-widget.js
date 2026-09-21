@@ -1741,11 +1741,11 @@
 										<div style="display: flex; gap: 0.75rem; margin-bottom: 2rem;">
     <a href="https://www.tourmag.com/IFTM-2026-toutes-les-actualites-du-salon-en-live-ABO_a132778.html" style="display: block; flex: 1; background: linear-gradient(135deg, #E93F66 0%, #AF354D 100%); color: #ffffff; padding: 0.85rem 0.8rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; position: relative; overflow: hidden; line-height: 1.3; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(11,61,110,0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
     <span style="display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 0.3rem;">Événement</span>
-    Le Live<br/>IFTM
+    Retour<br/>sur l'IFTM
 </a>
-    <a href="https://www.tourmag.com/Grand-Format-l-Australie_r602.html?utm_source=menu-tourmag" style="display: block; flex: 1; background: linear-gradient(135deg, #f4a020, #c0392b); color: #ffffff; padding: 0.85rem 0.8rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; position: relative; overflow: hidden; line-height: 1.3; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(196,79,31,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+    <a href="https://www.tourmag.com/Personal-Branding_r606.html?utm_source=menu-tourmag" style="display: block; flex: 1; background: linear-gradient(180deg, #31266A 0%, #794CA9 100%); color: #ffffff; padding: 0.85rem 0.8rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; position: relative; overflow: hidden; line-height: 1.3; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(196,79,31,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
     <span style="display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9; margin-bottom: 0.3rem;">Dossier Spécial</span>
-    Grand Format : l'Australie
+    Personal<br/>branding
 </a>
 </div>
                                             <div style="border: 2px solid #ffd700; border-radius: 12px; padding: 1rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 237, 78, 0.03)); position: relative; margin-bottom: 0.5rem;">
