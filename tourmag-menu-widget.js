@@ -1782,6 +1782,7 @@
                                                         <li><a href="https://www.tourmag.com/Annuaire-des-agences-touristiques-locales_r404.html">Annuaire des réceptifs</a></li>
                                                         <li><a href="https://www.tourmag.com/Dossiers-destinations_r562.html">Dossiers destinations</a></li>
                                                         <li><a href="https://www.tourmag.com/Communiques-des-agences-touristiques-locales_r408.html">Les offres des réceptifs</a></li>
+														<li><a href="https://www.tourmag.com/Grand-Format-l-Australie_r602.html">Grand Format : l'Australie</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
